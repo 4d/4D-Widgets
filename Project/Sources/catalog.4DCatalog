@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="4D Widgets" uuid="75589733A3F7467B8E2B8D103E889602" collation_locale="fr">
+	<schema name="DEFAULT_SCHEMA"/>
+	<base_extra package_name="4D Widgets" structure_file_name="4D Widgets" data_file_path=":4D Widgets.4DD" __stringCompHash="icu:63.1.0" __keywordBuildingHash="icu:63.1.0">
+		<temp_folder folder_selector="data"/>
+		<journal_file journal_file_enabled="false"/>
+	</base_extra>
+</base>

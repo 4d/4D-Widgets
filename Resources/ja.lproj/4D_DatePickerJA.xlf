@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- 
+   Translation file for 4D products.
+   Copyright (C) 2010-2013 4D SAS.
+   This file is distributed under the same license as the 4D product package.
+-->
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd"><xliff version="1.0">
+   <file datatype="x-STR#" original="undefined" product-version="v13" source-language="en-US" target-language="ja">
+      <header>
+         <prop-group name="Xliff-Editor.4dbase">
+            <prop prop-type="version">1.0</prop>
+            <prop prop-type="separator">_</prop>
+         </prop-group>
+      </header>
+      <body>
+         <group id="15001" resname="Monthes">
+            <trans-unit id="4" resname="Monthes_January">
+               <source>January</source>
+               <target>1月</target>
+            </trans-unit>
+            <trans-unit id="5" resname="Monthes_February">
+               <source>February</source>
+               <target>2月</target>
+            </trans-unit>
+            <trans-unit id="6" resname="Monthes_March">
+               <source>March</source>
+               <target>3月</target>
+            </trans-unit>
+            <trans-unit id="7" resname="Monthes_April">
+               <source>April</source>
+               <target>4月</target>
+            </trans-unit>
+            <trans-unit id="8" resname="Monthes_May">
+               <source>May</source>
+               <target>5月</target>
+            </trans-unit>
+            <trans-unit id="9" resname="Monthes_June">
+               <source>June</source>
+               <target>6月</target>
+            </trans-unit>
+            <trans-unit id="10" resname="Monthes_July">
+               <source>July</source>
+               <target>7月</target>
+            </trans-unit>
+            <trans-unit id="11" resname="Monthes_August">
+               <source>August</source>
+               <target>8月</target>
+            </trans-unit>
+            <trans-unit id="12" resname="Monthes_September">
+               <source>September</source>
+               <target>9月</target>
+            </trans-unit>
+            <trans-unit id="13" resname="Monthes_October">
+               <source>October</source>
+               <target>10月</target>
+            </trans-unit>
+            <trans-unit id="14" resname="Monthes_November">
+               <source>November</source>
+               <target>11月</target>
+            </trans-unit>
+            <trans-unit id="15" resname="Monthes_December">
+               <source>December</source>
+               <target>12月</target>
+            </trans-unit>
+         </group>
+         <group resname="Days">
+            <trans-unit id="14" resname="Days_Monday">
+               <source>Monday</source>
+               <target>月</target>
+            </trans-unit>
+            <trans-unit id="15" resname="Days_Tuesday">
+               <source>Tuesday</source>
+               <target>火</target>
+            </trans-unit>
+            <trans-unit id="16" resname="Days_Wednesday">
+               <source>Wednesday</source>
+               <target>水</target>
+            </trans-unit>
+            <trans-unit id="17" resname="Days_Thursday">
+               <source>Thursday</source>
+               <target>木</target>
+            </trans-unit>
+            <trans-unit id="18" resname="Days_Friday">
+               <source>Friday</source>
+               <target>金</target>
+            </trans-unit>
+            <trans-unit id="19" resname="Days_Saturday">
+               <source>Saturday</source>
+               <target>土</target>
+            </trans-unit>
+            <trans-unit id="19" resname="Days_Sunday">
+               <source>Sunday</source>
+               <target>日</target>
+            </trans-unit>
+         </group>
+         <group resname="Errors">
+            <trans-unit id="20" resname="Errors_LongIntParameter">
+               <source>Error: the method "[1]" was expecting a Long Integer as parameter.</source>
+               <target>エラー: メソッド "[1]" は倍長整数引数を受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="21" resname="Errors_DateParameter">
+               <source>Error: the method "[1]" was expecting a date as parameter.</source>
+               <target>エラー: メソッド "[1]" は日付引数を受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_ArrayPtrParameter">
+               <source>Error: the method "[1]" was expecting a seven item boolean array pointer as parameter.</source>
+               <target>エラー: メソッド "[1]" は7要素を持つブール配列へのポインターを引数として受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_DatePtrParameter">
+               <source>Error: the method "[1]" was expecting a date pointer parameter.</source>
+               <target>エラー: メソッド "[1]" は日付ポインターを引数として受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="24" resname="Errors_TimeParameter">
+               <source>Error: the method "[1]" was expecting a time as parameter.</source>
+               <target>エラー: メソッド "[1]" は日付引数を受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="25" resname="Errors_DateNullParameter">
+               <source>Error: the method "[1]" was expecting a not null date as parameter.</source>
+               <target>エラー: メソッド "[1]" はヌルでない日付を引数として受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="26" resname="Errors_TextArrayPtrParameters">
+               <source>Error: the method "[1]" was expecting two text array pointer as parameters.</source>
+               <target>エラー: メソッド "[1]" は2つのテキスト配列へのポインターを引数として受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_TextPtrParameter">
+               <source>Error: the method "[1]" was expecting a text pointer parameter.</source>
+               <target>エラー: メソッド "[1]" はテキストポインターを引数として受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_TextParameter">
+               <source>Error: the method "[1]" was expecting a text parameter.</source>
+               <target>エラー: メソッド "[1]" はテキスト引数を受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_ValidPathParameter">
+               <source>Error: the method "[1]" was expecting a valid path as parameter.</source>
+               <target>エラー: メソッド "[1]" は有効なパスを引数として受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="24" resname="Errors_BooleanParameter">
+               <source>Error: the method "[1]" was expecting a boolan parameter.</source>
+               <target>エラー: メソッド "[1]" はブール引数を受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="24" resname="Errors_NumericParameter">
+               <source>Error: the method "[1]" was expecting a numeric parameter.</source>
+               <target>エラー: メソッド "[1]" は数値引数を受け取ります。</target>
+            </trans-unit>
+            <trans-unit id="32" resname="Errors_IncorrectParamNumbers">
+               <source>Error: the method "[1]" did not received the correct number of parameters.</source>
+               <target>エラー: メソッド "[1]" は正しい数の引数を受け取っていません。</target>
+            </trans-unit>
+            <trans-unit id="33" resname="Errors_PointerParameter">
+               <source>Error: the method "[1]" was expecting a pointer parameter.</source>
+               <target>エラー: メソッド "[1]" はポインター引数を受け取ります。</target>
+            </trans-unit>
+         </group>
+      </body>
+   </file>
+</xliff>

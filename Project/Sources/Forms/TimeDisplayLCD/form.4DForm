@@ -1,0 +1,226 @@
+﻿{
+	"destination": "detailScreen",
+	"shared": true,
+	"width": 256,
+	"height": 48,
+	"markerBody": 48,
+	"markerBreak": 48,
+	"markerFooter": 48,
+	"events": [
+		"onLoad",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"lcdDisplayAmPm": {
+					"type": "input",
+					"top": 626,
+					"left": 1218,
+					"width": 141,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#FFFFFF",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"lcdDisplaySeconds": {
+					"type": "input",
+					"top": 650,
+					"left": 1218,
+					"width": 131,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#FFFFFF",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"lcdDisplayColor": {
+					"type": "input",
+					"top": 579,
+					"left": 1218,
+					"width": 111,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#EE0000",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"gClock": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 256,
+					"height": 48,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "scaled",
+					"dragging": "custom"
+				},
+				"Picture5": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 256,
+					"height": 48,
+					"visibility": "hidden",
+					"pictureFormat": "truncatedTopLeft",
+					"picture": "Images/Picture5.png"
+				},
+				"lcdDisplayMode": {
+					"type": "input",
+					"top": 674,
+					"left": 1218,
+					"width": 121,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"dataSourceTypeHint": "number",
+					"stroke": "#FFFFFF",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"lcdRebuild": {
+					"type": "input",
+					"top": 602,
+					"left": 1218,
+					"width": 121,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#EE0000",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"View 2": {
+				"visible": false,
+				"selectable": false,
+				"objects": [
+					"Picture5"
+				]
+			},
+			"View 3": {
+				"objects": [
+					"lcdDisplayAmPm",
+					"lcdDisplaySeconds",
+					"lcdDisplayColor",
+					"lcdDisplayMode",
+					"lcdRebuild"
+				]
+			},
+			"View 4": {
+				"selectable": false
+			},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}

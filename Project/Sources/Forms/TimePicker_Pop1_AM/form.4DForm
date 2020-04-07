@@ -1,0 +1,220 @@
+﻿{
+	"destination": "detailScreen",
+	"shared": true,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 112,
+	"height": 24,
+	"markerBody": 24,
+	"markerBreak": 24,
+	"markerFooter": 24,
+	"events": [
+		"onLoad",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Hours": {
+					"type": "dropdown",
+					"top": 0,
+					"left": 0,
+					"width": 108,
+					"height": 20,
+					"sizingX": "grow",
+					"class": "Buttons_13",
+					"textAlign": "left",
+					"method": "ObjectMethods/Hours.4dm",
+					"events": [
+						"onClick",
+						"onDataChange"
+					]
+				},
+				"Picture1": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 112,
+					"height": 24,
+					"visibility": "hidden",
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture1.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"FormInited": {
+					"type": "input",
+					"top": 7,
+					"left": 292,
+					"width": 150,
+					"height": 16,
+					"dataSourceTypeHint": "number",
+					"class": "Default",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"MinTime": {
+					"type": "input",
+					"top": 43,
+					"left": 292,
+					"width": 70,
+					"height": 16,
+					"dataSourceTypeHint": "time",
+					"class": "Default",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"MaxTime": {
+					"type": "input",
+					"top": 43,
+					"left": 372,
+					"width": 70,
+					"height": 16,
+					"dataSourceTypeHint": "time",
+					"class": "Default",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Step": {
+					"type": "input",
+					"top": 70,
+					"left": 292,
+					"width": 70,
+					"height": 16,
+					"dataSourceTypeHint": "time",
+					"class": "Default",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"AMlabel": {
+					"type": "input",
+					"top": 70,
+					"left": 372,
+					"width": 70,
+					"height": 16,
+					"class": "Default",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"PMlabel": {
+					"type": "input",
+					"top": 70,
+					"left": 452,
+					"width": 70,
+					"height": 16,
+					"class": "Default",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"SelectedTime": {
+					"type": "input",
+					"top": 106,
+					"left": 292,
+					"width": 110,
+					"height": 16,
+					"dataSourceTypeHint": "time",
+					"class": "Default",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"timeFormat": "hh_mm_ss",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"AmPmEntry": {
+					"type": "input",
+					"top": 166,
+					"left": 390,
+					"width": 120,
+					"height": 16,
+					"class": "Buttons_13",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"defaultView": "Vue 1",
+		"activeView": "Vue 4",
+		"views": {
+			"Vue 1": {},
+			"Vue 2": {},
+			"Vue 3": {},
+			"Vue 4": {
+				"objects": [
+					"Picture1"
+				]
+			},
+			"Vue 5": {},
+			"Vue 6": {},
+			"Vue 7": {},
+			"Vue 8": {},
+			"Vue 9": {}
+		}
+	}
+}

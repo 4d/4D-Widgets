@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+   Translation file for 4D products.
+   Copyright (C) 2010-2013 4D SAS.
+   This file is distributed under the same license as the 4D product package.
+-->
+
+<!DOCTYPE xliff PUBLIC "-//XLIFF//DTD XLIFF//EN" "http://www.oasis-open.org/committees/xliff/documents/xliff.dtd">
+
+<xliff version="1.0">
+   <file datatype="x-STR#" original="undefined" product-version="v13" source-language="en-US" target-language="fr">
+      <header>
+         <prop-group name="Xliff-Editor.4dbase">
+            <prop prop-type="version">1.0</prop>
+            <prop prop-type="separator">_</prop>
+         </prop-group>
+      </header>
+      <body>
+         <group id="15001" resname="Monthes">
+            <trans-unit id="4" resname="Monthes_January">
+               <source>January</source>
+               <target>Janvier</target>
+            </trans-unit>
+            <trans-unit id="5" resname="Monthes_February">
+               <source>February</source>
+               <target>Février</target>
+            </trans-unit>
+            <trans-unit id="6" resname="Monthes_March">
+               <source>March</source>
+               <target>Mars</target>
+            </trans-unit>
+            <trans-unit id="7" resname="Monthes_April">
+               <source>April</source>
+               <target>Avril</target>
+            </trans-unit>
+            <trans-unit id="8" resname="Monthes_May">
+               <source>May</source>
+               <target>Mai</target>
+            </trans-unit>
+            <trans-unit id="9" resname="Monthes_June">
+               <source>June</source>
+               <target>Juin</target>
+            </trans-unit>
+            <trans-unit id="10" resname="Monthes_July">
+               <source>July</source>
+               <target>Juillet</target>
+            </trans-unit>
+            <trans-unit id="11" resname="Monthes_August">
+               <source>August</source>
+               <target>Août</target>
+            </trans-unit>
+            <trans-unit id="12" resname="Monthes_September">
+               <source>September</source>
+               <target>Septembre</target>
+            </trans-unit>
+            <trans-unit id="13" resname="Monthes_October">
+               <source>October</source>
+               <target>Octobre</target>
+            </trans-unit>
+            <trans-unit id="14" resname="Monthes_November">
+               <source>November</source>
+               <target>Novembre</target>
+            </trans-unit>
+            <trans-unit id="15" resname="Monthes_December">
+               <source>December</source>
+               <target>Décembre</target>
+            </trans-unit>
+         </group>
+         <group resname="Days">
+            <trans-unit id="14" resname="Days_Monday">
+               <source>Monday</source>
+               <target>Lundi</target>
+            </trans-unit>
+            <trans-unit id="15" resname="Days_Tuesday">
+               <source>Tuesday</source>
+               <target>Mardi</target>
+            </trans-unit>
+            <trans-unit id="16" resname="Days_Wednesday">
+               <source>Wednesday</source>
+               <target>Mercredi</target>
+            </trans-unit>
+            <trans-unit id="17" resname="Days_Thursday">
+               <source>Thursday</source>
+               <target>Jeudi</target>
+            </trans-unit>
+            <trans-unit id="18" resname="Days_Friday">
+               <source>Friday</source>
+               <target>Vendredi</target>
+            </trans-unit>
+            <trans-unit id="19" resname="Days_Saturday">
+               <source>Saturday</source>
+               <target>Samedi</target>
+            </trans-unit>
+            <trans-unit id="19" resname="Days_Sunday">
+               <source>Sunday</source>
+               <target>Dimanche</target>
+            </trans-unit>
+         </group>
+         <group resname="Errors">
+            <trans-unit id="20" resname="Errors_LongIntParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a Long Integer as parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type Entier Long.</target>
+            </trans-unit>
+            <trans-unit id="21" resname="Errors_DateParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a date as parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type Date.</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_ArrayPtrParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a seven item boolean array pointer as parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type pointeur vers un tableau booléen de sept éléments.</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_DatePtrParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a date pointer parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type pointeur vers une date.</target>
+            </trans-unit>
+            <trans-unit id="24" resname="Errors_TimeParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a time as parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type heure.</target>
+            </trans-unit>
+            <trans-unit id="25" resname="Errors_DateNullParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a not null date as parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait une date non nulle en paramètre.</target>
+            </trans-unit>
+            <trans-unit id="26" resname="Errors_TextArrayPtrParameters">
+               <source>Error: the method &quot;[1]&quot; was expecting two text array pointer as parameters.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait deux paramètres de type pointeur vers des tableaux Texte.
+(Le premier tableau doit contenir le nom des jours et le second le nom des mois.)</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_TextPtrParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a text pointer parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type pointeur vers un texte.</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_TextParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a text parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type texte.</target>
+            </trans-unit>
+            <trans-unit id="23" resname="Errors_ValidPathParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a valid path as parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un chemin d&apos;accès valide en paramètre.</target>
+            </trans-unit>
+            <trans-unit id="24" resname="Errors_BooleanParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a boolan parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type booléen.</target>
+            </trans-unit>
+            <trans-unit id="24" resname="Errors_NumericParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a numeric parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type numérique.</target>
+            </trans-unit>
+            <trans-unit id="32" resname="Errors_IncorrectParamNumbers">
+               <source>Error: the method &quot;[1]&quot; did not received the correct number of parameters.</source>
+               <target>Erreur : Le nombre de paramètres reçus par la méthode [1] est incorrect.</target>
+            </trans-unit>
+            <trans-unit id="33" resname="Errors_PointerParameter">
+               <source>Error: the method &quot;[1]&quot; was expecting a pointer parameter.</source>
+               <target>Erreur : la méthode &quot;[1]&quot; attendait un paramètre de type pointeur.</target>
+            </trans-unit>
+         </group>
+      </body>
+   </file>
+</xliff>

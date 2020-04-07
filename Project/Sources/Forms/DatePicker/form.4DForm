@@ -1,0 +1,1748 @@
+﻿{
+	"destination": "detailScreen",
+	"shared": true,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 168,
+	"height": 190,
+	"markerBody": 190,
+	"markerBreak": 190,
+	"markerFooter": 190,
+	"events": [
+		"onLoad",
+		"onActivate",
+		"onDeactivate",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"Picture2": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 168,
+					"height": 190,
+					"pictureFormat": "scaled",
+					"picture": "/RESOURCES/Images/Calendar/AlphaBackground.png"
+				},
+				"DatePicker_Btn_1": {
+					"type": "radio",
+					"top": 46,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_1.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_2": {
+					"type": "radio",
+					"top": 46,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_2.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_3": {
+					"type": "radio",
+					"top": 46,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_3.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_4": {
+					"type": "radio",
+					"top": 46,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_4.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_5": {
+					"type": "radio",
+					"top": 46,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_5.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_6": {
+					"type": "radio",
+					"top": 46,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_6.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_7": {
+					"type": "radio",
+					"top": 46,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_7.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_8": {
+					"type": "radio",
+					"top": 70,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_8.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_9": {
+					"type": "radio",
+					"top": 70,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_9.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_10": {
+					"type": "radio",
+					"top": 70,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_10.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_11": {
+					"type": "radio",
+					"top": 70,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_11.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_12": {
+					"type": "radio",
+					"top": 70,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_12.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_13": {
+					"type": "radio",
+					"top": 70,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_13.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_14": {
+					"type": "radio",
+					"top": 70,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_14.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_15": {
+					"type": "radio",
+					"top": 94,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_15.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_16": {
+					"type": "radio",
+					"top": 94,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_16.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_17": {
+					"type": "radio",
+					"top": 94,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_17.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_18": {
+					"type": "radio",
+					"top": 94,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_18.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_19": {
+					"type": "radio",
+					"top": 94,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_19.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_20": {
+					"type": "radio",
+					"top": 94,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_20.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_21": {
+					"type": "radio",
+					"top": 94,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_21.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_22": {
+					"type": "radio",
+					"top": 118,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_22.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_23": {
+					"type": "radio",
+					"top": 118,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_23.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_24": {
+					"type": "radio",
+					"top": 118,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_24.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_25": {
+					"type": "radio",
+					"top": 118,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_25.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_26": {
+					"type": "radio",
+					"top": 118,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_26.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_27": {
+					"type": "radio",
+					"top": 118,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_27.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_28": {
+					"type": "radio",
+					"top": 118,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_28.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_29": {
+					"type": "radio",
+					"top": 142,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_29.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_30": {
+					"type": "radio",
+					"top": 142,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_30.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_31": {
+					"type": "radio",
+					"top": 142,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_31.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_32": {
+					"type": "radio",
+					"top": 142,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_32.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_33": {
+					"type": "radio",
+					"top": 142,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_33.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_34": {
+					"type": "radio",
+					"top": 142,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_34.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_35": {
+					"type": "radio",
+					"top": 142,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_35.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_36": {
+					"type": "radio",
+					"top": 166,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_36.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_37": {
+					"type": "radio",
+					"top": 166,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_37.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_38": {
+					"type": "radio",
+					"top": 166,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_38.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_39": {
+					"type": "radio",
+					"top": 166,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_39.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_40": {
+					"type": "radio",
+					"top": 166,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_40.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_41": {
+					"type": "radio",
+					"top": 166,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_41.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DatePicker_Btn_42": {
+					"type": "radio",
+					"top": 166,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"class": "Buttons_12",
+					"stroke": "#0021D8",
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/DatePicker_Btn_42.4dm",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					]
+				},
+				"DisplayedMonth": {
+					"type": "input",
+					"top": 8,
+					"left": 0,
+					"width": 160,
+					"height": 20,
+					"stroke": "#000000",
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"DayName1": {
+					"type": "input",
+					"top": 29,
+					"left": 0,
+					"width": 24,
+					"height": 14,
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DayName2": {
+					"type": "input",
+					"top": 29,
+					"left": 24,
+					"width": 24,
+					"height": 14,
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DayName3": {
+					"type": "input",
+					"top": 29,
+					"left": 48,
+					"width": 24,
+					"height": 14,
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DayName4": {
+					"type": "input",
+					"top": 29,
+					"left": 72,
+					"width": 24,
+					"height": 14,
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DayName5": {
+					"type": "input",
+					"top": 29,
+					"left": 96,
+					"width": 24,
+					"height": 14,
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DayName6": {
+					"type": "input",
+					"top": 29,
+					"left": 120,
+					"width": 24,
+					"height": 14,
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"DayName7": {
+					"type": "input",
+					"top": 29,
+					"left": 144,
+					"width": 24,
+					"height": 14,
+					"class": "Buttons_11",
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"BtnNext": {
+					"type": "button",
+					"top": 5,
+					"left": 140,
+					"width": 20,
+					"height": 20,
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"focusable": false,
+					"icon": "/RESOURCES/Images/Calendar/IconNext.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/BtnNext.4dm",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					]
+				},
+				"BtnPrevious": {
+					"type": "button",
+					"top": 5,
+					"left": 0,
+					"width": 20,
+					"height": 20,
+					"fontFamily": ".SF NS Text",
+					"fontSize": 12,
+					"focusable": false,
+					"icon": "/RESOURCES/Images/Calendar/IconPrevious.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"method": "ObjectMethods/BtnPrevious.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"DummyBtnUp": {
+					"type": "button",
+					"top": 58,
+					"left": 1009,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[up arrow]",
+					"display": false,
+					"method": "ObjectMethods/DummyBtnUp.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"DummyBtnLeft": {
+					"type": "button",
+					"top": 82,
+					"left": 967,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[left arrow]",
+					"display": false,
+					"method": "ObjectMethods/DummyBtnLeft.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"DummyBtnRight": {
+					"type": "button",
+					"top": 82,
+					"left": 1052,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[right arrow]",
+					"display": false,
+					"method": "ObjectMethods/DummyBtnRight.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"DummyBtnDown": {
+					"type": "button",
+					"top": 103,
+					"left": 1009,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[down arrow]",
+					"display": false,
+					"method": "ObjectMethods/DummyBtnDown.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Picture6": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 168,
+					"height": 190,
+					"visibility": "hidden",
+					"pictureFormat": "tiled",
+					"picture": "/RESOURCES/Images/Calendar/CalendarPicker.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"FormInited": {
+					"type": "input",
+					"top": 16,
+					"left": 419,
+					"width": 151,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "number",
+					"class": "Buttons_11",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_ListMonthes": {
+					"type": "listbox",
+					"top": 46,
+					"left": 326,
+					"width": 110,
+					"height": 202,
+					"visibility": "hidden",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "_ListMonthes_Column1",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Lucida Grande",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header1",
+								"text": "Header1",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							},
+							"footer": {
+								"name": "Footer1",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"_ListDays": {
+					"type": "listbox",
+					"top": 46,
+					"left": 439,
+					"width": 110,
+					"height": 202,
+					"visibility": "hidden",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "_ListDays_Column1",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Lucida Grande",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header2",
+								"text": "Header2",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							},
+							"footer": {
+								"name": "Footer2",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"_WeeklyDaysOff": {
+					"type": "listbox",
+					"top": 46,
+					"left": 552,
+					"width": 110,
+					"height": 202,
+					"visibility": "hidden",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "_WeeklyDaysOff_Column1",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"fontFamily": "Lucida Grande",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header3",
+								"text": "Header3",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							},
+							"footer": {
+								"name": "Footer3",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"_DaysNames": {
+					"type": "listbox",
+					"top": 46,
+					"left": 665,
+					"width": 110,
+					"height": 202,
+					"visibility": "hidden",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "_DaysNames_Column1",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "left",
+							"fontFamily": "Lucida Grande",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header4",
+								"text": "Header4",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							},
+							"footer": {
+								"name": "Footer4",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"_MonthesNames": {
+					"type": "listbox",
+					"top": 46,
+					"left": 778,
+					"width": 110,
+					"height": 202,
+					"visibility": "hidden",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "_MonthesNames_Column1",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textAlign": "left",
+							"fontFamily": "Lucida Grande",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header5",
+								"text": "Header5",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							},
+							"footer": {
+								"name": "Footer5",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"FirstDayOfWeek": {
+					"type": "input",
+					"top": 285,
+					"left": 293,
+					"width": 124,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "number",
+					"class": "Buttons_11",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"_DaysOff1": {
+					"type": "listbox",
+					"top": 285,
+					"left": 454,
+					"width": 110,
+					"height": 202,
+					"visibility": "hidden",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "_DaysOff1_Column1",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "System date short",
+							"numberFormat": "System date short",
+							"textAlign": "left",
+							"fontFamily": "Lucida Grande",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header6",
+								"text": "Header6",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							},
+							"footer": {
+								"name": "Footer6",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"_DaysOff2": {
+					"type": "listbox",
+					"top": 285,
+					"left": 567,
+					"width": 110,
+					"height": 202,
+					"visibility": "hidden",
+					"resizingMode": "legacy",
+					"focusable": false,
+					"movableRows": false,
+					"rowHeightAutoMin": "20px",
+					"rowHeightAutoMax": "20px",
+					"showHeaders": false,
+					"selectionMode": "single",
+					"scrollbarHorizontal": "hidden",
+					"horizontalLineStroke": "transparent",
+					"verticalLineStroke": "transparent",
+					"fill": "transparent",
+					"fontFamily": "Lucida Grande",
+					"fontSize": 11,
+					"events": [
+						"onClick",
+						"onDisplayDetail",
+						"onDataChange"
+					],
+					"columns": [
+						{
+							"name": "_DaysOff2_Column1",
+							"width": 95,
+							"minWidth": 10,
+							"maxWidth": 32000,
+							"enterable": false,
+							"textFormat": "System date short",
+							"numberFormat": "System date short",
+							"textAlign": "left",
+							"fontFamily": "Lucida Grande",
+							"fontSize": 11,
+							"events": [
+								"onClick",
+								"onDataChange"
+							],
+							"header": {
+								"name": "Header7",
+								"text": "Header7",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							},
+							"footer": {
+								"name": "Footer7",
+								"timeFormat": "hh_mm_ss",
+								"fontFamily": "Lucida Grande",
+								"fontSize": 11
+							}
+						}
+					]
+				},
+				"SelectedDate": {
+					"type": "input",
+					"top": 305,
+					"left": 293,
+					"width": 124,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "date",
+					"stroke": "#FF0000",
+					"class": "Buttons_11",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"MinDate": {
+					"type": "input",
+					"top": 344,
+					"left": 293,
+					"width": 124,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "date",
+					"class": "Buttons_11",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"MaxDate": {
+					"type": "input",
+					"top": 365,
+					"left": 293,
+					"width": 124,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "date",
+					"class": "Buttons_11",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FirstDisplayedDay": {
+					"type": "input",
+					"top": 402,
+					"left": 295,
+					"width": 127,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "date",
+					"class": "Buttons_11",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"FirstOfCurrentMonth": {
+					"type": "input",
+					"top": 423,
+					"left": 295,
+					"width": 127,
+					"height": 13,
+					"visibility": "hidden",
+					"dataSourceTypeHint": "date",
+					"class": "Buttons_11",
+					"focusable": false,
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Text": {
+					"type": "text",
+					"top": 345,
+					"left": 128,
+					"width": 148,
+					"height": 13,
+					"visibility": "hidden",
+					"class": "Buttons_11",
+					"textAlign": "right",
+					"text": "Min Date:"
+				},
+				"Text1": {
+					"type": "text",
+					"top": 365,
+					"left": 128,
+					"width": 148,
+					"height": 13,
+					"visibility": "hidden",
+					"class": "Buttons_11",
+					"textAlign": "right",
+					"text": "Max Date:"
+				},
+				"Text2": {
+					"type": "text",
+					"top": 16,
+					"left": 288,
+					"width": 118,
+					"height": 13,
+					"visibility": "hidden",
+					"class": "Buttons_11",
+					"textAlign": "right",
+					"text": "zone Inited:"
+				},
+				"Text4": {
+					"type": "text",
+					"top": 305,
+					"left": 128,
+					"width": 148,
+					"height": 13,
+					"visibility": "hidden",
+					"class": "Buttons_11",
+					"textAlign": "right",
+					"text": "Selected Date:"
+				},
+				"Text5": {
+					"type": "text",
+					"top": 402,
+					"left": 100,
+					"width": 188,
+					"height": 13,
+					"visibility": "hidden",
+					"class": "Buttons_11",
+					"textAlign": "right",
+					"text": "First displayed day:"
+				},
+				"Text6": {
+					"type": "text",
+					"top": 285,
+					"left": 128,
+					"width": 148,
+					"height": 13,
+					"visibility": "hidden",
+					"class": "Buttons_11",
+					"textAlign": "right",
+					"text": "First day of week:"
+				},
+				"Text3": {
+					"type": "text",
+					"top": 423,
+					"left": 100,
+					"width": 188,
+					"height": 13,
+					"visibility": "hidden",
+					"class": "Buttons_11",
+					"textAlign": "right",
+					"text": "First of current displayed month"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"Preview": {
+				"visible": false,
+				"selectable": false,
+				"objects": [
+					"Picture6"
+				]
+			},
+			"View 3": {},
+			"View 4": {},
+			"View 5": {},
+			"View 6": {},
+			"View 7": {},
+			"View 8": {},
+			"View 9": {}
+		}
+	}
+}
