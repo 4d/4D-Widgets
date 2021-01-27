@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="21">
+	<com.4d>
+		<database>
+			<cache flush_buffer_delay="20s" size_fixed="32" size_maximum="100" size_reserved="128"/>
+			<cpu_priority/>
+			<misc use_ast_interpreter="false"/>
+                            		</database>
+		<compiler>
+			<typage default_for_button="2" default_for_numeric="2"/>
+			<options AMD64_support="true" compilation_path="3" fat_binary="true"/>
+                            		</compiler>
+		<interface>
+			<shortcuts>
+				<add_subform command="true" key_code="11311" shift="true"/>
+				<cancel_input_form key_code="13595"/>
+				<accept_input_form key_code="19459"/>
+                                                      			</shortcuts>
+			<developper allow_read_only_structure="false"/>
+			<user print_progress="false"/>
+                                        		</interface>
+		<general execute_host_database_event="true">
+			<mover always_display_dialog="2"/>
+		</general>
+		<server>
+			<network>
+				<options publication_name="4D DatePicker" use_legacy_network_layer="false"/>
+			</network>
+		</server>
+		<web>
+			<standalone_server>
+				<configuration automatic_session_management="false" port_number="80">
+					<hosts>
+						<host home_page="index.html" html_root="./DossierWeb/" id="0" name="Default"/>
+					</hosts>
+				</configuration>
+				<log tokens="">
+					<backup daily="" hourly="" monthly="" size="0" weekly=""/>
+				</log>
+				<misc/>
+				<options>
+					<cache cache_max_size="524288" use_4d_web_cache="false"/>
+					<web_processes max_concurrent="100"/>
+					<keep_alive requests_number="100"/>
+				</options>
+				<webservices>
+					<server name="A_WebService"/>
+				</webservices>
+			</standalone_server>
+			<remote>
+				<configuration allow_ssl="false" automatic_session_management="false"/>
+				<misc/>
+				<options>
+					<cache use_4d_web_cache="false"/>
+				</options>
+			</remote>
+		</web>
+		<deployment>
+			<options/>
+		</deployment>
+		<sql>
+			<publication port_number="19812"/>
+		</sql>
+		<php ip_address="127.0.0.1"/>
+                          	</com.4d>
+    </preferences>

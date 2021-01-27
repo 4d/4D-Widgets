@@ -1,0 +1,171 @@
+﻿{
+	"Compiler": {
+		"methods": [
+			"Compiler_Arrays_Inter",
+			"Compiler_Methods",
+			"Compiler_Variables",
+			"Compiler_Variables_Inter"
+		]
+	},
+	"DatePicker": {
+		"groups": [
+			"DatePicker Forms",
+			"DatePicker Private",
+			"DatePicker Shared"
+		]
+	},
+	"DatePicker Forms": {
+		"forms": [
+			"DateButton",
+			"DateEntry",
+			"DatePicker"
+		]
+	},
+	"DatePicker Private": {
+		"methods": [
+			"DateEntry__Increase",
+			"DateEntry__ManageFocus",
+			"DateEntry__Redraw",
+			"DatePicker SET DEFAULT DATE",
+			"DatePicker__CalculateFirstDay",
+			"DatePicker__ClickButton",
+			"DatePicker__DISPOSE",
+			"DatePicker__GetBlob",
+			"DatePicker__GetDaysOff",
+			"DatePicker__GetMaxDate",
+			"DatePicker__GetMinDate",
+			"DatePicker__GetSelectedDate",
+			"DatePicker__GetTarget",
+			"DatePicker__GetWeekDaysOff",
+			"DatePicker__GetWeekFirstDay",
+			"DatePicker__InitForm",
+			"DatePicker__InitInter",
+			"DatePicker__ManageFocus",
+			"DatePicker__RecalcDate",
+			"DatePicker__RedrawCalendar",
+			"DatePicker__SetBlob",
+			"DatePicker__SetSelectedDate"
+		]
+	},
+	"DatePicker Shared": {
+		"methods": [
+			"DatePicker APPLY DEFAULT VALUES",
+			"DatePicker Display Dialog",
+			"DatePicker RESET DEFAULT VALUES",
+			"DatePicker SET DAYS OFF",
+			"DatePicker SET DEFAULT 1ST DAY",
+			"DatePicker SET DEFAULT DAYS OFF",
+			"DatePicker SET DEFAULT MAX DATE",
+			"DatePicker SET DEFAULT MIN DATE",
+			"DatePicker SET MAX DATE",
+			"DatePicker SET MIN DATE",
+			"DatePicker SET WEEK FIRST DAY"
+		]
+	},
+	"SearchPicker": {
+		"groups": [
+			"SearchPicker Forms",
+			"SearchPicker Private",
+			"SearchPicker Shared"
+		]
+	},
+	"SearchPicker Forms": {
+		"forms": [
+			"SearchPicker"
+		]
+	},
+	"SearchPicker Private": {
+		"methods": [
+			"SearchPicker__BtnClose",
+			"SearchPicker__BtnPopup",
+			"SearchPicker__EnterableText",
+			"SearchPicker__GetTarget",
+			"SearchPicker__InitForm",
+			"SearchPicker__InitInter",
+			"SearchPicker__SET_ENTERABLE",
+			"SearchPicker__SET_HELPTEXT",
+			"SearchPicker__SET_TEXT",
+			"SearchPicker__SetInterface"
+		]
+	},
+	"SearchPicker Shared": {
+		"methods": [
+			"SearchPicker SET ENTERABLE",
+			"SearchPicker SET HELP TEXT"
+		]
+	},
+	"TimePicker": {
+		"groups": [
+			"TimePicker Forms",
+			"TimePicker Private",
+			"TimePicker Shared"
+		]
+	},
+	"TimePicker Forms": {
+		"forms": [
+			"TimeDisplay",
+			"TimeDisplayLCD",
+			"TimeEntry",
+			"TimeEntry_AM",
+			"TimePicker_Pop1",
+			"TimePicker_Pop1_AM",
+			"TimePicker_Pop2",
+			"TimePicker_Pop2_AM"
+		]
+	},
+	"TimePicker Private": {
+		"methods": [
+			"TimeEntry__Increase",
+			"TimeEntry__ManageFocus",
+			"TimePicker__BuildPopup",
+			"TimePicker__DisplaySecondHand",
+			"TimePicker__DisplayTimeInputs",
+			"TimePicker__DisplayTimePopups",
+			"TimePicker__GetLabelAM",
+			"TimePicker__GetLabelPM",
+			"TimePicker__GetSelectedTime",
+			"TimePicker__GetStep",
+			"TimePicker__GetTarget",
+			"TimePicker__GetTimeMax",
+			"TimePicker__GetTimeMin",
+			"TimePicker__InitForm",
+			"TimePicker__InitInter",
+			"TimePicker__LCD DISPLAY AMPM",
+			"TimePicker__LCD DISPLAY SECONDS",
+			"TimePicker__LCD SET COLOR",
+			"TimePicker__LCD SET MODE",
+			"TimePicker__LCDcreatePict",
+			"TimePicker__LCDdisplayTime",
+			"TimePicker__SetSelectedTime"
+		]
+	},
+	"TimePicker Shared": {
+		"methods": [
+			"TimePicker APPLY DEFAULT VALUES",
+			"TimePicker DISPLAY SECOND HAND",
+			"TimePicker LCD DISPLAY AMPM",
+			"TimePicker LCD DISPLAY SECONDS",
+			"TimePicker LCD SET COLOR",
+			"TimePicker LCD SET MODE",
+			"TimePicker RESET DEFAULT VALUES",
+			"TimePicker SET DEFAULT LABEL AM",
+			"TimePicker SET DEFAULT LABEL PM",
+			"TimePicker SET DEFAULT MAX TIME",
+			"TimePicker SET DEFAULT MIN TIME",
+			"TimePicker SET DEFAULT STEP",
+			"TimePicker SET DEFAULT TIME",
+			"TimePicker SET LABEL AM",
+			"TimePicker SET LABEL PM",
+			"TimePicker SET MAX TIME",
+			"TimePicker SET MIN TIME",
+			"TimePicker SET STEP"
+		]
+	},
+	"Tools": {
+		"methods": [
+			"Tool_ObjectToVar",
+			"Tool_VarToObject"
+		]
+	},
+	"trash": {}
+}

@@ -1,0 +1,138 @@
+﻿{
+	"shared": true,
+	"windowMaxWidth": 32000,
+	"windowMaxHeight": 32000,
+	"width": 120,
+	"height": 120,
+	"markerBody": 120,
+	"markerBreak": 120,
+	"markerFooter": 120,
+	"events": [
+		"onLoad",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		null,
+		{
+			"objects": {
+				"gClock": {
+					"type": "input",
+					"top": 1,
+					"left": 1,
+					"width": 118,
+					"height": 118,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "picture",
+					"stroke": "#FF6600",
+					"class": "Default",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "scaled",
+					"dragging": "none",
+					"dropping": "none"
+				},
+				"Picture2": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 120,
+					"height": 120,
+					"visibility": "hidden",
+					"pictureFormat": "scaled",
+					"picture": "Images/Picture2.png"
+				},
+				"clockDisplaySecondHand": {
+					"type": "input",
+					"top": 77,
+					"left": 913,
+					"width": 181,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#FFFFFF",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"clockRebuild": {
+					"type": "input",
+					"top": 41,
+					"left": 913,
+					"width": 181,
+					"height": 16,
+					"visibility": "hidden",
+					"sizingX": "move",
+					"sizingY": "move",
+					"stroke": "#EE0000",
+					"textAlign": "left",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				}
+			}
+		}
+	],
+	"editor": {
+		"defaultView": "Vue 1",
+		"activeView": "Vue 2",
+		"views": {
+			"Vue 1": {},
+			"Vue 2": {
+				"objects": [
+					"Picture2"
+				]
+			},
+			"Vue 3": {
+				"objects": [
+					"clockDisplaySecondHand",
+					"clockRebuild"
+				]
+			},
+			"Vue 4": {},
+			"Vue 5": {},
+			"Vue 6": {},
+			"Vue 7": {},
+			"Vue 8": {},
+			"Vue 9": {}
+		}
+	}
+}

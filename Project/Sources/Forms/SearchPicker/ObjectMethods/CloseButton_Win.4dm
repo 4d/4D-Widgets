@@ -1,0 +1,1 @@
+SearchPicker__BtnClose ("Win")
