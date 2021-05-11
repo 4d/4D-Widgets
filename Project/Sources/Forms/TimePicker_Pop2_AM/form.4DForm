@@ -53,8 +53,8 @@
 				"Texte1": {
 					"type": "text",
 					"top": 2,
-					"left": 89,
-					"width": 5,
+					"left": 114,
+					"width": 2,
 					"height": 16,
 					"sizingX": "move",
 					"class": "Default",
@@ -64,13 +64,73 @@
 				},
 				"Picture1": {
 					"type": "picture",
-					"top": 0,
-					"left": 0,
+					"top": 282,
+					"left": 129,
 					"width": 155,
 					"height": 24,
 					"visibility": "hidden",
 					"pictureFormat": "scaled",
 					"picture": "Images/Picture1.png"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 86,
+					"height": 21,
+					"stroke": "automatic",
+					"fill": "automatic",
+					"borderRadius": 4,
+					"visibility": "hidden"
+				},
+				"Text": {
+					"type": "text",
+					"text": "09 AM",
+					"top": 3,
+					"left": 10,
+					"width": 70,
+					"height": 16,
+					"visibility": "hidden"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 95,
+					"width": 56,
+					"height": 21,
+					"stroke": "automatic",
+					"fill": "automatic",
+					"borderRadius": 4,
+					"visibility": "hidden"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "35",
+					"top": 3,
+					"left": 105,
+					"width": 33,
+					"height": 16,
+					"visibility": "hidden"
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 3,
+					"left": 67,
+					"width": 16,
+					"height": 16,
+					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
+					"pictureFormat": "scaled",
+					"visibility": "hidden"
+				},
+				"Static Picture2": {
+					"type": "picture",
+					"top": 3,
+					"left": 132,
+					"width": 16,
+					"height": 16,
+					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
+					"pictureFormat": "scaled",
+					"visibility": "hidden"
 				}
 			}
 		},
@@ -224,17 +284,21 @@
 		}
 	],
 	"editor": {
+		"activeView": "Preview",
 		"defaultView": "Vue 1",
-		"activeView": "Vue 3",
 		"views": {
 			"Vue 1": {},
 			"Vue 2": {},
 			"Vue 3": {},
-			"Vue 4": {
-				"visible": false,
-				"selectable": false,
+			"Preview": {
 				"objects": [
-					"Picture1"
+					"Picture1",
+					"Rectangle",
+					"Text",
+					"Rectangle1",
+					"Text1",
+					"Static Picture1",
+					"Static Picture2"
 				]
 			},
 			"Vue 5": {},
@@ -243,5 +307,10 @@
 			"Vue 8": {},
 			"Vue 9": {}
 		}
+	},
+	"geometryStamp": 65,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }

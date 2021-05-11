@@ -59,15 +59,65 @@
 					"fontWeight": "bold",
 					"text": ":"
 				},
-				"Picture1": {
-					"type": "picture",
+				"Rectangle": {
+					"type": "rectangle",
 					"top": 0,
 					"left": 0,
-					"width": 134,
-					"height": 24,
-					"visibility": "hidden",
+					"width": 60,
+					"height": 21,
+					"stroke": "automatic",
+					"fill": "automatic",
+					"borderRadius": 4,
+					"visibility": "hidden"
+				},
+				"Text": {
+					"type": "text",
+					"text": "09",
+					"top": 3,
+					"left": 10,
+					"width": 37,
+					"height": 16,
+					"visibility": "hidden"
+				},
+				"Rectangle1": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 70,
+					"width": 60,
+					"height": 21,
+					"stroke": "automatic",
+					"fill": "automatic",
+					"borderRadius": 4,
+					"visibility": "hidden"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "35",
+					"top": 3,
+					"left": 80,
+					"width": 37,
+					"height": 16,
+					"visibility": "hidden"
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 3,
+					"left": 42,
+					"width": 16,
+					"height": 16,
+					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
 					"pictureFormat": "scaled",
-					"picture": "Images/Picture1.png"
+					"visibility": "hidden"
+				},
+				"Static Picture2": {
+					"type": "picture",
+					"top": 3,
+					"left": 112,
+					"width": 16,
+					"height": 16,
+					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
+					"pictureFormat": "scaled",
+					"visibility": "hidden"
 				}
 			}
 		},
@@ -210,12 +260,7 @@
 				"visible": false,
 				"selectable": false
 			},
-			"Vue 4": {
-				"selectable": false,
-				"objects": [
-					"Picture1"
-				]
-			},
+			"Preview": {},
 			"Vue 5": {
 				"visible": false,
 				"selectable": false
@@ -237,5 +282,10 @@
 				"selectable": false
 			}
 		}
+	},
+	"geometryStamp": 59,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }

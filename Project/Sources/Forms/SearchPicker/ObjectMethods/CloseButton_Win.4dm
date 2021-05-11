@@ -1,1 +1,0 @@
-SearchPicker__BtnClose ("Win")

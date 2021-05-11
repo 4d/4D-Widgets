@@ -1,12 +1,12 @@
 Case of 
-	: (Form event code:C388=On Getting Focus:K2:7)
-		OBJECT SET VISIBLE:C603(*;"FocusRing@";True:C214)
+		//: (Form event code=On Getting Focus)
+		//OBJECT SET RGB COLORS(*; "FocusRingBackGround"; "grey"; Background color)
 		
-	: (Form event code:C388=On Losing Focus:K2:8)
-		OBJECT SET VISIBLE:C603(*;"FocusRing@";False:C215)
+		//: (Form event code=On Losing Focus)
+		//OBJECT SET RGB COLORS(*; "FocusRingBackGround"; "silver"; Background color)
 		
 	: (Form event code:C388=On Data Change:K2:15)
-		TimePicker__DisplayTimeInputs (True:C214)
+		TimePicker__DisplayTimeInputs(True:C214)
 		
 End case 
 

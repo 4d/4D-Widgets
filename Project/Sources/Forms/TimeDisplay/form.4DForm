@@ -50,7 +50,7 @@
 					"height": 120,
 					"visibility": "hidden",
 					"pictureFormat": "scaled",
-					"picture": "Images/Picture2.png"
+					"picture": "Images/Preview.png"
 				},
 				"clockDisplaySecondHand": {
 					"type": "input",
@@ -112,8 +112,8 @@
 		}
 	],
 	"editor": {
+		"activeView": "Vue 1",
 		"defaultView": "Vue 1",
-		"activeView": "Vue 2",
 		"views": {
 			"Vue 1": {},
 			"Vue 2": {
@@ -134,5 +134,10 @@
 			"Vue 8": {},
 			"Vue 9": {}
 		}
-	}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 10
 }

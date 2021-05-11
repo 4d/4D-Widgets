@@ -1,33 +1,31 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($CurrentText;$FocusRing)
+C_TEXT:C284($CurrentText)
+C_TEXT:C284($scheme; $focus; $notFocus)
 
-C_LONGINT:C283($Event)
 
-
-$Event:=Form event code:C388
-
-If (Is Windows:C1573)
-	$FocusRing:=""
+$scheme:=FORM Get color scheme:C1761
+If ($scheme="dark")
+	$focus:="silver"
+	$notFocus:="grey"
 Else 
-	$FocusRing:="FocusRing@"  //focus ring (visible or not depending on the focus)
+	$focus:="grey"
+	$notFocus:="silver"
 End if 
 
 Case of 
 		
-	: ($event=On After Edit:K2:43)
+	: (Form event code:C388=On After Edit:K2:43)
 		
 		$CurrentText:=Get edited text:C655
-		SearchPicker__SET_TEXT ($CurrentText;"")
+		SearchPicker__SET_TEXT($CurrentText; "")
 		
-	: ($event=On Getting Focus:K2:7)
+	: (Form event code:C388=On Getting Focus:K2:7)
+		OBJECT SET RGB COLORS:C628(*; "BgndRing@"; $focus; Background color:K23:2)
 		
-		OBJECT SET VISIBLE:C603(*;$FocusRing;True:C214)
-		
-	: ($event=On Losing Focus:K2:8)
-		
-		OBJECT SET VISIBLE:C603(*;$FocusRing;False:C215)
+	: (Form event code:C388=On Losing Focus:K2:8)
+		OBJECT SET RGB COLORS:C628(*; "BgndRing@"; $notFocus; Background color:K23:2)
 		
 End case 
 
-SearchPicker__SetInterface 
+SearchPicker__SetInterface
 

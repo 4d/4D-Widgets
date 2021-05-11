@@ -27,17 +27,17 @@
 				"FocusRingBackGround": {
 					"type": "rectangle",
 					"top": 2,
-					"left": 3,
-					"width": 67,
+					"left": 2,
+					"width": 68,
 					"height": 20,
 					"visibility": "hidden",
 					"fill": "automatic",
-					"stroke": "transparent"
+					"stroke": "#808080"
 				},
 				"Texte": {
 					"type": "text",
 					"top": 4,
-					"left": 21,
+					"left": 20,
 					"width": 8,
 					"height": 16,
 					"class": "Default",
@@ -47,8 +47,8 @@
 				"Texte1": {
 					"type": "text",
 					"top": 4,
-					"left": 45,
-					"width": 7,
+					"left": 44,
+					"width": 8,
 					"height": 16,
 					"class": "Default",
 					"textAlign": "center",
@@ -95,7 +95,7 @@
 				"HoursEntry": {
 					"type": "input",
 					"top": 4,
-					"left": 5,
+					"left": 4,
 					"width": 16,
 					"height": 16,
 					"class": "Buttons_13",
@@ -110,15 +110,13 @@
 					"dropping": "custom",
 					"method": "ObjectMethods/HoursEntry.4dm",
 					"events": [
-						"onLosingFocus",
-						"onGettingFocus",
 						"onDataChange"
 					]
 				},
 				"MinutsEntry": {
 					"type": "input",
 					"top": 4,
-					"left": 29,
+					"left": 28,
 					"width": 16,
 					"height": 16,
 					"class": "Buttons_13",
@@ -133,8 +131,6 @@
 					"dropping": "custom",
 					"method": "ObjectMethods/MinutsEntry.4dm",
 					"events": [
-						"onLosingFocus",
-						"onGettingFocus",
 						"onDataChange"
 					]
 				},
@@ -156,8 +152,6 @@
 					"dropping": "custom",
 					"method": "ObjectMethods/SecondsEntry.4dm",
 					"events": [
-						"onLosingFocus",
-						"onGettingFocus",
 						"onDataChange"
 					]
 				},
@@ -356,5 +350,6 @@
 	"$4d": {
 		"version": "1",
 		"kind": "form"
-	}
+	},
+	"geometryStamp": 13
 }

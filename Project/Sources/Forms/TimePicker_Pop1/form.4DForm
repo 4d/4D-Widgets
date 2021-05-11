@@ -37,15 +37,35 @@
 						"onDataChange"
 					]
 				},
-				"Picture1": {
-					"type": "picture",
+				"Rectangle": {
+					"type": "rectangle",
 					"top": 0,
 					"left": 0,
-					"width": 84,
-					"height": 24,
-					"visibility": "hidden",
+					"width": 80,
+					"height": 21,
+					"stroke": "automatic",
+					"fill": "automatic",
+					"borderRadius": 4,
+					"visibility": "hidden"
+				},
+				"Text": {
+					"type": "text",
+					"text": "09:35",
+					"top": 3,
+					"left": 10,
+					"width": 60,
+					"height": 16,
+					"visibility": "hidden"
+				},
+				"Static Picture1": {
+					"type": "picture",
+					"top": 2,
+					"left": 62,
+					"width": 16,
+					"height": 16,
+					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
 					"pictureFormat": "scaled",
-					"picture": "Images/Picture1.png"
+					"visibility": "hidden"
 				}
 			}
 		},
@@ -176,7 +196,7 @@
 		}
 	],
 	"editor": {
-		"activeView": "Vue 1",
+		"activeView": "Preview",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
@@ -189,9 +209,10 @@
 				"selectable": false
 			},
 			"Preview": {
-				"selectable": false,
 				"objects": [
-					"Picture1"
+					"Rectangle",
+					"Text",
+					"Static Picture1"
 				]
 			},
 			"Vue 5": {},
@@ -200,5 +221,10 @@
 			"Vue 8": {},
 			"Vue 9": {}
 		}
+	},
+	"geometryStamp": 84,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }
