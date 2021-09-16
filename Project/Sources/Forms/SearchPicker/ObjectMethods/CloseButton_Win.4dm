@@ -1,0 +1,3 @@
+
+SearchPicker__BtnClose("Win")
+

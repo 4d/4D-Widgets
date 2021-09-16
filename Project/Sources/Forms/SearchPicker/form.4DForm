@@ -129,7 +129,8 @@
 					"events": [
 						"onClick"
 					],
-					"visibility": "hidden"
+					"visibility": "hidden",
+					"method": "ObjectMethods/CloseButton_Win.4dm"
 				},
 				"SearchText_Win": {
 					"type": "input",
@@ -148,7 +149,8 @@
 						"onAfterEdit"
 					],
 					"borderStyle": "none",
-					"visibility": "hidden"
+					"visibility": "hidden",
+					"stroke": "automatic"
 				},
 				"Preview": {
 					"type": "picture",
@@ -159,12 +161,30 @@
 					"visibility": "hidden",
 					"pictureFormat": "truncatedTopLeft",
 					"picture": "/RESOURCES/Images/Mac/SearchBox/SearchPreview.png"
+				},
+				"CloseButton_Win1": {
+					"type": "button",
+					"top": 86,
+					"left": 173,
+					"width": 20,
+					"height": 20,
+					"sizingX": "move",
+					"class": "Default",
+					"focusable": false,
+					"icon": "/RESOURCES/Images/Win/SearchBox/Searchbox_glass.png",
+					"iconFrames": 4,
+					"style": "custom",
+					"customBackgroundPicture": "var:0",
+					"events": [
+						"onClick"
+					],
+					"visibility": "hidden"
 				}
 			}
 		}
 	],
 	"editor": {
-		"activeView": "Search Mac",
+		"activeView": "Search Win",
 		"defaultView": "Search",
 		"views": {
 			"Search": {},
@@ -177,11 +197,11 @@
 				]
 			},
 			"Search Win": {
-				"visible": false,
 				"objects": [
 					"BgndRing_Win",
 					"CloseButton_Win",
-					"SearchText_Win"
+					"SearchText_Win",
+					"CloseButton_Win1"
 				]
 			},
 			"Preview": {
@@ -193,7 +213,7 @@
 			}
 		}
 	},
-	"geometryStamp": 214,
+	"geometryStamp": 258,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

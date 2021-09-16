@@ -2,7 +2,6 @@ C_POINTER:C301($Ptr)
 C_LONGINT:C283($Type)
 C_TEXT:C284($SearchText)
 
-
 Case of 
 		
 	: (Form event code:C388=On Load:K2:1)

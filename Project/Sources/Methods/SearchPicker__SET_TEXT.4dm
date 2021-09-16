@@ -11,7 +11,7 @@ C_POINTER:C301($Target)
 
 If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	
-	SearchPicker__InitInter 
+	SearchPicker__InitInter
 	
 	$CurrentText:=$1
 	
@@ -24,9 +24,9 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 			$SearchObjectName:="SearchText_Mac"
 		End if 
 		
-		Tool_VarToObject (->$CurrentText;$SearchObjectName;$Form)
+		Tool_VarToObject(->$CurrentText; $SearchObjectName; $Form)
 		
-		$Target:=SearchPicker__GetTarget 
+		$Target:=SearchPicker__GetTarget
 		If (Not:C34(Is nil pointer:C315($Target)))
 			$Target->:=$CurrentText
 		End if 
@@ -38,7 +38,7 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 Else 
 	
 	$ErrorText:=Get localized string:C991("Errors_TextParameter")
-	$ErrorText:=Replace string:C233($ErrorText;"[1]";Current method name:C684)
+	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	
 End if 
