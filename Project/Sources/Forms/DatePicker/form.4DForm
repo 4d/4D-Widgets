@@ -21,18 +21,22 @@
 		"paperHeight": "842pt"
 	},
 	"pages": [
-		null,
 		{
 			"objects": {
-				"Picture2": {
-					"type": "picture",
+				"Rectangle": {
+					"type": "rectangle",
 					"top": 0,
 					"left": 0,
 					"width": 168,
 					"height": 190,
-					"pictureFormat": "scaled",
-					"picture": "/RESOURCES/Images/Calendar/AlphaBackground.png"
-				},
+					"stroke": "transparent",
+					"fill": "automatic",
+					"strokeWidth": 0
+				}
+			}
+		},
+		{
+			"objects": {
 				"DatePicker_Btn_1": {
 					"type": "radio",
 					"top": 46,
@@ -875,11 +879,11 @@
 				},
 				"DisplayedMonth": {
 					"type": "input",
-					"top": 8,
-					"left": 0,
-					"width": 160,
+					"top": 7,
+					"left": 14,
+					"width": 140,
 					"height": 20,
-					"stroke": "#000000",
+					"stroke": "automatic",
 					"class": "Buttons_11",
 					"textAlign": "center",
 					"fontWeight": "bold",
@@ -1034,10 +1038,10 @@
 				"BtnNext": {
 					"type": "button",
 					"top": 5,
-					"left": 140,
+					"left": 148,
 					"width": 20,
 					"height": 20,
-					"fontFamily": ".SF NS Text",
+					"fontFamily": "System Font Regular",
 					"fontSize": 12,
 					"focusable": false,
 					"icon": "/RESOURCES/Images/Calendar/IconNext.png",
@@ -1060,7 +1064,7 @@
 					"left": 0,
 					"width": 20,
 					"height": 20,
-					"fontFamily": ".SF NS Text",
+					"fontFamily": "System Font Regular",
 					"fontSize": 12,
 					"focusable": false,
 					"icon": "/RESOURCES/Images/Calendar/IconPrevious.png",
@@ -1074,8 +1078,8 @@
 				},
 				"DummyBtnUp": {
 					"type": "button",
-					"top": 58,
-					"left": 1009,
+					"top": 46,
+					"left": 640,
 					"width": 30,
 					"height": 30,
 					"shortcutKey": "[up arrow]",
@@ -1087,8 +1091,8 @@
 				},
 				"DummyBtnLeft": {
 					"type": "button",
-					"top": 82,
-					"left": 967,
+					"top": 70,
+					"left": 598,
 					"width": 30,
 					"height": 30,
 					"shortcutKey": "[left arrow]",
@@ -1100,8 +1104,8 @@
 				},
 				"DummyBtnRight": {
 					"type": "button",
-					"top": 82,
-					"left": 1052,
+					"top": 70,
+					"left": 683,
 					"width": 30,
 					"height": 30,
 					"shortcutKey": "[right arrow]",
@@ -1113,8 +1117,8 @@
 				},
 				"DummyBtnDown": {
 					"type": "button",
-					"top": 103,
-					"left": 1009,
+					"top": 91,
+					"left": 640,
 					"width": 30,
 					"height": 30,
 					"shortcutKey": "[down arrow]",
@@ -1140,8 +1144,8 @@
 			"objects": {
 				"FormInited": {
 					"type": "input",
-					"top": 16,
-					"left": 419,
+					"top": 32,
+					"left": 601,
 					"width": 151,
 					"height": 13,
 					"visibility": "hidden",
@@ -1158,8 +1162,8 @@
 				},
 				"_ListMonthes": {
 					"type": "listbox",
-					"top": 46,
-					"left": 326,
+					"top": 62,
+					"left": 508,
 					"width": 110,
 					"height": 202,
 					"visibility": "hidden",
@@ -1211,8 +1215,8 @@
 				},
 				"_ListDays": {
 					"type": "listbox",
-					"top": 46,
-					"left": 439,
+					"top": 62,
+					"left": 621,
 					"width": 110,
 					"height": 202,
 					"visibility": "hidden",
@@ -1264,8 +1268,8 @@
 				},
 				"_WeeklyDaysOff": {
 					"type": "listbox",
-					"top": 46,
-					"left": 552,
+					"top": 62,
+					"left": 734,
 					"width": 110,
 					"height": 202,
 					"visibility": "hidden",
@@ -1317,8 +1321,8 @@
 				},
 				"_DaysNames": {
 					"type": "listbox",
-					"top": 46,
-					"left": 665,
+					"top": 62,
+					"left": 847,
 					"width": 110,
 					"height": 202,
 					"visibility": "hidden",
@@ -1371,8 +1375,8 @@
 				},
 				"_MonthesNames": {
 					"type": "listbox",
-					"top": 46,
-					"left": 778,
+					"top": 62,
+					"left": 960,
 					"width": 110,
 					"height": 202,
 					"visibility": "hidden",
@@ -1425,8 +1429,8 @@
 				},
 				"FirstDayOfWeek": {
 					"type": "input",
-					"top": 285,
-					"left": 293,
+					"top": 301,
+					"left": 475,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -1443,8 +1447,8 @@
 				},
 				"_DaysOff1": {
 					"type": "listbox",
-					"top": 285,
-					"left": 454,
+					"top": 301,
+					"left": 636,
 					"width": 110,
 					"height": 202,
 					"visibility": "hidden",
@@ -1499,8 +1503,8 @@
 				},
 				"_DaysOff2": {
 					"type": "listbox",
-					"top": 285,
-					"left": 567,
+					"top": 301,
+					"left": 749,
 					"width": 110,
 					"height": 202,
 					"visibility": "hidden",
@@ -1555,8 +1559,8 @@
 				},
 				"SelectedDate": {
 					"type": "input",
-					"top": 305,
-					"left": 293,
+					"top": 321,
+					"left": 475,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -1574,8 +1578,8 @@
 				},
 				"MinDate": {
 					"type": "input",
-					"top": 344,
-					"left": 293,
+					"top": 360,
+					"left": 475,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -1592,8 +1596,8 @@
 				},
 				"MaxDate": {
 					"type": "input",
-					"top": 365,
-					"left": 293,
+					"top": 381,
+					"left": 475,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -1610,8 +1614,8 @@
 				},
 				"FirstDisplayedDay": {
 					"type": "input",
-					"top": 402,
-					"left": 295,
+					"top": 418,
+					"left": 477,
 					"width": 127,
 					"height": 13,
 					"visibility": "hidden",
@@ -1628,8 +1632,8 @@
 				},
 				"FirstOfCurrentMonth": {
 					"type": "input",
-					"top": 423,
-					"left": 295,
+					"top": 439,
+					"left": 477,
 					"width": 127,
 					"height": 13,
 					"visibility": "hidden",
@@ -1646,8 +1650,8 @@
 				},
 				"Text": {
 					"type": "text",
-					"top": 345,
-					"left": 128,
+					"top": 361,
+					"left": 310,
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
@@ -1657,8 +1661,8 @@
 				},
 				"Text1": {
 					"type": "text",
-					"top": 365,
-					"left": 128,
+					"top": 381,
+					"left": 310,
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
@@ -1668,8 +1672,8 @@
 				},
 				"Text2": {
 					"type": "text",
-					"top": 16,
-					"left": 288,
+					"top": 32,
+					"left": 470,
 					"width": 118,
 					"height": 13,
 					"visibility": "hidden",
@@ -1679,8 +1683,8 @@
 				},
 				"Text4": {
 					"type": "text",
-					"top": 305,
-					"left": 128,
+					"top": 321,
+					"left": 310,
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
@@ -1690,8 +1694,8 @@
 				},
 				"Text5": {
 					"type": "text",
-					"top": 402,
-					"left": 100,
+					"top": 418,
+					"left": 282,
 					"width": 188,
 					"height": 13,
 					"visibility": "hidden",
@@ -1701,8 +1705,8 @@
 				},
 				"Text6": {
 					"type": "text",
-					"top": 285,
-					"left": 128,
+					"top": 301,
+					"left": 310,
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
@@ -1712,8 +1716,8 @@
 				},
 				"Text3": {
 					"type": "text",
-					"top": 423,
-					"left": 100,
+					"top": 439,
+					"left": 282,
 					"width": 188,
 					"height": 13,
 					"visibility": "hidden",
@@ -1725,13 +1729,11 @@
 		}
 	],
 	"editor": {
-		"activeView": "View 1",
+		"activeView": "Preview",
 		"defaultView": "View 1",
 		"views": {
 			"View 1": {},
 			"Preview": {
-				"visible": false,
-				"selectable": false,
 				"objects": [
 					"Picture6"
 				]
@@ -1744,5 +1746,10 @@
 			"View 8": {},
 			"View 9": {}
 		}
+	},
+	"geometryStamp": 241,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
 	}
 }

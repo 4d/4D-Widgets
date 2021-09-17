@@ -130,7 +130,7 @@
 					"height": 48,
 					"visibility": "hidden",
 					"pictureFormat": "truncatedTopLeft",
-					"picture": "Images/Picture5.png"
+					"picture": "Images/Preview.png"
 				},
 				"lcdDisplayMode": {
 					"type": "input",
@@ -198,8 +198,6 @@
 		"views": {
 			"View 1": {},
 			"View 2": {
-				"visible": false,
-				"selectable": false,
 				"objects": [
 					"Picture5"
 				]
@@ -222,5 +220,10 @@
 			"View 8": {},
 			"View 9": {}
 		}
-	}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 4
 }

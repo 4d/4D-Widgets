@@ -21,22 +21,22 @@ If (Count parameters:C259=2)
 				$SearchObjectName:="SearchText_Mac"
 			End if 
 			
-			EXECUTE METHOD IN SUBFORM:C1085($Form;"SearchPicker__SET_ENTERABLE";*;$SearchObjectName;$Enterable)
+			EXECUTE METHOD IN SUBFORM:C1085($Form; "SearchPicker__SET_ENTERABLE"; *; $SearchObjectName; $Enterable)
 			
 		Else 
 			$ErrorText:=Get localized string:C991("Errors_TextParameter")
-			$ErrorText:=Replace string:C233($ErrorText;"[1]";Current method name:C684)
+			$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 			ALERT:C41($ErrorText)
 		End if 
 	Else 
 		$ErrorText:=Get localized string:C991("Errors_BooleanParameter")
-		$ErrorText:=Replace string:C233($ErrorText;"[1]";Current method name:C684)
+		$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 		ALERT:C41($ErrorText)
 	End if 
 Else 
-	  //incorrect number of parameters
+	//incorrect number of parameters
 	$ErrorText:=Get localized string:C991("Errors_IncorrectParamNumbers")
-	$ErrorText:=Replace string:C233($ErrorText;"[1]";Current method name:C684)
+	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	
 End if 

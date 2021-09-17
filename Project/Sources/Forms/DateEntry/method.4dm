@@ -1,14 +1,14 @@
-  //modified by RL on avril 2nd 2010  ∆∆∆
-  // replace hard coded "/" system date separators
+//modified by RL on avril 2nd 2010  ∆∆∆
+// replace hard coded "/" system date separators
 
 C_DATE:C307($DisplayedDate)
 
-C_LONGINT:C283($start;$i)
-C_LONGINT:C283($dayWidth;$monthWidth;$yearWidth)
+C_LONGINT:C283($start; $i)
+C_LONGINT:C283($dayWidth; $monthWidth; $yearWidth)
 
 C_TEXT:C284($DateSeparator)
-C_TEXT:C284($PositionDay_t;$PositionMonth_t;$PositionYear_t)
-C_TEXT:C284($DayZoneName;$MonthZoneName;$YearZoneName)
+C_TEXT:C284($PositionDay_t; $PositionMonth_t; $PositionYear_t)
+C_TEXT:C284($DayZoneName; $MonthZoneName; $YearZoneName)
 
 C_POINTER:C301($datePicker_Target)
 
@@ -18,33 +18,33 @@ Case of
 		
 		CALL SUBFORM CONTAINER:C1086(On Load:K2:1*(-1))  //usefull when the widget is not in page 1 of the main form
 		
-		  //On load Only
+		//On load Only
 		
-		DatePicker__InitInter 
-		DatePicker__InitForm 
-		DateEntry__ManageFocus (On Deactivate:K2:10)
+		DatePicker__InitInter
+		DatePicker__InitForm
+		DateEntry__ManageFocus(On Deactivate:K2:10)
 		
-		  // Common code On Load / On bound variable change
+		// Common code On Load / On bound variable change
 		
-		$datePicker_Target:=DatePicker__GetTarget 
-		  // TM 2019-05-24 - don't use process variables to allow two instances.
+		$datePicker_Target:=DatePicker__GetTarget
+		// TM 2019-05-24 - don't use process variables to allow two instances.
 		
-		  //OBJECT SET DATA SOURCE(*;"Replica";$Target) // set the SAME taget to the subform 
+		//OBJECT SET DATA SOURCE(*;"Replica";$Target) // set the SAME taget to the subform 
 		
 		$DisplayedDate:=$datePicker_Target->
 		
-		$DisplayedDate:=DatePicker__SetSelectedDate ($DisplayedDate;"")
-		DatePicker__CalculateFirstDay ($DisplayedDate;"")
+		$DisplayedDate:=DatePicker__SetSelectedDate($DisplayedDate; "")
+		DatePicker__CalculateFirstDay($DisplayedDate; "")
 		
-		  // set sources of input zones according to system settings
+		// set sources of input zones according to system settings
 		
 		$dayWidth:=17
 		$monthWidth:=17
 		$yearWidth:=34
 		
-		ARRAY LONGINT:C221($_Width;5)
-		ARRAY POINTER:C280($_inputs;3)
-		ARRAY TEXT:C222($_inputNames;5)
+		ARRAY LONGINT:C221($_Width; 5)
+		ARRAY POINTER:C280($_inputs; 3)
+		ARRAY TEXT:C222($_inputNames; 5)
 		
 		$_Width{2}:=8  // slash1
 		$_Width{4}:=8  //slash2
@@ -55,14 +55,14 @@ Case of
 		$_inputNames{4}:="Slash2"
 		$_inputNames{5}:="RightEntry"
 		
-		$_inputs{1}:=OBJECT Get pointer:C1124(Object named:K67:5;"LeftEntry")
-		$_inputs{2}:=OBJECT Get pointer:C1124(Object named:K67:5;"CenterEntry")
-		$_inputs{3}:=OBJECT Get pointer:C1124(Object named:K67:5;"RightEntry")
+		$_inputs{1}:=OBJECT Get pointer:C1124(Object named:K67:5; "LeftEntry")
+		$_inputs{2}:=OBJECT Get pointer:C1124(Object named:K67:5; "CenterEntry")
+		$_inputs{3}:=OBJECT Get pointer:C1124(Object named:K67:5; "RightEntry")
 		
 		
-		GET SYSTEM FORMAT:C994(Short date day position:K60:12;$PositionDay_t)
-		GET SYSTEM FORMAT:C994(Short date month position:K60:13;$PositionMonth_t)
-		GET SYSTEM FORMAT:C994(Short date year position:K60:14;$PositionYear_t)
+		GET SYSTEM FORMAT:C994(Short date day position:K60:12; $PositionDay_t)
+		GET SYSTEM FORMAT:C994(Short date month position:K60:13; $PositionMonth_t)
+		GET SYSTEM FORMAT:C994(Short date year position:K60:14; $PositionYear_t)
 		
 		Case of 
 			: ($PositionDay_t="1") & ($PositionMonth_t="2") & ($PositionYear_t="3")  //DD/MM/YYYY
@@ -124,66 +124,64 @@ Case of
 				
 		End case 
 		
-		  // SAVE names in the form
+		// SAVE names in the form
 		
-		(OBJECT Get pointer:C1124(Object named:K67:5;"DayZoneName"))->:=$DayZoneName
-		(OBJECT Get pointer:C1124(Object named:K67:5;"MonthZoneName"))->:=$MonthZoneName
-		(OBJECT Get pointer:C1124(Object named:K67:5;"YearZoneName"))->:=$YearZoneName
+		(OBJECT Get pointer:C1124(Object named:K67:5; "DayZoneName"))->:=$DayZoneName
+		(OBJECT Get pointer:C1124(Object named:K67:5; "MonthZoneName"))->:=$MonthZoneName
+		(OBJECT Get pointer:C1124(Object named:K67:5; "YearZoneName"))->:=$YearZoneName
 		
-		  // resize objects (the order will NOT be changed !!!)
-		OBJECT GET COORDINATES:C663(*;$_inputNames{1};$x1;$y1;$x2;$y2)
+		// resize objects (the order will NOT be changed !!!)
+		OBJECT GET COORDINATES:C663(*; $_inputNames{1}; $x1; $y1; $x2; $y2)
 		$start:=$x1
-		For ($i;1;5)
-			OBJECT MOVE:C664(*;$_inputNames{$i};$start;$y1;$start+$_Width{$i};$y2;*)
+		For ($i; 1; 5)
+			OBJECT MOVE:C664(*; $_inputNames{$i}; $start; $y1; $start+$_Width{$i}; $y2; *)
 			$start:=$start+$_Width{$i}
 		End for 
 		
-		OBJECT SET FORMAT:C236(*;$DayZoneName;"00")
-		OBJECT SET FORMAT:C236(*;$MonthZoneName;"00")
-		OBJECT SET FORMAT:C236(*;$YearZoneName;"0000")
+		OBJECT SET FORMAT:C236(*; $DayZoneName; "00")
+		OBJECT SET FORMAT:C236(*; $MonthZoneName; "00")
+		OBJECT SET FORMAT:C236(*; $YearZoneName; "0000")
 		
 		
-		GET SYSTEM FORMAT:C994(Date separator:K60:10;$DateSeparator)  //∆∆∆
-		OBJECT SET TITLE:C194(*;"Slash1";$DateSeparator)
-		OBJECT SET TITLE:C194(*;"Slash2";$DateSeparator)
+		GET SYSTEM FORMAT:C994(Date separator:K60:10; $DateSeparator)  //∆∆∆
+		OBJECT SET TITLE:C194(*; "Slash1"; $DateSeparator)
+		OBJECT SET TITLE:C194(*; "Slash2"; $DateSeparator)
 		
-		(OBJECT Get pointer:C1124(Object named:K67:5;$DayZoneName))->:=String:C10(Day of:C23($DisplayedDate);"00")
-		(OBJECT Get pointer:C1124(Object named:K67:5;$MonthZoneName))->:=String:C10(Month of:C24($DisplayedDate);"00")
-		(OBJECT Get pointer:C1124(Object named:K67:5;$YearZoneName))->:=String:C10(Year of:C25($DisplayedDate);"0000")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $DayZoneName))->:=String:C10(Day of:C23($DisplayedDate); "00")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $MonthZoneName))->:=String:C10(Month of:C24($DisplayedDate); "00")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $YearZoneName))->:=String:C10(Year of:C25($DisplayedDate); "0000")
 		
+		OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
 		
-		  //Bouton;0;0;0;0;0;2020;0;0;0;0;0;0
-		  //$format:=OBJECT Get format(*;"FocusRing")
-		OBJECT SET FORMAT:C236(*;"FocusRing";";;;;;;2020")
 		
 	: (Form event code:C388=On Bound Variable Change:K2:52)
 		
-		  // Common code On Load / On bound variable change
+		// Common code On Load / On bound variable change
 		
-		$datePicker_Target:=DatePicker__GetTarget 
-		  // TM 2019-05-24 - don't use process variables to allow two instances.
+		$datePicker_Target:=DatePicker__GetTarget
+		// TM 2019-05-24 - don't use process variables to allow two instances.
 		$DisplayedDate:=$datePicker_Target->
 		
-		$DisplayedDate:=DatePicker__SetSelectedDate ($DisplayedDate;"")
+		$DisplayedDate:=DatePicker__SetSelectedDate($DisplayedDate; "")
 		
-		DatePicker__CalculateFirstDay ($DisplayedDate;"")
+		DatePicker__CalculateFirstDay($DisplayedDate; "")
 		
-		$DayZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5;"DayZoneName"))->
-		$MonthZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5;"MonthZoneName"))->
-		$YearZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5;"YearZoneName"))->
+		$DayZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5; "DayZoneName"))->
+		$MonthZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5; "MonthZoneName"))->
+		$YearZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5; "YearZoneName"))->
 		
-		(OBJECT Get pointer:C1124(Object named:K67:5;$DayZoneName))->:=String:C10(Day of:C23($DisplayedDate);"00")
-		(OBJECT Get pointer:C1124(Object named:K67:5;$MonthZoneName))->:=String:C10(Month of:C24($DisplayedDate);"00")
-		(OBJECT Get pointer:C1124(Object named:K67:5;$YearZoneName))->:=String:C10(Year of:C25($DisplayedDate);"0000")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $DayZoneName))->:=String:C10(Day of:C23($DisplayedDate); "00")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $MonthZoneName))->:=String:C10(Month of:C24($DisplayedDate); "00")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $YearZoneName))->:=String:C10(Year of:C25($DisplayedDate); "0000")
 		
 		
 	: (Form event code:C388=On Activate:K2:9)
 		
-		DateEntry__ManageFocus (Form event code:C388)
-		$datePicker_Target:=DatePicker__GetTarget   //ACI0097346
+		DateEntry__ManageFocus(Form event code:C388)
+		$datePicker_Target:=DatePicker__GetTarget  //ACI0097346
 		
 	: (Form event code:C388=On Deactivate:K2:10)
 		
-		DateEntry__ManageFocus (Form event code:C388)
+		DateEntry__ManageFocus(Form event code:C388)
 		
 End case 
