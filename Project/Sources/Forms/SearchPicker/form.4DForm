@@ -22,6 +22,14 @@
 		null,
 		{
 			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 49,
+					"left": 136,
+					"width": 93,
+					"height": 22,
+					"fill": "#dda0dd"
+				},
 				"BgndRing_Mac": {
 					"type": "rectangle",
 					"top": 3,
@@ -62,7 +70,7 @@
 					"sizingX": "grow",
 					"borderRadius": 0,
 					"stroke": "#808080",
-					"fill": "automatic",
+					"fill": "#FFFFFF",
 					"visibility": "hidden"
 				},
 				"SearchText_Mac": {
@@ -150,7 +158,8 @@
 					],
 					"borderStyle": "none",
 					"visibility": "hidden",
-					"stroke": "automatic"
+					"stroke": "automatic",
+					"fill": "#FFFFFF"
 				},
 				"Preview": {
 					"type": "picture",
@@ -198,6 +207,7 @@
 			},
 			"Search Win": {
 				"objects": [
+					"Rectangle",
 					"BgndRing_Win",
 					"CloseButton_Win",
 					"SearchText_Win",
@@ -213,7 +223,7 @@
 			}
 		}
 	},
-	"geometryStamp": 258,
+	"geometryStamp": 289,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
