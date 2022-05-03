@@ -33,7 +33,8 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"focusable": false
 				},
 				"Minuts": {
 					"type": "dropdown",
@@ -46,7 +47,8 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"focusable": false
 				},
 				"Texte1": {
 					"type": "text",
@@ -260,7 +262,17 @@
 				"visible": false,
 				"selectable": false
 			},
-			"Preview": {},
+			"Preview": {
+				"visible": false,
+				"objects": [
+					"Rectangle",
+					"Text",
+					"Rectangle1",
+					"Text1",
+					"Static Picture1",
+					"Static Picture2"
+				]
+			},
 			"Vue 5": {
 				"visible": false,
 				"selectable": false

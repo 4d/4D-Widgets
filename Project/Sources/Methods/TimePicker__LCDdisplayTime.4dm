@@ -12,7 +12,7 @@ C_LONGINT:C283($hours)
 C_LONGINT:C283($minuts)
 C_LONGINT:C283($seconds)
 C_LONGINT:C283($index)
-C_LONGINT:C283($digit;$segment)
+C_LONGINT:C283($digit; $segment)
 
 C_TEXT:C284($objectName)
 C_TEXT:C284($AmPm)
@@ -56,23 +56,23 @@ If ($mode=12)
 	End case 
 End if 
 
-$time_t:=String:C10($hours;"00")+String:C10($minuts;"00")+String:C10($seconds;"00")+$AmPm
+$time_t:=String:C10($hours; "00")+String:C10($minuts; "00")+String:C10($seconds; "00")+$AmPm
 
-  //0 : ABCDEF
-  //1 : BC
-  //2 : ABEDG
-  //3 : ABGCD
-  //4 : FGBC
-  //5 : AFGCD
-  //6 : AFEDCG
-  //7 : ABC
-  //8 : ABCDEFG
-  //9 : FABGCD
-  //10 : EFABC (A)
-  //11 : EFABG (P)
-  //12 : EFABCH (M)
+//0 : ABCDEF
+//1 : BC
+//2 : ABEDG
+//3 : ABGCD
+//4 : FGBC
+//5 : AFGCD
+//6 : AFEDCG
+//7 : ABC
+//8 : ABCDEFG
+//9 : FABGCD
+//10 : EFABC (A)
+//11 : EFABG (P)
+//12 : EFABCH (M)
 
-ARRAY LONGINT:C221($Decoder;12;8)
+ARRAY LONGINT:C221($Decoder; 12; 8)
 
 $Decoder{0}{1}:=1
 $Decoder{0}{2}:=1
@@ -191,7 +191,7 @@ $Decoder{12}{6}:=1
 $Decoder{12}{7}:=0
 $Decoder{12}{8}:=1
 
-For ($digit;1;Length:C16($time_t))
+For ($digit; 1; Length:C16($time_t))
 	
 	$Value_t:=$time_t[[$digit]]
 	Case of 
@@ -205,20 +205,20 @@ For ($digit;1;Length:C16($time_t))
 			$index:=12
 	End case 
 	
-	For ($segment;1;8)
+	For ($segment; 1; 8)
 		
 		$id:="dig"+String:C10($digit)+"_seg"+Char:C90(Character code:C91("A")+$segment-1)
 		
 		If ($Decoder{$index}{$segment}=1)
-			SVG SET ATTRIBUTE:C1055(*;$objectName;$id;"fill-opacity";"1")
-			SVG SET ATTRIBUTE:C1055(*;$objectName;$id;"stroke-opacity";"1")
+			SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "fill-opacity"; "1")
+			SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "stroke-opacity"; "1")
 		Else 
 			If ($segment#8)  // barre vertical du M (exception)
-				SVG SET ATTRIBUTE:C1055(*;$objectName;$id;"fill-opacity";"0.05")
-				SVG SET ATTRIBUTE:C1055(*;$objectName;$id;"stroke-opacity";"0.05")
+				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "fill-opacity"; "0.05")
+				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "stroke-opacity"; "0.05")
 			Else 
-				SVG SET ATTRIBUTE:C1055(*;$objectName;$id;"fill-opacity";"0")
-				SVG SET ATTRIBUTE:C1055(*;$objectName;$id;"stroke-opacity";"0")
+				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "fill-opacity"; "0")
+				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "stroke-opacity"; "0")
 			End if 
 		End if 
 		
@@ -226,11 +226,11 @@ For ($digit;1;Length:C16($time_t))
 End for 
 
 If (((Milliseconds:C459%1000)>500) | (Not:C34($blink)))
-	SVG SET ATTRIBUTE:C1055(*;$objectName;"blink";"fill-opacity";"1")
-	SVG SET ATTRIBUTE:C1055(*;$objectName;"blink";"stroke-opacity";"1")
+	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "fill-opacity"; "1")
+	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "stroke-opacity"; "1")
 Else 
-	SVG SET ATTRIBUTE:C1055(*;$objectName;"blink";"fill-opacity";"0.05")
-	SVG SET ATTRIBUTE:C1055(*;$objectName;"blink";"stroke-opacity";"0.05")
+	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "fill-opacity"; "0.05")
+	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "stroke-opacity"; "0.05")
 End if 
 
 

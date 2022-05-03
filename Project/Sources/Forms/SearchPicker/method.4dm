@@ -1,6 +1,6 @@
 C_POINTER:C301($Ptr)
-C_LONGINT:C283($Type)
-C_TEXT:C284($SearchText)
+C_LONGINT:C283($type)
+C_TEXT:C284($searchText)
 
 Case of 
 		
@@ -23,11 +23,11 @@ Case of
 		$Ptr:=Self:C308(Object subform container:K67:4)  //parent associated variable which is A TEXT
 		If (Not:C34(Is nil pointer:C315($Ptr)))
 			
-			$Type:=Type:C295($Ptr->)
+			$type:=Type:C295($Ptr->)
 			
-			If ($Type=Is string var:K8:2) | ($Type=Is text:K8:3)
-				$SearchText:=$Ptr->
-				SearchPicker__SET_TEXT($SearchText; "")
+			If ($type=Is string var:K8:2) | ($type=Is text:K8:3)
+				$searchText:=$Ptr->
+				SearchPicker__SET_TEXT($searchText; "")
 			End if 
 			
 		End if 
@@ -36,17 +36,11 @@ Case of
 		
 	: (Form event code:C388=On Bound Variable Change:K2:52)
 		
-		$Ptr:=Self:C308(Object subform container:K67:4)  //parent associated variable which is A TEXT
-		If (Not:C34(Is nil pointer:C315($Ptr)))
-			
-			$Type:=Type:C295($Ptr->)
-			
-			If ($Type=Is string var:K8:2) | ($Type=Is text:K8:3)
-				$SearchText:=$Ptr->
-				SearchPicker__SET_TEXT($SearchText; "")
-			End if 
-			
-		End if 
+		$searchText:=SearchPicker__GetTarget
+		
+		SearchPicker__SET_TEXT($searchText; "")
+		
+		
 		
 		SearchPicker__SetInterface
 		

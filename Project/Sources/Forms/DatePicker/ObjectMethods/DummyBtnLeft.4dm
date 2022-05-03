@@ -1,11 +1,11 @@
-  // left
+// left
 
-C_DATE:C307($SelectedDate)
-Tool_ObjectToVar ("SelectedDate";->$SelectedDate)
+C_DATE:C307($selectedDate)
+Tool_ObjectToVar("SelectedDate"; ->$selectedDate)
 
-$SelectedDate:=Add to date:C393($SelectedDate;0;0;-1)
+$selectedDate:=Add to date:C393($selectedDate; 0; 0; -1)
 
-$SelectedDate:=DatePicker__SetSelectedDate ($SelectedDate;"")
+$selectedDate:=DatePicker__SetSelectedDate($selectedDate; "")
 
-DatePicker__CalculateFirstDay ($SelectedDate)
-DatePicker__RedrawCalendar 
+DatePicker__CalculateFirstDay($selectedDate)
+DatePicker__RedrawCalendar

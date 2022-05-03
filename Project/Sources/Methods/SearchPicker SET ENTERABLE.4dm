@@ -5,7 +5,7 @@ C_BOOLEAN:C305($2)  //true or false
 
 C_TEXT:C284($Form)
 C_TEXT:C284($ErrorText)
-C_TEXT:C284($SearchObjectName)
+C_TEXT:C284($searchObjectName)
 
 C_BOOLEAN:C305($Enterable)
 
@@ -16,12 +16,12 @@ If (Count parameters:C259=2)
 			$Enterable:=$2
 			
 			If (Is Windows:C1573)
-				$SearchObjectName:="SearchText_Win"
+				$searchObjectName:="SearchText_Win"
 			Else   //macintosh
-				$SearchObjectName:="SearchText_Mac"
+				$searchObjectName:="SearchText_Mac"
 			End if 
 			
-			EXECUTE METHOD IN SUBFORM:C1085($Form; "SearchPicker__SET_ENTERABLE"; *; $SearchObjectName; $Enterable)
+			EXECUTE METHOD IN SUBFORM:C1085($Form; "SearchPicker__SET_ENTERABLE"; *; $searchObjectName; $Enterable)
 			
 		Else 
 			$ErrorText:=Get localized string:C991("Errors_TextParameter")

@@ -6,7 +6,7 @@ C_POINTER:C301($PtrTarget)
 C_TEXT:C284($2)
 C_TEXT:C284($Form)
 
-C_TIME:C306($Time)
+C_TIME:C306($time)
 
 $PtrTarget:=$1
 
@@ -16,9 +16,9 @@ Else
 	$Form:=""
 End if 
 
-Tool_ObjectToVar ("SelectedTime";->$Time;$Form)
-If ($Time=?00:00:00?)
-	$Time:=<>TimePicker_SelectedTime
+Tool_ObjectToVar("SelectedTime"; ->$time; $Form)
+If ($time=?00:00:00?)
+	$time:=<>TimePicker_SelectedTime
 End if 
 
-$PtrTarget->:=$Time
+$PtrTarget->:=$time

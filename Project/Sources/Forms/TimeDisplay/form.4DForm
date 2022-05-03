@@ -54,8 +54,8 @@
 				},
 				"clockDisplaySecondHand": {
 					"type": "input",
-					"top": 77,
-					"left": 913,
+					"top": 60,
+					"left": 519,
 					"width": 181,
 					"height": 16,
 					"visibility": "hidden",
@@ -82,8 +82,8 @@
 				},
 				"clockRebuild": {
 					"type": "input",
-					"top": 41,
-					"left": 913,
+					"top": 24,
+					"left": 519,
 					"width": 181,
 					"height": 16,
 					"visibility": "hidden",
@@ -139,5 +139,5 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 50
+	"geometryStamp": 51
 }

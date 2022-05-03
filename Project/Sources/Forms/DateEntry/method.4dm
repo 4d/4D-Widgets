@@ -6,11 +6,9 @@ C_DATE:C307($DisplayedDate)
 C_LONGINT:C283($start; $i)
 C_LONGINT:C283($dayWidth; $monthWidth; $yearWidth)
 
-C_TEXT:C284($DateSeparator)
+C_TEXT:C284($dateSeparator)
 C_TEXT:C284($PositionDay_t; $PositionMonth_t; $PositionYear_t)
-C_TEXT:C284($DayZoneName; $MonthZoneName; $YearZoneName)
-
-C_POINTER:C301($datePicker_Target)
+C_TEXT:C284($DayZoneName; $monthZoneName; $YearZoneName)
 
 Case of 
 		
@@ -26,13 +24,7 @@ Case of
 		
 		// Common code On Load / On bound variable change
 		
-		$datePicker_Target:=DatePicker__GetTarget
-		// TM 2019-05-24 - don't use process variables to allow two instances.
-		
-		//OBJECT SET DATA SOURCE(*;"Replica";$Target) // set the SAME taget to the subform 
-		
-		$DisplayedDate:=$datePicker_Target->
-		
+		$DisplayedDate:=DatePicker__GetTarget
 		$DisplayedDate:=DatePicker__SetSelectedDate($DisplayedDate; "")
 		DatePicker__CalculateFirstDay($DisplayedDate; "")
 		
@@ -67,7 +59,7 @@ Case of
 		Case of 
 			: ($PositionDay_t="1") & ($PositionMonth_t="2") & ($PositionYear_t="3")  //DD/MM/YYYY
 				$DayZoneName:="LeftEntry"
-				$MonthZoneName:="CenterEntry"
+				$monthZoneName:="CenterEntry"
 				$YearZoneName:="RightEntry"
 				$_Width{1}:=$dayWidth
 				$_Width{3}:=$monthWidth
@@ -76,13 +68,13 @@ Case of
 			: ($PositionDay_t="1") & ($PositionYear_t="2") & ($PositionMonth_t="3")  //DD/YYYY/MM
 				$DayZoneName:="LeftEntry"
 				$YearZoneName:="CenterEntry"
-				$MonthZoneName:="RightEntry"
+				$monthZoneName:="RightEntry"
 				$_Width{1}:=$dayWidth
 				$_Width{3}:=$yearWidth
 				$_Width{5}:=$monthWidth
 				
 			: ($PositionMonth_t="1") & ($PositionDay_t="2") & ($PositionYear_t="3")  //MM/DD/YYYY
-				$MonthZoneName:="LeftEntry"
+				$monthZoneName:="LeftEntry"
 				$DayZoneName:="CenterEntry"
 				$YearZoneName:="RightEntry"
 				$_Width{1}:=$monthWidth
@@ -92,13 +84,13 @@ Case of
 			: ($PositionYear_t="1") & ($PositionDay_t="2") & ($PositionMonth_t="3")  //YYYY/DD/MM
 				$YearZoneName:="LeftEntry"
 				$DayZoneName:="CenterEntry"
-				$MonthZoneName:="RightEntry"
+				$monthZoneName:="RightEntry"
 				$_Width{1}:=$yearWidth
 				$_Width{3}:=$dayWidth
 				$_Width{5}:=$monthWidth
 				
 			: ($PositionMonth_t="1") & ($PositionYear_t="2") & ($PositionDay_t="3")  //MM/YYYY/DD
-				$MonthZoneName:="LeftEntry"
+				$monthZoneName:="LeftEntry"
 				$YearZoneName:="CenterEntry"
 				$DayZoneName:="RightEntry"
 				$_Width{1}:=$monthWidth
@@ -107,7 +99,7 @@ Case of
 				
 			: ($PositionYear_t="1") & ($PositionMonth_t="2") & ($PositionDay_t="3")  //YYYY/MM/DD
 				$YearZoneName:="LeftEntry"
-				$MonthZoneName:="CenterEntry"
+				$monthZoneName:="CenterEntry"
 				$DayZoneName:="RightEntry"
 				$_Width{1}:=$yearWidth
 				$_Width{3}:=$monthWidth
@@ -116,7 +108,7 @@ Case of
 			Else   // default values
 				
 				$DayZoneName:="LeftEntry"
-				$MonthZoneName:="CenterEntry"
+				$monthZoneName:="CenterEntry"
 				$YearZoneName:="RightEntry"
 				$_Width{1}:=$dayWidth
 				$_Width{3}:=$monthWidth
@@ -127,7 +119,7 @@ Case of
 		// SAVE names in the form
 		
 		(OBJECT Get pointer:C1124(Object named:K67:5; "DayZoneName"))->:=$DayZoneName
-		(OBJECT Get pointer:C1124(Object named:K67:5; "MonthZoneName"))->:=$MonthZoneName
+		(OBJECT Get pointer:C1124(Object named:K67:5; "MonthZoneName"))->:=$monthZoneName
 		(OBJECT Get pointer:C1124(Object named:K67:5; "YearZoneName"))->:=$YearZoneName
 		
 		// resize objects (the order will NOT be changed !!!)
@@ -139,16 +131,16 @@ Case of
 		End for 
 		
 		OBJECT SET FORMAT:C236(*; $DayZoneName; "00")
-		OBJECT SET FORMAT:C236(*; $MonthZoneName; "00")
+		OBJECT SET FORMAT:C236(*; $monthZoneName; "00")
 		OBJECT SET FORMAT:C236(*; $YearZoneName; "0000")
 		
 		
-		GET SYSTEM FORMAT:C994(Date separator:K60:10; $DateSeparator)  //∆∆∆
-		OBJECT SET TITLE:C194(*; "Slash1"; $DateSeparator)
-		OBJECT SET TITLE:C194(*; "Slash2"; $DateSeparator)
+		GET SYSTEM FORMAT:C994(Date separator:K60:10; $dateSeparator)  //∆∆∆
+		OBJECT SET TITLE:C194(*; "Slash1"; $dateSeparator)
+		OBJECT SET TITLE:C194(*; "Slash2"; $dateSeparator)
 		
 		(OBJECT Get pointer:C1124(Object named:K67:5; $DayZoneName))->:=String:C10(Day of:C23($DisplayedDate); "00")
-		(OBJECT Get pointer:C1124(Object named:K67:5; $MonthZoneName))->:=String:C10(Month of:C24($DisplayedDate); "00")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $monthZoneName))->:=String:C10(Month of:C24($DisplayedDate); "00")
 		(OBJECT Get pointer:C1124(Object named:K67:5; $YearZoneName))->:=String:C10(Year of:C25($DisplayedDate); "0000")
 		
 		OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
@@ -158,27 +150,24 @@ Case of
 		
 		// Common code On Load / On bound variable change
 		
-		$datePicker_Target:=DatePicker__GetTarget
-		// TM 2019-05-24 - don't use process variables to allow two instances.
-		$DisplayedDate:=$datePicker_Target->
 		
+		$DisplayedDate:=DatePicker__GetTarget
 		$DisplayedDate:=DatePicker__SetSelectedDate($DisplayedDate; "")
 		
 		DatePicker__CalculateFirstDay($DisplayedDate; "")
 		
 		$DayZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5; "DayZoneName"))->
-		$MonthZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5; "MonthZoneName"))->
+		$monthZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5; "MonthZoneName"))->
 		$YearZoneName:=(OBJECT Get pointer:C1124(Object named:K67:5; "YearZoneName"))->
 		
 		(OBJECT Get pointer:C1124(Object named:K67:5; $DayZoneName))->:=String:C10(Day of:C23($DisplayedDate); "00")
-		(OBJECT Get pointer:C1124(Object named:K67:5; $MonthZoneName))->:=String:C10(Month of:C24($DisplayedDate); "00")
+		(OBJECT Get pointer:C1124(Object named:K67:5; $monthZoneName))->:=String:C10(Month of:C24($DisplayedDate); "00")
 		(OBJECT Get pointer:C1124(Object named:K67:5; $YearZoneName))->:=String:C10(Year of:C25($DisplayedDate); "0000")
 		
 		
 	: (Form event code:C388=On Activate:K2:9)
 		
 		DateEntry__ManageFocus(Form event code:C388)
-		$datePicker_Target:=DatePicker__GetTarget  //ACI0097346
 		
 	: (Form event code:C388=On Deactivate:K2:10)
 		

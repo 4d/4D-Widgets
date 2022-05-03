@@ -1729,11 +1729,12 @@
 		}
 	],
 	"editor": {
-		"activeView": "Preview",
+		"activeView": "View 1",
 		"defaultView": "View 1",
 		"views": {
 			"View 1": {},
 			"Preview": {
+				"visible": false,
 				"objects": [
 					"Picture6"
 				]

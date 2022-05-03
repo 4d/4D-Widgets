@@ -34,7 +34,8 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"focusable": false
 				},
 				"Minuts": {
 					"type": "dropdown",
@@ -48,13 +49,14 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"focusable": false
 				},
 				"Texte1": {
 					"type": "text",
 					"top": 2,
-					"left": 114,
-					"width": 2,
+					"left": 87,
+					"width": 6,
 					"height": 16,
 					"sizingX": "move",
 					"class": "Default",
@@ -284,12 +286,10 @@
 		}
 	],
 	"editor": {
-		"activeView": "Preview",
+		"activeView": "Vue 1",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
-			"Vue 2": {},
-			"Vue 3": {},
 			"Preview": {
 				"objects": [
 					"Picture1",
@@ -300,15 +300,10 @@
 					"Static Picture1",
 					"Static Picture2"
 				]
-			},
-			"Vue 5": {},
-			"Vue 6": {},
-			"Vue 7": {},
-			"Vue 8": {},
-			"Vue 9": {}
+			}
 		}
 	},
-	"geometryStamp": 65,
+	"geometryStamp": 78,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

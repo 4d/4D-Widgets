@@ -6,7 +6,7 @@ C_POINTER:C301($PtrTarget)
 C_TEXT:C284($2)
 C_TEXT:C284($Form)
 
-C_TIME:C306($Time)
+C_TIME:C306($time)
 
 $PtrTarget:=$1
 
@@ -16,6 +16,6 @@ Else
 	$Form:=""
 End if 
 
-Tool_ObjectToVar ("MinTime";->$Time;$Form)
+Tool_ObjectToVar("MinTime"; ->$time; $Form)
 
-$PtrTarget->:=$Time
+$PtrTarget->:=$time

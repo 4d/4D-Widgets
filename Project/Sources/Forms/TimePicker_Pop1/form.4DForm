@@ -35,7 +35,8 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"focusable": false
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -196,7 +197,7 @@
 		}
 	],
 	"editor": {
-		"activeView": "Preview",
+		"activeView": "Vue 1",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
@@ -209,6 +210,7 @@
 				"selectable": false
 			},
 			"Preview": {
+				"visible": false,
 				"objects": [
 					"Rectangle",
 					"Text",

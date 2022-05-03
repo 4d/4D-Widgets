@@ -8,7 +8,7 @@ C_TEXT:C284($subFormName)
 C_TEXT:C284($ErrorText)
 C_TEXT:C284($rgb)
 
-C_LONGINT:C283($red;$blue;$green)
+C_LONGINT:C283($red; $blue; $green)
 
 If (Count parameters:C259>=2)
 	
@@ -25,12 +25,12 @@ If (Count parameters:C259>=2)
 	End if 
 	
 	$rgb:="rgb("+String:C10($red)+","+String:C10($green)+","+String:C10($blue)+")"
-	EXECUTE METHOD IN SUBFORM:C1085($subFormName;"TimePicker__LCD SET COLOR";*;$rgb)
+	EXECUTE METHOD IN SUBFORM:C1085($subFormName; "TimePicker__LCD SET COLOR"; *; $rgb)
 	
 Else 
-	  //incorrect number of parameters
+	//incorrect number of parameters
 	$ErrorText:=Get localized string:C991("Errors_IncorrectParamNumbers")
-	$ErrorText:=Replace string:C233($ErrorText;"[1]";Current method name:C684)
+	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 End if 
 

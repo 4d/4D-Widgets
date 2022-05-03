@@ -5,9 +5,9 @@ C_TEXT:C284($2)  //destination parent form if provided
 C_TEXT:C284($CurrentText)
 C_TEXT:C284($Form)
 C_TEXT:C284($ErrorText)
-C_TEXT:C284($SearchObjectName)
+C_TEXT:C284($searchObjectName)
 
-C_POINTER:C301($Target)
+C_POINTER:C301($target)
 
 If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	
@@ -19,17 +19,20 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 		$Form:=$2
 		
 		If (Is Windows:C1573)
-			$SearchObjectName:="SearchText_Win"
+			$searchObjectName:="SearchText_Win"
 		Else   //macintosh
-			$SearchObjectName:="SearchText_Mac"
+			$searchObjectName:="SearchText_Mac"
 		End if 
 		
-		Tool_VarToObject(->$CurrentText; $SearchObjectName; $Form)
+		Tool_VarToObject(->$CurrentText; $searchObjectName; $Form)
 		
-		$Target:=SearchPicker__GetTarget
-		If (Not:C34(Is nil pointer:C315($Target)))
-			$Target->:=$CurrentText
-		End if 
+		
+		SearchPicker__SetTarget($CurrentText)
+		
+		//$target:=SearchPicker__GetTarget
+		//If (Not(Is nil pointer($target)))
+		//$target->:=$CurrentText
+		//End if 
 		
 	Else 
 		

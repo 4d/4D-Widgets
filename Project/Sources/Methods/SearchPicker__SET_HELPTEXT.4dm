@@ -3,7 +3,7 @@ C_TEXT:C284($1)
 
 C_TEXT:C284($CurrentHelp)
 C_TEXT:C284($ErrorText)
-C_TEXT:C284($SearchObjectName)
+C_TEXT:C284($searchObjectName)
 
 If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	
@@ -12,12 +12,12 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	$CurrentHelp:=$1
 	
 	If (Is Windows:C1573)
-		$SearchObjectName:="SearchText_Win"
+		$searchObjectName:="SearchText_Win"
 	Else   //macintosh
-		$SearchObjectName:="SearchText_Mac"
+		$searchObjectName:="SearchText_Mac"
 	End if 
 	
-	OBJECT SET PLACEHOLDER:C1295(*; $SearchObjectName; $CurrentHelp)
+	OBJECT SET PLACEHOLDER:C1295(*; $searchObjectName; $CurrentHelp)
 	
 Else 
 	

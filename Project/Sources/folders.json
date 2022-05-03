@@ -1,12 +1,5 @@
 ﻿{
-	"Compiler": {
-		"methods": [
-			"Compiler_Arrays_Inter",
-			"Compiler_Methods",
-			"Compiler_Variables",
-			"Compiler_Variables_Inter"
-		]
-	},
+	"Compiler": {},
 	"DatePicker": {
 		"groups": [
 			"DatePicker Forms",

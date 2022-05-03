@@ -1,0 +1,484 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Subform": {
+					"type": "subform",
+					"left": 433,
+					"top": 244,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Input": {
+					"type": "input",
+					"left": 431,
+					"top": 131,
+					"width": 132,
+					"height": 17,
+					"dataSourceTypeHint": "time",
+					"dataSource": "Form:C1466.startTime",
+					"timeFormat": "hh_mm_ss",
+					"method": "ObjectMethods/Input.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Button": {
+					"type": "button",
+					"text": "TEST",
+					"top": 38,
+					"left": 221,
+					"width": 186,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 227,
+					"top": 131,
+					"width": 132,
+					"height": 17,
+					"dataSourceTypeHint": "time",
+					"dataSource": "vStartTime",
+					"timeFormat": "hh_mm_ss",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Subform5": {
+					"type": "subform",
+					"left": 854,
+					"top": 85,
+					"width": 120,
+					"height": 120,
+					"detailForm": "TimeDisplay",
+					"borderStyle": "sunken",
+					"dataSource": "vShift1"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "TEST",
+					"top": 29,
+					"left": 931,
+					"width": 186,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Text": {
+					"type": "text",
+					"text": "VAR NUM",
+					"top": 137,
+					"left": 741,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Subform6": {
+					"type": "subform",
+					"left": 854,
+					"top": 413,
+					"width": 120,
+					"height": 120,
+					"detailForm": "TimeDisplay",
+					"borderStyle": "sunken",
+					"dataSource": "vStaticTime1"
+				},
+				"Subform8": {
+					"type": "subform",
+					"left": 854,
+					"top": 215,
+					"width": 120,
+					"height": 120,
+					"detailForm": "TimeDisplay",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.shift1"
+				},
+				"Subform10": {
+					"type": "subform",
+					"left": 854,
+					"top": 563,
+					"width": 120,
+					"height": 120,
+					"detailForm": "TimeDisplay",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.staticTime1"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "EXP NUM",
+					"top": 267,
+					"left": 741,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Text2": {
+					"type": "text",
+					"text": "VAR TIME",
+					"top": 465,
+					"left": 741,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Text3": {
+					"type": "text",
+					"text": "EXP TEXT",
+					"top": 615,
+					"left": 741,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Subform4": {
+					"type": "subform",
+					"left": 985,
+					"top": 121,
+					"width": 256,
+					"height": 48,
+					"detailForm": "TimeDisplayLCD",
+					"borderStyle": "sunken",
+					"dataSource": "vShift1"
+				},
+				"Subform7": {
+					"type": "subform",
+					"left": 985,
+					"top": 449,
+					"width": 256,
+					"height": 48,
+					"detailForm": "TimeDisplayLCD",
+					"borderStyle": "sunken",
+					"dataSource": "vStaticTime1"
+				},
+				"Subform9": {
+					"type": "subform",
+					"left": 985,
+					"top": 251,
+					"width": 256,
+					"height": 48,
+					"detailForm": "TimeDisplayLCD",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.shift1"
+				},
+				"Subform11": {
+					"type": "subform",
+					"left": 985,
+					"top": 599,
+					"width": 256,
+					"height": 48,
+					"detailForm": "TimeDisplayLCD",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.staticTime1"
+				},
+				"Subform1": {
+					"type": "subform",
+					"left": 431,
+					"top": 168,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform3": {
+					"type": "subform",
+					"left": 435,
+					"top": 282,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2_AM",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform12": {
+					"type": "subform",
+					"left": 433,
+					"top": 209,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1_AM",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform13": {
+					"type": "subform",
+					"left": 435,
+					"top": 326,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimeEntry",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform14": {
+					"type": "subform",
+					"left": 435,
+					"top": 360,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimeEntry_AM",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform2": {
+					"type": "subform",
+					"left": 99,
+					"top": 244,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2",
+					"borderStyle": "none",
+					"dataSource": "vStartTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform15": {
+					"type": "subform",
+					"left": 97,
+					"top": 168,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1",
+					"borderStyle": "none",
+					"dataSource": "vStartTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform16": {
+					"type": "subform",
+					"left": 101,
+					"top": 282,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2_AM",
+					"borderStyle": "none",
+					"dataSource": "vStartTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform17": {
+					"type": "subform",
+					"left": 99,
+					"top": 209,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1_AM",
+					"borderStyle": "none",
+					"dataSource": "vStartTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform18": {
+					"type": "subform",
+					"left": 101,
+					"top": 326,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimeEntry",
+					"borderStyle": "none",
+					"dataSource": "vStartTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Subform19": {
+					"type": "subform",
+					"left": 101,
+					"top": 360,
+					"width": 160,
+					"height": 24,
+					"detailForm": "TimeEntry_AM",
+					"borderStyle": "none",
+					"dataSource": "vStartTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Text4": {
+					"type": "text",
+					"text": "VAR TIME",
+					"top": 108,
+					"left": 97,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Text5": {
+					"type": "text",
+					"text": "EXP TIME",
+					"top": 108,
+					"left": 435,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Subform20": {
+					"type": "subform",
+					"left": 26,
+					"top": 470,
+					"width": 168,
+					"height": 190,
+					"detailForm": "DatePicker",
+					"borderStyle": "sunken",
+					"dataSource": "vStartDate"
+				},
+				"Subform21": {
+					"type": "subform",
+					"left": 221,
+					"top": 470,
+					"width": 138,
+					"height": 24,
+					"detailForm": "DateEntry",
+					"borderStyle": "sunken",
+					"dataSource": "vStartDate"
+				},
+				"Subform22": {
+					"type": "subform",
+					"left": 221,
+					"top": 506,
+					"width": 19,
+					"height": 16,
+					"detailForm": "DateButton",
+					"borderStyle": "sunken",
+					"dataSource": "vStartDate"
+				},
+				"Text6": {
+					"type": "text",
+					"text": "VAR DATE",
+					"top": 428,
+					"left": 97,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Text7": {
+					"type": "text",
+					"text": "EXP DATE",
+					"top": 428,
+					"left": 435,
+					"width": 92,
+					"height": 16,
+					"fontWeight": "bold",
+					"textAlign": "right"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 227,
+					"top": 599,
+					"width": 129,
+					"height": 17,
+					"dataSource": "vStartDate",
+					"dataSourceTypeHint": "date"
+				},
+				"Subform23": {
+					"type": "subform",
+					"left": 396,
+					"top": 470,
+					"width": 168,
+					"height": 190,
+					"detailForm": "DatePicker",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.startDate"
+				},
+				"Subform24": {
+					"type": "subform",
+					"left": 591,
+					"top": 470,
+					"width": 138,
+					"height": 24,
+					"detailForm": "DateEntry",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.startDate"
+				},
+				"Subform25": {
+					"type": "subform",
+					"left": 591,
+					"top": 506,
+					"width": 19,
+					"height": 16,
+					"detailForm": "DateButton",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.startDate"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 600,
+					"top": 599,
+					"width": 129,
+					"height": 17,
+					"dataSource": "Form:C1466.startDate",
+					"dataSourceTypeHint": "date"
+				}
+			}
+		}
+	],
+	"geometryStamp": 418,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
+}

@@ -1,4 +1,4 @@
-C_POINTER:C301($Target)
+C_POINTER:C301($target)
 C_TIME:C306($CurrentTime)
 C_TEXT:C284($localisation1; $localisation2)
 C_LONGINT:C283($i; $n)
@@ -39,13 +39,9 @@ Case of
 			End for 
 		End if 
 		
-		
-		$Target:=TimePicker__GetTarget
-		If (Not:C34(Is nil pointer:C315($Target)))
-			$CurrentTime:=$Target->
-			$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
-			TimePicker__DisplayTimeInputs(False:C215)
-		End if 
+		$CurrentTime:=TimePicker__GetTarget
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		TimePicker__DisplayTimeInputs(False:C215)
 		
 		OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
 		
@@ -55,12 +51,9 @@ Case of
 		
 	: (Form event code:C388=On Bound Variable Change:K2:52)
 		
-		$Target:=TimePicker__GetTarget
-		If (Not:C34(Is nil pointer:C315($Target)))
-			$CurrentTime:=$Target->
-			$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
-			TimePicker__DisplayTimeInputs(False:C215)
-		End if 
+		$CurrentTime:=TimePicker__GetTarget
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		TimePicker__DisplayTimeInputs(False:C215)
 		
 End case 
 

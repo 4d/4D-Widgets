@@ -35,7 +35,8 @@
 					"events": [
 						"onClick",
 						"onDataChange"
-					]
+					],
+					"focusable": false
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -161,7 +162,7 @@
 				"PMlabel": {
 					"type": "input",
 					"top": 70,
-					"left": 452,
+					"left": 460,
 					"width": 70,
 					"height": 16,
 					"class": "Default",
@@ -178,7 +179,7 @@
 					"type": "input",
 					"top": 106,
 					"left": 292,
-					"width": 110,
+					"width": 100,
 					"height": 16,
 					"dataSourceTypeHint": "time",
 					"class": "Default",
@@ -191,29 +192,6 @@
 					"events": [
 						"onDataChange"
 					]
-				},
-				"AmPmEntry": {
-					"type": "input",
-					"top": 166,
-					"left": 390,
-					"width": 120,
-					"height": 16,
-					"class": "Buttons_13",
-					"textAlign": "left",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"hideFocusRing": true,
-					"contextMenu": "none",
-					"entryFilter": "~A",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onLosingFocus",
-						"onGettingFocus",
-						"onDataChange"
-					]
 				}
 			}
 		}
@@ -223,7 +201,14 @@
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
-			"Vue 2": {},
+			"Preview": {
+				"visible": false,
+				"objects": [
+					"Rectangle",
+					"Text",
+					"Static Picture1"
+				]
+			},
 			"Vue 3": {},
 			"Vue 4": {},
 			"Vue 5": {},
@@ -233,7 +218,7 @@
 			"Vue 9": {}
 		}
 	},
-	"geometryStamp": 28,
+	"geometryStamp": 31,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

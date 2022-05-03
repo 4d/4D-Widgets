@@ -1,4 +1,3 @@
-C_POINTER:C301($Target)
 C_TIME:C306($CurrentTime)
 
 Case of 
@@ -10,25 +9,21 @@ Case of
 		TimePicker__InitInter
 		TimePicker__InitForm
 		
-		$Target:=TimePicker__GetTarget
-		$CurrentTime:=$Target->
+		$CurrentTime:=TimePicker__GetTarget
 		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
 		TimePicker__DisplayTimeInputs(False:C215)
 		
 		OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
 		
-		
 	: (Form event code:C388=On Bound Variable Change:K2:52)
 		
-		$Target:=TimePicker__GetTarget
-		$CurrentTime:=$Target->
+		$CurrentTime:=TimePicker__GetTarget
 		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
 		TimePicker__DisplayTimeInputs(False:C215)
 		
 	: (Form event code:C388=On Activate:K2:9) | (Form event code:C388=On Deactivate:K2:10)
 		
 		TimeEntry__ManageFocus(Form event code:C388)
-		
 		
 End case 
 
