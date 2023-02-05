@@ -2,9 +2,8 @@
 
 > TimePicker SET DEFAULT LABEL PM ( label )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | label |     | Text |     | ⬅️ |     | Label to use for PM |     |
 
 ## Description

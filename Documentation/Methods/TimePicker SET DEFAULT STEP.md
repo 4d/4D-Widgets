@@ -2,9 +2,8 @@
 
 > TimePicker SET DEFAULT STEP ( step )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | step |     | Time |     | ⬅️ |     | Interval between two time values |     |
 
 ## Description

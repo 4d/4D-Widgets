@@ -1,9 +1,6 @@
 # DatePicker RESET DEFAULT VALUES
 
-     |     |
-| --- | --- | --- |
-|     | DatePicker RESET DEFAULT VALUES |     |     |     |     |     |     |     |
-|     | Does not require any parameters |     |     |     |     |     |     |     |
+> DatePicker RESET DEFAULT VALUES
 
 ## Description
 

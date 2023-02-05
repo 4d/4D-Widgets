@@ -2,9 +2,8 @@
 
 > DatePicker SET WEEK FIRST DAY ( objectName ; dayNum )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
 |     | dayNum |     | Longint |     | ⬅️ |     | Number of first day to display |     |
 

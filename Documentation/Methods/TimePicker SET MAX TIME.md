@@ -2,9 +2,8 @@
 
 > TimePicker SET MAX TIME ( objectName ; maxTime )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
 |     | maxTime |     | Time |     | ⬅️ |     | Upper limit of enterable time |     |
 

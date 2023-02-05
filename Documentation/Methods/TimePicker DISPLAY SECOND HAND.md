@@ -2,9 +2,8 @@
 
 > TimePicker DISPLAY SECOND HAND ( objectName ; secondHand )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
 |     | secondHand |     | Boolean |     | ⬅️ |     | True (default) = second hand shown, False = second hand hidden |     |
 

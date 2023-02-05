@@ -2,9 +2,8 @@
 
 > DatePicker SET DEFAULT 1ST DAY ( dayNum )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | dayNum |     | Longint |     | ⬅️ |     | First day of the week |     |
 
 ## Description

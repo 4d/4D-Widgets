@@ -2,9 +2,8 @@
 
 > TimePicker SET DEFAULT MAX TIME ( maxTime )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | maxTime |     | Time |     | ⬅️ |     | Upper limit of enterable time |     |
 
 ## Description

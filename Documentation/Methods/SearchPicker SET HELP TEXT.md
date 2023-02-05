@@ -2,9 +2,8 @@
 
 > SearchPicker SET HELP TEXT ( objectName ; helpText )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
 |     | helpText |     | Text |     | ⬅️ |     | Text to display |     |
 

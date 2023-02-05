@@ -1,9 +1,6 @@
 # TimePicker RESET DEFAULT VALUES
 
-     |     |
-| --- | --- | --- |
-|     | TimePicker RESET DEFAULT VALUES |     |     |     |     |     |     |     |
-|     | Does not require any parameters |     |     |     |     |     |     |     |
+> TimePicker RESET DEFAULT 
 
 ## Description
 

@@ -2,9 +2,8 @@
 
 > TimePicker SET LABEL PM ( objectName ; label )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
 |     | label |     | Text |     | ⬅️ |     | Label to use for PM |     |
 

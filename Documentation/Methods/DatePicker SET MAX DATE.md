@@ -2,9 +2,8 @@
 
 > DatePicker SET MAX DATE ( objectName ; maxDate )
 
-|     |     |     |     |     |     |     |     |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
 |     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
 |     | maxDate |     | Date |     | ⬅️ |     | Upper limit of enterable date |     |
 
