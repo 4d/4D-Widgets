@@ -2,10 +2,10 @@
 
 > TimePicker SET LABEL AM ( objectName ; label )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-|     | label |     | Text |     | ⬅️ |     | Label to use for AM |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| label |     | Text |     | ⬅️ |     | Label to use for AM |     |
 
 ## Description
 

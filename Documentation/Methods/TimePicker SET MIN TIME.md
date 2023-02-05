@@ -2,10 +2,10 @@
 
 > TimePicker SET MIN TIME ( objectName ; minTime )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-|     | minTime |     | Time |     | ⬅️ |     | Lower limit of enterable time |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| minTime |     | Time |     | ⬅️ |     | Lower limit of enterable time |     |
 
 ## Description
 

@@ -2,9 +2,9 @@
 
 > DatePicker SET DEFAULT MIN DATE ( dateMin )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | dateMin |     | Date |     | ⬅️ |     | Limite inférieure de date saisissable |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| dateMin |     | Date |     | ⬅️ |     | Limite inférieure de date saisissable |     |
 
 ## Description
 

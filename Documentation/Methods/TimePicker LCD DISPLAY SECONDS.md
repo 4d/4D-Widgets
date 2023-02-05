@@ -2,10 +2,10 @@
 
 > TimePicker LCD DISPLAY SECONDS ( objectName ; seconds )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-|     | seconds |     | Boolean |     | ⬅️ |     | True = display seconds, False = do not display |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| seconds |     | Boolean |     | ⬅️ |     | True = display seconds, False = do not display |     |
 
 ## Description
 

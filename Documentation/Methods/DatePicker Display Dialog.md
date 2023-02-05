@@ -2,12 +2,12 @@
 
 > DatePicker Display Dialog {( left ; top {; defaultDate})} -> Function result
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | left |     | Longint |     | ⬅️ |     | Location for left side of window |     |
-|     | top |     | Longint |     | ⬅️ |     | Location for top of window |     |
-|     | defaultDate |     | Date |     | ⬅️ |     | Date to select by default in the dialog |     |
-|     | Function result |     | Date |     | ➡️ |     | Date selected by user |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| left |     | Longint |     | ⬅️ |     | Location for left side of window |     |
+| top |     | Longint |     | ⬅️ |     | Location for top of window |     |
+| defaultDate |     | Date |     | ⬅️ |     | Date to select by default in the dialog |     |
+| Function result |     | Date |     | ➡️ |     | Date selected by user |     |
 
 ## Description
 

@@ -2,9 +2,9 @@
 
 > DatePicker SET DEFAULT MAX DATE ( maxDate )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | maxDate |     | Date |     | ⬅️ |     | Upper limit of enterable date |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| maxDate |     | Date |     | ⬅️ |     | Upper limit of enterable date |     |
 
 ## Description
 

@@ -2,9 +2,9 @@
 
 > TimePicker SET DEFAULT LABEL AM ( label )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | label |     | Text |     | ⬅️ |     | Label to use for AM |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| label |     | Text |     | ⬅️ |     | Label to use for AM |     |
 
 ## Description
 

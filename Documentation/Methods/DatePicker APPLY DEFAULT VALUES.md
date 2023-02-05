@@ -2,9 +2,9 @@
 
 > DatePicker APPLY DEFAULT VALUES ( objectName )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
 
 ## Description
 

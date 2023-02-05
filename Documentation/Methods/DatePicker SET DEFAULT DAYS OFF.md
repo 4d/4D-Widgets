@@ -2,10 +2,10 @@
 
 > DatePicker SET DEFAULT DAYS OFF ( dayType ; ptrDaysOffArray )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | dayType |     | Longint |     | ⬅️ |     | Types of days off |     |
-|     | ptrDaysOffArray |     | Pointer |     | ⬅️ |     | Pointer to date or Boolean array of days off |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| dayType |     | Longint |     | ⬅️ |     | Types of days off |     |
+| ptrDaysOffArray |     | Pointer |     | ⬅️ |     | Pointer to date or Boolean array of days off |     |
 
 ## Description
 

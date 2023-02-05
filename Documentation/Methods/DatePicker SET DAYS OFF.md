@@ -2,11 +2,11 @@
 
 > DatePicker SET DAYS OFF ( objectName {; dayType ; ptrDaysOffArray} )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-|     | dayType |     | Longint |     | ⬅️ |     | Types of days off |     |
-|     | ptrDaysOffArray |     | Pointer |     | ⬅️ |     | Pointer to date or Boolean array of days off |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| dayType |     | Longint |     | ⬅️ |     | Types of days off |     |
+| ptrDaysOffArray |     | Pointer |     | ⬅️ |     | Pointer to date or Boolean array of days off |     |
 
 ## Description
 

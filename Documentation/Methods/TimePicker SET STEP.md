@@ -2,10 +2,10 @@
 
 > TimePicker SET STEP ( objectName ; step )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-|     | step |     | Time |     | ⬅️ |     | Interval between two time values |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| step |     | Time |     | ⬅️ |     | Interval between two time values |     |
 
 ## Description
 

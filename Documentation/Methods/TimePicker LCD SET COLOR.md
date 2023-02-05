@@ -2,12 +2,12 @@
 
 > TimePicker LCD SET COLOR ( objectName ; color {; colorG ; colorB} )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-|     | color |     | Longint |     | ⬅️ |     | Value of RGB color (4 bytes) or Value of red component (0..255) if the other parameters are passed |     |
-|     | colorG |     | Longint |     | ⬅️ |     | Value of green component (0..255) |     |
-|     | colorB |     | Longint |     | ⬅️ |     | Value of blue component (0..255) |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| color |     | Longint |     | ⬅️ |     | Value of RGB color (4 bytes) or Value of red component (0..255) if the other parameters are passed |     |
+| colorG |     | Longint |     | ⬅️ |     | Value of green component (0..255) |     |
+| colorB |     | Longint |     | ⬅️ |     | Value of blue component (0..255) |     |
 
 ## Description
 

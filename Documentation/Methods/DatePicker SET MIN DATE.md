@@ -2,10 +2,10 @@
 
 > DatePicker SET MIN DATE ( objectName ; dateMin )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-|     | dateMin |     | Date |     | ⬅️ |     | Lower limit of enterable date |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
+| dateMin |     | Date |     | ⬅️ |     | Lower limit of enterable date |     |
 
 ## Description
 

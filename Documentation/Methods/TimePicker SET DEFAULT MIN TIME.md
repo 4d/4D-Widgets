@@ -2,9 +2,9 @@
 
 > TimePicker SET DEFAULT MIN TIME ( minTime )
 
-|     | Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-|     | minTime |     | Time |     | ⬅️ |     | Lower limit of enterable time |     |
+| Parameter |     | Type |     |     |     | Description |     |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| minTime |     | Time |     | ⬅️ |     | Lower limit of enterable time |     |
 
 ## Description
 
