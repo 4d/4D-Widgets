@@ -2,13 +2,12 @@
 
 > DatePicker Display Dialog {( left ; top {; defaultDate})} -> Function result
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| left |     | Longint |     | ⬅️ |     | Location for left side of window |     |
-| top |     | Longint |     | ⬅️ |     | Location for top of window |     |
-| defaultDate |     | Date |     | ⬅️ |     | Date to select by default in the dialog |     |
-| Function result |     | Date |     | ➡️ |     | Date selected by user |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| left | Longint | ⬅️ | Location for left side of window |
+| top | Longint | ⬅️ | Location for top of window |
+| defaultDate | Date | ⬅️ | Date to select by default in the dialog |
+| Function result | Date | ➡️ | Date selected by user |
 ## Description
 
 The DatePicker Display Dialog command opens a DatePicker calendar in a pop-up window (a pop-up type window is automatically closed when the user clicks outside the window or hits the **Enter** or **Esc** key).

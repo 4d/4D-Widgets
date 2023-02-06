@@ -2,11 +2,10 @@
 
 > DatePicker SET MIN DATE ( objectName ; dateMin )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| dateMin |     | Date |     | ⬅️ |     | Lower limit of enterable date |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| dateMin | Date | ⬅️ | Lower limit of enterable date |
 ## Description
 
 The DatePicker SET MIN DATE command is used to set the minimum enterable date in a DatePicker calendar (the days located before this minimum date appear grayed out in the calendar).

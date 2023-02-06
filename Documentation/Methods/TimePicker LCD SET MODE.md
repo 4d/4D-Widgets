@@ -2,11 +2,10 @@
 
 > TimePicker LCD SET MODE ( objectName ; mode )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| mode |     | Longint |     | ⬅️ |     | 12 = display time in 12-hour mode, 24 = display time in 24-hour mode |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| mode | Longint | ⬅️ | 12 = display time in 12-hour mode, 24 = display time in 24-hour mode |
 ## Description
 
 The **TimePicker LCD SET MODE** sets the display to either 12- or 24-hour mode for the [objectName](# "Name of subform object") subform object (digital clock only).

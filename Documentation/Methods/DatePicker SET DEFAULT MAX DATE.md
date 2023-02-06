@@ -2,10 +2,9 @@
 
 > DatePicker SET DEFAULT MAX DATE ( maxDate )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| maxDate |     | Date |     | ⬅️ |     | Upper limit of enterable date |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| maxDate | Date | ⬅️ | Upper limit of enterable date |
 ## Description
 
 The DatePicker SET DEFAULT MAX DATE command is used to set the maximum enterable day for all the calendars of the DatePicker component.

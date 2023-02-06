@@ -2,11 +2,10 @@
 
 > TimePicker SET STEP ( objectName ; step )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| step |     | Time |     | ⬅️ |     | Interval between two time values |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| step | Time | ⬅️ | Interval between two time values |
 ## Description
 
 The TimePicker SET STEP command is used to set the step between time values available for the object designated by [objectName](# "Name of subform object"). This parameter only applies to TimePickers displayed as pop-up menus.

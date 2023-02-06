@@ -2,12 +2,11 @@
 
 > DatePicker SET DAYS OFF ( objectName {; dayType ; ptrDaysOffArray} )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| dayType |     | Longint |     | ⬅️ |     | Types of days off |     |
-| ptrDaysOffArray |     | Pointer |     | ⬅️ |     | Pointer to date or Boolean array of days off |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| dayType | Longint | ⬅️ | Types of days off |
+| ptrDaysOffArray | Pointer | ⬅️ | Pointer to date or Boolean array of days off |
 ## Description
 
 The DatePicker SET DAYS OFF command is used to set the days off to appear in the DatePicker calendar. These days are displayed in bold and italic and remain selectable for the user.

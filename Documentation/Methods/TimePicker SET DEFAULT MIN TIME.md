@@ -2,10 +2,9 @@
 
 > TimePicker SET DEFAULT MIN TIME ( minTime )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| minTime |     | Time |     | ⬅️ |     | Lower limit of enterable time |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| minTime | Time | ⬅️ | Lower limit of enterable time |
 ## Description
 
 The TimePicker SET DEFAULT MIN TIME command is used to specify the minimum enterable time that will be allowed by default for all the TimePicker objects.

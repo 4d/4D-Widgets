@@ -2,11 +2,10 @@
 
 > TimePicker LCD DISPLAY AMPM ( objectName ; amPm )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| amPm |     | Boolean |     | ⬅️ |     | True = display AM/PM, False = do not display |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| amPm | Boolean | ⬅️ | True = display AM/PM, False = do not display |
 ## Description
 
 The **TimePicker LCD DISPLAY AMPM** displays or hides the AM/PM placed to the right of the [objectName](# "Name of subform object") subform object (digital clock only).

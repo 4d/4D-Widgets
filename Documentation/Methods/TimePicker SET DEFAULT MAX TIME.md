@@ -2,10 +2,9 @@
 
 > TimePicker SET DEFAULT MAX TIME ( maxTime )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| maxTime |     | Time |     | ⬅️ |     | Upper limit of enterable time |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| maxTime | Time | ⬅️ | Upper limit of enterable time |
 ## Description
 
 The TimePicker SET DEFAULT MAX TIME command is used to specify the maximum enterable time that will be allowed by default for all the TimePicker objects.

@@ -2,10 +2,9 @@
 
 > TimePicker SET DEFAULT LABEL PM ( label )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| label |     | Text |     | ⬅️ |     | Label to use for PM |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| label | Text | ⬅️ | Label to use for PM |
 ## Description
 
 The [TimePicker SET LABEL PM](TimePicker%20SET%20LABEL%20PM.md "TimePicker SET LABEL PM") command is used to modify the default "PM" label in all the TimePicker objects displaying the AM/PM format.

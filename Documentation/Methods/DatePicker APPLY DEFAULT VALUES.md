@@ -2,10 +2,9 @@
 
 > DatePicker APPLY DEFAULT VALUES ( objectName )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
 ## Description
 
 The DatePicker APPLY DEFAULT VALUES command is used to reset all the DatePicker parameters to their default values for the [objectName](# "Name of subform object") subform object.

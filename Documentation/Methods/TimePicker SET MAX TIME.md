@@ -2,11 +2,10 @@
 
 > TimePicker SET MAX TIME ( objectName ; maxTime )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| maxTime |     | Time |     | ⬅️ |     | Upper limit of enterable time |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| maxTime | Time | ⬅️ | Upper limit of enterable time |
 ## Description
 
 The TimePicker SET MAX TIME command is used to set the maximum enterable time that will be accepted by the object designated by [objectName](# "Name of subform object"). If a higher time value is entered, it will be rejected.

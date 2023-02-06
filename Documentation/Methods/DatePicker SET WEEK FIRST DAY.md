@@ -2,11 +2,10 @@
 
 > DatePicker SET WEEK FIRST DAY ( objectName ; dayNum )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| dayNum |     | Longint |     | ⬅️ |     | Number of first day to display |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| dayNum | Longint | ⬅️ | Number of first day to display |
 ## Description
 
 The DatePicker SET WEEK FIRST DAY command is used to set the first day of the week to display in the left part of a DatePicker calendar. By default, the first day is Monday.
@@ -24,7 +23,6 @@ Pass a 4D constant from the `Days and Months` theme in the [dayNum](# "Number of
 | Thursday | Longint | 5   |
 | Friday | Longint | 6   |
 | Saturday | Longint | 7   |
-
 ### Example 1  
 
  Setting first day to Sunday:

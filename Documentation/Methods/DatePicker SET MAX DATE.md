@@ -2,11 +2,10 @@
 
 > DatePicker SET MAX DATE ( objectName ; maxDate )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| maxDate |     | Date |     | ⬅️ |     | Upper limit of enterable date |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| maxDate | Date | ⬅️ | Upper limit of enterable date |
 ## Description
 
 The DatePicker SET MAX DATE command is used to specify the maximum enterable date in the DatePicker calendar (the days located after this maximum date appear grayed out in the calendar).

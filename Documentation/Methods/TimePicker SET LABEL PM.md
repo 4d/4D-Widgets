@@ -2,11 +2,10 @@
 
 > TimePicker SET LABEL PM ( objectName ; label )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| label |     | Text |     | ⬅️ |     | Label to use for PM |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| label | Text | ⬅️ | Label to use for PM |
 ## Description
 
 The TimePicker SET LABEL PM command is used to modify the "PM" label in TimePicker objects displaying the AM/PM format. The command applies to the object designated by [objectName](# "Name of subform object"). By default, the system am/pm labels are used.

@@ -2,11 +2,10 @@
 
 > DatePicker SET DEFAULT DAYS OFF ( dayType ; ptrDaysOffArray )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| dayType |     | Longint |     | ⬅️ |     | Types of days off |     |
-| ptrDaysOffArray |     | Pointer |     | ⬅️ |     | Pointer to date or Boolean array of days off |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| dayType | Longint | ⬅️ | Types of days off |
+| ptrDaysOffArray | Pointer | ⬅️ | Pointer to date or Boolean array of days off |
 ## Description
 
 The DatePicker SET DEFAULT DAYS OFF command is used to set the days off that will appear in all the calendars of the DatePicker component. These days are displayed in bold and italic and remain selectable for the user.

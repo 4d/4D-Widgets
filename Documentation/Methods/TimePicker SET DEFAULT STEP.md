@@ -2,10 +2,9 @@
 
 > TimePicker SET DEFAULT STEP ( step )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| step |     | Time |     | ⬅️ |     | Interval between two time values |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| step | Time | ⬅️ | Interval between two time values |
 ## Description
 
 The TimePicker SET DEFAULT STEP command is used to set the step between time values for all the TimePicker objects.

@@ -2,10 +2,9 @@
 
 > TimePicker APPLY DEFAULT VALUES ( objectName )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
 ## Description
 
 The TimePicker APPLY DEFAULT VALUES command is used to reset all the TimePicker parameters to their current default values for the [objectName](# "Name of subform object") subform object.

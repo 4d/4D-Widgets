@@ -2,11 +2,10 @@
 
 > TimePicker DISPLAY SECOND HAND ( objectName ; secondHand )
 
-| Parameter |     | Type |     |     |     | Description |     |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| objectName |     | Text |     | ⬅️ |     | Name of subform object |     |
-| secondHand |     | Boolean |     | ⬅️ |     | True (default) = second hand shown, False = second hand hidden |     |
-
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
+| objectName | Text | ⬅️ | Name of subform object |
+| secondHand | Boolean | ⬅️ | True (default) = second hand shown, False = second hand hidden |
 ## Description
 
 The **TimePicker DISPLAY SECOND HAND** command displays or hides the second hand in the [objectName](# "Name of subform object") subform object (clock widget only).
