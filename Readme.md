@@ -64,7 +64,7 @@ To handle this case, widget areas return a specific event with a value of -1 to 
 rather than:
 
 ```4d
- If(FORM Event=[On Load](/4Dv19/index.en.html "On Load")) // only works if the widget is on page 1  
+ If(FORM Event code=On Load) // only works if the widget is on page 1  
     TimePicker SET STEP("myTimePicker";? 00:10:00?)  
  End if
 ```

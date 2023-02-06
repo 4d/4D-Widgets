@@ -50,5 +50,4 @@ A DateEntry object can be used without programming thanks to the mechanism provi
 You can insert a DateEntry area into a form in two ways:
 
 * By inserting a "DateEntry area" object from the preconfigured object library of 4D.
-* By creating a subform area and assign the **DateEntry** detail form to i> 9/4D/19/DatePicker.201-5462912.en.html)
-t.
+* By creating a subform area and assign the **DateEntry** detail form to it.

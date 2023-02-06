@@ -49,7 +49,7 @@ Clocks can either display the current time dynamically, or show a static time.
 * To display the current time, associate an **Integer** variable to the subform object of the widget (default operation). In this case, the widget automatically displays the current time and operates like a clock.  
     You can apply an offset to the displayed time: the value of the number variable indicates the offset in seconds. For example, 3600 = advancing the clock one hour, -1800 = turning the clock back 30 minutes, etc.
 
-* To display a static time, associate a **Time** variable to the subform object of the widget (by means of the [C_TIME](/4Dv19/4D/19/C-TIME.301-5392150.en.html) command or the Property List). The clock then displays the value of the this variable.
+* To display a static time, associate a **Time** variable to the subform object of the widget (by means of the [C_TIME](https://developer.4d.com/docs/Concepts/time) command or the Property List). The clock then displays the value of the this variable.
 
 For example, we want the clock to show 10:10:30:
 

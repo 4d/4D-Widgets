@@ -32,7 +32,7 @@ Designation of Friday as the weekly day off (instead of Saturday and Sunday by d
 ```4d
  ARRAY BOOLEAN($arrbDaysOff;7)  
   //By default, all the elements of a Boolean array are False; thus it is not necessary to add initialization code  
- $arrbDaysOff{[Friday](/4Dv19/4D/19/Days-and-Months.302-5393337.en.html "Friday")}:=True  
+ $arrbDaysOff{Friday}:=True  
  DatePicker SET DAYS OFF("mycalendar";0;->$arrbDaysOff)
 ```
 

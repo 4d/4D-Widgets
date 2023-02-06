@@ -10,7 +10,7 @@
 
 The DatePicker SET DEFAULT 1ST DAY command is used to set the first day of the week to be displayed by default in the left part of all DatePicker calendars.
 
-In the [dayNum](# "First day of the week") parameter, pass one of the following 4D constants found in the [Days and Months](/4Dv19/4D/19/Days-and-Months.302-5393337.en.html) theme:
+In the [dayNum](# "First day of the week") parameter, pass one of the following 4D constants found in the `[`Days and Months` theme:
 
 | Constant | Type | Value |
 | --- | --- | --- |
