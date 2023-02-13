@@ -1,4 +1,4 @@
-﻿{
+{
 	"Compiler": {},
 	"DatePicker": {
 		"groups": [
@@ -156,8 +156,10 @@
 	},
 	"Tools": {
 		"methods": [
+			"GetTimestamp",
 			"Tool_ObjectToVar",
-			"Tool_VarToObject"
+			"Tool_VarToObject",
+			"WeekNumber"
 		]
 	},
 	"trash": {}

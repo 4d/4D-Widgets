@@ -126,3 +126,12 @@ C_TEXT:C284(SearchPicker__SET_TEXT; $2)
 C_TEXT:C284(TimePicker APPLY DEFAULT VALUES; $1)
 C_DATE:C307(DatePicker__CalculateFirstDay; $1)
 C_TEXT:C284(DatePicker__CalculateFirstDay; $2)
+
+//GetTimestamp
+C_LONGINT:C283(GetTimestamp; $0)
+C_DATE:C307(GetTimestamp; $1)
+C_TIME:C306(GetTimestamp; $2)
+
+//WeekNumber
+C_LONGINT:C283(WeekNumber; $0)
+C_DATE:C307(WeekNumber; $1)

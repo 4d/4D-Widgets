@@ -201,6 +201,12 @@ If (Not:C34(Is nil pointer:C315($ptrBtn)))
 		
 	End for 
 	
+	For ($i; 1; 6; 1)  //6 objects to fill
+		
+		OBJECT SET TITLE:C194(*; "DatePicker_Lbl_Wk_"+String:C10($i); String:C10(WeekNumber($FirstDisplayedDay+($i*7)-7)))
+		
+	End for 
+	
 	If (True:C214)
 		
 		If ($FirstDisplayedDay<$minDate)
