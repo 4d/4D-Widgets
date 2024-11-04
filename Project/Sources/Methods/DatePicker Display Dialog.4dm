@@ -61,20 +61,7 @@ If ($CalcXY=True:C214)
 	
 End if 
 
-Case of 
-	: (($x1+$Width)>Screen width:C187)  // Screen on MAC, MDI window on WIN
-		$x1:=Screen width:C187-$Width-5
-	: ($x1<5)
-		$x1:=5
-End case 
-
-Case of 
-	: (($y1+$Height)>Screen height:C188)
-		$y1:=Screen height:C188-$Height-10
-	: ($y1<5)
-		$y1:=5
-End case 
-
+Tool_AdjustWindowPos(->$x1; ->$y1; $Width; $Height)
 
 $form:=New object:C1471  //ACI0099621 //ACI0099964
 If (Count parameters:C259>=3)
