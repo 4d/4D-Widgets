@@ -9,7 +9,7 @@ The DatePicker widget is an intuitive, easy-to-use object that you can use to ma
 
 A DatePicker calendar is an area displaying each month as a table of days. During execution, the user can scroll through the months of the calendar both forwards and backwards by clicking on the arrow buttons. They can also use the arrow keys of the keyboard.
 
-![](https://doc.4d.com/4Dv19/picture/307767/pict307767.en.png)
+![](../images/pict307767.en.png)
 
 When it is inserted into a subform, a DatePicker object can be used without programming thanks to the mechanism provided by the **bound variable**: you can work with the value of the variable bound with the subform object ("Variable Name" property in the Property List) in order to manage its display and entry.  
 When the form is executed, this date variable automatically contains the date selected by the user. Conversely, if you modify the value of this variable by programming, it will be shown automatically in the subform.
@@ -39,7 +39,7 @@ You can use a DatePicker calendar as a pop-up window. To do this, you can either
 A DateEntry type area facilitates the entry of a date in the form specified in the system preferences (for example DD/MM/YY).  
 The area appears as a date type associated with buttons:
 
-![](https://doc.4d.com/4Dv19/picture/307791/pict307791.en.png)
+![](../images/pict307791.en.png)
 
 During execution, the buttons located to the right of the entry area are only displayed when the object has the focus. The user selects each element of the date (day, month or year) individually by clicking or hitting the Tab key and can scroll them using the numeric stepper or the arrow keys of the keyboard. The calendar icon to the right can be used to select a date from a DatePicker pop-up calendar.
 

@@ -22,7 +22,7 @@ Configuration of the TimePicker in the form of a pop-up menu named "time1", limi
  TimePicker SET STEP("time1";?00:10:00?)
 ```
 
-![](https://doc.4d.com/4Dv19/picture/308616/pict308616.en.png)
+![](../images/pict308616.en.png)
 
 ## See also
 

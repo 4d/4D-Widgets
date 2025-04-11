@@ -31,7 +31,7 @@ Pass a 4D constant from the `Days and Months` theme in the [dayNum](# "Number of
  DatePicker SET WEEK FIRST DAY("mycalendar";Sunday)
 ```
 
-![](https://doc.4d.com/4Dv19/picture/308112/pict308112.en.png)
+![](../images/pict308112.en.png)
 
 ### Example 2  
 
@@ -41,7 +41,7 @@ Setting first day to Thursday:
  DatePicker SET WEEK FIRST DAY("mycalendar";Thursday)
 ```
 
-![](https://doc.4d.com/4Dv19/picture/308150/pict308150.en.png)
+![](../images/pict308150.en.png)
 
 ## See also
 

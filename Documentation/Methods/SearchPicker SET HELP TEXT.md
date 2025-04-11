@@ -18,4 +18,4 @@ Displays the word "Country" in the area, indicating that the search will concern
  SearchPicker SET HELP TEXT("vSearch";"Country")
 ```
 
-![](https://doc.4d.com/4Dv19/picture/308485/pict308485.en.png)
+![](../images/pict308485.en.png)

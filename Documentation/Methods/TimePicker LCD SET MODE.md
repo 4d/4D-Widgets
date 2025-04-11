@@ -21,7 +21,7 @@ We want to switch to 24-hour mode and hide the AM/PM:
  TimePicker LCD DISPLAY AMPM("Subform1";False)
 ```
 
-![](https://doc.4d.com/4Dv19/picture/1239968/pict1239968.fr.png)
+![](../images/pict1239968.fr.png)
 
 ## See also
 

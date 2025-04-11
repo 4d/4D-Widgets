@@ -35,7 +35,7 @@ Designation of Friday as the weekly day off (instead of Saturday and Sunday by d
  DatePicker SET DAYS OFF("mycalendar";0;->$arrbDaysOff)
 ```
 
-![](https://doc.4d.com/4Dv19/picture/308188/pict308188.en.png)
+![](../images/pict308188.en.png)
 
 ### Example 2  
 
