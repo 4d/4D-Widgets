@@ -12,7 +12,7 @@
 
 The DatePicker Display Dialog command opens a DatePicker calendar in a pop-up window (a pop-up type window is automatically closed when the user clicks outside the window or hits the **Enter** or **Esc** key).
 
-![](https://doc.4d.com/4Dv19/picture/307838/pict307838.en.png)
+![](../images/pict307838.en.png)
 
 The two optional [left](# "Location for left side of window") and [top](# "Location for top of window") parameters are used to specify the location of the top left corner of the window to be opened. These two parameters must be passed together; if only one is passed, it is ignored. If these parameters are omitted, the window is opened at the location of the click.
 

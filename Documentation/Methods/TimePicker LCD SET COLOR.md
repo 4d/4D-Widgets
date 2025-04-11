@@ -37,4 +37,4 @@ Change the clock digits to red:
   // can also be written: TimePicker LCD SET COLOR ("Subform1";255;0;0)
 ```
 
-![](https://doc.4d.com/4Dv19/picture/1239854/pict1239854.fr.png)
+![](../images/pict1239854.fr.png)

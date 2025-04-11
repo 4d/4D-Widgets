@@ -23,7 +23,7 @@ We want to hide the AM/PM:
  TimePicker LCD DISPLAY AMPM("Subform1";False)
 ```
 
-![](https://doc.4d.com/4Dv19/picture/1239891/pict1239891.fr.png)
+![](../images/pict1239891.fr.png)
 
 ## See also
 

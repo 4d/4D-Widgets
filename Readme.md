@@ -11,7 +11,7 @@ Three widgets are available:
  > These widgets can be used with or without programming. You can simply integrate them into your forms and use their default properties.
  > <br>If you want to be able to control and configure them in a more customized manner, you can make use of specific project methods, called "Component methods," which are listed by component.
 
-![](https://doc.4d.com/4Dv19/picture/307590/pict307590.en.png)
+![](Documentation/images/pict307590.en.png)
 
 This documentation covers each widget and describes the syntax of the component methods associated with it.
 
@@ -30,7 +30,7 @@ To insert a widget using the object library:
     The Object Library window appears.
 2. Select **Widgets** in the Category menu.  
     All the available widgets are listed:  
-    ![](https://doc.4d.com/4Dv19/picture/307739/pict307739.en.png)
+    ![](Documentation/images/pict307739.en.png)
 3. Insert the desired widget into your form by dragging and dropping it.  
     You can then configure it via the properties of the inserted object or via its object method.
 
@@ -41,7 +41,7 @@ To create a widget via a subform type object:
 1. In the Form editor, add a subform object.  
     This point is described in the 4D _Design Reference_ manual.
 2. In the Property List, click on the "Detail Form" menu to scroll through the list of forms that can be used. This list includes the widgets.  
-    ![](https://doc.4d.com/4Dv19/picture/307757/pict307757.en.png)
+    ![](Documentation/images/pict307757.en.png)
 3. Select the widget to be inserted.  
     You can then configure it via the object properties or the object method of the subform.
 
