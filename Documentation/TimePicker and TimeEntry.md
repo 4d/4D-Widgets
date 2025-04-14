@@ -3,13 +3,13 @@
 The TimePicker widget provides easy-to-use objects that you can use to make the most of any fields that require times to be entered or displayed. It can be used in the following forms:
 
 * Single or double pop up menus:  
-    ![](../images/pict308493.en.png) ![](../images/pict308495.en.png)
+    ![](images/pict308493.en.png) ![](images/pict308495.en.png)
 
 * Time entry areas in the "hh:mm:ss" format associated with a numeric stepper that can be used to increase or decrease the value of the hours, minutes or seconds:  
-    ![](../images/pict308497.en.png)
+    ![](images/pict308497.en.png)
 
 * Clocks (_TimeDisplay_) or digital clocks (_TimeDisplayLCD_):  
-    ![](../images/pict1239685.fr.png) ![](../images/pict1239687.fr.png)
+    ![](images/pict1239685.fr.png) ![](images/pict1239687.fr.png)
 
 In addition, each type of TimePicker can display the time in 12-hour (AM-PM) or 24-hour format.
 
@@ -28,16 +28,16 @@ Then specify the name of the variable bound to the subform ("Variable Name" prop
 
 Clock widgets are drawn in SVG, and therefore have a vector path allowing deformations in Application mode (in Design mode, their size is fixed):
 
-![](../images/pict1239707.fr.png)
+![](images/pict1239707.fr.png)
 
 Note that:
 
-* For a standard clock, the second hand can be displayed or hidden using the [TimePicker DISPLAY SECOND HAND](TimePicker%20DISPLAY%20SECOND%20HAND.md) method.
+* For a standard clock, the second hand can be displayed or hidden using the [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md) method.
 * A standard clock automatically changes to "day mode" or "night mode" depending on the time:  
-    ![](../images/pict1239740.fr.png)  
+    ![](images/pict1239740.fr.png)  
     The time ranges are 8:00:00 -> 19:59:59 = Day, 20:00 -> 07:59:59 = Night.
 * The "digital clock" widget is transparent and has no background, so it can be placed on top of colored objects in order to vary its appearance:  
-    ![](../images/pict1239718.fr.png)  
+    ![](images/pict1239718.fr.png)  
     There are several display options for this widget that are available through component methods, which are prefixed by "TimePicker LCD".
 
 **Note:** Developers can displace this clock drawing and substitute their own creations by replacing the "clock.svg" file found at the first level of the "Resources" folder.

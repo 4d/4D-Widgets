@@ -4,15 +4,16 @@
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | ⬅️ | Name of subform object |
-| dayNum | Longint | ⬅️ | Number of first day to display |
+| objectName | Text | → | Name of subform object |
+| dayNum | Longint | → | Number of first day to display |
+
 ## Description
 
-The DatePicker SET WEEK FIRST DAY command is used to set the first day of the week to display in the left part of a DatePicker calendar. By default, the first day is Monday.
+The `DatePicker SET WEEK FIRST DAY` command is used to set the first day of the week to display in the left part of a DatePicker calendar. By default, the first day is Monday.
 
-The [objectName](# "Name of subform object") parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+The `objectName` parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
 
-Pass a 4D constant from the `Days and Months` theme in the [dayNum](# "Number of first day to display") parameter:
+Pass a 4D constant from the `Days and Months` theme in the `dayNum` parameter:
 
 | Constant | Type | Value |
 | --- | --- | --- |

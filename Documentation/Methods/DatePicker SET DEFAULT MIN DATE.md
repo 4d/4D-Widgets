@@ -4,12 +4,13 @@
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| dateMin | Date | ⬅️ | Limite inférieure de date saisissable |
+| dateMin | Date | → | Limite inférieure de date saisissable |
+
 ## Description
 
 The DatePicker SET DEFAULT MIN DATE command is used to set the minimum enterable day for all the calendars of the DatePicker component.
 
-Note that this parameter is only taken into account for calendars created subsequently and does not apply to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md "DatePicker APPLY DEFAULT VALUES") command.
+Note that this parameter is only taken into account for calendars created subsequently and does not apply to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) command.
 
 ### Example  
 

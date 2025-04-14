@@ -4,24 +4,25 @@
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| dayType | Longint | ⬅️ | Types of days off |
-| ptrDaysOffArray | Pointer | ⬅️ | Pointer to date or Boolean array of days off |
+| dayType | Longint | → | Types of days off |
+| ptrDaysOffArray | Pointer | → | Pointer to date or Boolean array of days off |
+
 ## Description
 
 The DatePicker SET DEFAULT DAYS OFF command is used to set the days off that will appear in all the calendars of the DatePicker component. These days are displayed in bold and italic and remain selectable for the user.
 
-Note that this setting is only taken into account for calendars that are created subsequently and does not apply to any existing calendars. If you want to apply it to the existing calendars, you will need to use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md "DatePicker APPLY DEFAULT VALUES") component method.
+Note that this setting is only taken into account for calendars that are created subsequently and does not apply to any existing calendars. If you want to apply it to the existing calendars, you will need to use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) component method.
 
-The command can be used to set recurrent weekly or yearly days off as well as occasional holidays. You specify the type of days off set by the method via the [dayType](# "Types of days off") parameter:
+The command can be used to set recurrent weekly or yearly days off as well as occasional holidays. You specify the type of days off set by the method via the `dayType` parameter:
 
 * 0 = Days off occurring weekly (by default, Saturday and Sunday)
 * 1 = Days off that occur every year (such as January 1st or December 25th)
 * 2 = Occasional holidays, set for a single year
 
-You set the holidays by creating a array and by passing a pointer to this array as the [ptrDaysOffArray](# "Pointer to date or Boolean array of days off") parameter. The type of array depends on the value passed in [dayType](# "Types of days off"):
+You set the holidays by creating a array and by passing a pointer to this array as the `ptrDaysOffArray` parameter. The type of array depends on the value passed in `dayType`:
 
-* If you pass 0 in [dayType](# "Types of days off") (weekly days off), in [ptrDaysOffArray](# "Pointer to date or Boolean array of days off") you must pass a pointer to a Boolean array made up of 7 elements. Each element set to True indicates a weekly day off.
-* If you pass 1 or 2 in [dayType](# "Types of days off") (yearly or occasional days off), in [ptrDaysOffArray](# "Pointer to date or Boolean array of days off") you must pass a pointer to a Date array. In this array, each element must contain a valid date, indicating a day off. The dates must be expressed in the default format corresponding to the system language. If you passed 1 in [dayType](# "Types of days off") (recurrent days), the year is ignored; you can pass any value.
+* If you pass 0 in `dayType` (weekly days off), in `ptrDaysOffArray` you must pass a pointer to a Boolean array made up of 7 elements. Each element set to True indicates a weekly day off.
+* If you pass 1 or 2 in `dayType` (yearly or occasional days off), in `ptrDaysOffArray` you must pass a pointer to a Date array. In this array, each element must contain a valid date, indicating a day off. The dates must be expressed in the default format corresponding to the system language. If you passed 1 in `dayType` (recurrent days), the year is ignored; you can pass any value.
 
 ### Example  
 

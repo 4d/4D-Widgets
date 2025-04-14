@@ -1,6 +1,7 @@
 # TimePicker
 
-- [TimePicker and TimeEntry](Methods/TimePicker%20and%20TimeEntry.md)
+[TimePicker and TimeEntry](Methods/TimePicker%20and%20TimeEntry.md)
+
 - [TimePicker APPLY DEFAULT VALUES](Methods/TimePicker%20APPLY%20DEFAULT%20VALUES.md)
 - [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md)
 - [TimePicker LCD DISPLAY AMPM](Methods/TimePicker%20LCD%20DISPLAY%20AMPM.md)
@@ -18,4 +19,3 @@
 - [TimePicker SET MAX TIME](Methods/TimePicker%20SET%20MAX%20TIME.md)
 - [TimePicker SET MIN TIME](Methods/TimePicker%20SET%20MIN%20TIME.md)
 - [TimePicker SET STEP](Methods/TimePicker%20SET%20STEP.md)
-- [Next page](Methods/Next%20page.md)
