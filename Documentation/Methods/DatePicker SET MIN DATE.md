@@ -4,17 +4,18 @@
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | ⬅️ | Name of subform object |
-| dateMin | Date | ⬅️ | Lower limit of enterable date |
+| objectName | Text | → | Name of subform object |
+| dateMin | Date | → | Lower limit of enterable date |
+
 ## Description
 
 The DatePicker SET MIN DATE command is used to set the minimum enterable date in a DatePicker calendar (the days located before this minimum date appear grayed out in the calendar).
 
-The [objectName](# "Name of subform object") parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+The `objectName` parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
 
 The minDate date must be expressed in the default entry format corresponding to the system language. If you pass a blank date (!00/00/00!), all the dates preceding the current date will be enterable.
 
-If the minimum enterable date is later than the maximum enterable date (see [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md "DatePicker SET MAX DATE")), no date will be enterable.
+If the minimum enterable date is later than the maximum enterable date (see [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)), no date will be enterable.
 
 ### Example  
 
