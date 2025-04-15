@@ -23,7 +23,7 @@ Paramétrage du TimePicker en pop up menu nommé "heure1", limitation des heures
  TimePicker SET STEP("heure1";?00:10:00?)
 ```
 
-![](../images/pict308616.fr.png)
+![](../images/pict308616.en.png)
 
 ## Voir aussi
 

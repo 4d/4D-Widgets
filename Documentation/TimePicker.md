@@ -1,6 +1,6 @@
 # TimePicker
 
-[TimePicker and TimeEntry](Methods/TimePicker%20and%20TimeEntry.md)
+[TimePicker and TimeEntry](TimePicker%20and%20TimeEntry.md)
 
 - [TimePicker APPLY DEFAULT VALUES](Methods/TimePicker%20APPLY%20DEFAULT%20VALUES.md)
 - [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md)

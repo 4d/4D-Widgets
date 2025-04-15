@@ -13,7 +13,7 @@
 
 La commande `DatePicker Display Dialog` ouvre un calendrier DatePicker dans une fenêtre pop up (une fenêtre de type pop up est automatiquement refermée lorsque l'utilisateur clique en-dehors de la fenêtre ou appuie sur la touche **Entrée** ou **Echap**).
 
-![](../images/pict307838.fr.png)
+![](../images/pict307838.en.png)
 
 Les deux paramètres optionnels `gauche` et `haut` permettent de définir l'emplacement de l'angle supérieur gauche de la fenêtre à ouvrir. Ces deux paramètres doivent être passés ensemble ; si un seul est passé, il est ignoré. Si ces paramètres sont omis, la fenêtre est ouverte à l'emplacement du clic.
 

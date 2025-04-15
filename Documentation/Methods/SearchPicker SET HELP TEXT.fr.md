@@ -19,4 +19,4 @@ Affichage du mot "Country" dans la zone, indiquant que la recherche portera sur 
  SearchPicker SET HELP TEXT("vRech";"Country")
 ```
 
-![](../images/pict308485.fr.png)
+![](../images/pict308485.en.png)

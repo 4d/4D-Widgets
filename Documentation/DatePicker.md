@@ -1,6 +1,6 @@
 # DatePicker
 
-[DatePicker and DateEntry](Methods/DatePicker%20and%20DateEntry.md)
+[DatePicker and DateEntry](DatePicker%20and%20DateEntry.md)
 
 - [DatePicker APPLY DEFAULT VALUES](Methods/DatePicker%20APPLY%20DEFAULT%20VALUES.md)
 - [DatePicker Display Dialog](Methods/DatePicker%20Display%20Dialog.md)
