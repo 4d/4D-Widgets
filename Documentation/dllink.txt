@@ -1,0 +1,128 @@
+TimePicker and TimeEntry.ja.md
+Methods/TimePicker APPLY DEFAULT VALUES.ja.md
+Methods/TimePicker DISPLAY SECOND HAND.ja.md
+Methods/TimePicker LCD DISPLAY AMPM.ja.md
+Methods/TimePicker LCD DISPLAY SECONDS.ja.md
+Methods/TimePicker LCD SET COLOR.ja.md
+Methods/TimePicker LCD SET MODE.ja.md
+Methods/TimePicker RESET DEFAULT VALUES.ja.md
+Methods/TimePicker SET DEFAULT LABEL AM.ja.md
+Methods/TimePicker SET DEFAULT LABEL PM.ja.md
+Methods/TimePicker SET DEFAULT MAX TIME.ja.md
+Methods/TimePicker SET DEFAULT MIN TIME.ja.md
+Methods/TimePicker SET DEFAULT STEP.ja.md
+Methods/TimePicker SET LABEL AM.ja.md
+Methods/TimePicker SET LABEL PM.ja.md
+Methods/TimePicker SET MAX TIME.ja.md
+Methods/TimePicker SET MIN TIME.ja.md
+Methods/TimePicker SET STEP.ja.md
+SearchPicker Overview.ja.md
+Methods/SearchPicker SET HELP TEXT.ja.md
+DatePicker and DateEntry.ja.md
+Methods/DatePicker APPLY DEFAULT VALUES.ja.md
+Methods/DatePicker Display Dialog.ja.md
+Methods/DatePicker RESET DEFAULT VALUES.ja.md
+Methods/DatePicker SET DAYS OFF.ja.md
+Methods/DatePicker SET DEFAULT 1ST DAY.ja.md
+Methods/DatePicker SET DEFAULT DAYS OFF.ja.md
+Methods/DatePicker SET DEFAULT MAX DATE.ja.md
+Methods/DatePicker SET DEFAULT MIN DATE.ja.md
+Methods/DatePicker SET MAX DATE.ja.md
+Methods/DatePicker SET MIN DATE.ja.md
+Methods/DatePicker SET WEEK FIRST DAY.ja.md
+TimePicker and TimeEntry.pt.md
+Methods/TimePicker APPLY DEFAULT VALUES.pt.md
+Methods/TimePicker DISPLAY SECOND HAND.pt.md
+Methods/TimePicker LCD DISPLAY AMPM.pt.md
+Methods/TimePicker LCD DISPLAY SECONDS.pt.md
+Methods/TimePicker LCD SET COLOR.pt.md
+Methods/TimePicker LCD SET MODE.pt.md
+Methods/TimePicker RESET DEFAULT VALUES.pt.md
+Methods/TimePicker SET DEFAULT LABEL AM.pt.md
+Methods/TimePicker SET DEFAULT LABEL PM.pt.md
+Methods/TimePicker SET DEFAULT MAX TIME.pt.md
+Methods/TimePicker SET DEFAULT MIN TIME.pt.md
+Methods/TimePicker SET DEFAULT STEP.pt.md
+Methods/TimePicker SET LABEL AM.pt.md
+Methods/TimePicker SET LABEL PM.pt.md
+Methods/TimePicker SET MAX TIME.pt.md
+Methods/TimePicker SET MIN TIME.pt.md
+Methods/TimePicker SET STEP.pt.md
+SearchPicker Overview.pt.md
+Methods/SearchPicker SET HELP TEXT.pt.md
+DatePicker and DateEntry.pt.md
+Methods/DatePicker APPLY DEFAULT VALUES.pt.md
+Methods/DatePicker Display Dialog.pt.md
+Methods/DatePicker RESET DEFAULT VALUES.pt.md
+Methods/DatePicker SET DAYS OFF.pt.md
+Methods/DatePicker SET DEFAULT 1ST DAY.pt.md
+Methods/DatePicker SET DEFAULT DAYS OFF.pt.md
+Methods/DatePicker SET DEFAULT MAX DATE.pt.md
+Methods/DatePicker SET DEFAULT MIN DATE.pt.md
+Methods/DatePicker SET MAX DATE.pt.md
+Methods/DatePicker SET MIN DATE.pt.md
+Methods/DatePicker SET WEEK FIRST DAY.pt.md
+DatePicker and DateEntry.es.md
+Methods/DatePicker APPLY DEFAULT VALUES.es.md
+Methods/DatePicker Display Dialog.es.md
+Methods/DatePicker RESET DEFAULT VALUES.es.md
+Methods/DatePicker SET DAYS OFF.es.md
+Methods/DatePicker SET DEFAULT 1ST DAY.es.md
+Methods/DatePicker SET DEFAULT DAYS OFF.es.md
+Methods/DatePicker SET DEFAULT MAX DATE.es.md
+Methods/DatePicker SET DEFAULT MIN DATE.es.md
+Methods/DatePicker SET MAX DATE.es.md
+Methods/DatePicker SET MIN DATE.es.md
+Methods/DatePicker SET WEEK FIRST DAY.es.md
+TimePicker and TimeEntry.es.md
+Methods/TimePicker APPLY DEFAULT VALUES.es.md
+Methods/TimePicker DISPLAY SECOND HAND.es.md
+Methods/TimePicker LCD DISPLAY AMPM.es.md
+Methods/TimePicker LCD DISPLAY SECONDS.es.md
+Methods/TimePicker LCD SET COLOR.es.md
+Methods/TimePicker LCD SET MODE.es.md
+Methods/TimePicker RESET DEFAULT VALUES.es.md
+Methods/TimePicker SET DEFAULT LABEL AM.es.md
+Methods/TimePicker SET DEFAULT LABEL PM.es.md
+Methods/TimePicker SET DEFAULT MAX TIME.es.md
+Methods/TimePicker SET DEFAULT MIN TIME.es.md
+Methods/TimePicker SET DEFAULT STEP.es.md
+Methods/TimePicker SET LABEL AM.es.md
+Methods/TimePicker SET LABEL PM.es.md
+Methods/TimePicker SET MAX TIME.es.md
+Methods/TimePicker SET MIN TIME.es.md
+Methods/TimePicker SET STEP.es.md
+SearchPicker Overview.es.md
+Methods/SearchPicker SET HELP TEXT.es.md
+DatePicker and DateEntry.de.md
+Methods/DatePicker APPLY DEFAULT VALUES.de.md
+Methods/DatePicker Display Dialog.de.md
+Methods/DatePicker RESET DEFAULT VALUES.de.md
+Methods/DatePicker SET DAYS OFF.de.md
+Methods/DatePicker SET DEFAULT 1ST DAY.de.md
+Methods/DatePicker SET DEFAULT DAYS OFF.de.md
+Methods/DatePicker SET DEFAULT MAX DATE.de.md
+Methods/DatePicker SET DEFAULT MIN DATE.de.md
+Methods/DatePicker SET MAX DATE.de.md
+Methods/DatePicker SET MIN DATE.de.md
+Methods/DatePicker SET WEEK FIRST DAY.de.md
+SearchPicker Overview.de.md
+Methods/SearchPicker SET HELP TEXT.de.md
+TimePicker and TimeEntry.de.md
+Methods/TimePicker APPLY DEFAULT VALUES.de.md
+Methods/TimePicker DISPLAY SECOND HAND.de.md
+Methods/TimePicker LCD DISPLAY AMPM.de.md
+Methods/TimePicker LCD DISPLAY SECONDS.de.md
+Methods/TimePicker LCD SET COLOR.de.md
+Methods/TimePicker LCD SET MODE.de.md
+Methods/TimePicker RESET DEFAULT VALUES.de.md
+Methods/TimePicker SET DEFAULT LABEL AM.de.md
+Methods/TimePicker SET DEFAULT LABEL PM.de.md
+Methods/TimePicker SET DEFAULT MAX TIME.de.md
+Methods/TimePicker SET DEFAULT MIN TIME.de.md
+Methods/TimePicker SET DEFAULT STEP.de.md
+Methods/TimePicker SET LABEL AM.de.md
+Methods/TimePicker SET LABEL PM.de.md
+Methods/TimePicker SET MAX TIME.de.md
+Methods/TimePicker SET MIN TIME.de.md
+Methods/TimePicker SET STEP.de.md
