@@ -1,34 +1,34 @@
 # DatePicker SET MIN DATE
 
-> DatePicker SET MIN DATE ( objectName ; dateMin )
+> DatePicker SET MIN DATE ( ObjektName ; minDatum )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| dateMin | Date | → | Lower limit of enterable date |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| minDatum | Datum | → | Untere Grenze des eingebbaren Datums |
 
-## Description
+## Beschreibung
 
-The DatePicker SET MIN DATE command is used to set the minimum enterable date in a DatePicker calendar (the days located before this minimum date appear grayed out in the calendar).
+Der Befehl `DatePicker SET MIN DATE` setzt das eingebbare Minimumdatum in einem DatePicker Kalender. Die davor liegenden Tage sind dann im Kalender in Grauschrift gesetzt.
 
-The `objectName` parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+Der Parameter `ObjektName` gibt die Instanz des Unterformulars an, für welche die Funktion gelten soll. In diesem Parameter müssen Sie den Namen eines Objekts Unterformular übergeben, das im aktuellen Formular angezeigt wird.
 
-The minDate date must be expressed in the default entry format corresponding to the system language. If you pass a blank date (!00/00/00!), all the dates preceding the current date will be enterable.
+Das Datum `minDatum` muss im Standard Eingabeformat der Systemsprache eingegeben werden. Übergeben Sie ein leeres Datum, (!00.00.00!), sind alle Datumsangaben eingebbar, die vor dem aktuellen Datum liegen.
 
-If the minimum enterable date is later than the maximum enterable date (see [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)), no date will be enterable.
+Liegt das eingebbare Minimumdatum nach dem eingebbaren Maximumdatum, ist kein Datum eingebbar (siehe [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)).
 
-### Example  
+### Beispiel  
 
-The current form contains two DatePicker calendars located in two subform objects named "DP1" and "DP2".
+Das aktuelle Formular enthält zwei DatePicker Kalender, die in zwei Unterformularen mit Namen "DP1" und "DP2" liegen.
 
 ```4d
-  //Disabling all dates before January 1, 2009 in the first calendar  
- DatePicker SET MIN DATE("DP1";!01/01/2009!)  
-  //Disabling all dates before March 1st, 2009 in the second calendar  
- DatePicker SET MIN DATE("DP2";!03/01/2009!)
+  //Im ersten Kalender alle Daten vor dem 1. Januar 2009 deaktivieren
+ DatePicker SET MIN DATE("DP1";!01.01.2009!)
+  //Im 2. Kalender alle Daten vor dem 1. März 2009 deaktivieren
+ DatePicker SET MIN DATE("DP2";!01.03.2009!)
 ```
 
-## See also
+## Siehe auch
 
 [DatePicker SET DEFAULT MIN DATE](DatePicker%20SET%20DEFAULT%20MIN%20DATE.md)  
 [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)

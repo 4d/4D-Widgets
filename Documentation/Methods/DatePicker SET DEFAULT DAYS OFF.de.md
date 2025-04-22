@@ -1,48 +1,47 @@
 # DatePicker SET DEFAULT DAYS OFF
 
-> DatePicker SET DEFAULT DAYS OFF ( dayType ; ptrDaysOffArray )
+> DatePicker SET DEFAULT DAYS OFF ( TagTyp ; ZgrFeiertageArray )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| dayType | Longint | → | Types of days off |
-| ptrDaysOffArray | Pointer | → | Pointer to date or Boolean array of days off |
+| TagTyp | Lange Ganzzahl | → | Art der Feiertage |
+| ZgrFeiertageArray | Zeiger | → | Zeiger auf Array Datum oder Boolean mit Feiertagen |
 
-## Description
+## Beschreibung
 
-The DatePicker SET DEFAULT DAYS OFF command is used to set the days off that will appear in all the calendars of the DatePicker component. These days are displayed in bold and italic and remain selectable for the user.
+Der Befehl `DatePicker SET DEFAULT DAYS OFF` setzt die Feiertage, die in allen Kalendern der Komponente DatePicker erscheinen sollen. Diese Tage erscheinen in fett und kursiv und bleiben für den Benutzer auswählbar.
 
-Note that this setting is only taken into account for calendars that are created subsequently and does not apply to any existing calendars. If you want to apply it to the existing calendars, you will need to use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) component method.
+Beachten Sie, dass diese Einstellung nur für nachfolgend erstellte Kalender berücksichtigt wird und nicht für bereits bestehende Kalender. Soll sie auch für diese gelten, müssen Sie die Komponentenmethode [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY DEFAULT VALUES.md) einsetzen.
 
-The command can be used to set recurrent weekly or yearly days off as well as occasional holidays. You specify the type of days off set by the method via the `dayType` parameter:
+Mit dieser Komponentenmethode können Sie sowohl wöchentlich oder jährlich wiederkehrende freie Tage als auch bewegliche Feiertage setzen. Die Art des freien Tages setzen Sie im Parameter `TagTyp`:
 
-* 0 = Days off occurring weekly (by default, Saturday and Sunday)
-* 1 = Days off that occur every year (such as January 1st or December 25th)
-* 2 = Occasional holidays, set for a single year
+* 0 = Wöchentlich auftretende freie Tage (standardmäßig Samstag und Sonntag)
+* 1 = Feste Feiertage, die sich jedes Jahr wiederholen, wie z.B. 1. Januar oder 1. Mai)
+* 2 = bewegliche Feiertage, die für ein einzelnes Jahr gelten, z.B. Ostermontag
 
-You set the holidays by creating a array and by passing a pointer to this array as the `ptrDaysOffArray` parameter. The type of array depends on the value passed in `dayType`:
+Um die Feiertage zu setzen, erstellen Sie ein Array und übergeben im Parameter `ZgrFeiertageArray` einen Zeiger auf dieses Array. Sein Typ richtet sich nach dem in `TagTyp` übergebenen Wert:
 
-* If you pass 0 in `dayType` (weekly days off), in `ptrDaysOffArray` you must pass a pointer to a Boolean array made up of 7 elements. Each element set to True indicates a weekly day off.
-* If you pass 1 or 2 in `dayType` (yearly or occasional days off), in `ptrDaysOffArray` you must pass a pointer to a Date array. In this array, each element must contain a valid date, indicating a day off. The dates must be expressed in the default format corresponding to the system language. If you passed 1 in `dayType` (recurrent days), the year is ignored; you can pass any value.
+* Übergeben Sie 0 in `TagTyp` (wöchentliche freie Tage), müssen Sie in `ZgrFeiertageArray` einen Zeiger auf ein Array vom Typ Boolean mit 7 Elementen übergeben. Jedes auf Wahr gesetzte Element gibt einen freien Tag in der Woche an.
+* Übergeben Sie 1 oder 2 in `TagTyp` (jährliche oder bewegliche freie Tage), müssen Sie in `ZgrFeiertageArray` einen Zeiger auf ein Array vom Typ Datum übergeben. In diesem Array muss jedes Element ein gültiges Datum für einen Feiertag enthalten. Die Datumsangaben müssen im Standardformat der Systemsprache ausgedrückt werden. Haben Sie 1 im Parameter `TagTyp` übergeben (wiederkehrende Tage), wird das Jahr ignoriert; Sie können jeden Wert übergeben.
 
-### Example  
+### Beispiel  
 
-Designation of recurrent holidays (example valid for the USA):
+Bezeichnung fester Feiertage (Beispiel gültig für Deutschland):
 
 ```4d
- ARRAY DATE($arrdRepeatedDays;0)  
-  //The year is ignored; we use 2000 by default  
- APPEND TO ARRAY($arrdRepeatedDays;!01/01/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!02/02/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!02/14/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!03/17/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!04/01/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!10/31/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!11/11/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!12/25/2000!)  
- DatePicker SET DEFAULT DAYS OFF(1;->$arrdRepeatedDays)
+ ARRAY DATE($arrdRepeatedDays;0)  
+  //Das Jahr wird ignoriert; wir verwenden standardmäßig 2000  
+ APPEND TO ARRAY($arrdRepeatedDays;!01.01.2000!)  
+ APPEND TO ARRAY($arrdRepeatedDays;!06.01.2000!)  
+ APPEND TO ARRAY($arrdRepeatedDays;!01.05.2000!)  
+ APPEND TO ARRAY($arrdRepeatedDays;!15.08.2000!)  
+ APPEND TO ARRAY($arrdRepeatedDays;!03.10.2000!)  
+ APPEND TO ARRAY($arrdRepeatedDays;!01.11.2000!)  
+ APPEND TO ARRAY($arrdRepeatedDays;!26.12.2000!)  
+ DatePicker SET DEFAULT DAYS OFF(1;->$arrdRepeatedDays)
 ```
 
-## See also
+## Siehe auch
 
 [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md)  
 [DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.md)

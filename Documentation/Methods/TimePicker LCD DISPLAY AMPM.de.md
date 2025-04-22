@@ -1,31 +1,30 @@
 # TimePicker LCD DISPLAY AMPM
 
-> TimePicker LCD DISPLAY AMPM ( objectName ; amPm )
+> TimePicker LCD DISPLAY AMPM ( ObjektName ; amPm )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| amPm | Boolean | → | True = display AM/PM, False = do not display |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| amPm | Boolean | → | Wahr = AM/PM anzeigen, Falsch = AM/PM nicht anzeigen |
 
-## Description
+## Beschreibung
 
-The `TimePicker LCD DISPLAY AMPM` displays or hides the AM/PM placed to the right of the `objectName` subform object (digital clock only).
+Der Befehl `TimePicker LCD DISPLAY AMPM` blendet im Unterformular `ObjektName` nach den Ziffern AM/PM ein oder aus (nur digitale Uhr).
 
-These letters are used to distinguish between the morning and afternoon when the clock is used in 12-hour mode (see [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.md)).
+Damit wird im 12-Stundenmodus zwischen Vormittag und Nachmittag unterschieden (siehe [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.md)).
 
-By default, these letters are displayed. You can pass `False` in [amPm](# "True = display AM/PM, False = do not display
-") to hide them.
+Standardmäßig werden diese Buchstaben angezeigt. Um sie auszublenden, übergeben Sie im Parameter `amPm` **Falsch**.
 
-### Example  
+### Beispiel  
 
-We want to hide the AM/PM:
+AM/PM ausblenden:
 
 ```4d
- TimePicker LCD DISPLAY AMPM("Subform1";False)
+ TimePicker LCD DISPLAY AMPM("Unterformular1";False)
 ```
 
 ![](../images/pict1239891.fr.png)
 
-## See also
+## Siehe auch
 
 [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.md)

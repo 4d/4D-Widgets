@@ -15,5 +15,4 @@ Note that this setting is only taken into account for calendars created subseque
 
 ## See also
 
-[DatePicker APPLY DEFAULT VALUES](DatePicker APPLY DEFAULT VALUES.m>
-d)
+[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md)

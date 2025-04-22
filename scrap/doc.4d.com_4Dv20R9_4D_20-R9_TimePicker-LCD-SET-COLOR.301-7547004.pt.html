@@ -1,0 +1,1202 @@
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt" xml:lang="pt">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-script-type" content="text/javascript" />
+    <meta http-equiv="Content-style-type" content="text/css" />
+	<meta name="robots" content="noindex">
+    <title>TimePicker LCD SET COLOR</title>
+	    <!--script type="text/javascript" src="http://yui.yahooapis.com/combo?2.8.2r1/build/utilities/utilities.js&amp;2.8.2r1/build/datasource/datasource-min.js&amp;2.8.2r1/build/datatable/datatable-min.js&amp;2.8.2r1/build/autocomplete/autocomplete-min.js&amp;2.8.2r1/build/container/container-min.js&amp;2.8.2r1/build/menu/menu-min.js&amp;2.8.2r1/build/button/button-min.js&amp;2.8.2r1/build/editor/editor-min.js&amp;2.8.2r1/build/json/json-min.js&amp;2.8.2r1/build/treeview/treeview-min.js&amp;2.8.2r1/build/animation/animation-min.js&amp;2.8.2r1/build/dragdrop/dragdrop-min.js&amp;2.8.2r1/build/element/element-min.js&amp;2.8.2r1/build/resize/resize-min.js&amp;2.8.2r1/build/layout/layout-min.js"></script-->
+    <!--link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.2r1/build/assets/skins/sam/skin.css"/-->
+	 <link rel="stylesheet" type="text/css" src="/scripts/skin.css"/>
+	 <script type="text/javascript" src="/scripts/yui.js"></script>
+	 <script type="text/javascript"src="https://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+			<script type="text/javascript" src="/scripts/shCore.js"></script>
+     <script type="text/javascript" src="/scripts/shBrushJScript.js"></script>
+  <script type="text/javascript" src="/scripts/shBrushXml.js"></script>
+  <script type="text/javascript" src="/scripts/shBrushCss.js"></script>
+   <script type="text/javascript" src="/scripts/shBrushPhp.js"></script>
+   <script type="text/javascript" src="/scripts/shBrushSql.js"></script>
+   <style>
+	.active a{
+	color:#0B0B61 !important;
+background-color:#F2F2F2;
+}
+#results_mc  li  a {
+    color: #1e7ad3;
+    text-decoration: none;
+}
+.search {
+    position: relative;
+    margin: 0 auto;
+    width: 300px;
+	display: inline;
+}
+.champRech {
+    height: 26px;
+	width:220px;
+    padding: 0 29px 0 25px;
+    background: white url("/image/tool16x16/loupe2.png") 8px 6px no-repeat;
+background-color: #576E97;
+  border-color: #4F658A #6881AE #6881AE #4F658A;
+  border-style: solid;
+  border-width: 1px;
+   color: #FFFFFF; 
+  font-size: 14px;
+}
+.buttonRech {
+    width: 27px;
+	background: white url("/image/tool16x16/loupe2.png") 8px 3px no-repeat;
+	background-color: #3D4E6C;
+	border-color: #3D4E6C;
+	border-style: solid;
+	border-width: 1px;
+	color: #FFFFFF; 
+}
+.search input:focus + .results {  
+overflow-x: hidden !important;
+
+max-height:350px;
+ 
+overflow: auto;
+
+}
+.search .results {
+    position: absolute;
+    display:none;
+	top: 23px;
+    left: 0;
+    right: 0;
+    
+
+z-index: 10;
+    padding: 0;
+    margin: 0;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #cbcfe2 #c8cee7 #c4c7d7;
+    border-radius: 3px;
+    background-color: #fdfdfd;
+    background-
+
+image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fdfdfd), color-stop(100%, #eceef4));
+    background-image: -webkit-linear-gradient(top, #fdfdfd, #eceef4);
+    background-image: 
+
+-moz-linear-gradient(top, #fdfdfd, #eceef4);
+    background-image: -ms-linear-gradient(top, #fdfdfd, #eceef4);
+    background-image: -o-linear-gradient(top, #fdfdfd, #eceef4);
+    background-image: 
+
+linear-gradient(top, #fdfdfd, #eceef4);
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    -
+
+o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.search .results li { display: block }
+.search .results li:first-child { margin-top: -1px }
+.search .results 
+
+li:first-child:before, .search .results li:first-child:after {
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    margin-left: -5px;
+    border: 5px 
+
+outset transparent;
+}
+.search .results li:first-child:before {
+    border-bottom: 5px solid #c4c7d7;
+    top: -11px;
+}
+.search .results li:first-child:after {
+    border-bottom: 5px solid #fdfdfd;
+    top: 
+
+-10px;
+}
+.search .results li:first-child:hover:before, .search .results li:first-child:hover:after { display: none }
+.search .results li:last-child { margin-bottom: -1px }
+.search .results a img{
+padding-right:5px;
+}
+.search .results a {
+    display: block;
+    position: relative;
+    margin: 0 -1px;
+    padding: 6px 1px 1px 10px;
+    color: #808394;
+    font-weight: 500;
+    text-shadow: 0 1px #fff;
+ 
+
+   border: 1px solid transparent;
+    border-radius: 3px;
+}
+.search .results a span { font-weight: 200 }
+.search .results a:before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: 
+
+absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -9px;
+    text-decoration: none;
+}
+.search #results_mc li:hover {
+	background-color:#F2F2F2;
+		color:#0B0B61;
+}
+.search #results_mc 
+
+li:hover a{
+		color:#0B0B61;
+text-decoration:none
+  }
+:-moz-placeholder {
+    color: #a7aabc;
+    font-weight: 200;
+}
+::-webkit-input-placeholder {
+    color: #a7aabc;
+    font-weight: 200;
+}
+.lt-ie9 
+
+.search input { line-height: 26px }   
+
+</style>
+<script type='text/javascript' src='https://code.jquery.com/jquery-1.6.2.js'></script>
+	<script>
+	var lien;
+  $(document).ready(function () {
+   $(window).keyup(function (e) { //boutons up/down pour l'autocomplete 
+   if (e.keyCode == 38 || e.keyCode == 40){
+        if ( $('.search ul li').length > 1 ) {
+				var $current = $('.search ul li.active');
+				var $next;
+			if ( $current.length ){
+                if (e.keyCode == 38)	$next = $current.prev();
+				if (e.keyCode == 40)    $next = $current.next();
+                if ($next.length > 0) {
+                    $('.search ul li').removeClass('active');
+                    $next.addClass('active');
+				}}
+			else
+			{
+				if (e.keyCode == 38)
+					$('.search ul li:last-child').addClass('active');
+				if (e.keyCode == 40)
+					$('.search ul li:first-child').addClass("active");
+			}
+		}}});
+			
+$('body').keyup(function(e) { //cacher l'autocomplete quand Tabulation
+    if ( e.keyCode == '9' || e.which == '9') document.getElementById("results_mc").style.display = "none";
+ });
+ 
+ $(".search ul").hover(function () {$('.search ul li').removeClass('active');});
+
+ });
+	</script>
+	  <script type="text/javascript">
+ 
+ function HTTPRequestObject() {
+	var req = false;
+	try
+	{
+	req=new XMLHttpRequest();
+	}
+	catch(e)
+	{
+		try
+		{
+		req=new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch(e)
+		{
+			try
+			{
+			req=new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch(e)
+			{
+				req = false;
+			}
+		}
+	}
+	return req;
+}
+var timeoutId
+function move3(event,val,target) {
+val=val.replace("'","’");
+if (event.keyCode != 38 && event.keyCode != 40) {
+document.getElementById("results_mc").style.display = "none";
+
+if (event.type=="keydown")
+    {
+      target.keyDownCode = event.which; //keep it for comparision in keyup
+    }
+
+if (event.type=="keyup")
+    {
+
+if (13==event.which && event.which==target.keyDownCode) {
+if(typeof document.getElementsByClassName('active')[0] !== 'undefined' && document.getElementById('autocomplete').value.length > 2)
+	{
+	lien=document.getElementsByClassName('active')[0].children[0].href
+    window.location = lien;
+	return false;
+document.getElementById("autocomplete").style.background = "url('/image/tool16x16/loupe2.png') 8px 6px no-repeat";
+document.getElementById("autocomplete").style.backgroundColor = "#576E97";
+}
+else buttonRechFunction() ;
+}
+
+}
+
+
+
+
+if ((event.keyCode>8 && event.keyCode<=46 ) || (event.which>8 && event.which<=46 )) //&& event.which!=32
+{
+document.getElementById("results_mc").style.display = "none";
+document.getElementById("autocomplete").style.background = "url('/image/tool16x16/loupe2.png') 8px 6px no-repeat";
+document.getElementById("autocomplete").style.backgroundColor = "#576E97";
+}
+/*if (((event.keyCode==32 && event.which==32) ||(event.keyCode>48 && event.keyCode<=105) || (event.which>48 && event.which<=105) || (event.keyCode==8 ||  event.which==8) || (event.keyCode== 0 || event.which==0) || (event.keyCode==39 ||  event.which==39) || (event.keyCode== 37 || event.which==37)) && (val.length>2))
+{
+//document.getElementById("autocomplete").style.background = "url('/image/tool16x16/loupe2.png') 8px 6px no-repeat,url('/image/animated/loader.gif') right 10px center no-repeat";
+document.getElementById("autocomplete").style.background = "url('/image/tool16x16/loupe2.png') 8px 6px no-repeat";
+document.getElementById("autocomplete").style.backgroundColor = "#576E97";
+clearTimeout(timeoutId)
+
+var timeout;
+
+if(!!window.chrome==true)
+
+timeout = 250;
+
+else
+
+timeout = 850;
+
+timeoutId = setTimeout(function () {
+
+explore(val);
+
+document.getElementById("results_mc").style.display = "block";
+
+},timeout);
+}*/}}
+function buttonRechFunction() {
+var str=document.getElementById('autocomplete').value;
+str=str.replace("'", "’");
+window.location = "https://doc.4d.com/4DACTION/SearchResults_mc/"+str+'/'+document.getElementById('gamme_id').value+"-"+document.getElementById('book_id').value+'/false.'+"pt"+'.html';
+return false;
+document.getElementById("autocomplete").style.background = "url('/image/tool16x16/loupe2.png') 8px 6px no-repeat";
+document.getElementById("autocomplete").style.backgroundColor = "#576E97";
+}
+function explore(val) {
+var req = HTTPRequestObject ();
+if (req)
+   {
+   req.open("GET",'/4daction/MC_Recherche_saisie_pred/'+val+'/'+document.getElementById('gamme_id').value+"-"+document.getElementById('book_id').value+'/false.'+"pt"+'.html',false);
+   req.onreadystatechange=function()
+    {	if (req.readyState==4)
+         {  if(req.status!=200)
+            req =false;
+         }
+	}
+   req.send("");
+   }
+document.getElementById("results_mc").innerHTML=req.responseText +"<li style=\"text-align:center;font-size:15px\" onClick=\"this.parentNode.style.display = 'none';\"><a href=\"javascript:buttonRechFunction()\">.. All results ..</li>";
+document.getElementById("autocomplete").style.background = "url('/image/tool16x16/loupe2.png') 8px 6px no-repeat";
+document.getElementById("autocomplete").style.backgroundColor = "#576E97";
+}
+document.onclick = function(e) {
+    if ( e.target.nodeName != 'OBJECT' &&  e.target.nodeName != 'INPUT' ) {
+	document.getElementById("results_mc").style.display = "none";
+document.getElementById("autocomplete").style.background = "url('/image/tool16x16/loupe2.png') 8px 6px no-repeat";
+document.getElementById("autocomplete").style.backgroundColor = "#576E97";
+}};
+</script>
+    
+    <link rel="icon" type="image/gif" href="/favicon.gif" />
+    
+    
+    <!--link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?2.8.2r1/build/assets/skins/sam/skin.css"/-->
+	<link rel="stylesheet" type="text/css" src="/scripts/skin.css"/>
+    <link rel="stylesheet" type="text/css" href="/cssdynamic/10222.css"/>
+    <link rel="stylesheet" type="text/css" media="print" href="/cssdynamic/print.css"/>
+    <!--[if IE]><link rel="stylesheet" type="text/css" href="css/tdcIE.css"/><![endif]-->
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+    <script type="text/javascript">
+ function test(){
+  if    (window.location.href.toString().indexOf(".ja.")>0) 
+  {
+   document.getElementsByName("langue_id")[0].value="6";
+  }
+ 
+}
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
+}
+function isCookie(name){
+var x = readCookie(name)
+//if (x) {
+	//var session_id=x;
+	var session_id='0';
+
+
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+  // alert(xmlhttp.responseText);
+  // document.getElementById('comments-div').innerHTML=xmlhttp.responseText;
+  function readCookie_Structure(oStructure){
+                        for (property in oStructure) {
+                            this[property] = oStructure[property];
+                        }
+                    }
+                    readCookie_Structure.prototype = {
+                        html: '',
+                        name: ''
+                    };
+                    var oStructure2 = eval('new readCookie_Structure(' + xmlhttp.responseText + ');');
+					document.getElementById('comments-div').innerHTML=oStructure2.html;
+					if(oStructure2.html!=""){document.getElementById('comments_btn_div').style.display='none';}else{document.getElementById('comments_btn_div').style.display='none';}
+					//document.getElementById('topLoginSearch').innerHTML=oStructure2.name;
+					
+    }
+  }
+  var book_id=document.getElementById('book_id').value;
+  var url_original=document.getElementById('url_original').value;
+xmlhttp.open("GET","https://doc.4d.com/4DACTION/Get_User_Comments/"+url_original+"/"+session_id+"/"+book_id,true);
+xmlhttp.send();
+
+
+//}
+//else
+//{
+//document.getElementById('comments_btn_div').style.display='none';
+//}
+}
+ function resize(obj)
+{
+	if(obj.width > 750){
+		obj.style.width = "100%";
+	}
+}
+function OnloadLoadPage(){ 
+isCookie("WWSessionID");
+
+
+ }
+</script>
+</head>
+
+    <body onload="OnloadLoadPage()" class="yui-skin-sam ">
+        <table cellpadding="0" cellspacing="0" width="100%">
+            <tr>
+                <td colspan="3">
+                    
+<div id="tdc_entete">
+    <a href="http://doc.4d.com">
+        <img src="../../image/master/header_title_olv.png" alt="4D Online Documentation Center" class="noMargin"/>
+    </a>
+
+           <div id="topLoginSearch" style="visibility: visible !important;">
+            <p>
+             <div class="search" >
+				<input type="text" title="Enter !222 to display the command 222
+" class="champRech" name="q" id="autocomplete" placeholder="Pesquisa..." onkeyup="move3(event,this.value,this)" onkeydown="move3(event,this.value,this)" autocomplete="off" />
+				<input type="button" class="buttonRech" alt="Pesquisa" onclick="buttonRechFunction()" onfocus="document.getElementById("results_mc").style.display = "none"";">
+				<ul class="results" id="results_mc" ></ul>
+			</div>
+           
+            </p>
+			  </div> 
+    
+                <input type="hidden" id="book_id" value="7547004"/>
+                 <input type="hidden" id="gamme_id" value="7543518"/>
+				<input type="hidden" id="book_pere_id" value="7546981"/>
+				<input type="hidden" id="book_gpere_id" value="7546984"/>
+				<input type="hidden" id="langues_id" value="7"/>
+				<input type="hidden" id="url_original" value="4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.pt.html"/>
+    </div>
+
+<div id="tdc_entete2" class="tdc_entete2new">
+    <div class="new_doc"> 
+	 
+	 
+     
+	 
+     
+	 
+	 <p >Este é o site histórico da documentação 4D. As documentações estão sendo movidas progressivamente para <a href="https://developer.4d.com/docs/pt/" target="_blank">developer.4d.com</a></p>
+	  
+	  
+ 	   
+    </div>
+	   </div>
+	 
+
+                </td>
+            </tr>
+            <tr>
+                <td style="width:230px;vertical-align:top;padding-left:5px;padding-right:5px" id="tdc_toc_ipad">
+                 
+                <p>
+    <a href="/" style="font-size:100%">Página Inicial</a>
+</p>
+<ul>
+    
+    
+    
+    <li class="tdc_tocItem"><a href="/4Dv20R9/4D/20-R9/4D-Widgets.100-7546981.pt.html">4D Widgets</a></li>
+    
+    
+        <li class="tdc_hiddenItem">
+            <ul>
+                
+                    
+                        <li class="tdc_tocItem"><a href="/4Dv20R9/4D/20-R9/TimePicker.201-7546984.pt.html">TimePicker</a></li>
+                    
+                    
+                        <li class="tdc_hiddenItem">
+                            <ul>
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-e-TimeEntry.300-7547012.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_200.png" alt="" width="16px" height="16px"/>TimePicker e TimeEntry
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-APPLY-DEFAULT-VALUES.301-7547011.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker APPLY DEFAULT VALUES
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-DISPLAY-SECOND-HAND.301-7547003.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker DISPLAY SECOND HAND
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-DISPLAY-AMPM.301-7547006.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker LCD DISPLAY AMPM
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-DISPLAY-SECONDS.301-7547005.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker LCD DISPLAY SECONDS
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocCurrent4">
+                                    <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker LCD SET COLOR
+                                    
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-MODE.301-7547000.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker LCD SET MODE
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-RESET-DEFAULT-VALUES.301-7547008.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker RESET DEFAULT VALUES
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-DEFAULT-LABEL-AM.301-7547009.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET DEFAULT LABEL AM
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-DEFAULT-LABEL-PM.301-7547001.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET DEFAULT LABEL PM
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-DEFAULT-MAX-TIME.301-7547002.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET DEFAULT MAX TIME
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-DEFAULT-MIN-TIME.301-7547013.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET DEFAULT MIN TIME
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-DEFAULT-STEP.301-7547010.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET DEFAULT STEP
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-LABEL-AM.301-7547015.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET LABEL AM
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-LABEL-PM.301-7546998.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET LABEL PM
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-MAX-TIME.301-7547007.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET MAX TIME
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-MIN-TIME.301-7546999.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET MIN TIME
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                                
+                                    <li class="tdc_tocItem">
+                                        <a href="/4Dv20R9/4D/20-R9/TimePicker-SET-STEP.301-7547014.pt.html">
+                                            
+                                            <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>TimePicker SET STEP
+                                            
+                                        </a>
+                                    </li>
+                                
+                            
+                            </ul>
+                        </li>
+                        
+                
+            </ul>
+        </li>
+    
+    <li>&nbsp;</li></ul>
+    
+    
+
+
+
+
+
+
+                <div class="tdc_espace">&nbsp;</div>
+          
+                </td>
+                <td style="vertical-align:top">
+					
+                    <!--div id="tdc_central"-->
+                        <div class="tdc_roundbox">
+                            <b class="tdc_top"><b class="tdc_b1"></b><b class="tdc_b2"></b><b class="tdc_b3"></b><b class="tdc_b4"></b></b>
+                            <div class="tdc_roundboxcontent">
+                                
+<div class="ppA"></div>
+
+<div class="ppB">
+    <a href="/">Página Inicial</a>
+</div>
+
+<div class="ppC"></div>
+
+
+
+
+
+<div class="ppB">
+    4D v20 R9
+</div>
+
+<div class="ppC"></div>
+
+
+
+
+
+<div class="ppB">
+    <a href="/4Dv20R9/4D/20-R9/4D-Widgets.100-7546981.pt.html">4D Widgets</a>
+</div>
+
+<div class="ppC"></div>
+
+
+
+
+
+<div class="ppB">
+    <a href="/4Dv20R9/4D/20-R9/TimePicker.201-7546984.pt.html">TimePicker</a>
+</div>
+
+<div class="ppD"></div>
+
+
+
+
+
+<div class="ppE">TimePicker LCD SET COLOR</div>
+
+
+
+                                <!--*************************-->
+                                <div id="TitreTitle7547004">
+    <h3 id="TitleTitle">
+        <img src="../../image/article16x16/ak_700.png" alt="" width="16px" height="16px"/>
+        TimePicker LCD SET COLOR&nbsp;
+    </h3>
+</div>
+<p>
+    
+
+
+<br/>&nbsp;</p>
+
+
+<table class="tSynt_table" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="tSynt_td_lt"></td>
+        <td colspan="7" class="tSynt_td_ct"></td>
+        <td class="tSynt_td_rt"></td>
+    </tr>
+    <tr>
+        <td class="tSynt_td_lc"></td>
+        <td colspan="7" class="tSynt_td_cc">
+            <span id="syntax_caption_1">TimePicker LCD SET COLOR ( nomObjeto ; cor {; corV ; corA} ) &nbsp;</span>
+        </td>
+        <td class="tSynt_td_rc"></td>
+    </tr>
+    <tr>
+        <td class="tSynt_td_lc"></td>
+        <td colspan="7" class="tSynt_td_ch"></td>
+        <td class="tSynt_td_rc"></td>
+    </tr>
+    <tr>
+        <td class="tSynt_td_lc"></td>
+        <td class="tSynt_td_lrh">Parâmetro</td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lrh">Tipo</td>
+        <td class="tSynt_td_sr"></td>
+        <td class="tSynt_td_lrh">&nbsp;</td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lrh">Descrição</td>
+        <td class="tSynt_td_rc"></td>
+    </tr>
+    
+    
+    <tr>
+        <td class="tSynt_td_lc"></td>
+        <td class="tSynt_td_lr" id="parameterName_1239829">nomObjeto&nbsp;</td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lr"><span title="">Texto</span></td>
+        <td class="tSynt_td_sr"></td>
+        <td class="tSynt_td_lr">
+            <img src="../../image/parameter16x16/in_out1.png" alt="in" width="16px" height="16px"/>
+        </td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lrm">Nome do objeto subformulário</td>
+        <td class="tSynt_td_rc"></td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td class="tSynt_td_lc"></td>
+        <td class="tSynt_td_lr" id="parameterName_1239835">cor&nbsp;</td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lr"><span title="">Inteiro longo</span></td>
+        <td class="tSynt_td_sr"></td>
+        <td class="tSynt_td_lr">
+            <img src="../../image/parameter16x16/in_out1.png" alt="in" width="16px" height="16px"/>
+        </td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lrm">Valor da cor RGB (4 bytes) ou Valor do componente vermelho(0..255) se passarem os outros parâmetros</td>
+        <td class="tSynt_td_rc"></td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td class="tSynt_td_lc"></td>
+        <td class="tSynt_td_lr" id="parameterName_1239841">corV&nbsp;</td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lr"><span title="">Inteiro longo</span></td>
+        <td class="tSynt_td_sr"></td>
+        <td class="tSynt_td_lr">
+            <img src="../../image/parameter16x16/in_out1.png" alt="in" width="16px" height="16px"/>
+        </td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lrm">Valor do componente verde (0..255)</td>
+        <td class="tSynt_td_rc"></td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td class="tSynt_td_lc"></td>
+        <td class="tSynt_td_lr" id="parameterName_1239847">corA&nbsp;</td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lr"><span title="">Inteiro longo</span></td>
+        <td class="tSynt_td_sr"></td>
+        <td class="tSynt_td_lr">
+            <img src="../../image/parameter16x16/in_out1.png" alt="in" width="16px" height="16px"/>
+        </td>
+        <td class="tSynt_td_vr"></td>
+        <td class="tSynt_td_lrm">Valor do componente azul (0..255)</td>
+        <td class="tSynt_td_rc"></td>
+    </tr>
+    
+    
+    
+    
+    
+    
+    <tr>
+        <td class="tSynt_td_lb"></td>
+        <td colspan="7" class="tSynt_td_cb"></td>
+        <td class="tSynt_td_rb"></td>
+    </tr>
+</table>   
+<div class="command_paragraph">
+    <input type="hidden" id="dlg3_000_id_paragraph" value="1239820,1239856,"/>
+    <input type="hidden" id="dlg100_001_book_id" value="7547004"/>
+    <input type="hidden" id="dlg3_000_nb_syntax" value="1"/>
+    
+    <div id="Paragraph_1239820" class="">
+        <h4>
+                    <a name="1239820">Descrição</a>
+        
+        &nbsp;&nbsp;
+        </h4>
+    </div>
+    
+    <div id="Paragraph_text_1239820" class="rte4d"><p>O comando <strong>TimePicker LCD SET COLOR</strong> define as cores dos dígitos do objeto de subformulário <span class="rte4d_prm">nomObjeto </span>(relógio digital).<br/><br/>Este comando aceita duas sintaxes:</p><ul><li>Se passar somente o parâmetro <a href="#" title="Valor da cor RGB (4 bytes) ou Valor do componente vermelho(0..255) se passarem os outros parâmetros" class="rte4d_prm">cor</a>, deve passar um inteiro longo de 4 bytes cujo formato (0x00RRGGBB) se descreve a continuação (os bytes se enumeram de 0 a 3, começando da direita para a esquerda:<br/><table class="rte4d_table"><tr><td><strong>Byte</strong></td><td><strong>Descrição</strong></td></tr><tr><td>3</td><td>Deve ser zero para uma cor RGB absoluto</td></tr><tr><td>2</td><td>Componente vermelho da cor (0..255)</td></tr><tr><td>1</td><td>Componente verde da cor (0..255)</td></tr><tr><td>0</td><td>Componente azul da cor (0..255)</td></tr></table></li></ul><ul><li>Também pode passar três parâmetros: <a href="#" title="Valor da cor RGB (4 bytes) ou Valor do componente vermelho(0..255) se passarem os outros parâmetros" class="rte4d_prm">cor</a>, <span class="rte4d_prm">corV </span>e <a href="#" title="Valor do componente azul (0..255)" class="rte4d_prm">corA</a>. Neste caso, cada parâmetro deve ser um número entre 0 e 255, que representa um componente de cor RGB.</li></ul></div>
+    
+    <div id="Paragraph_1239856" class="">
+        <h4>
+                    <a name="1239856">Exemplo</a>
+        
+        &nbsp;
+        </h4>
+    </div>
+    
+    <div id="Paragraph_text_1239856" class="rte4d"><p>Mudar os dígitos do relógio a vermelho:</p><p><div class="code4d"><code>&nbsp;<span class="code4d_method">TimePicker LCD SET COLOR</span>("Subform1";0x00FF0000)<br/>&nbsp;&nbsp;<span class="code4d_comment">// can also be written: TimePicker LCD SET COLOR ("Subform1";255;0;0)</span></code></div></p><p><img  src="../../picture/1239854/pict1239854.fr.png" alt=""style="max-width:100%;"/></p></div>
+    
+</div>    
+<p></p>     
+
+
+                                <!--*************************-->
+								
+	
+								
+								
+								
+								
+								
+                            </div>
+                            <b class="tdc_bottom"><b class="tdc_b4b"></b><b class="tdc_b3b"></b><b class="tdc_b2b"></b><b class="tdc_b1b"></b></b>
+                        </div>
+						
+                       <div id="comments-div"> 
+						
+						</div>
+						 
+                       
+							<div id="comments_btn_div" style="display:none"> 
+						<div class="footer_blocA"></div>
+						<div class="footer_blocB">
+        <img src="../../image_4d/tool16x16/comment.png" alt="" width="16px" height="16px"><a id="dlg0_005_btn">Adicionar um comentário</a>
+                   </div>
+				   <div class="footer_blocD"></div>
+				   </div>
+                        <p style="display:block;background:transparent;text-align:left;margin-top: 40px;">
+                    <div class="footer_bloc">
+    <div class="footer_blocA"></div>
+    <div class="footer_blocB">
+       <a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-DISPLAY-SECONDS.301-7547005.pt.html">anterior</a>
+    </div>
+    <div class="footer_blocD"></div>
+</div>
+<div class="footer_bloc">
+    <div class="footer_blocA"></div>
+    <div class="footer_blocB">
+      <a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-MODE.301-7547000.pt.html">seguido</a>
+    </div>
+    <div class="footer_blocD"></div>
+</div>
+                </p>
+                        <div class="tdc_espace">&nbsp;</div>
+                       
+                    <!--/div--><!-- fin central-->
+                </td>
+                <td style="width:19em;vertical-align:top;padding-left:5px;padding-right:5px">
+                    <!--div id="tdc_secondaire"-->
+                        
+<div class="bloc" id="properties_title"><div class="blocA"><div class="blocC"><div class="blocB">PROPRIEDADES&nbsp;</div></div></div></div>
+<p class="blocDEF">
+	Produto: 4D<br/>
+	Tema: TimePicker<br/>
+	
+        
+        
+	
+</p>
+<p class="blocDEF">
+	
+</p>
+
+<div class="blocMNP"><div class="blocM"><div class="blocP"><div class="blocN">&nbsp;</div></div></div></div>
+<div class="bloc" id="sommaire_title"><div class="blocA"><div class="blocC"><div class="blocB">CONTEÚDO DA PÁGINA&nbsp;</div></div></div></div>
+   <input type="hidden" name="zzivk24733" value="703532210"/>
+    <input type="hidden" id="dlg4_018_translate" value="Fechar"/>
+    <input type="hidden" id="dlg4_018_list_paragraph_id" value="1239820,1239856,"/>
+    <input type="hidden" id="dlg4_018_book_id" name="book_id" value="7547004"/>
+    <input type="hidden" id="dlg4_018_perma_id" name="perma_id" value="3378"/>
+    <input type="hidden" id="dlg4_018_is_command" name="is_command" value="1"/>
+	<div class="blocDEF" style="word-wrap:break-word">
+	
+	
+	<div class="dlg4_018_paragraph_1">
+		
+		<span class="prgh_1">
+		
+		
+					<a href="#1239820" id="prg_1239820">Descrição</a>
+		<br/>
+		</span>
+	</div>
+	
+	
+	
+	<div class="dlg4_018_paragraph_1">
+		
+		<span class="prgh_1">
+		
+		
+					<a href="#1239856" id="prg_1239856">Exemplo</a>
+		<br/>
+		</span>
+	</div>
+	
+	
+	</div>
+<div class="blocMNP"><div class="blocM"><div class="blocP"><div class="blocN">&nbsp;</div></div></div></div>
+	<div class="bloc" id="history_title"><div class="blocA"><div class="blocC"><div class="blocB">HISTÓRIA&nbsp;</div></div></div></div>
+<p id="history_ul" class="blocDEF">
+
+
+	Criado por: 4D v14<br/>
+</p>
+<div class="blocMNP"><div class="blocM"><div class="blocP"><div class="blocN">&nbsp;</div></div></div></div>
+
+
+<div class="bloc" id="article_usage"><div class="blocA"><div class="blocC"><div class="blocB">ARTICLE USAGE</div></div></div></div>
+<p id="article_usage_ul" class="blocDEF">
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	<b>4D Widgets</b> ( 4D v20 R9)<br/>
+</p>
+<p class="blocDEF"></p>
+<div class="blocMNP"><div class="blocM"><div class="blocP"><div class="blocN">&nbsp;</div></div></div></div>
+
+                        <div class="tdc_espace">&nbsp;</div>
+                    <!--/div-->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div id="tdc_toolbar_footer_container">
+                        <div id="tdc_toolbar">
+                            <div class="footer_bloc">
+    <div class="footer_blocA"></div>
+    <div class="footer_blocB">
+       
+       &nbsp;<a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.fr.html" title="fr"><img src="../../image/flagSmall/fr.png" alt="FR"/></a>
+       
+       
+       &nbsp;<a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.en.html" title="en"><img src="../../image/flagSmall/en.png" alt="EN"/></a>
+       
+       
+       &nbsp;<a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.de.html" title="de"><img src="../../image/flagSmall/de.png" alt="DE"/></a>
+       
+       
+       &nbsp;<a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.es.html" title="es"><img src="../../image/flagSmall/es.png" alt="ES"/></a>
+       
+       
+       &nbsp;<a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.fe.html" title="fe"><img src="../../image/flagSmall/fe.png" alt="fe"/></a>
+       
+       
+       &nbsp;<a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.ja.html" title="ja"><img src="../../image/flagSmall/ja.png" alt="JA"/></a>
+       
+       
+       &nbsp;<a href="/4Dv20R9/4D/20-R9/TimePicker-LCD-SET-COLOR.301-7547004.pt.html" title="pt"><img src="../../image/flagSmall/pt.png" alt="PT"/></a>
+       
+    </div>
+    <div class="footer_blocD"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="pwrd_by_4d">
+    <span id="copyright">© 4D SAS 1985 - 2025. Todos os direitos reservados.</span><a href="http://www.4d.com"><img src="../../image/logo/poweredby4D_web.png" alt="Powered by 4D" class="noMargin"/></a>
+</div>
+
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <div id="dlg_container" style="visibility:hidden">
+            <!--*************************-->
+			
+<div id="dlg0_005_dialog">
+    <div class="hd">
+        <img src="../../image_4d/tool16x16/comment.png" alt=""/>Adicionar um comentário
+    </div>
+    <div class="bd">
+        <form id="dlg0_005_form" method="post" action="">
+            <p>
+               
+                <input type="hidden" id="langues_id" value=""/>
+                <input type="hidden" id="dlg0_005_translate" value="Comentário,Cancelar,Adicionar um comentário"/>
+            </p>
+            <p>
+                <textarea name="myComment" id="dlg0_005_description" rows="20" cols="80">
+                </textarea>
+            </p>
+            <div id="dlg0_005_descriptionContainer">
+            </div>
+        </form>
+    </div>
+</div>
+            
+
+</div>
+
+
+       <!--*************************-->
+    <script type="text/javascript" src="/js_statique/dlg0_005.js"></script>
+        <!--*************************-->
+		
+    </body>
+</html>

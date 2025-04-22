@@ -1,34 +1,34 @@
 # DatePicker Display Dialog
 
-> DatePicker Display Dialog {( left ; top {; defaultDate})} -> Function result
+> DatePicker Display Dialog {( Links ; Oben {; Standarddatum})} -> Funktionsergebnis
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| left | Longint | → | Location for left side of window |
-| top | Longint | → | Location for top of window |
-| defaultDate | Date | → | Date to select by default in the dialog |
-| Function result | Date | ➡️ | Date selected by user |
+| Links | Lange Ganzzahl | → | Stelle für linken Rand des Fensters |
+| Oben | Lange Ganzzahl | → | Stelle für oberen Rand des Fensters |
+| Standarddatum | Datum | → | Datum, das im Dialog standardmäßig ausgewählt wird |
+| Funktionsergebnis | Datum | ➡️ | Vom Benutzer ausgewähltes Datum |
 
-## Description
+## Beschreibung
 
-The DatePicker Display Dialog command opens a DatePicker calendar in a pop-up window (a pop-up type window is automatically closed when the user clicks outside the window or hits the **Enter** or **Esc** key).
+Die Funktion DatePicker Display Dialog öffnet einen Kalender in einem PopUp Fenster (Ein Fenster vom Typ PopUp wird automatisch geschlossen, wenn der Benutzer außerhalb des Fensters klickt oder die **Enter**- bzw. **Esc-Taste** drückt).
 
 ![](../images/pict307838.en.png)
 
-The two optional `left`and `top` parameters are used to specify the location of the top left corner of the window to be opened. These two parameters must be passed together; if only one is passed, it is ignored. If these parameters are omitted, the window is opened at the location of the click.
+Die beiden optionalen Parameter `Links` und `Oben` definieren die Position der linken oberen Ecke des zu öffnenden Fensters. Die Parameter müssen zusammen übergeben werden; Ist nur ein Parameter übergeben, wird er ignoriert. Werden diese Parameter weggelassen, wird das Fenster an der Stelle des Mausklicks geöffnet.
 
-You can pass a `defaultDate` date as third parameter in order to set the DatePicker dialog have an associated date pre-selected when displayed to the user.
+Sie können als dritten Parameter `Standarddatum` übergeben, damit im Dialogfenster DatePicker ein zugewiesenes Datum ausgewählt wird, wenn es für den Benutzer angezeigt wird.
 
-DatePicker Display Dialog returns the date selected by the user in the DatePicker calendar. If the window is closed without a date being selected by the user, the command returns a blank date (!00/00/00!), even if a `defaultDate` date was passed.
+DatePicker Display Dialog gibt das Datum zurück, welches der Benutzer im DatePicker Kalender ausgewählt hat. Wird das Fenster ohne ausgewähltes Datum geschlossen, gibt die Funktion ein leeres Datum zurück (!00/00/00!), selbst wenn der Parameter `Standarddatum` übergeben wurde.
 
-### Example  
+### Beispiel  
 
-This example displays a DatePicker calendar when a button is clicked:
+Dieses Beispiel zeigt einen DatePicker Kalender, wenn auf eine Schaltfläche geklickt wird:
 
 ```4d
- OBJECT GET COORDINATES(*;"MyCalendarButton";$x1;$y1;$x2;$y2)  
- $MyLocalDate:=DatePicker Display Dialog($x1;$y1)  
- If($MyLocalDate #!00/00/00!)  
-    [Event]DateRV:=$MyLocalDate  
- End if
+ OBJECT GET COORDINATES(*;"MyCalendarButton";$x1;$y1;$x2;$y2)  
+ $MyLocalDate:=DatePicker Display Dialog($x1;$y1)  
+ If($MyLocalDate #!00.00.00!)  
+    [Event]DateRV:=$MyLocalDate  
+ End if
 ```

@@ -1,31 +1,31 @@
 # DatePicker SET MAX DATE
 
-> DatePicker SET MAX DATE ( objectName ; maxDate )
+> DatePicker SET MAX DATE ( ObjektName ; maxDatum )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| maxDate | Date | → | Upper limit of enterable date |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| maxDatum | Datum | → | Obere Grenze des eingebbaren Datums |
 
-## Description
+## Beschreibung
 
-The DatePicker SET MAX DATE command is used to specify the maximum enterable date in the DatePicker calendar (the days located after this maximum date appear grayed out in the calendar).
+Der Befehl `DatePicker SET MAX DATE` setzt das eingebbare Maximumdatum in einen DatePicker Kalender. Die darauf folgenden Tage sind dann im Kalender in Grauschrift gesetzt.
 
-The `objectName` specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+Der Parameter `ObjektName` gibt die Instanz des Unterformulars an, für welche die Funktion gelten soll. In diesem Parameter müssen Sie den Namen des Objekts Unterformular übergeben, das im aktuellen Formular angezeigt wird.
 
-The `maxDate` date must be expressed in the default entry format corresponding to the system language. If you pass a blank date (!00/00/00!), all the dates that follow the current date are enterable.
+Das Datum `maxDatum` muss im Standard Eingabeformat der Systemsprache eingegeben werden. Übergeben Sie ein leeres Datum, (!00.00.00!), sind alle Datumsangaben eingebbar, die nach dem aktuellen Datum liegen.
 
-If the maximum enterable date is earlier than the minimum enterable date (see [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.md)), no date will be enterable.
+Liegt das eingebbare Maximumdatum vor dem Minimumdatum (siehe [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.md)), wird kein Datum eingegeben.
 
-### Example  
+### Beispiel  
 
-Disabling all dates after December 31, 2009 in the object named "ReturnDate":
+Alle Datumsangaben nach dem 31.Dezember 2009 im Objekt "ReturnDate" deaktivieren:
 
 ```4d
- DatePicker SET MAX DATE("ReturnDate";!12/31/2009!)
+ DatePicker SET MAX DATE("ReturnDate";!31.12.2009!)
 ```
 
-## See also
+## Siehe auch
 
 [DatePicker SET DEFAULT MAX DATE](DatePicker%20SET%20DEFAULT%20MAX%20DATE.md)  
 [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.md)

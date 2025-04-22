@@ -1,59 +1,78 @@
-# 🧩 TimePicker and TimeEntry  
+# 🧩 TimePicker und TimeEntry  
 
-The TimePicker widget provides easy-to-use objects that you can use to make the most of any fields that require times to be entered or displayed. It can be used in the following forms:
+Das Widget TimePicker ist ein leicht zu handhabendes Objekt, über das Sie Felder mit Zeitangabe attraktiver darstellen können. Es gibt Formen:
 
-* Single or double pop up menus:  
+* Einfaches oder doppeltes Popup-Menü:  
     ![](images/pict308493.en.png) ![](images/pict308495.en.png)
 
-* Time entry areas in the "hh:mm:ss" format associated with a numeric stepper that can be used to increase or decrease the value of the hours, minutes or seconds:  
+* Bereiche für Zeiteingabe im Format "hh:mm:ss" mit Zähler, um Stunden, Minuten oder Sekunden vor- oder zurückzuzählen:  
     ![](images/pict308497.en.png)
 
-* Clocks (_TimeDisplay_) or digital clocks (_TimeDisplayLCD_):  
+* Uhr (*TimeDisplay*) oder digitale Uhr (*TimeDisplayLCD*):  
     ![](images/pict1239685.fr.png) ![](images/pict1239687.fr.png)
 
-In addition, each type of TimePicker can display the time in 12-hour (AM-PM) or 24-hour format.
+Darüberhinaus kann jede Art von TimePicker die Zeit im 12-Stunden (AM-PM) oder 24-Stundenformat anzeigen.
 
- TimePicker object can be used without programming thanks to the mechanisms provided by the bound variable. However, if you want to customize the functioning of TimePicker objects, you can use the set of component methods that is provided.
+Das Objekt TimePicker ist ohne Programmierung verwendbar, da seine Funktionsweise über die gebundene (bound) Variable gesteuert wird. Wollen Sie dagegen diese Funktionsweise anpassen, können Sie den Satz mitgelieferter Komponentenmethoden verwenden.
 
-## Creation and use  
+## Erstellung und Verwendung  
 
-You can insert a TimePicker area into a form in two ways:
+Sie können einen Bereich TimePicker auf zwei Arten in ein Formular einfügen:
 
-* By inserting a "TimePicker" or "TimeEntry" object from the preconfigured object library of 4D.
-* By creating a subform area and assigning the **TimePicker** or **TimeEntry** detail form of your choice to it.
+* Durch Einfügen eines Objekts "TimePicker" oder "TimeEntry" aus der vorkonfigurierten Objektbibliothek von 4D.
+* Durch Erstellen eines Bereichs Unterformular und Zuweisen des Detail Formulars **TimePicker** oder **TimeEntry**.
 
-Then specify the name of the variable bound to the subform ("Variable Name" property in the Property List). When the form is executed, this variable will automatically contain the time specified by the user. Conversely, if you modify the value of this variable by programming, it will automatically be shown in the subform. You can also choose not to name the variable in order to benefit from the dynamic variable mechanism.
+Dann definieren Sie den Namen der Zeitvariablen, die dem Unterformular zugewiesen ist (Eigenschaft "Variablenname" in der Eigenschaftenliste). Beim Ausführen des Formulars enthält diese Variable automatisch die vom Benutzer gewählte Zeit. Ändern Sie umgekehrt den Wert dieser Variablen per Programmierung, wird er automatisch im Unterformular angezeigt. Sie können die Variable auch unbenannt lassen, um den dynamischen Variablenmechanismus zu nutzen.
 
-#### About clocks (new in v14)  
+## Widget Clock (neu in Version 14)
 
-Clock widgets are drawn in SVG, and therefore have a vector path allowing deformations in Application mode (in Design mode, their size is fixed):
+Das Widget "Clock" ist in SVG gezeichnet, und ist ein Vektorbild, das Ändern von Größe- und Proportionen im Anwendungmodus zulässt (im Designmodus ist die Größe fest):
 
 ![](images/pict1239707.fr.png)
 
-Note that:
+Beachte das:
 
-* For a standard clock, the second hand can be displayed or hidden using the [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md) method.
-* A standard clock automatically changes to "day mode" or "night mode" depending on the time:  
+* Für die Anzeige als Uhr lässt sich mit der Methode [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md) der Sekundenzeiger ein- oder ausblenden.
+* Die Uhr wechselt, je nach Zeit, automatisch in den Tag- oder Nacht-Modus:  
     ![](images/pict1239740.fr.png)  
-    The time ranges are 8:00:00 -> 19:59:59 = Day, 20:00 -> 07:59:59 = Night.
-* The "digital clock" widget is transparent and has no background, so it can be placed on top of colored objects in order to vary its appearance:  
+    Die Zeiteinteilung ist 8:00:00 -> 19:59:59 = Tag, 20:00 -> 07:59:59 = Nacht.
+* Das Wiget "digital clock" ist transparent und ohne Hintergrund, so lässt es sich auch auf farbige Objekte setzen. Die Anzeige lässt sich z.B. wie folgt variieren:  
     ![](images/pict1239718.fr.png)  
-    There are several display options for this widget that are available through component methods, which are prefixed by "TimePicker LCD".
+    Für dieses Wigdet gibt es verschiedene Anzeigeoptionen, die über Komponentenmethoden mit der Vorsilbe "TimePicker LCD" verfügbar sind.
 
-**Note:** Developers can displace this clock drawing and substitute their own creations by replacing the "clock.svg" file found at the first level of the "Resources" folder.
+**Hinweis:** Entwickler können diese Uhrdarstellung durch eigene Kreationen ersetzen. Dazu ersetzen sie einfach die Datei "clock.svg", die im Ordner "Resources" auf der ersten Ebene liegt.
 
-## Displaying the current time or a static time  
+## Aktuelle oder statische Zeit anzeigen
 
-Clocks can either display the current time dynamically, or show a static time.
+Uhren können entweder die aktuelle Zeit dynamisch anzeigen oder eine statische Zeit anzeigen.
 
-* To display the current time, associate an **Integer** variable to the subform object of the widget (default operation). In this case, the widget automatically displays the current time and operates like a clock.  
-    You can apply an offset to the displayed time: the value of the number variable indicates the offset in seconds. For example, 3600 = advancing the clock one hour, -1800 = turning the clock back 30 minutes, etc.
+* Zur Anzeige der **aktuellen Zeit** und funktioniert wie eine Uhr:
+  * Wenn Sie eine Variable als Datenquelle verwenden, verknüpfen Sie eine **Ganzzahl**-Variable mit dem Unterformularobjekt des Widgets (Standard).
+  * Wenn Sie eine **Objekteigenschaft** als Datenquelle verwenden (z.B. Form.myTime), verknüpfen Sie einen **Ganzzahl**- oder **Zeitwert** mit dem Unterformularobjekt des Widgets.
 
-* To display a static time, associate a **Time** variable to the subform object of the widget (by means of the [C_TIME](https://developer.4d.com/docs/Concepts/time) command or the Property List). The clock then displays the value of the this variable.
+**Hinweis**: Sie können einen Offset auf die angezeigte Zeit anwenden: Der Wert der Zahlenvariablen gibt den Offset in Sekunden an. Beispiel: 3600 = Vorstellen der Uhr um eine Stunde, -1800 = Zurückstellen der Uhr um 30 Minuten, usw.
 
-For example, we want the clock to show 10:10:30:
+* Zur Anzeige einer **statischen Zeit**:
+  * Wenn Sie eine **Variable** als Datenquelle verwenden, verknüpfen Sie eine **Zeit**- oder **Textvariable** mit dem Unterformularobjekt des Widgets (über die Sprache oder die Eigenschaftsliste).
+  * Wenn Sie eine **Objekteigenschaft** als Datenquelle verwenden (z.B. Form.myTime), verknüpfen Sie einen **Textwert** mit dem Unterformularobjekt des Widgets.
+
+Wir möchten zum Beispiel, dass die Uhr 10:10:30 anzeigt:
+
+* mit einer Variablen als Datenquelle
 
 ```4d
- C_TIME(myvar) // myvar is the name of the widget’s variable  
- myvar:=?10:10:30?
+ C_TIME(myTime) // myTime ist die Datenquelle des Widgets
+ myTime:=?10:10:30?
+ 
+  // equivalent to:
+ C_TEXT(myOtherTime) // myOtherTime ist die Datenquelle des Widgets
+ myOtherTime:="10:10:30"
 ```
+
+* mit einer Objekteigenschaft als Datenquelle:
+
+```4d
+ Form.myTime:="10:10:30" // Form.myTime ist die Datenquelle für das Widget
+```
+
+![](images/pict1239765.fr.png)

@@ -1,29 +1,30 @@
 # DatePicker SET DEFAULT 1ST DAY
 
-> DatePicker SET DEFAULT 1ST DAY ( dayNum )
+> DatePicker SET DEFAULT 1ST DAY ( TagNum )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| dayNum | Longint | → | First day of the week |
+| TagNum | Lange Ganzzahl | → | Erster Tag der Woche |
 
-## Description
+## Beschreibung
 
-The DatePicker SET DEFAULT 1ST DAY command is used to set the first day of the week to be displayed by default in the left part of all DatePicker calendars.
+Der Befehl `DatePicker SET DEFAULT 1ST DAY` setzt den ersten Tag der Woche, der standardmäßig im linken Teil aller DatePicker Kalender erscheinen soll.
 
-In the `dayNum` parameter, pass one of the following 4D constants found in the `[`Days and Months` theme:
+Im Parameter `TagNum` übergeben Sie eine der nachfolgenden 4D Konstanten unter dem Thema `Days and Months`:
 
-| Constant | Type | Value |
+| Konstante | Typ | Wert |
 | --- | --- | --- |
-| Sunday | Longint | 1   |
-| Monday | Longint | 2   |
-| Tuesday | Longint | 3   |
-| Wednesday | Longint | 4   |
-| Thursday | Longint | 5   |
-| Friday | Longint | 6   |
-| Saturday | Longint | 7   |
-Note that this parameter is only taken into account for calendars created subsequently and does not apply to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) component method.
+| Sunday | Lange Ganzzahl | 1   |
+| Monday | Lange Ganzzahl | 2   |
+| Tuesday | Lange Ganzzahl | 3   |
+| Wednesday | Lange Ganzzahl | 4   |
+| Thursday | Lange Ganzzahl | 5   |
+| Friday | Lange Ganzzahl | 6   |
+| Saturday | Lange Ganzzahl | 7   |
 
-## See also
+Beachten Sie, dass dieser Parameter nur für nachfolgend erstellte Kalender berücksichtigt wird und nicht für bereits vorhandene Kalender. Soll er auch für diese gelten, müssen Sie den Befehl [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) verwenden.
+
+## Siehe auch
 
 [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md)  
 [DatePicker SET WEEK FIRST DAY](DatePicker%20SET%20WEEK%20FIRST%20DAY.md)

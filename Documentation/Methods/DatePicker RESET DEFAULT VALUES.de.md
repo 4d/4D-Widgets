@@ -2,18 +2,17 @@
 
 > DatePicker RESET DEFAULT VALUES
 
-## Description
+## Beschreibung
 
-The DatePicker RESET DEFAULT VALUES command resets the parameters of the DatePicker component to their "factory settings". After executing this component method:
+Der Befehl `DatePicker RESET DEFAULT VALUES` setzt alle Parameter im Kalender DatePicker auf die Standardeinstellung zurück. Nach Ausführung des Befehls gilt folgendes:
 
-* the minimum or maximum enterable dates are 00/00/00 (meaning there are no limits)
-* the first day of the week is 2 (Monday)
-* the weekly "days off" are Saturday and Sunday
-* no yearly "days off" or specific holidays are set.
+* das eingebbare Minimum- oder Maximumdatum ist 00.00.00, d.h. es gibt keine Begrenzung
+* der erste Tag der Woche ist 2, das ist Montag
+* die freien Tage in der Woche sind Samstag und Sonntag
+* es sind keine freien Tage im Jahr und keine Feiertage gesetzt
 
-Note that this setting is only taken into account for calendars created subsequently and is not applied to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) component method.
+Beachten Sie, dass dieser Parameter nur für nachfolgend erstellte Kalender berücksichtigt wird und nicht für bereits vorhandene Kalender. Soll er auch für diese gelten, müssen Sie den Befehl [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) verwenden.
 
-## See also
+## Siehe auch
 
-[DatePicker APPLY DEFAULT VALUES](DatePicker APPLY DEFAULT VALUES.m>
-d)
+[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md)

@@ -1,29 +1,29 @@
 # TimePicker LCD SET MODE
 
-> TimePicker LCD SET MODE ( objectName ; mode )
+> TimePicker LCD SET MODE ( ObjektName ; Modus )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| mode | Longint | → | 12 = display time in 12-hour mode, 24 = display time in 24-hour mode |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| Modus | Lange Ganzzahl | → | 12 = Zeitanzeige im 12-Stundenmodus, 24 = Zeitanzeige im 24-Stundenmodus |
 
-## Description
+## Beschreibung
 
-The `TimePicker LCD SET MODE` sets the display to either 12- or 24-hour mode for the `objectName` subform object (digital clock only).
+Der Befehl `TimePicker LCD SET MODE` setzt die Anzeige des Unterformulars `ObjektName` auf den 12- oder 24-Stundenmodus (nur digitale Uhr).
 
-By default, the object is displayed in 12-hour mode. You can pass the value 24 in the `mode` parameter if you want to switch to 24-hour mode. In this case, it is generally a good idea to hide the AM/PM as well (see the [TimePicker LCD DISPLAY AMPM](TimePicker%20LCD%20DISPLAY%20AMPM.md)).
+Standardmäßig wird das Objekt im 12-Stundenmodus angezeigt. Um in den 24-Stundenmodus zu wechseln, übergeben Sie im Parameter `Modus` den Wert 24. In diesem Fall sollten Sie auch AM/PM ausblenden (siehe Befehl [TimePicker LCD DISPLAY AMPM](TimePicker%20LCD%20DISPLAY%20AMPM.md)).
 
-### Example  
+### Beispiel  
 
-We want to switch to 24-hour mode and hide the AM/PM:
+In den 24-Stundenmodus wechseln und AM/PM ausblenden:
 
 ```4d
- TimePicker LCD SET MODE("Subform1";24)  
- TimePicker LCD DISPLAY AMPM("Subform1";False)
+ TimePicker LCD SET MODE("Subform1";24)  
+ TimePicker LCD DISPLAY AMPM("Subform1";False)
 ```
 
 ![](../images/pict1239968.fr.png)
 
-## See also
+## Siehe auch
 
 [TimePicker LCD DISPLAY AMPM](TimePicker%20LCD%20DISPLAY%20AMPM.md)

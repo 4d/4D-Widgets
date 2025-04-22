@@ -1,32 +1,32 @@
 # SearchPicker
 
-## Overview
+## Überblick
 
-With the SearchPicker widget, you can easily create standard search areas, similar to those found in browsers or tool bars. The appearance of the area depends on the platform.
+Mit dem Widget SearchPicker können Sie mühelos standardmäßige Suchbereiche anlegen, ähnlich wie Suchbereiche in Browsern oder Werkzeugleisten. Die Darstellung richtet sich nach der jeweiligen Plattform.
 
 **Windows:**  
 ![Windows](images/pict308433.en.png)  
 **Mac OS:**  
 ![Mac OS](images/pict308435.en.png)
 
-The text displayed by default in the area can be controlled by programming, using the [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) component method.
+Der standardmäßig im Bereich angezeigte Text lässt sich per Programmierung steuern, und zwar über die Komponentenmethode [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md).
 
-### Functioning
+### Funktionsweise
 
-Besides its appearance, a SearchPicker search area is characterized by the following elements: grayed out text, an entry area, and a deletion icon.
+Ein Suchbereich SearchPicker hat zusätzlich zu seiner Darstellung folgende Merkmale: Text in Grauschrift, Eingabebereich und Icon zum Löschen.
 
-- **Entry area:** The user enters the value to be searched for. This value is automatically and dynamically assigned to the variable that you have bound with the area in the Property list ("Variable Name" property). You use this variable to supply the value searched for to the search method.
-- **Grayed out text:** An aid indicating the field(s) where the search will be carried out to the user. It disappears as soon as the area has the focus. This text can be set via the [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) command.
-- **Deletion button:** Used to erase the contents of the area. Its functioning is automatic.
+- **Eingabebereich:** Im Eingabebereich wird der zu suchende Wert eingegeben. Dieser Wert wird automatisch der Variablen zugewiesen, die Sie mit dem Bereich in der Eigenschaftenliste gebunden haben (Eigenschaft Variablenname). Über diese Variable liefern Sie den gesuchten Wert für die Suchmethode.
+- **Text in Grauschrift:** Der Text in Grauschrift dient als Hilfe, die dem Benutzer das Feld bzw. die Felder anzeigt, wo die Suche ausgeführt wird. Er verschwindet, sobald der Bereich den Fokus hat. Dieser Text lässt sich über den Befehl [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) setzen.
+- **Icon zum Löschen:** Mit dem Icon Löschen lässt sich der Inhalt im Bereich löschen. Er funktioniert automatisch.
 
-During execution, you can launch your search method by clicking on a custom button in the form or via a form event. The area generates more particularly the **On Data Change** and **On Losing Focus** events. You can provide a dynamic search that is reevaluated each time the user enters another character by calling the search method in the **On Data Change** event.
+Während der Ausführung können Sie Ihre Suchmethode durch Anklicken einer eigenen Schaltfläche im Formular oder in einem Formularereignis starten. Der Bereich erzeugt die Ereignisse **On Data Change** und **On Losing Focus**. Sie können eine dynamische Suche liefern, die immer, wenn der Benutzer ein anderes Zeichen eingibt, durch Aufrufen der Suchmethode im Ereignis **On Data Change** neu bewertet wird.
 
-### Creation
+### Erstellung
 
-You can insert a SearchPicker area in a form in two ways:
+Sie können einen Bereich SearchPicker auf zwei Arten in ein Formular einfügen:
 
-1. By inserting a "SearchPicker" area from the preconfigured object library of 4D ("Entry areas" theme).
-2. By creating a subform area and assigning the **SearchPicker** detail form to it.  
+1. Durch Einfügen eines Bereichs "SearchPicker" aus der vorkonfigurierten Objektbibliothek von 4D (Kategorie "Eingabebereiche").
+2. Durch Erstellen eines Bereichs Unterformular und Zuweisen des Detail Formulars **SearchPicker**.  
    ![Subform](images/pict308455.en.png)
 
-Then specify the name of the variable bound with the subform ("Variable Name" property in the Property list). When the form is executed, this variable will automatically contain the value searched for by the user. You can then pass this value to your custom search method.
+Dann definieren Sie den Namen der Variablen, welche Sie dem Unterformular zuweisen (Eigenschaft "Variablenname" in der Eigenschaftenliste). Beim Ausführen des Formulars enthält diese Variable automatisch den vom Benutzer gesuchten Wert, den Sie dann in Ihrer eigenen Suchmethode übergeben können.

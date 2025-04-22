@@ -1,33 +1,33 @@
 # DatePicker APPLY DEFAULT VALUES
 
-> DatePicker APPLY DEFAULT VALUES ( objectName )
+> DatePicker APPLY DEFAULT VALUES ( Objektname )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
+| Objektname | Text | → | Name des Objekts Unterformular |
 
-## Description
+## Beschreibung
 
-The `DatePicker APPLY DEFAULT VALUES` command is used to reset all the DatePicker parameters to their default values for the `objectName` subform object.
+Der Befehl `DatePicker APPLY DEFAULT VALUES` setzt alle Parameter im Kalender DatePicker auf die Standardwerte des in `Objektname` angegebenen Unterformulars zurück.
 
-These default values may be the factory settings but may also have been modified via the SET DEFAULT commands of the component.  
-The action of this command is immediate: the default values of `objectName` are instantly modified. Note that the variable associated with the object could also be modified in order to take the new values into account. For example, if the new default values set the minimum date to 01/01/2000 and the variable associated with `objectName` was 05/05/1995, its value is automatically returned to 01/01/2000.
+Das können die Standardeinstellungen oder die Anpassungen über die SET DEFAULT Befehle der Komponente sein.  
+Der Befehl wirkt sich unmittelbar aus: die Standardwerte von `Objektname` werden sofort geändert. Beachten Sie, dass sich die dem Objekt zugewiesene Variable ebenfalls ändern kann, um die neuen Werte zu berücksichtigen. Setzt z.B. der neue Standardwert das Minimumdatum auf 01.01.2000 und war die `Objektname` zugeordnete Variable 05.05.1995, wird der Wert automatisch auf 01.01.2000 gesetzt.
 
-The DatePicker parameters include:
+Die Parameter von DatePicker enthalten:
 
-* minimum or maximum enterable dates
-* the first day of the week
-* weekly and yearly "days off" as well as specific holidays
+* eingebbares Minimum- oder Maximumdatum
+* den ersten Tag der Woche
+* Freie Tage in der Woche und im Jahr sowie feste Feiertage
 
-### Example  
+### Beispiel  
 
-This example resets the parameters of the Date1 object to their default settings:
+Dieses Beispiel setzt die Parameter des Objekts Date1 auf seine Standardwerte zurück:
 
 ```4d
- DatePicker APPLY DEFAULT VALUES("Date1")
+ DatePicker APPLY DEFAULT VALUES("Datum1")
 ```
 
-## See also
+## Siehe auch
 
 [DatePicker RESET DEFAULT VALUES](DatePicker%20RESET%20DEFAULT%20VALUES.md)  
 [DatePicker SET DEFAULT 1ST DAY](DatePicker%20SET%20DEFAULT%201ST%20DAY.md)  

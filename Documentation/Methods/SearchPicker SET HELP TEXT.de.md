@@ -1,22 +1,22 @@
 # SearchPicker SET HELP TEXT
 
-> SearchPicker SET HELP TEXT ( objectName ; helpText )
+> SearchPicker SET HELP TEXT ( ObjektName ; HilfeText )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| helpText | Text | → | Text to display |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| HilfeText | Text | → | Anzuzeigender Text |
 
-## Description
+## Beschreibung
 
-The `SearchPicker SET HELP TEXT` command is used to display a non-enterable grayed-out text in the background of the search area specified by `objectName`. This text disappears when the user clicks in the area.
+Der Befehl `SearchPicker SET HELP TEXT` setzt einen nicht-eingebbaren in grau gesetzten Text im Hintergrund des Suchbereichs, definiert in `ObjektName`. Dieser Text verschwindet, wenn der Benutzer in den Bereich klickt.
 
-### Example  
+### Beispiel  
 
-Displays the word "Country" in the area, indicating that the search will concern this variable:
+Zeigt das Wort "Country" im Bereich und gibt an, dass die Suche diese Variable betrifft:
 
 ```4d
- SearchPicker SET HELP TEXT("vSearch";"Country")
+ SearchPicker SET HELP TEXT("vSearch";"Country")
 ```
 
 ![](../images/pict308485.en.png)

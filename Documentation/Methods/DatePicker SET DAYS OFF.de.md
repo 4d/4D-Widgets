@@ -1,57 +1,57 @@
 # DatePicker SET DAYS OFF
 
-> DatePicker SET DAYS OFF ( objectName {; dayType ; ptrDaysOffArray} )
+> DatePicker SET DAYS OFF ( ObjektName {; TagTyp ; ZgrFeiertageArray} )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| dayType | Longint | → | Types of days off |
-| ptrDaysOffArray | Pointer | → | Pointer to date or Boolean array of days off |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| TagTyp | Lange Ganzzahl | → | Art der Feiertage |
+| ZgrFeiertageArray | Zeiger | → | Zeiger auf Array Datum mit Feiertagen |
 
-## Description
+## Beschreibung
 
-The DatePicker SET DAYS OFF command is used to set the days off to appear in the DatePicker calendar. These days are displayed in bold and italic and remain selectable for the user.
+Der Befehl `DatePicker SET DAYS OFF` setzt die Feiertage, die im Kalender DatePicker erscheinen sollen. Diese Tage erscheinen in fett und kursiv und bleiben für den Benutzer auswählbar.
 
-The `objectName` parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+Der Parameter `ObjektName` spezifiziert die Instanz des Unterformulars, für welche die Funktion gelten soll. In diesem Parameter übergeben Sie den Namen des Objekts Unterformular, das im aktuellen Formular angezeigt wird.
 
-This command can be used to set either recurrent weekly or yearly days off as well as occasional holidays. You specify the type of days off set via the `dayType` parameter:
+Mit diesem Befehl können Sie sowohl wöchentlich oder jährlich wiederkehrende freie Tage als auch bewegliche Feiertage setzen. Die Art des freien Tages setzen Sie im Parameter `TagTyp`:
 
-* 0 = Days off occurring weekly (by default, Saturday and Sunday)
-* 1 = Days off that occur every year (such as January 1st or December 25th)
-* 2 = Occasional holidays, set for a single year
+* 0 = Wöchentlich auftretende freie Tage (standardmäßig Samstag und Sonntag)
+* 1 = Feste Feiertage, die sich jedes Jahr wiederholen, wie z.B. 1. Januar oder 25. Dezember)
+* 2 = bewegliche Feiertage, die für ein einzelnes Jahr gelten, z.B. Ostermontag
 
-You set the holidays by creating a array and by passing a pointer to this array as the `ptrDaysOffArray` parameter. The type of array depends on the value passed in `dayType`:
+Um die Feiertage zu setzen, erstellen Sie ein Array und übergeben im Parameter `ZgrFeiertageArray` einen Zeiger auf dieses Array. Sein Typ richtet sich nach dem in `TagTyp` übergebenen Wert:
 
-* If you pass 0 in `dayType` (weekly days off), in `ptrDaysOffArray` you must pass a pointer to a Boolean array made up of 7 elements. Each element set to True indicates a weekly day off.
-* If you pass 1 or 2 in `dayType` (yearly or occasional days off), in `ptrDaysOffArray` you must pass a pointer to a Date array. In this array, each element must contain a valid date, indicating a day off. The dates must be expressed in the default format corresponding to the system language. If you passed 1 in `dayType` (recurrent days), the year is ignored; you can pass any value.
+* Übergeben Sie 0 in `TagTyp` (wöchentliche freie Tage) müssen Sie in `ZgrFeiertageArray` einen Zeiger auf ein Array vom Typ Boolean mit 7 Elementen übergeben. Jedes auf Wahr gesetzte Element gibt einen freien Tag in der Woche an.
+* Übergeben Sie 1 oder 2 in `TagTyp` (jährliche oder bewegliche freie Tage) müssen Sie in `ZgrFeiertageArray` einen Zeiger auf ein Array vom Typ Datum übergeben. In diesem Array muss jedes Element ein gültiges Datum für einen Feiertag enthalten. Die Datumsangaben müssen im Standardformat der Systemsprache ausgedrückt werden. Haben Sie 1 im Parameter `TagTyp` übergeben (wiederkehrende Tage), wird das Jahr ignoriert; Sie können jeden Wert übergeben.
 
-### Example 1  
+### Beispiel 1  
 
-Designation of Friday as the weekly day off (instead of Saturday and Sunday by default):
+Freitag als freien Tag bezeichnen, anstatt der Standardeinstellung Samstag und Sonntag:
 
 ```4d
- ARRAY BOOLEAN($arrbDaysOff;7)  
-  //By default, all the elements of a Boolean array are False; thus it is not necessary to add initialization code  
- $arrbDaysOff{Friday}:=True  
- DatePicker SET DAYS OFF("mycalendar";0;->$arrbDaysOff)
+ ARRAY BOOLEAN($arrbDaysOff;7)  
+  //Standardmäßig sind alle Elemente eines Boolean Array Falsch; deshalb muss kein Code zur Initialisierung hinzugefügt werden.
+ $arrbDaysOff{Friday}:=True  
+ DatePicker SET DAYS OFF("mycalendar";0;->$arrbDaysOff)
 ```
 
 ![](../images/pict308188.en.png)
 
-### Example 2  
+### Beispiel 2  
 
-Designation of occasional holidays:
+Bezeichnung beweglicher Feiertage, z.B. Ostermontag:
 
 ```4d
- ARRAY DATE($arrdUniqueDays;0)  
-  //The year is taken into account  
- APPEND TO ARRAY($arrdUniqueDays;!02/15/2008!)  
- APPEND TO ARRAY($arrdUniqueDays;!02/12/2009!)  
- APPEND TO ARRAY($arrdUniqueDays;!02/17/2010!)  
- DatePicker SET DAYS OFF(1;->$arrdUniqueDays)
+ ARRAY DATE($arrdUniqueDays;0)  
+  //Das Jahr wird berücksichtigt  
+ APPEND TO ARRAY($arrdUniqueDays;!02/15/2008!)  
+ APPEND TO ARRAY($arrdUniqueDays;!02/12/2009!)  
+ APPEND TO ARRAY($arrdUniqueDays;!02/17/2010!)  
+ DatePicker SET DAYS OFF(1;->$arrdUniqueDays)
 ```
 
-## See also
+## Siehe auch
 
 [DatePicker SET DEFAULT DAYS OFF](DatePicker%20SET%20DEFAULT%20DAYS%20OFF.md)  
 [DatePicker SET WEEK FIRST DAY](DatePicker%20SET%20WEEK%20FIRST%20DAY.md)

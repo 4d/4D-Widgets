@@ -1,25 +1,25 @@
 # TimePicker APPLY DEFAULT VALUES
 
-> TimePicker APPLY DEFAULT VALUES ( objectName )
+> TimePicker APPLY DEFAULT VALUES ( ObjektName )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
+| ObjektName | Text | → | Name des Objekts Unterformular |
 
-## Description
+## Beschreibung
 
-The `TimePicker APPLY DEFAULT VALUES` command is used to reset all the TimePicker parameters to their current default values for the `objectName` subform object.
+Der Befehl `TimePicker APPLY DEFAULT VALUES` setzt alle TimePicker Parameter auf ihre Standardwerte für das Unterformular zurück, angegeben in `ObjektName`.
 
-These default values may be the factory settings but may also have been modified via the SET DEFAULT commands of the component.  
-The action of this command is immediate: the default values of `objectName` are instantly modified. Note that the bound variable of the object could also be modified in order to take the new values into account. For example, if the new default values set the minimum time to 07:00:00 and the value of the variable bound with `objectName` was 06:00:00, its value is automatically returned to 07:00:00.
+Das können die Standardeinstellungen, aber auch die Anpassungen über SET DEFAULT Befehle der Komponente sein.
+Der Befehl wirkt sich unmittelbar aus: die Standardwerte von `ObjektName` werden sofort geändert. Beachten Sie, dass sich die dem Objekt zugewiesene Variable ebenfalls ändern kann, um die neuen Werte zu berücksichtigen. Setzt z.B. der neue Standardwert die Minimumzeit auf 07:00:00 und war die `ObjektName` zugeordnete Variable 06:00:00, wird der Wert automatisch auf 07:00:00 gesetzt.
 
-The TimePicker parameters include:
+Die Parameter für TimePicker enthalten:
 
-* minimum or maximum enterable times,
-* the AM and PM labels,
-* the steps in minutes.
+* die eingebbaren Minimum- und Maximumzeiten
+* die Bezeichnungen AM und PM
+* die Intervalle in Minuten
 
-## See also
+## Siehe auch
 
 [TimePicker RESET DEFAULT VALUES](TimePicker%20RESET%20DEFAULT%20VALUES.md)  
 [TimePicker SET DEFAULT LABEL AM](TimePicker%20SET%20DEFAULT%20LABEL%20AM.md)  

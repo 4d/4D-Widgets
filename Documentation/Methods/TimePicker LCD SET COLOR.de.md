@@ -1,39 +1,39 @@
 # TimePicker LCD SET COLOR
 
-> TimePicker LCD SET COLOR ( objectName ; color {; colorG ; colorB} )
+> TimePicker LCD SET COLOR ( ObjektName ; Farbe {; FarbeG ; FarbeB} )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| color | Longint | → | Value of RGB color (4 bytes) or Value of red component (0..255) if the other parameters are passed |
-| colorG | Longint | → | Value of green component (0..255) |
-| colorB | Longint | → | Value of blue component (0..255) |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| Farbe | Lange Ganzzahl | → | Wert der RGB Farbe (4 bytes) oder Wert der roten Komponente (0..255), wenn die anderen Parameter übergeben sind |
+| FarbeG | Lange Ganzzahl | → | Wert der grünen Komponente (0..255) |
+| FarbeB | Lange Ganzzahl | → | Wert der blauen Komponente (0..255) |
 
-## Description
+## Beschreibung
 
-The `TimePicker LCD SET COLOR` command sets the colors for the digits in the `objectName` subform object (digital clock only).
+Der Befehl `TimePicker LCD SET COLOR` setzt die Farben der Ziffern im Unterformular `ObjektName` (nur digitale Uhr).
 
-This command accepts two syntaxes:
+Dieser Befehl akzeptiert zwei Syntaxarten:
 
-* If you only pass the `color` parameter, you must pass a 4-byte longint whose format (0x00RRGGBB) is described below (the bytes are numbered from 0 to 3, starting from right to left):  
+* Übergeben Sie nur den Parameter `Farbe`, müssen Sie eine Lange Ganzzahl mit 4-byte im Format (0x00RRGGBB) übergeben. Die Bytes sind von rechts nach links von 0 bis 3 nummeriert:  
 
     |     |     |
     | --- | --- |
-    | **Byte** | **Description** |
-    | 3   | Must be zero for an absolute RGB color |
-    | 2   | Red component of color (0..255) |
-    | 1   | Green component of color (0..255) |
-    | 0   | Blue component of color (0..255) |
+    | **Byte** | **Beschreibung** |
+    | 3   | Muss Null sein für eine absolute RGB Farbe |
+    | 2   | Rote Farbkomponente (0..255) |
+    | 1   | Grüne Farbkomponente (0..255) |
+    | 0   | Blaue Farbkomponente (0..255) |
 
-* You can also pass three parameters: `color`, `colorG` and `colorB`. In this case, each parameter must be a number between 0 and 255, representing a component of the RGB color.
+* Sie können auch alle drei Parameter `Farbe`, `FarbeG` und `FarbeB` übergeben. Dann muss jeder Parameter eine Zahl zwischen 0 und 255 sein, die eine Komponente der RGB Farbe angibt.
 
-### Example  
+### Beispiel  
 
-Change the clock digits to red:
+Die Ziffern der LCD Anzeige in Rot ändern:
 
 ```4d
- TimePicker LCD SET COLOR("Subform1";0x00FF0000)  
-  // can also be written: TimePicker LCD SET COLOR ("Subform1";255;0;0)
+ TimePicker LCD SET COLOR("Subform1";0x00FF0000)  
+  // lässt sich auch schreiben: TimePicker LCD SET COLOR ("Subform1";255;0;0)
 ```
 
 ![](../images/pict1239854.fr.png)

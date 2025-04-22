@@ -1,53 +1,53 @@
-# 🧩 DatePicker and DateEntry  
+# 🧩 DatePicker und DateEntry
 
-The DatePicker widget is an intuitive, easy-to-use object that you can use to make the most of any fields that require dates to be entered or simply represented. This widget is provided in two forms:
+Das Widget DatePicker ist ein intuitives, leicht einzusetzendes Objekt, über das Sie Felder, die ein Datum benötigen, attraktiver darstellen können. Dieses Widget ist in zwei Formen verfügbar:
 
-* **DatePicker Calendar**: This object can be used either in a subform, or as a pull-down calendar displayed by clicking a button.
-* **DateEntry Area**: Date area associated with control buttons. This object can be only be used in a subform.
+* **DatePicker Kalender**: Dieses Objekt lässt sich entweder in einem Unterformular verwenden oder als Pulldown Kalender, der durch Anklicken einer Schaltfläche erscheint.
+* **DateEntry Bereich**: Datumsbereich, der einer Steuerschaltfläche zugewiesen wird. Dieses Objekt lässt sich nur in einem Unterformular verwenden.
 
-## DatePicker calendar  
+## DatePicker Kalender
 
-A DatePicker calendar is an area displaying each month as a table of days. During execution, the user can scroll through the months of the calendar both forwards and backwards by clicking on the arrow buttons. They can also use the arrow keys of the keyboard.
+Ein DatePicker Kalender zeigt jeden Monat als Tabelle mit Tagen an. Der Benutzer kann während der Ausführung über die Pfeile am oberen Rand in den Kalendermonaten vor- und zurückblättern. Er kann dazu aber auch die Pfeiltasten auf der Tastatur verwenden.
 
 ![](images/pict307767.en.png)
 
-When it is inserted into a subform, a DatePicker object can be used without programming thanks to the mechanism provided by the **bound variable**: you can work with the value of the variable bound with the subform object ("Variable Name" property in the Property List) in order to manage its display and entry.  
-When the form is executed, this date variable automatically contains the date selected by the user. Conversely, if you modify the value of this variable by programming, it will be shown automatically in the subform.
+Beim Einfügen in ein Unterformular ist das Objekt DatePicker ohne Programmierung verwendbar. Die Funktionsweise wird über die gebundene (bound) Variable gesteuert: Sie können die Anzeige und Eingabe über den Wert dieser Variable steuern, die an das Objekt Unterformular gebunden ist (Eigenschaft "Variablenname" in der Eigenschaftenliste).  
+Beim Ausführen des Formulars enthält diese Datumsvariable automatisch das vom Benutzer ausgewählte Datum. Ändern Sie umgekehrt den Wert dieser Variablen per Programmierung, erscheint er automatisch im Unterformular.
 
-However, if you want to customize the functioning of the DatePicker or display it as a pop-up menu, you must use the set of component methods that is provided.
+Wollen Sie dagegen diese Funktionsweise anpassen oder das Objekt als PopUp-Menü anzeigen, müssen Sie den Satz mitgelieferter Komponentenmethoden verwenden.
 
-### Use in a subform  
+### Verwendung in einem Unterformular
 
-You can insert a DatePicker calendar into a form in two ways:
+Sie können einen DatePicker Kalender in ein Formular auf zwei Arten einfügen:
 
-* By inserting a "Date Picker" object from the preconfigured object library of 4D
-* By creating a subform area and assigning the detail form of the **DatePicker** to it.
+* Durch Einfügen eines "Date Picker" Objekts aus der vorkonfigurierten Objektbibliothek von 4D
+* Durch Erstellen eines Bereichs Unterformular und Zuweisung des Detailformulars von **DatePicker**.
 
-You can manage this area without programming via the bound variable mechanism (see above).
+Sie können diesen Bereich über den Mechanismus der gebundenen (bound) Variable ohne Programmierung steuern (siehe oben).
 
-### Use in a pop-up  
+### Verwendung in einem PopUp
 
-You can use a DatePicker calendar as a pop-up window. To do this, you can either:
+Sie können einen DatePicker Kalender als PopUp-Fenster verwenden. Dazu können Sie entweder:
 
-* insert a "Pop up date" object from the preconfigured object library,
-* create a subform and assign the **DateButton** detail form to it.  
-    In both these cases, you can manage its display and entry by binding a date variable to the object.
-* create an object that calls the [DatePicker Display Dialog](Methods/DatePicker%20Display%20Dialog.md) component method. This method returns the date selected by the user.
+* ein Objekt "PopUp Datum" aus der vorkonfigurierten Objektbibliothek einfügen,
+* ein Unterformular erstellen und das Detailformular **DateButton** zuweisen.  
+    In beiden Fällen können Sie die Anzeige und Eingabe durch Einbinden einer Datumsvariable mit dem Objekt verwalten.
+* ein Objekt anlegen, das die [DatePicker Display Dialog](Methods/DatePicker%20Display%20Dialog.md) Komponentenmethode aufruft. Diese Methode gibt das vom Benutzer gewählte Datum zurück.
 
-## DateEntry area  
+## DateEntry Bereich
 
-A DateEntry type area facilitates the entry of a date in the form specified in the system preferences (for example DD/MM/YY).  
-The area appears as a date type associated with buttons:
+Ein Eingabebereich für Datum erleichtert die Eingabe eines Datums im Format, das in den Systemeinstellungen angegeben ist (z. B. TT/MM/JJ).  
+Der Bereich erscheint als Datumstyp mit Schaltflächen:
 
 ![](images/pict307791.en.png)
 
-During execution, the buttons located to the right of the entry area are only displayed when the object has the focus. The user selects each element of the date (day, month or year) individually by clicking or hitting the Tab key and can scroll them using the numeric stepper or the arrow keys of the keyboard. The calendar icon to the right can be used to select a date from a DatePicker pop-up calendar.
+Während der Ausführung erscheinen die Schaltflächen rechts neben dem Eingabebereich nur, wenn das Objekt den Fokus hat. Der Benutzer wählt durch Anklicken oder mit der Tabulatortaste jedes Element einzeln aus (Tag, Monat oder Jahr) und kann mit dem Zähler oder den Pfeiltasten der Tastatur darin scrollen. Über das Kalender-Icon rechts kann er ein Datum aus dem DatePicker PopUp-Kalender auswählen.
 
-A DateEntry object can be used without programming thanks to the mechanism provided by the bound variable (see the "DatePicker calendar" paragraph). However, if you want to customize the functioning, you can use the set of component methods that is provided. These methods are the same as those of the DatePicker object.
+Ein DateEntry Objekt ist ohne Programmierung verwendbar. Die Funktionsweise wird über die gebundene (bound) Variable gesteuert (siehe den Abschnitt "DatePicker Kalender"). Wollen Sie dagegen diese Funktionsweise anpassen, können Sie den Satz mitgelieferter Komponentenmethoden verwenden. Die Methoden sind dieselben wie für das Objekt DatePicker.
 
-### Use in a subform  
+### Verwendung in einem Unterformular
 
-You can insert a DateEntry area into a form in two ways:
+Sie können einen DateEntry Bereich auf zwei Arten in ein Formular einfügen:
 
-* By inserting a "DateEntry area" object from the preconfigured object library of 4D.
-* By creating a subform area and assign the **DateEntry** detail form to it.
+* Durch Einfügen eines Objekts "DateEntry" aus der vorkonfigurierten Objektbibliothek von 4D.
+* Durch Erstellen eines Bereichs Unterformular und Zuweisen des Detailformulars **DateEntry**.

@@ -1,50 +1,51 @@
 # DatePicker SET WEEK FIRST DAY
 
-> DatePicker SET WEEK FIRST DAY ( objectName ; dayNum )
+> DatePicker SET WEEK FIRST DAY ( ObjektName ; TagNum )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| dayNum | Longint | → | Number of first day to display |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| TagNum | Lange Ganzzahl | → | Nummer des ersten anzuzeigenden Tages |
 
-## Description
+## Beschreibung
 
-The `DatePicker SET WEEK FIRST DAY` command is used to set the first day of the week to display in the left part of a DatePicker calendar. By default, the first day is Monday.
+Der Befehl `DatePicker SET WEEK FIRST DAY` setzt den ersten Tag der Woche, der im Kalender DatePicker links erscheint. Standardmäßig ist als erster Tag Montag eingestellt.
 
-The `objectName` parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+Der Parameter `ObjektName` spezifiziert die Instanz des Unterformulars, für welche die Funktion gelten soll. In diesem Parameter übergeben Sie den Namen des Objekts Unterformular, das im aktuellen Formular angezeigt wird.
 
-Pass a 4D constant from the `Days and Months` theme in the `dayNum` parameter:
+Im Parameter `TagNum` übergeben Sie eine 4D Konstante unter dem Thema `Days and Months`:
 
-| Constant | Type | Value |
+| Konstante | Typ | Wert |
 | --- | --- | --- |
-| Sunday | Longint | 1   |
-| Monday | Longint | 2   |
-| Tuesday | Longint | 3   |
-| Wednesday | Longint | 4   |
-| Thursday | Longint | 5   |
-| Friday | Longint | 6   |
-| Saturday | Longint | 7   |
-### Example 1  
+| Sunday | Lange Ganzzahl | 1   |
+| Monday | Lange Ganzzahl | 2   |
+| Tuesday | Lange Ganzzahl | 3   |
+| Wednesday | Lange Ganzzahl | 4   |
+| Thursday | Lange Ganzzahl | 5   |
+| Friday | Lange Ganzzahl | 6   |
+| Saturday | Lange Ganzzahl | 7   |
 
- Setting first day to Sunday:
+### Beispiel 1  
+
+Als ersten Tag Sonntag setzen:
 
 ```4d
- DatePicker SET WEEK FIRST DAY("mycalendar";Sunday)
+ DatePicker SET WEEK FIRST DAY("mycalendar";Sunday)
 ```
 
 ![](../images/pict308112.en.png)
 
-### Example 2  
+### Beispiel 2  
 
-Setting first day to Thursday:
+Als ersten Tag Donnerstag setzen:
 
 ```4d
- DatePicker SET WEEK FIRST DAY("mycalendar";Thursday)
+ DatePicker SET WEEK FIRST DAY("mycalendar";Thursday)
 ```
 
 ![](../images/pict308150.en.png)
 
-## See also
+## Siehe auch
 
 [DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.md)  
 [DatePicker SET DEFAULT 1ST DAY](DatePicker%20SET%20DEFAULT%201ST%20DAY.md)

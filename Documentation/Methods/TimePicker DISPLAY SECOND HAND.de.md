@@ -1,14 +1,14 @@
 # TimePicker DISPLAY SECOND HAND
 
-> TimePicker DISPLAY SECOND HAND ( objectName ; secondHand )
+> TimePicker DISPLAY SECOND HAND ( ObjektName ; Sekundenzeiger )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| secondHand | Boolean | → | True (default) = second hand shown, False = second hand hidden |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| Sekundenzeiger | Boolean | → | Wahr (Standard) = mit Sekundenzeiger, Falsch = ohne Sekundenzeiger |
 
-## Description
+## Beschreibung
 
-The `TimePicker DISPLAY SECOND HAND` command displays or hides the second hand in the `objectName` subform object (clock widget only).
+Der Befehl `TimePicker DISPLAY SECOND HAND` blendet den Sekundenzeiger im Unterformular `ObjektName` ein oder aus (nur Widget Uhr).
 
-By default, the second hand is displayed. To hide it, call this command and pass `False` in the `secondHand` parameter.
+Der Sekundenzeiger wird standardmäßig angezeigt. Um ihn auszublenden, übergeben Sie im Parameter `Sekundenzeiger` **Falsch**.

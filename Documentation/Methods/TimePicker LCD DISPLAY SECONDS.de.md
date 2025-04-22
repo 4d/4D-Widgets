@@ -1,15 +1,14 @@
 # TimePicker LCD DISPLAY SECONDS
 
-> TimePicker LCD DISPLAY SECONDS ( objectName ; seconds )
+> TimePicker LCD DISPLAY SECONDS ( ObjektName ; Sekunden )
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| seconds | Boolean | → | True = display seconds, False = do not display |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| Sekunden | Boolean | → | Wahr = Sekunden anzeigen, Falsch = Sekunden nicht anzeigen |
 
-## Description
+## Beschreibung
 
-The `TimePicker LCD DISPLAY SECONDS` displays or hides the seconds part of the `objectName` subform object (digital clock only).
+Der Befehl `TimePicker LCD DISPLAY SECONDS` blendet den Sekundenteil des Unterformulars `ObjektName` ein oder aus (nur digitale Uhr).
 
-By default, seconds are displayed. You can pass `False` in [seconds](# "True = display seconds, False = do not display
-") to hide them.
+Standardmäßig werden Sekunden angezeigt. Um sie auszublenden, übergeben Sie im Parameter `Sekunden` **Falsch**.
