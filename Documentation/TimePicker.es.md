@@ -1,0 +1,21 @@
+# TimePicker
+
+[TimePicker y TimeEntry](TimePicker%20and%20TimeEntry.es.md)
+
+- [TimePicker APPLY DEFAULT VALUES](Methods/TimePicker%20APPLY%20DEFAULT%20VALUES.es.md)
+- [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.es.md)
+- [TimePicker LCD DISPLAY AMPM](Methods/TimePicker%20LCD%20DISPLAY%20AMPM.es.md)
+- [TimePicker LCD DISPLAY SECONDS](Methods/TimePicker%20LCD%20DISPLAY%20SECONDS.es.md)
+- [TimePicker LCD SET COLOR](Methods/TimePicker%20LCD%20SET%20COLOR.es.md)
+- [TimePicker LCD SET MODE](Methods/TimePicker%20LCD%20SET%20MODE.es.md)
+- [TimePicker RESET DEFAULT VALUES](Methods/TimePicker%20RESET%20DEFAULT%20VALUES.es.md)
+- [TimePicker SET DEFAULT LABEL AM](Methods/TimePicker%20SET%20DEFAULT%20LABEL%20AM.es.md)
+- [TimePicker SET DEFAULT LABEL PM](Methods/TimePicker%20SET%20DEFAULT%20LABEL%20PM.es.md)
+- [TimePicker SET DEFAULT MAX TIME](Methods/TimePicker%20SET%20DEFAULT%20MAX%20TIME.es.md)
+- [TimePicker SET DEFAULT MIN TIME](Methods/TimePicker%20SET%20DEFAULT%20MIN%20TIME.es.md)
+- [TimePicker SET DEFAULT STEP](Methods/TimePicker%20SET%20DEFAULT%20STEP.es.md)
+- [TimePicker SET LABEL AM](Methods/TimePicker%20SET%20LABEL%20AM.es.md)
+- [TimePicker SET LABEL PM](Methods/TimePicker%20SET%20LABEL%20PM.es.md)
+- [TimePicker SET MAX TIME](Methods/TimePicker%20SET%20MAX%20TIME.es.md)
+- [TimePicker SET MIN TIME](Methods/TimePicker%20SET%20MIN%20TIME.es.md)
+- [TimePicker SET STEP](Methods/TimePicker%20SET%20STEP.es.md)

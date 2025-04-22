@@ -1,6 +1,6 @@
 # Sélecteur d'Heure (TimePicker)
 
-[TimePicker and TimeEntry](TimePicker%20and%20TimeEntry.fr.md)
+[TimePicker et TimeEntry](TimePicker%20and%20TimeEntry.fr.md)
 
 - [TimePicker APPLY DEFAULT VALUES](Methods/TimePicker%20APPLY%20DEFAULT%20VALUES.fr.md)
 - [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.fr.md)
