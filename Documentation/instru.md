@@ -1,4 +1,3 @@
-| Documentation/TimePicker and TimeEntry.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-und-TimeEntry.300-7547012.ja.html |
 | Documentation/Methods/TimePicker APPLY DEFAULT VALUES.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-APPLY-DEFAULT-VALUES.301-7547011.ja.html |
 | Documentation/Methods/TimePicker DISPLAY SECOND HAND.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-DISPLAY-SECOND-HAND.301-7547003.ja.html |
 | Documentation/Methods/TimePicker LCD DISPLAY AMPM.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-LCD-DISPLAY-AMPM.301-7547006.ja.html |
