@@ -2,24 +2,24 @@
 
 > TimePicker APPLY DEFAULT VALUES ( objectName )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 |     | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
 
-## Description
+## 説明
 
-The `TimePicker APPLY DEFAULT VALUES` command is used to reset all the TimePicker parameters to their current default values for the `objectName` subform object.
+`TimePicker APPLY DEFAULT VALUES`コマンドを使用して、`objectName`サブフォームオブジェクトのすべてのTimePickerパラメタを現在のデフォルト値に再設定できます。
 
-These default values may be the factory settings but may also have been modified via the SET DEFAULT commands of the component.  
-The action of this command is immediate: the default values of `objectName` are instantly modified. Note that the bound variable of the object could also be modified in order to take the new values into account. For example, if the new default values set the minimum time to 07:00:00 and the value of the variable bound with `objectName` was 06:00:00, its value is automatically returned to 07:00:00.
+これらのデフォルト値は初期値またはコンポーネントのSET DEFAULTコマンドで設定された値です。  
+このコマンドは即座に効果を及ぼします。`objectName`のデフォルト値は即座に更新されます。オブジェクトに割り当てられた変数は、新しい値を有効にするために更新されるかもしれないことに留意してください。例えば新しい最小時間のデフォルト値が07:00:00に設定され、`objectName`に割り当てられた変数が06:00:00のとき、その値は自動で07:00:00に変更されます。
 
-The TimePicker parameters include:
+TimePickerパラメタには以下があります:
 
-* minimum or maximum enterable times,
-* the AM and PM labels,
-* the steps in minutes.
+* 入力可能時間の下限と上限
+* AMおよびPMラベル
+* 分単位のステップ
 
-## See also
+## 参照
 
 [TimePicker RESET DEFAULT VALUES](TimePicker%20RESET%20DEFAULT%20VALUES.ja.md)  
 [TimePicker SET DEFAULT LABEL AM](TimePicker%20SET%20DEFAULT%20LABEL%20AM.ja.md)  

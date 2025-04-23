@@ -2,13 +2,13 @@
 
 > TimePicker DISPLAY SECOND HAND ( objectName ; secondHand )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 |     | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| secondHand | Boolean | → | True (default) = second hand shown, False = second hand hidden |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
+| secondHand | ブール | → | True (デフォルト) = 秒針を表示, False = 秒針を非表示 |
 
-## Description
+## 説明
 
-The `TimePicker DISPLAY SECOND HAND` command displays or hides the second hand in the `objectName` subform object (clock widget only).
+**TimePicker DISPLAY SECOND HAND** コマンドは、`objectName` で指定したサブフォームオブジェクトの、秒針の表示・非表示を設定します(ただしclockウィジェットに限る)。
 
-By default, the second hand is displayed. To hide it, call this command and pass `False` in the `secondHand` parameter.
+デフォルトでは、秒針は表示されています。非表示にするためには、このコマンドを呼び出して `secondHand` 引数に **False** を渡します。

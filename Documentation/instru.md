@@ -1,10 +1,4 @@
-| Documentation/Methods/TimePicker APPLY DEFAULT VALUES.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-APPLY-DEFAULT-VALUES.301-7547011.ja.html |
-| Documentation/Methods/TimePicker DISPLAY SECOND HAND.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-DISPLAY-SECOND-HAND.301-7547003.ja.html |
-| Documentation/Methods/TimePicker LCD DISPLAY AMPM.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-LCD-DISPLAY-AMPM.301-7547006.ja.html |
-| Documentation/Methods/TimePicker LCD DISPLAY SECONDS.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-LCD-DISPLAY-SECONDS.301-7547005.ja.html |
-| Documentation/Methods/TimePicker LCD SET COLOR.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-LCD-SET-COLOR.301-7547004.ja.html |
-| Documentation/Methods/TimePicker LCD SET MODE.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-LCD-SET-MODE.301-7547000.ja.html |
-| Documentation/Methods/TimePicker RESET DEFAULT VALUES.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-RESET-DEFAULT-VALUES.301-7547008.ja.html |
+
 | Documentation/Methods/TimePicker SET DEFAULT LABEL AM.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-SET-DEFAULT-LABEL-AM.301-7547009.ja.html |
 | Documentation/Methods/TimePicker SET DEFAULT LABEL PM.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-SET-DEFAULT-LABEL-PM.301-7547001.ja.html |
 | Documentation/Methods/TimePicker SET DEFAULT MAX TIME.ja.md | scrap/doc.4d.com_4Dv20R9_4D_20-R9_TimePicker-SET-DEFAULT-MAX-TIME.301-7547002.ja.html |

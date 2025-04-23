@@ -2,30 +2,29 @@
 
 > TimePicker LCD DISPLAY AMPM ( objectName ; amPm )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 |     | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| amPm | Boolean | → | True = display AM/PM, False = do not display |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
+| amPm | ブール | → | True = AM/PMを表示、 False = 非表示 |
 
-## Description
+## 説明
 
-The `TimePicker LCD DISPLAY AMPM` displays or hides the AM/PM placed to the right of the `objectName` subform object (digital clock only).
+**TimePicker LCD DISPLAY AMPM** コマンドは、`objectName` で指定したサブフォームオブジェクトの、AM/PM表示を表示・非表示を設定します(デジタル時計に限る)。
 
-These letters are used to distinguish between the morning and afternoon when the clock is used in 12-hour mode (see [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.ja.md)).
+この文字は時計が12時間モードのときに午前か午後を区別するために表示されています。([TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.ja.md) を参照して下さい。)
 
-By default, these letters are displayed. You can pass `False` in [amPm](# "True = display AM/PM, False = do not display
-") to hide them.
+デフォルトでは、この文字は表示されています。`amPm` 引数に **False** を渡すことによって非表示にすることができます。
 
-### Example  
+### 例題
 
-We want to hide the AM/PM:
+AM/PM の文字表示を非表示にします:
 
 ```4d
- TimePicker LCD DISPLAY AMPM("Subform1";False)
+ TimePicker LCD DISPLAY AMPM("Subform1";False)
 ```
 
 ![](../images/pict1239891.fr.png)
 
-## See also
+## 参照
 
 [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.ja.md)

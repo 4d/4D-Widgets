@@ -1,19 +1,20 @@
 # TimePicker RESET DEFAULT VALUES
 
-> TimePicker RESET DEFAULT 
+> TimePicker RESET DEFAULT VALUES
 
-## Description
+このコマンドは引数を必要としません
 
-The `TimePicker RESET DEFAULT VALUES command resets the parameters of the TimePicker component to their "factory settings". After execution of this` command:
+## 説明
 
-* the minimum enterable time is 08:00:00
-* the maximum enterable time is 20:00:00
-* the AM and PM labels are the system labels
-* the steps in minutes is 00:15:00
+**TimePicker RESET DEFAULT VALUES** コマンドはTimePickerコンポーネントのパラメタを初期値にリセットします。このコマンド実行後は以下のように設定されます:
 
-Note that this parameter is only taken into account for TimePicker objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md) component method.
+* 入力可能な時間の下限は08:00:00
+* 入力可能な時間の上限は20:00:00
+* AMとPMラベルはシステムラベル
+* 分単位のステップは 00:15:00
 
-## See also
+この設定は後で作成されるオブジェクトに適用され、既存のオブジェクトには影響を与えない点に留意してください。既存のオブジェクトに適用したい場合は[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md)コマンドを使用します。
 
-[TimePicker APPLY DEFAULT VALUES](TimePicker APPLY DEFAULT VALUES.m>
-d)
+## 参照
+
+[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md)

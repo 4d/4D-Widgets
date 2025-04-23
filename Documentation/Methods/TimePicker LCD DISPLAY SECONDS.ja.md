@@ -2,14 +2,13 @@
 
 > TimePicker LCD DISPLAY SECONDS ( objectName ; seconds )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 |     | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| seconds | Boolean | → | True = display seconds, False = do not display |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
+| seconds | ブール | → | True = 秒数を表示、 False = 非表示 |
 
-## Description
+## 説明
 
-The `TimePicker LCD DISPLAY SECONDS` displays or hides the seconds part of the `objectName` subform object (digital clock only).
+**TimePicker LCD DISPLAY SECONDS** コマンドは、`objectName` で指定したサブフォームオブジェクトの、秒数表示の表示・非表示を設定します。(ただしデジタル時計に限る)
 
-By default, seconds are displayed. You can pass `False` in [seconds](# "True = display seconds, False = do not display
-") to hide them.
+デフォルトでは、秒数は表示されています。`seconds` 引数に **False** を渡す事によって非表示にすることができます。

@@ -2,38 +2,38 @@
 
 > TimePicker LCD SET COLOR ( objectName ; color {; colorG ; colorB} )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 |     | 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| color | Longint | → | Value of RGB color (4 bytes) or Value of red component (0..255) if the other parameters are passed |
-| colorG | Longint | → | Value of green component (0..255) |
-| colorB | Longint | → | Value of blue component (0..255) |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
+| color | 倍長整数 | → | RGB カラーの値(4 bytes) または 他の引数が渡された場合には赤成分の値(0..255) |
+| colorG | 倍長整数 | → | 緑成分の値 (0..255) |
+| colorB | 倍長整数 | → | 青成分の値 (0..255) |
 
-## Description
+## 説明
 
-The `TimePicker LCD SET COLOR` command sets the colors for the digits in the `objectName` subform object (digital clock only).
+**TimePicker LCD SET COLOR** コマンドは、`objectName` で指定したサブフォームオブジェクトの、数字の色を設定します。(ただしデジタル時計に限る)。
 
-This command accepts two syntaxes:
+このコマンドには二つのシンタックスが使用できます:
 
-* If you only pass the `color` parameter, you must pass a 4-byte longint whose format (0x00RRGGBB) is described below (the bytes are numbered from 0 to 3, starting from right to left):  
+* `color` 引数のみを指定する場合、(0x00RRGGBB) のフォーマットに適合する4バイトの倍長整数を渡します。(桁番号は右から左へ数えられ、0から3とナンバリングされています):  
 
     |     |     |
     | --- | --- |
-    | **Byte** | **Description** |
-    | 3   | Must be zero for an absolute RGB color |
-    | 2   | Red component of color (0..255) |
-    | 1   | Green component of color (0..255) |
-    | 0   | Blue component of color (0..255) |
+    | **バイト** | **詳細** |
+    | 3   | 絶対RGBカラーを指定するためには0でなければなりません。 |
+    | 2   | カラーの赤成分 (0..255) |
+    | 1   | カラーの緑成分 (0..255) |
+    | 0   | カラーの青成分 (0..255) |
 
-* You can also pass three parameters: `color`, `colorG` and `colorB`. In this case, each parameter must be a number between 0 and 255, representing a component of the RGB color.
+* それ以外に、3つの引数を渡す事もできます。: `color`, `colorG` そして `colorB` の3つです。この場合、それぞれの引数が0から255の間の数字である必要があり、それぞれがRGBカラーの要素となります。
 
-### Example  
+### 例題
 
-Change the clock digits to red:
+数字の表示を赤に変更する場合を考えます:
 
 ```4d
- TimePicker LCD SET COLOR("Subform1";0x00FF0000)  
-  // can also be written: TimePicker LCD SET COLOR ("Subform1";255;0;0)
+ TimePicker LCD SET COLOR("Subform1";0x00FF0000)
+  // 別の記法: TimePicker LCD SET COLOR ("Subform1";255;0;0)
 ```
 
 ![](../images/pict1239854.fr.png)
