@@ -10,9 +10,9 @@
 
 The `TimePicker SET DEFAULT STEP` command is used to set the step between time values for all the TimePicker objects.
 
-This setting is only taken into account for objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) command.
+This setting is only taken into account for objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md) command.
 
 ## See also
 
-[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md)  
-[TimePicker SET STEP](TimePicker%20SET%20STEP.md)
+[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md)  
+[TimePicker SET STEP](TimePicker%20SET%20STEP.ja.md)

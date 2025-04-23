@@ -11,8 +11,8 @@ Der Befehl `TimePicker RESET DEFAULT VALUES` setzt die Parameter der TimePicker 
 * Die Bezeichnungen AM und PM sind die Systembezeichnungen
 * Das Intervall in Minuten ist 00:15:00
 
-Beachten Sie, dass diese Parameter nur nachfolgend erstellte TimePicker Objekte berücksichtigt, sie gilt nicht für bereits vorhandene Objekte. Soll sie auch für diese gelten, müssen Sie den Befehl [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) verwenden.
+Beachten Sie, dass diese Parameter nur nachfolgend erstellte TimePicker Objekte berücksichtigt, sie gilt nicht für bereits vorhandene Objekte. Soll sie auch für diese gelten, müssen Sie den Befehl [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.de.md) verwenden.
 
 ## Siehe auch
 
-[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md)
+[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.de.md)

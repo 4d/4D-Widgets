@@ -21,5 +21,5 @@ Standardmäßig statt der Systembezeichnung AM die Bezeichnung "morgens" verwend
 
 ## Siehe auch
 
-[TimePicker SET DEFAULT LABEL AM](TimePicker%20SET%20DEFAULT%20LABEL%20AM.md)  
-[TimePicker SET LABEL PM](TimePicker%20SET%20LABEL%20PM.md)
+[TimePicker SET DEFAULT LABEL AM](TimePicker%20SET%20DEFAULT%20LABEL%20AM.de.md)  
+[TimePicker SET LABEL PM](TimePicker%20SET%20LABEL%20PM.de.md)

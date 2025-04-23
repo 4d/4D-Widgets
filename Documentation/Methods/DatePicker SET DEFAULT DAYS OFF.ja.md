@@ -11,7 +11,7 @@
 
 The DatePicker SET DEFAULT DAYS OFF command is used to set the days off that will appear in all the calendars of the DatePicker component. These days are displayed in bold and italic and remain selectable for the user.
 
-Note that this setting is only taken into account for calendars that are created subsequently and does not apply to any existing calendars. If you want to apply it to the existing calendars, you will need to use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) component method.
+Note that this setting is only taken into account for calendars that are created subsequently and does not apply to any existing calendars. If you want to apply it to the existing calendars, you will need to use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md) component method.
 
 The command can be used to set recurrent weekly or yearly days off as well as occasional holidays. You specify the type of days off set by the method via the `dayType` parameter:
 
@@ -44,5 +44,5 @@ Designation of recurrent holidays (example valid for the USA):
 
 ## See also
 
-[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md)  
-[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.md)
+[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)  
+[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.ja.md)

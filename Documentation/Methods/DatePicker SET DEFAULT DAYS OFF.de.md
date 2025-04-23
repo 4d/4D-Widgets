@@ -11,7 +11,7 @@
 
 Der Befehl `DatePicker SET DEFAULT DAYS OFF` setzt die Feiertage, die in allen Kalendern der Komponente DatePicker erscheinen sollen. Diese Tage erscheinen in fett und kursiv und bleiben für den Benutzer auswählbar.
 
-Beachten Sie, dass diese Einstellung nur für nachfolgend erstellte Kalender berücksichtigt wird und nicht für bereits bestehende Kalender. Soll sie auch für diese gelten, müssen Sie die Komponentenmethode [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY DEFAULT VALUES.md) einsetzen.
+Beachten Sie, dass diese Einstellung nur für nachfolgend erstellte Kalender berücksichtigt wird und nicht für bereits bestehende Kalender. Soll sie auch für diese gelten, müssen Sie die Komponentenmethode [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.de.md) einsetzen.
 
 Mit dieser Komponentenmethode können Sie sowohl wöchentlich oder jährlich wiederkehrende freie Tage als auch bewegliche Feiertage setzen. Die Art des freien Tages setzen Sie im Parameter `TagTyp`:
 
@@ -43,5 +43,5 @@ Bezeichnung fester Feiertage (Beispiel gültig für Deutschland):
 
 ## Siehe auch
 
-[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md)  
-[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.md)
+[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.de.md)  
+[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.de.md)

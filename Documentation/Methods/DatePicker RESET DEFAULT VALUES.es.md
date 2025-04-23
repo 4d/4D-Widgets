@@ -11,7 +11,7 @@ The DatePicker RESET DEFAULT VALUES command resets the parameters of the DatePic
 * the weekly "days off" are Saturday and Sunday
 * no yearly "days off" or specific holidays are set.
 
-Note that this setting is only taken into account for calendars created subsequently and is not applied to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md) component method.
+Note that this setting is only taken into account for calendars created subsequently and is not applied to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.es.md) component method.
 
 ## See also
 

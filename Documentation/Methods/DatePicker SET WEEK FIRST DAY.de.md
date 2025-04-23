@@ -47,5 +47,5 @@ Als ersten Tag Donnerstag setzen:
 
 ## Siehe auch
 
-[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.md)  
-[DatePicker SET DEFAULT 1ST DAY](DatePicker%20SET%20DEFAULT%201ST%20DAY.md)
+[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.de.md)  
+[DatePicker SET DEFAULT 1ST DAY](DatePicker%20SET%20DEFAULT%201ST%20DAY.de.md)

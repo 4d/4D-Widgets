@@ -15,7 +15,7 @@ Der Parameter `ObjektName` gibt die Instanz des Unterformulars an, für welche d
 
 Das Datum `minDatum` muss im Standard Eingabeformat der Systemsprache eingegeben werden. Übergeben Sie ein leeres Datum, (!00.00.00!), sind alle Datumsangaben eingebbar, die vor dem aktuellen Datum liegen.
 
-Liegt das eingebbare Minimumdatum nach dem eingebbaren Maximumdatum, ist kein Datum eingebbar (siehe [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)).
+Liegt das eingebbare Minimumdatum nach dem eingebbaren Maximumdatum, ist kein Datum eingebbar (siehe [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.de.md)).
 
 ### Beispiel  
 
@@ -30,5 +30,5 @@ Das aktuelle Formular enthält zwei DatePicker Kalender, die in zwei Unterformul
 
 ## Siehe auch
 
-[DatePicker SET DEFAULT MIN DATE](DatePicker%20SET%20DEFAULT%20MIN%20DATE.md)  
-[DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)
+[DatePicker SET DEFAULT MIN DATE](DatePicker%20SET%20DEFAULT%20MIN%20DATE.de.md)  
+[DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.de.md)

@@ -21,5 +21,5 @@ Using by default the "in the morning" label instead of the system label for AM:
 
 ## See also
 
-[TimePicker SET DEFAULT LABEL AM](TimePicker%20SET%20DEFAULT%20LABEL%20AM.md)  
-[TimePicker SET LABEL PM](TimePicker%20SET%20LABEL%20PM.md)
+[TimePicker SET DEFAULT LABEL AM](TimePicker%20SET%20DEFAULT%20LABEL%20AM.pt.md)  
+[TimePicker SET LABEL PM](TimePicker%20SET%20LABEL%20PM.pt.md)

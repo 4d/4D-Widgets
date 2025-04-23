@@ -27,4 +27,4 @@ TimePicker in Form eines PopUp-Menüs mit Namen Zeit1 erstellen, mit eingebbaren
 
 ## Siehe auch
 
-[TimePicker SET DEFAULT STEP](TimePicker%20SET%20DEFAULT%20STEP.md)
+[TimePicker SET DEFAULT STEP](TimePicker%20SET%20DEFAULT%20STEP.de.md)

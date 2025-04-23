@@ -13,5 +13,5 @@ The `TimePicker SET MAX TIME` command is used to set the maximum enterable time 
 
 ## See also
 
-[TimePicker SET DEFAULT MAX TIME](TimePicker%20SET%20DEFAULT%20MAX%20TIME.md)  
-[TimePicker SET MIN TIME](TimePicker%20SET%20MIN%20TIME.md)
+[TimePicker SET DEFAULT MAX TIME](TimePicker%20SET%20DEFAULT%20MAX%20TIME.pt.md)  
+[TimePicker SET MIN TIME](TimePicker%20SET%20MIN%20TIME.pt.md)

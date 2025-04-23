@@ -15,7 +15,7 @@ The `objectName` parameter specifies the instance of the subform to which the co
 
 The minDate date must be expressed in the default entry format corresponding to the system language. If you pass a blank date (!00/00/00!), all the dates preceding the current date will be enterable.
 
-If the minimum enterable date is later than the maximum enterable date (see [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)), no date will be enterable.
+If the minimum enterable date is later than the maximum enterable date (see [DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.es.md)), no date will be enterable.
 
 ### Example  
 
@@ -30,5 +30,5 @@ The current form contains two DatePicker calendars located in two subform object
 
 ## See also
 
-[DatePicker SET DEFAULT MIN DATE](DatePicker%20SET%20DEFAULT%20MIN%20DATE.md)  
-[DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.md)
+[DatePicker SET DEFAULT MIN DATE](DatePicker%20SET%20DEFAULT%20MIN%20DATE.es.md)  
+[DatePicker SET MAX DATE](DatePicker%20SET%20MAX%20DATE.es.md)

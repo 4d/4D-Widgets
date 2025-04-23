@@ -11,7 +11,7 @@
 
 The `TimePicker LCD DISPLAY AMPM` displays or hides the AM/PM placed to the right of the `objectName` subform object (digital clock only).
 
-These letters are used to distinguish between the morning and afternoon when the clock is used in 12-hour mode (see [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.md)).
+These letters are used to distinguish between the morning and afternoon when the clock is used in 12-hour mode (see [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.es.md)).
 
 By default, these letters are displayed. You can pass `False` in [amPm](# "True = display AM/PM, False = do not display
 ") to hide them.
@@ -28,4 +28,4 @@ We want to hide the AM/PM:
 
 ## See also
 
-[TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.md)
+[TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.es.md)

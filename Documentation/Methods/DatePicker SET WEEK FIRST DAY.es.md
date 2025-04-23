@@ -46,5 +46,5 @@ Setting first day to Thursday:
 
 ## See also
 
-[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.md)  
-[DatePicker SET DEFAULT 1ST DAY](DatePicker%20SET%20DEFAULT%201ST%20DAY.md)
+[DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.es.md)  
+[DatePicker SET DEFAULT 1ST DAY](DatePicker%20SET%20DEFAULT%201ST%20DAY.es.md)

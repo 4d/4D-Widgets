@@ -11,7 +11,7 @@
 
 La commande DatePicker SET DEFAULT DAYS OFF vous permet de définir les "jours de congés" à faire figurer dans la totalité des calendriers du composant DatePicker. Ces jours sont affichés en gras italique et restent sélectionnables par l'utilisateur. 
 
-A noter que ce paramétrage est pris en compte uniquement pour les calendriers créés par la suite et n'est pas appliqué aux calendriers existants. Si vous souhaitez l'appliquer aux calendriers existants, vous devez utiliser la commande [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.md).
+A noter que ce paramétrage est pris en compte uniquement pour les calendriers créés par la suite et n'est pas appliqué aux calendriers existants. Si vous souhaitez l'appliquer aux calendriers existants, vous devez utiliser la commande [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.fr.md).
 
 La méthode composant permet de définir des jours de congés récurrents hebdomadaires ou annuels ainsi que des jours "fériés" ponctuels. Vous précisez le type de jour de congé défini par la méthode via le paramètre typeJour :
 

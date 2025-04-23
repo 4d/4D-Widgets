@@ -15,7 +15,7 @@ Der Parameter `ObjektName` gibt die Instanz des Unterformulars an, für welche d
 
 Das Datum `maxDatum` muss im Standard Eingabeformat der Systemsprache eingegeben werden. Übergeben Sie ein leeres Datum, (!00.00.00!), sind alle Datumsangaben eingebbar, die nach dem aktuellen Datum liegen.
 
-Liegt das eingebbare Maximumdatum vor dem Minimumdatum (siehe [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.md)), wird kein Datum eingegeben.
+Liegt das eingebbare Maximumdatum vor dem Minimumdatum (siehe [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.de.md)), wird kein Datum eingegeben.
 
 ### Beispiel  
 
@@ -27,5 +27,5 @@ Alle Datumsangaben nach dem 31.Dezember 2009 im Objekt "ReturnDate" deaktivieren
 
 ## Siehe auch
 
-[DatePicker SET DEFAULT MAX DATE](DatePicker%20SET%20DEFAULT%20MAX%20DATE.md)  
-[DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.md)
+[DatePicker SET DEFAULT MAX DATE](DatePicker%20SET%20DEFAULT%20MAX%20DATE.de.md)  
+[DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.de.md)

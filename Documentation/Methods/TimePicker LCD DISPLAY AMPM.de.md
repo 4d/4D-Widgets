@@ -11,7 +11,7 @@
 
 Der Befehl `TimePicker LCD DISPLAY AMPM` blendet im Unterformular `ObjektName` nach den Ziffern AM/PM ein oder aus (nur digitale Uhr).
 
-Damit wird im 12-Stundenmodus zwischen Vormittag und Nachmittag unterschieden (siehe [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.md)).
+Damit wird im 12-Stundenmodus zwischen Vormittag und Nachmittag unterschieden (siehe [TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.de.md)).
 
 Standardmäßig werden diese Buchstaben angezeigt. Um sie auszublenden, übergeben Sie im Parameter `amPm` **Falsch**.
 
@@ -27,4 +27,4 @@ AM/PM ausblenden:
 
 ## Siehe auch
 
-[TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.md)
+[TimePicker LCD SET MODE](TimePicker%20LCD%20SET%20MODE.de.md)

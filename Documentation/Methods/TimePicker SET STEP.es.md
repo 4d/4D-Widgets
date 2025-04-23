@@ -27,4 +27,4 @@ Configuration of the TimePicker in the form of a pop-up menu named "time1", limi
 
 ## See also
 
-[TimePicker SET DEFAULT STEP](TimePicker%20SET%20DEFAULT%20STEP.md)
+[TimePicker SET DEFAULT STEP](TimePicker%20SET%20DEFAULT%20STEP.es.md)
