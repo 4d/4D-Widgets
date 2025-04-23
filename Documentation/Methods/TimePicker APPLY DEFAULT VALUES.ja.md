@@ -4,6 +4,29 @@
 
 | Parameter | Type |     | Description |
 | --- | --- | --- | --- |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
+
+## 説明
+
+`TimePicker APPLY DEFAULT VALUES`コマンドを使用して、`objectName`サブフォームオブジェクトのすべてのTimePickerパラメタを現在のデフォルト値に再設定できます。
+
+これらのデフォルト値は初期値またはコンポーネントのSET DEFAULTコマンドで設定された値です。  
+このコマンドは即座に効果を及ぼします。`objectName`のデフォルト値は即座に更新されます。オブジェクトに割り当てられた変数は、新しい値を有効にするために更新されるかもしれないことに留意してください。例えば新しい最小時間のデフォルト値が07:00:00に設定され、`objectName`に割り当てられた変数が06:00:00のとき、その値は自動で07:00:00に変更されます。
+
+TimePickerパラメタには以下があります:
+
+* 入力可能時間の下限と上限
+* AMおよびPMラベル
+* 分単位のステップ
+
+## 参照
+
+Documentation/Methods/TimePicker APPLY DEFAULT VALUES.ja.md
+
+@@ -4,26 +4,26 @@
+
+| Parameter | Type |     | Description |
+| --- | --- | --- | --- |
 | objectName | Text | → | Name of subform object |
 
 ## Description

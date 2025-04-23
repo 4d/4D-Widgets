@@ -1,59 +1,81 @@
-# 🧩 TimePicker and TimeEntry  
+# 🧩 TimePicker と TimeEntry  
 
-The TimePicker widget provides easy-to-use objects that you can use to make the most of any fields that require times to be entered or displayed. It can be used in the following forms:
+TimePickerウィジェットは時間の入力や表示をさらにアトラクティブに行えるフィールドを作成するための簡単に使用できるオブジェクトを提供します。以下の形にて使用することができます:
 
-* Single or double pop up menus:  
+* 1つ、または2つのポップアップ:  
     ![](images/pict308493.en.png) ![](images/pict308495.en.png)
 
-* Time entry areas in the "hh:mm:ss" format associated with a numeric stepper that can be used to increase or decrease the value of the hours, minutes or seconds:  
+* 数値ステッパーに関連付けられた "hh:mm:ss" フォーマットの時間入力エリア(数値ステッパーは時間、分、秒をそれぞれ増減させるのに使用します):  
     ![](images/pict308497.en.png)
 
-* Clocks (_TimeDisplay_) or digital clocks (_TimeDisplayLCD_):  
+* 時計(_TimeDisplay_)またはデジタル時計(_TimeDisplayLCD_):  
     ![](images/pict1239685.fr.png) ![](images/pict1239687.fr.png)
 
-In addition, each type of TimePicker can display the time in 12-hour (AM-PM) or 24-hour format.
+さらにそれぞれのタイプのTimePickerは12時間 (AM-PM) または24時間形式で時間を表示できます。
 
- TimePicker object can be used without programming thanks to the mechanisms provided by the bound variable. However, if you want to customize the functioning of TimePicker objects, you can use the set of component methods that is provided.
+TimePickerオブジェクトは、バインド変数により提供されるメカニズムのおかげで、プログラムなしで使用できます。しかしTimePickerオブジェクトの動作をカスタマイズしたい場合は、提供されるコンポーネントメソッドを使用しなければなりません。
 
-## Creation and use  
+## 作成と利用  
 
-You can insert a TimePicker area into a form in two ways:
+TimePickerエリアをフォームに挿入する方法は2つあります:
 
-* By inserting a "TimePicker" or "TimeEntry" object from the preconfigured object library of 4D.
-* By creating a subform area and assigning the **TimePicker** or **TimeEntry** detail form of your choice to it.
+* 4Dの定義済みオブジェクトライブラリから"TimePicker"または"TimeEntry"を挿入する。
+* サブフォームエリアを作成し、**TimePicker**または**TimeEntry**詳細フォームを割り当てる。
 
-Then specify the name of the variable bound to the subform ("Variable Name" property in the Property List). When the form is executed, this variable will automatically contain the time specified by the user. Conversely, if you modify the value of this variable by programming, it will automatically be shown in the subform. You can also choose not to name the variable in order to benefit from the dynamic variable mechanism.
+そのうえで、サブフォームにバインドする変数の名前を指定します (プロパティリストの"変数名"プロパティ)。フォームが実行されると、この変数は自動でユーザーが指定した時間が代入されます。逆にこの変数の値をプログラムで更新すると、自動でサブフォームに反映されます。変数に名前を与えないことにより、フォームローカル変数の利点を生かすこともできます。
 
-#### About clocks (new in v14)  
+#### 時計について(v14よりの新機能)  
 
-Clock widgets are drawn in SVG, and therefore have a vector path allowing deformations in Application mode (in Design mode, their size is fixed):
+Clock ウィジェットはSVGで描画されているので、ヴェクターパスをもち、それ故にアプリケーションモードでは自在に変形することが出来ます(デザインモードではサイズは固定です):
 
 ![](images/pict1239707.fr.png)
 
-Note that:
+更に、以下の様な機能もあります:
 
-* For a standard clock, the second hand can be displayed or hidden using the [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md) method.
-* A standard clock automatically changes to "day mode" or "night mode" depending on the time:  
+* 時計の秒針は、[TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md)メソッドを使用することにより表示したり隠したりすることが出来ます。
+* 時計は、時刻に応じて"昼間モード"と"夜間モード"を切り替えます:  
     ![](images/pict1239740.fr.png)  
-    The time ranges are 8:00:00 -> 19:59:59 = Day, 20:00 -> 07:59:59 = Night.
-* The "digital clock" widget is transparent and has no background, so it can be placed on top of colored objects in order to vary its appearance:  
+    昼間と夜間の時刻の範囲はそれぞれ、  
+    8:00:00 -> 19:59:59 = 昼間  
+    20:00 -> 07:59:59 = 夜間  
+    となっています。
+* "デジタル時計"のウィジェットは透明なので色のあるオブジェクトに重ねて色を変えることも出来ます:  
     ![](images/pict1239718.fr.png)  
-    There are several display options for this widget that are available through component methods, which are prefixed by "TimePicker LCD".
+    コンポーネントメソッドには表示のオプションに関する様々なメソッドが用意されています。これらのメソッドには"TimePicker LCD"の接頭辞がついています。
 
-**Note:** Developers can displace this clock drawing and substitute their own creations by replacing the "clock.svg" file found at the first level of the "Resources" folder.
+**注:** この時計は"Resources"フォルダーの第一レベルにある"clock.svg"を置き換えることにより削除したりデベロッパ自身の作成したオブジェクトで置き換えたりすることができます。
 
-## Displaying the current time or a static time  
+## カレントの時刻または静的な時刻の表示  
 
-Clocks can either display the current time dynamically, or show a static time.
+時計にはカレントの時刻を動的に表示させるか、または静的な時間を表示させることができます。
 
-* To display the current time, associate an **Integer** variable to the subform object of the widget (default operation). In this case, the widget automatically displays the current time and operates like a clock.  
-    You can apply an offset to the displayed time: the value of the number variable indicates the offset in seconds. For example, 3600 = advancing the clock one hour, -1800 = turning the clock back 30 minutes, etc.
+* **カレントの時刻**を表示させ、時計のように動作させるためには: 
+    * **変数**をデータソースとして使用する場合、ウィジェットのサブフォームオブジェクトに**整数**型の変数を割り当てます(デフォルト)。
+    * **オブジェクトプロパティ**をデータソースとして使用する場合(例 *Form.myTime*)、ウィジェットのサブフォームオブジェクトに**整数**型もしくは**時間**型の値を割り当てます。
 
-* To display a static time, associate a **Time** variable to the subform object of the widget (by means of the [C_TIME](https://developer.4d.com/docs/Concepts/time) command or the Property List). The clock then displays the value of the this variable.
+    **注意:** 表示される時刻にオフセットを適用することができます: 数値変数の値は秒単位でのオフセットを表します。例えば、3600 = 時計を1時間進める、-1800 = 時計を30分戻す、となります。
 
-For example, we want the clock to show 10:10:30:
+* **静的な時刻**を表示したい場合:
+    * **変数**をデータソースとして使用する場合、ウィジェットのサブフォームオブジェクトに(ランゲージまたはプロパティリストを使用して)**時間**型もしくは**テキスト**型の値を割り当てます。
+    * **オブジェクトプロパティ**をデータソースとして使用する場合(例 Form.myTime)、ウィジェットのサブフォームオブジェクトに**テキスト**型の値を割り当てます。
+
+例えば、時計に10:10:30を表示させたい場合:
+
+* 変数がデータソースの場合:
 
 ```4d
- C_TIME(myvar) // myvar is the name of the widget’s variable  
- myvar:=?10:10:30?
+ C_TIME(myTime) // myTime がウィジェットのデータソース
+ myTime:=?10:10:30?
+ 
+  // 以下と同等:
+ C_TEXT(myOtherTime) // myOtherTime がウィジェットのデータソース
+ myOtherTime:="10:10:30"
 ```
+
+* オブジェクトプロパティがデータソースの場合:
+
+```4d
+ Form.myTime:="10:10:30" // Form.myTime がウィジェットのデータソース
+```
+
+![](images/pict1239765.fr.png)
