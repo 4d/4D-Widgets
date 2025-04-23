@@ -1,30 +1,30 @@
 # TimePicker SET STEP
 
-> TimePicker SET STEP ( objectName ; step )
+> TimePicker SET STEP ( ObjektName ; Schritt )
 
-| Parameter | Type |     | Description |
+| Parameter | Type | | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| step | Time | → | Interval between two time values |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| Schritt | Zeit | → | Intervall zwischen zwei Zeitwerten |
 
-## Description
+## Beschreibung
 
-The `TimePicker SET STEP` command is used to set the step between time values available for the object designated by `objectName`. This parameter only applies to TimePickers displayed as pop-up menus.
+Der Befehl `TimePicker SET STEP` setzt das Intervall zwischen Zeitwerten, die für das in ObjektName definierte Objekt verfügbar sind. Dieser Parameter gilt nur für TimePicker, die als PopUp-Menüs angezeigt werden.
 
-The `step` value must be included between 1 minute and 1 hour and must be shown as whole divisions of 60 minutes. In practice, only the values 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60 min are possible. Any other value will automatically be rounded off in order to correspond to this principle.
+Der Wert in Schritt muss zwischen 1 Minute und 1 Stunde liegen und als Division von 60 Minuten angezeigt werden. In der Praxis sind nur die Werte 1, 2, 3, 4, 5, 6, 10, 15, 20, 30 und 60 min möglich. Andere Werte werden automatisch gerundet, so dass sie dieses Prinzip berücksichtigen.
 
-### Example  
+### Beispiel
 
-Configuration of the TimePicker in the form of a pop-up menu named "time1", limitation of enterable times from 8:30 to 16:30 with 10-minute steps:
+TimePicker in Form eines PopUp-Menüs mit Namen Zeit1 erstellen, mit eingebbaren Zeiten von 8:30 bis 16:30 mit einen Intervall von 10 Minuten:
 
 ```4d
- TimePicker SET MIN TIME("time1";?08:30:00?)  
- TimePicker SET MAX TIME("time1";?16:30:00?)  
- TimePicker SET STEP("time1";?00:10:00?)
+ TimePicker SET MIN TIME("Zeit1";?08:30:00?)
+ TimePicker SET MAX TIME("Zeit1";?16:30:00?)
+ TimePicker SET STEP("Zeit1";?00:10:00?)
 ```
 
 ![](../images/pict308616.en.png)
 
-## See also
+## Siehe auch
 
 [TimePicker SET DEFAULT STEP](TimePicker%20SET%20DEFAULT%20STEP.md)

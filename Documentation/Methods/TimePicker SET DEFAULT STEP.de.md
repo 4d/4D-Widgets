@@ -1,18 +1,18 @@
 # TimePicker SET DEFAULT STEP
 
-> TimePicker SET DEFAULT STEP ( step )
+> TimePicker SET DEFAULT STEP ( Schritt )
 
-| Parameter | Type |     | Description |
+| Parameter | Type | | Description |
 | --- | --- | --- | --- |
-| step | Time | → | Interval between two time values |
+| Schritt | Zeit | → | Intervall zwischen zwei Zeitwerten |
 
-## Description
+## Beschreibung
 
-The `TimePicker SET DEFAULT STEP` command is used to set the step between time values for all the TimePicker objects.
+Der Befehl `TimePicker SET DEFAULT STEP` setzt den Abstand zwischen Zeitwerten für alle TimePicker Objekte.
 
-This setting is only taken into account for objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) command.
+Diese Einstellung wird nur für nachfolgend erstellte Objekte berücksichtigt, sie gilt nicht für bereits vorhandene Objekte. Soll sie auch für diese gelten, müssen Sie den Befehl [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) verwenden.
 
-## See also
+## Siehe auch
 
 [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md)  
 [TimePicker SET STEP](TimePicker%20SET%20STEP.md)

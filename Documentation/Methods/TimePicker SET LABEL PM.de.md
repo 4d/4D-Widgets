@@ -1,25 +1,25 @@
 # TimePicker SET LABEL PM
 
-> TimePicker SET LABEL PM ( objectName ; label )
+> TimePicker SET LABEL PM ( ObjektName ; Bezeichnung )
 
-| Parameter | Type |     | Description |
+| Parameter | Type | | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| label | Text | → | Label to use for PM |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| Bezeichnung | Text | → | Bezeichnung anstelle von PM |
 
-## Description
+## Beschreibung
 
-The `TimePicker SET LABEL PM` command is used to modify the "PM" label in TimePicker objects displaying the AM/PM format. The command applies to the object designated by `objectName`. By default, the system am/pm labels are used.
+Der Befehl `TimePicker SET LABEL PM` ändert die Bezeichnung "PM" in TimePicker Objekten, die im Format AM/PM angezeigt werden. Der Befehl gilt für das in ObjektName angegebene Objekt. Standardmäßig werden die Systembezeichnungen am/pm verwendet.
 
-### Example  
+### Beispiel
 
-Using by default the "in the evening" label instead of the system label for PM:
+Standardmäßig statt der Systembezeichnung PM die Bezeichnung "abends" verwenden:
 
 ```4d
- TimePicker SET LABEL PM("clock";"in the evening")
+ TimePicker SET LABEL PM("Uhr";"abends")
 ```
 
-## See also
+## Siehe auch
 
 [TimePicker SET DEFAULT LABEL PM](TimePicker%20SET%20DEFAULT%20LABEL%20PM.md)  
 [TimePicker SET LABEL AM](TimePicker%20SET%20LABEL%20AM.md)

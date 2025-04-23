@@ -9,7 +9,7 @@ Tres widgets están disponibles:
 - [TimePicker](Documentation/TimePicker.es.md): selector de hora.
 
  > Estos widgets se pueden utilizar con o sin programación. Puede simplemente integrarlos en sus formularios y utilizar sus propiedades por defecto.
- > <br>Si quiere controlarlos y configurarlos de una manera más personalizada, puede hacer uso de los métodos proyecto específicos, llamados "Métodos componente".
+ > Si quiere controlarlos y configurarlos de una manera más personalizada, puede hacer uso de los métodos proyecto específicos, llamados "Métodos componente".
 
 ![](Documentation/images/pict307590.es.png)
 

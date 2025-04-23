@@ -1,17 +1,17 @@
 # TimePicker SET MAX TIME
 
-> TimePicker SET MAX TIME ( objectName ; maxTime )
+> TimePicker SET MAX TIME ( ObjektName ; maxZeit )
 
-| Parameter | Type |     | Description |
+| Parameter | Type | | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| maxTime | Time | → | Upper limit of enterable time |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| maxZeit | Zeit | → | Obere Grenze der eingebbaren Zeit |
 
-## Description
+## Beschreibung
 
-The `TimePicker SET MAX TIME` command is used to set the maximum enterable time that will be accepted by the object designated by `objectName`. If a higher time value is entered, it will be rejected.
+Der Befehl `TimePicker SET MAX TIME` setzt die eingebbare Maximumzeit, die alle in ObjektName definierten TimePicker Objekte annehmen. Wird ein höherer Zeitwert eingegeben, wird er nicht angenommen.
 
-## See also
+## Siehe auch
 
 [TimePicker SET DEFAULT MAX TIME](TimePicker%20SET%20DEFAULT%20MAX%20TIME.md)  
 [TimePicker SET MIN TIME](TimePicker%20SET%20MIN%20TIME.md)

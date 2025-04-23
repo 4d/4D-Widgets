@@ -1,6 +1,6 @@
 # TimePicker RESET DEFAULT VALUES
 
-> TimePicker RESET DEFAULT 
+> TimePicker RESET DEFAULT VALUES
 
 ## Description
 

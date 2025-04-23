@@ -9,7 +9,7 @@ Drei Widgets sind verfügbar:
 - [TimePicker](Documentation/TimePicker.de.md): Selector für Zeit.
 
  > Diese Widgets sind mit oder ohne Programmierung verwendbar. Sie können sie mühelos in Ihre Formulare integrieren und mit ihren Standardeigenschaften verwenden.
- > <br>Wollen Sie die Widgets nach eigenen Vorstellungen steuern und konfigurieren, können Sie spezifische Projektmethoden, genannt "Komponent-Methoden" verwenden.
+ > Wollen Sie die Widgets nach eigenen Vorstellungen steuern und konfigurieren, können Sie spezifische Projektmethoden, genannt "Komponent-Methoden" verwenden.
 
 ![](Documentation/images/pict307590.de.png)
 

@@ -1,17 +1,17 @@
 # TimePicker SET MIN TIME
 
-> TimePicker SET MIN TIME ( objectName ; minTime )
+> TimePicker SET MIN TIME ( ObjektName ; minZeit )
 
-| Parameter | Type |     | Description |
+| Parameter | Type | | Description |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| minTime | Time | → | Lower limit of enterable time |
+| ObjektName | Text | → | Name des Objekts Unterformular |
+| minZeit | Zeit | → | Untere Grenze der eingebbaren Zeit |
 
-## Description
+## Beschreibung
 
-The `TimePicker SET MIN TIME` command is used to set the minimum enterable time that will be accepted by the object designated by `objectName`. If a lower time value is entered, it will be rejected.
+Der Befehl `TimePicker SET MIN TIME` setzt die eingebbare Minimumzeit, die alle in ObjektName definierten TimePicker Objekte annehmen. Wird ein kleinerer Zeitwert eingegeben, wird er nicht angenommen.
 
-## See also
+## Siehe auch
 
 [TimePicker SET DEFAULT MIN TIME](TimePicker%20SET%20DEFAULT%20MIN%20TIME.md)  
 [TimePicker SET MAX TIME](TimePicker%20SET%20MAX%20TIME.md)

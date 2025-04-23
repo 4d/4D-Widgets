@@ -1,19 +1,18 @@
 # TimePicker RESET DEFAULT VALUES
 
-> TimePicker RESET DEFAULT 
+> TimePicker RESET DEFAULT VALUES
 
-## Description
+## Beschreibung
 
-The `TimePicker RESET DEFAULT VALUES command resets the parameters of the TimePicker component to their "factory settings". After execution of this` command:
+Der Befehl `TimePicker RESET DEFAULT VALUES` setzt die Parameter der TimePicker Komponente auf die Standardeinstellung zurück. Nach Ausführen dieses Befehls gilt:
 
-* the minimum enterable time is 08:00:00
-* the maximum enterable time is 20:00:00
-* the AM and PM labels are the system labels
-* the steps in minutes is 00:15:00
+* die eingebbare Minimumzeit ist 08:00:00
+* die eingebbare Maximumzeit ist 20:00:00
+* Die Bezeichnungen AM und PM sind die Systembezeichnungen
+* Das Intervall in Minuten ist 00:15:00
 
-Note that this parameter is only taken into account for TimePicker objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) component method.
+Beachten Sie, dass diese Parameter nur nachfolgend erstellte TimePicker Objekte berücksichtigt, sie gilt nicht für bereits vorhandene Objekte. Soll sie auch für diese gelten, müssen Sie den Befehl [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) verwenden.
 
-## See also
+## Siehe auch
 
-[TimePicker APPLY DEFAULT VALUES](TimePicker APPLY DEFAULT VALUES.m>
-d)
+[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md)

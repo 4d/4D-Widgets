@@ -1,18 +1,18 @@
 # TimePicker SET DEFAULT MAX TIME
 
-> TimePicker SET DEFAULT MAX TIME ( maxTime )
+> TimePicker SET DEFAULT MAX TIME ( maxZeit )
 
-| Parameter | Type |     | Description |
+| Parameter | Type | | Description |
 | --- | --- | --- | --- |
-| maxTime | Time | → | Upper limit of enterable time |
+| maxZeit | Zeit | → | Obergrenze der eingebbaren Zeit |
 
-## Description
+## Beschreibung
 
-The `TimePicker SET DEFAULT MAX TIME` command is used to specify the maximum enterable time that will be allowed by default for all the TimePicker objects.
+Der Befehl `TimePicker SET DEFAULT MAX TIME` gibt die eingebbare Maximumzeit an, die standardmäßig für alle TimePicker Objekte zulässig ist.
 
-This setting is only taken into account for objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) command.
+Diese Einstellung wird nur für nachfolgend erstellte Objekte berücksichtigt, sie gilt nicht für bereits vorhandene Objekte. Soll sie auch für diese gelten, müssen Sie den Befehl [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md) verwenden.
 
-## See also
+## Siehe auch
 
 [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.md)  
 [TimePicker SET MAX TIME](TimePicker%20SET%20MAX%20TIME.md)
