@@ -2,56 +2,56 @@
 
 > DatePicker SET DAYS OFF ( objectName {; dayType ; ptrDaysOffArray} )
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| dayType | Longint | → | Types of days off |
-| ptrDaysOffArray | Pointer | → | Pointer to date or Boolean array of days off |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| objectName | テキスト | サブフォームオブジェクト名 |
+| dayType | 倍長整数 | 休日タイプ |
+| ptrDaysOffArray | ポインター | 休日の日付またはブールタイプ配列へのポインタ |
 
-## Description
+## 説明
 
-The DatePicker SET DAYS OFF command is used to set the days off to appear in the DatePicker calendar. These days are displayed in bold and italic and remain selectable for the user.
+`DatePicker SET DAYS OFF`コマンドを使用してDatePickerカレンダに表示する休日を設定できます。これらの日付はボールドおよびイタリックで表示され、ユーザは依然選択が可能です。
 
-The `objectName` parameter specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+`objectName`引数では、コマンドを適用するサブフォームのインスタンスを指定します。この引数にはカレントフォーム中に表示されるサブフォームの名前を渡さなければなりません。
 
-This command can be used to set either recurrent weekly or yearly days off as well as occasional holidays. You specify the type of days off set via the `dayType` parameter:
+このコマンドでは毎週や毎年の休日や、特別な休日を設定できます。`dayType`引数を使用して休日タイプを指定します: 
 
-* 0 = Days off occurring weekly (by default, Saturday and Sunday)
-* 1 = Days off that occur every year (such as January 1st or December 25th)
-* 2 = Occasional holidays, set for a single year
+* 0 = 毎週の休日 (デフォルトで土曜と日曜)
+* 1 = 毎年の休日 (1月1日など)
+* 2 = 特別な休日でその年のみに設定
 
-You set the holidays by creating a array and by passing a pointer to this array as the `ptrDaysOffArray` parameter. The type of array depends on the value passed in `dayType`:
+配列を作成して、`ptrDaysOffArray`引数にその配列へのポインタを渡すことで、休日を設定します。配列のタイプは`dayType`に渡す値により異なります:
 
-* If you pass 0 in `dayType` (weekly days off), in `ptrDaysOffArray` you must pass a pointer to a Boolean array made up of 7 elements. Each element set to True indicates a weekly day off.
-* If you pass 1 or 2 in `dayType` (yearly or occasional days off), in `ptrDaysOffArray` you must pass a pointer to a Date array. In this array, each element must contain a valid date, indicating a day off. The dates must be expressed in the default format corresponding to the system language. If you passed 1 in `dayType` (recurrent days), the year is ignored; you can pass any value.
+* `dayType`に0 (毎週の休日) を渡した場合、`ptrDaysOffArray`には7要素のブール配列へのポインタを渡します。Trueはその曜日が休日であることを示します。
+* `dayType`に1 (毎年の休日) または2 (特別な休日) を渡した場合、`ptrDaysOffArray`には日付配列へのポインタを渡します。この配列では、それぞれの要素に休日を示す有効な日付が格納されていなければなりません。日付ははシステム言語に基づくデフォルトフォーマットで表現されなければなりません。1 (毎年の休日) を`dayType`に渡した場合、年は無視されます。有効な日付であればどんな値でも使用できます。
 
-### Example 1  
+### 例題 1
 
-Designation of Friday as the weekly day off (instead of Saturday and Sunday by default):
-
-```4d
- ARRAY BOOLEAN($arrbDaysOff;7)  
-  //By default, all the elements of a Boolean array are False; thus it is not necessary to add initialization code  
- $arrbDaysOff{Friday}:=True  
- DatePicker SET DAYS OFF("mycalendar";0;->$arrbDaysOff)
-```
-
-![](../images/pict308188.en.png)
-
-### Example 2  
-
-Designation of occasional holidays:
+デフォルトの土曜日と日曜日に代えて金曜日を毎週の休みに設定する:
 
 ```4d
- ARRAY DATE($arrdUniqueDays;0)  
-  //The year is taken into account  
- APPEND TO ARRAY($arrdUniqueDays;!02/15/2008!)  
- APPEND TO ARRAY($arrdUniqueDays;!02/12/2009!)  
- APPEND TO ARRAY($arrdUniqueDays;!02/17/2010!)  
- DatePicker SET DAYS OFF(1;->$arrdUniqueDays)
+ARRAY BOOLEAN($arrbDaysOff;7)
+  //デフォルトですべてのブール配列要素はFalseです。なので初期化コードを追加する必要はありません。
+$arrbDaysOff{Friday}:=True
+DatePicker SET DAYS OFF("mycalendar";0;->$arrbDaysOff)
 ```
 
-## See also
+![休日設定例](images/pict308188.en.png)
 
-[DatePicker SET DEFAULT DAYS OFF](DatePicker%20SET%20DEFAULT%20DAYS%20OFF.ja.md)  
+### 例題 2
+
+特別な休日を設定:
+
+```4d
+ARRAY DATE($arrdUniqueDays;0)
+  //年も設定される
+APPEND TO ARRAY($arrdUniqueDays;!02/15/2008!)
+APPEND TO ARRAY($arrdUniqueDays;!02/12/2009!)
+APPEND TO ARRAY($arrdUniqueDays;!02/17/2010!)
+DatePicker SET DAYS OFF(1;->$arrdUniqueDays)
+```
+
+## 参照
+
+[DatePicker SET DEFAULT DAYS OFF](DatePicker%20SET%20DEFAULT%20DAYS%20OFF.ja.md)
 [DatePicker SET WEEK FIRST DAY](DatePicker%20SET%20WEEK%20FIRST%20DAY.ja.md)

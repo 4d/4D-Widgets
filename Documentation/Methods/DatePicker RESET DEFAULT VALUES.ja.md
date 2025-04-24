@@ -1,19 +1,20 @@
 # DatePicker RESET DEFAULT VALUES
 
-> DatePicker RESET DEFAULT VALUES
+> DatePicker RESET DEFAULT VALUES 
 
-## Description
+このコマンドは引数を必要としません
 
-The DatePicker RESET DEFAULT VALUES command resets the parameters of the DatePicker component to their "factory settings". After executing this component method:
+## 説明
 
-* the minimum or maximum enterable dates are 00/00/00 (meaning there are no limits)
-* the first day of the week is 2 (Monday)
-* the weekly "days off" are Saturday and Sunday
-* no yearly "days off" or specific holidays are set.
+`DatePicker RESET DEFAULT VALUES`コマンドはDatePickerコンポーネントのデフォルト値を初期値にリセットします。このコンポーネントメソッド実行後は以下のように設定されます:    
 
-Note that this setting is only taken into account for calendars created subsequently and is not applied to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md) component method.
+* 最小および最大入力可能日付は00/00/00 (制限なし)
+* 最初の曜日は2 (月曜)
+* 毎週の休日は土曜と日曜
+* 毎年の休日と特別な休日はなし
 
-## See also
+このパラメタは後で作成されるカレンダに適用され、既存のカレンダには影響を与えない点に留意してください。既存のカレンダに適用したい場合は[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)コマンドを使用します。
 
-[DatePicker APPLY DEFAULT VALUES](DatePicker APPLY DEFAULT VALUES.m>
-d)
+## 参照
+
+[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)

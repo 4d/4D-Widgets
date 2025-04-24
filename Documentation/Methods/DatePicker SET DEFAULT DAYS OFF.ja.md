@@ -2,47 +2,47 @@
 
 > DatePicker SET DEFAULT DAYS OFF ( dayType ; ptrDaysOffArray )
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| dayType | Longint | → | Types of days off |
-| ptrDaysOffArray | Pointer | → | Pointer to date or Boolean array of days off |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| dayType | 倍長整数 | 休日タイプ |
+| ptrDaysOffArray | ポインター | 休日の日付またはブール配列へのポインタ |
 
-## Description
+## 説明
 
-The DatePicker SET DEFAULT DAYS OFF command is used to set the days off that will appear in all the calendars of the DatePicker component. These days are displayed in bold and italic and remain selectable for the user.
+`DatePicker SET DEFAULT DAYS OFF`コマンドを使用してDatePickerコンポーネントのすべてのカレンダーに現れる休日を設定できます。これらの日付は太字および斜体で表示され、ユー ザーは選択が可能です。
 
-Note that this setting is only taken into account for calendars that are created subsequently and does not apply to any existing calendars. If you want to apply it to the existing calendars, you will need to use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md) component method.
+この設定は、メソッド呼び出し後に表示されるカレンダーに対し有効で、すでに表示さたカレンダーには適用されません。既存のカレンダーに適用させたい場合は[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)コマンドを使用します。
 
-The command can be used to set recurrent weekly or yearly days off as well as occasional holidays. You specify the type of days off set by the method via the `dayType` parameter:
+このコンポーネントメソッドでは毎週および毎年、さらには特別な休日も設定できます。`dayType`引数を使用して休日のタイプを指定します:
 
-* 0 = Days off occurring weekly (by default, Saturday and Sunday)
-* 1 = Days off that occur every year (such as January 1st or December 25th)
-* 2 = Occasional holidays, set for a single year
+* 0 = 毎週の休み (デフォルトで土日)
+* 1 = 毎年の休み (1月1日など)
+* 2 = その年だけに設定する特別な休日
 
-You set the holidays by creating a array and by passing a pointer to this array as the `ptrDaysOffArray` parameter. The type of array depends on the value passed in `dayType`:
+配列を作成して`ptrDaysOffArray`にポインタ渡しすることで休日を設定します。配列の型は`dayType`に渡す値に基づきます:
 
-* If you pass 0 in `dayType` (weekly days off), in `ptrDaysOffArray` you must pass a pointer to a Boolean array made up of 7 elements. Each element set to True indicates a weekly day off.
-* If you pass 1 or 2 in `dayType` (yearly or occasional days off), in `ptrDaysOffArray` you must pass a pointer to a Date array. In this array, each element must contain a valid date, indicating a day off. The dates must be expressed in the default format corresponding to the system language. If you passed 1 in `dayType` (recurrent days), the year is ignored; you can pass any value.
+* `dayType`に0を渡す (毎週の休み) 場合、7要素を持つブール配列へのポインタを渡さなければなりません。Trueを渡された要素は毎週の休みに設定されます。
+* `dayType`に1または2を渡す (毎年あるいは特別な休日) 場合、`ptrDaysOffArray`には日付配列へのポインタを渡します。この配列にはそれぞれの要素に休日を示す有効な日付が格納されていなければなりません。日付はシステムランゲージのデフォルトフォーマットで表現されていなければなりません。`dayType`に1を渡した場合、年は無視されます。有効な日付であれば、どんな値でも渡すことができます。
 
-### Example  
+### 例題
 
-Designation of recurrent holidays (example valid for the USA):
+毎年の休みを設定する (USAの例):
 
 ```4d
- ARRAY DATE($arrdRepeatedDays;0)  
-  //The year is ignored; we use 2000 by default  
- APPEND TO ARRAY($arrdRepeatedDays;!01/01/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!02/02/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!02/14/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!03/17/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!04/01/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!10/31/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!11/11/2000!)  
- APPEND TO ARRAY($arrdRepeatedDays;!12/25/2000!)  
- DatePicker SET DEFAULT DAYS OFF(1;->$arrdRepeatedDays)
+ARRAY DATE($arrdRepeatedDays;0)
+  //年は無視されるので、 仮に2000を使用
+APPEND TO ARRAY($arrdRepeatedDays;!2000/01/01!)
+APPEND TO ARRAY($arrdRepeatedDays;!2000/02/02!)
+APPEND TO ARRAY($arrdRepeatedDays;!2000/02/14!)
+APPEND TO ARRAY($arrdRepeatedDays;!2000/03/17!)
+APPEND TO ARRAY($arrdRepeatedDays;!2000/04/01!)
+APPEND TO ARRAY($arrdRepeatedDays;!2000/10/31!)
+APPEND TO ARRAY($arrdRepeatedDays;!2000/11/11!)
+APPEND TO ARRAY($arrdRepeatedDays;!2000/12/25!)
+DatePicker SET DEFAULT DAYS OFF(1;->$arrdRepeatedDays)
 ```
 
-## See also
+## 参照
 
-[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)  
+[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)
 [DatePicker SET DAYS OFF](DatePicker%20SET%20DAYS%20OFF.ja.md)

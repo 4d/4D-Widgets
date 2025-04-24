@@ -32,7 +32,7 @@ Sie können einen DatePicker Kalender als PopUp-Fenster verwenden. Dazu können 
 * ein Objekt "PopUp Datum" aus der vorkonfigurierten Objektbibliothek einfügen,
 * ein Unterformular erstellen und das Detailformular **DateButton** zuweisen.  
     In beiden Fällen können Sie die Anzeige und Eingabe durch Einbinden einer Datumsvariable mit dem Objekt verwalten.
-* ein Objekt anlegen, das die [DatePicker Display Dialog](Methods/DatePicker%20Display%20Dialog.md) Komponentenmethode aufruft. Diese Methode gibt das vom Benutzer gewählte Datum zurück.
+* ein Objekt anlegen, das die [DatePicker Display Dialog](Methods/Methods/DatePicker%20Display%20Dialog.de.md) Komponentenmethode aufruft. Diese Methode gibt das vom Benutzer gewählte Datum zurück.
 
 ## DateEntry Bereich
 

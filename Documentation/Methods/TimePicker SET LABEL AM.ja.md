@@ -2,24 +2,24 @@
 
 > TimePicker SET LABEL AM ( objectName ; label )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 || 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| label | Text | → | Label to use for AM |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
+| label | テキスト | → | AMに使用するラベル |
 
-## Description
+## 説明
 
-The `TimePicker SET LABEL AM` command is used to modify the "AM" label in TimePicker objects displaying the AM/PM format. The command applies to the object designated by `objectName`. By default, the system am/pm labels are used.
+`TimePicker SET LABEL AM`コマンドを使用して、AM/PMフォーマットで表示されるTimePickerオブジェクトの"AM"ラベルを変更できます。コマンドは`objectName`で指定されたオブジェクトに適用されます。デフォルトでシステムのam/pmラベルが使用されます。
 
-### Example  
+## 例題
 
-Using by default the "in the morning" label instead of the system label for AM:
+AMのとき、システムラベルの代わりにデフォルトで"in the morning"を使用する:
 
 ```4d
- TimePicker SET LABEL AM("clock";"in the morning")
+ TimePicker SET LABEL AM("clock";"in the morning")
 ```
 
-## See also
+## 参照
 
 [TimePicker SET DEFAULT LABEL AM](TimePicker%20SET%20DEFAULT%20LABEL%20AM.ja.md)  
 [TimePicker SET LABEL PM](TimePicker%20SET%20LABEL%20PM.ja.md)

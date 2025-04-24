@@ -1,34 +1,34 @@
 # DatePicker Display Dialog
 
-> DatePicker Display Dialog {( left ; top {; defaultDate})} -> Function result
+> DatePicker Display Dialog {( left ; top {; defaultDate})} -> 戻り値
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| left | Longint | → | Location for left side of window |
-| top | Longint | → | Location for top of window |
-| defaultDate | Date | → | Date to select by default in the dialog |
-| Function result | Date | ➡️ | Date selected by user |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| left | 倍長整数 | ウィンドウの左位置 |
+| top | 倍長整数 | ウィンドウの上位置 |
+| defaultDate | 日付 | ダイアログ中デフォルトで選択する日付 |
+| 戻り値 | 日付 | ユーザが選択した日付 |
 
-## Description
+## 説明
 
-The DatePicker Display Dialog command opens a DatePicker calendar in a pop-up window (a pop-up type window is automatically closed when the user clicks outside the window or hits the **Enter** or **Esc** key).
+**DatePicker Display Dialog** コマンドはDatePickerカレンダをポップアップウィンドウに表示します (ポップアップタイプのウィンドウはユーザがウィンドウの外をクリックするか、**Enter**または**Esc**キーが押されると自動で閉じられます)。
 
-![](../images/pict307838.en.png)
+![DatePicker Dialog](images/pict307838.en.png)
 
-The two optional `left`and `top` parameters are used to specify the location of the top left corner of the window to be opened. These two parameters must be passed together; if only one is passed, it is ignored. If these parameters are omitted, the window is opened at the location of the click.
+2つのオプションの引数`left`と`top`を使用して、ウィンドウを開く左上の座標を指定できます。これら2つの引数はペアで渡さなければなりません。一つしか渡されない場合、それは無視されます。 これらの引数が省略されると、ウィンドウはクリックされた場所で開かれます。
 
-You can pass a `defaultDate` date as third parameter in order to set the DatePicker dialog have an associated date pre-selected when displayed to the user.
+第三引数 `defaultDate` に日付を渡すと、DatePickerダイアログが表示される際にその日付がデフォルトで選択されます。
 
-DatePicker Display Dialog returns the date selected by the user in the DatePicker calendar. If the window is closed without a date being selected by the user, the command returns a blank date (!00/00/00!), even if a `defaultDate` date was passed.
+**DatePicker Display Dialog** は、ユーザがDatePickerカレンダ内で選択した日付を返します。日付が選択されずにウィンドウが閉じられたとき、コマンドは空の日付 (!00/00/00!) を返します (たとえ`defaultDate`が指定されていた場合でも)。
 
-### Example  
+### 例題
 
-This example displays a DatePicker calendar when a button is clicked:
+この例題はボタンがクリックされるとDatePickerカレンダーを表示します:
 
 ```4d
- OBJECT GET COORDINATES(*;"MyCalendarButton";$x1;$y1;$x2;$y2)  
- $MyLocalDate:=DatePicker Display Dialog($x1;$y1)  
- If($MyLocalDate #!00/00/00!)  
-    [Event]DateRV:=$MyLocalDate  
- End if
+OBJECT GET COORDINATES(*;"MyCalendarButton";$x1;$y1;$x2;$y2)
+$MyLocalDate:=DatePicker Display Dialog($x1;$y1)
+If($MyLocalDate #!00/00/00!)
+    [Event]DateRV:=$MyLocalDate
+End if
 ```

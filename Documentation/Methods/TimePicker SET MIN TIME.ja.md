@@ -2,16 +2,16 @@
 
 > TimePicker SET MIN TIME ( objectName ; minTime )
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| minTime | Time | → | Lower limit of enterable time |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| objectName | テキスト | サブフォームオブジェクト名 |
+| minTime | 時間 | 入力可能な時間の下限 |
 
-## Description
+## 説明
 
-The `TimePicker SET MIN TIME` command is used to set the minimum enterable time that will be accepted by the object designated by `objectName`. If a lower time value is entered, it will be rejected.
+`TimePicker SET MIN TIME`コマンドを使用して、`objectName`で指定したオブジェクトが受け入れる時間の下限を設定できます。それよりも小さな時間が入力されると、受け入れられません。
 
-## See also
+## 参照
 
-[TimePicker SET DEFAULT MIN TIME](TimePicker%20SET%20DEFAULT%20MIN%20TIME.ja.md)  
-[TimePicker SET MAX TIME](TimePicker%20SET%20MAX%20TIME.ja.md)
+[TimePicker SET DEFAULT MIN TIME](TimePicker%20SET%20DEFAULT%20MIN%20TIME.md)
+[TimePicker SET MAX TIME](TimePicker%20SET%20MAX%20TIME.md)

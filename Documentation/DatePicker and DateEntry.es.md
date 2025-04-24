@@ -32,7 +32,7 @@ You can use a DatePicker calendar as a pop-up window. To do this, you can either
 * insert a "Pop up date" object from the preconfigured object library,
 * create a subform and assign the **DateButton** detail form to it.  
     In both these cases, you can manage its display and entry by binding a date variable to the object.
-* create an object that calls the [DatePicker Display Dialog](Methods/DatePicker%20Display%20Dialog.md) component method. This method returns the date selected by the user.
+* create an object that calls the [DatePicker Display Dialog](Methods/Methods/DatePicker%20Display%20Dialog.es.md) component method. This method returns the date selected by the user.
 
 ## DateEntry area  
 

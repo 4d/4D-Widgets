@@ -9,14 +9,14 @@ Mit dem Widget SearchPicker können Sie mühelos standardmäßige Suchbereiche a
 **Mac OS:**  
 ![Mac OS](images/pict308435.en.png)
 
-Der standardmäßig im Bereich angezeigte Text lässt sich per Programmierung steuern, und zwar über die Komponentenmethode [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md).
+Der standardmäßig im Bereich angezeigte Text lässt sich per Programmierung steuern, und zwar über die Komponentenmethode [SearchPicker SET HELP TEXT](Methods/Methods/SearchPicker%20SET%20HELP%20TEXT.de.md).
 
 ### Funktionsweise
 
 Ein Suchbereich SearchPicker hat zusätzlich zu seiner Darstellung folgende Merkmale: Text in Grauschrift, Eingabebereich und Icon zum Löschen.
 
 - **Eingabebereich:** Im Eingabebereich wird der zu suchende Wert eingegeben. Dieser Wert wird automatisch der Variablen zugewiesen, die Sie mit dem Bereich in der Eigenschaftenliste gebunden haben (Eigenschaft Variablenname). Über diese Variable liefern Sie den gesuchten Wert für die Suchmethode.
-- **Text in Grauschrift:** Der Text in Grauschrift dient als Hilfe, die dem Benutzer das Feld bzw. die Felder anzeigt, wo die Suche ausgeführt wird. Er verschwindet, sobald der Bereich den Fokus hat. Dieser Text lässt sich über den Befehl [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) setzen.
+- **Text in Grauschrift:** Der Text in Grauschrift dient als Hilfe, die dem Benutzer das Feld bzw. die Felder anzeigt, wo die Suche ausgeführt wird. Er verschwindet, sobald der Bereich den Fokus hat. Dieser Text lässt sich über den Befehl [SearchPicker SET HELP TEXT](Methods/Methods/SearchPicker%20SET%20HELP%20TEXT.de.md) setzen.
 - **Icon zum Löschen:** Mit dem Icon Löschen lässt sich der Inhalt im Bereich löschen. Er funktioniert automatisch.
 
 Während der Ausführung können Sie Ihre Suchmethode durch Anklicken einer eigenen Schaltfläche im Formular oder in einem Formularereignis starten. Der Bereich erzeugt die Ereignisse **On Data Change** und **On Losing Focus**. Sie können eine dynamische Suche liefern, die immer, wenn der Benutzer ein anderes Zeichen eingibt, durch Aufrufen der Suchmethode im Ereignis **On Data Change** neu bewertet wird.

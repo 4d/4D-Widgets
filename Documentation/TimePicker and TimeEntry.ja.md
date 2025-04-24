@@ -32,7 +32,7 @@ Clock ウィジェットはSVGで描画されているので、ヴェクター�
 
 更に、以下の様な機能もあります:
 
-* 時計の秒針は、[TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md)メソッドを使用することにより表示したり隠したりすることが出来ます。
+* 時計の秒針は、[TimePicker DISPLAY SECOND HAND](Methods/Methods/TimePicker%20DISPLAY%20SECOND%20HAND.ja.md)メソッドを使用することにより表示したり隠したりすることが出来ます。
 * 時計は、時刻に応じて"昼間モード"と"夜間モード"を切り替えます:  
     ![](images/pict1239740.fr.png)  
     昼間と夜間の時刻の範囲はそれぞれ、  

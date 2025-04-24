@@ -1,32 +1,30 @@
+
 # SearchPicker
 
-## Overview
+## 概要
 
-With the SearchPicker widget, you can easily create standard search areas, similar to those found in browsers or tool bars. The appearance of the area depends on the platform.
+SearchPickerウィジェットを使用して、ブラウザやツールバーに見られるような標準の検索エリアを簡単に作成できます。エリアのアピアランスはプラットフォームに依存します。
 
-**Windows:**  
-![Windows](images/pict308433.en.png)  
-**Mac OS:**  
-![Mac OS](images/pict308435.en.png)
+Windows: ![Windows SearchPicker](images/pict308433.en.png) Mac OS: ![Mac OS SearchPicker](images/pict308435.en.png)
 
-The text displayed by default in the area can be controlled by programming, using the [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) component method.
+デフォルトでエリアに表示されるテキストは、[SearchPicker SET HELP TEXT](Methods/Methods/SearchPicker%20SET%20HELP%20TEXT.ja.md)コンポーネントメソッドを使用して、プログラムでコントロールできます。
 
-### Functioning
+## 動作
 
-Besides its appearance, a SearchPicker search area is characterized by the following elements: grayed out text, an entry area, and a deletion icon.
+アピアランスの他、SearchPicker検索エリアは以下の要素による特徴を持っています: グレイアウトされたテキスト、入力エリア、削除アイコン。
 
-- **Entry area:** The user enters the value to be searched for. This value is automatically and dynamically assigned to the variable that you have bound with the area in the Property list ("Variable Name" property). You use this variable to supply the value searched for to the search method.
-- **Grayed out text:** An aid indicating the field(s) where the search will be carried out to the user. It disappears as soon as the area has the focus. This text can be set via the [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) command.
-- **Deletion button:** Used to erase the contents of the area. Its functioning is automatic.
+* 入力エリアには検索する値を入力します。この値はプロパティリストの変数名プロパティを使用してエリアにバインドした変数に自動および動的に代入されます。この変数を使用して検索する値を取り出し、検索メソッドに渡すことができます。
+* グレイアウトされたテキストは、検索が実行されるフィールドをユーザに補助的に提示するものです。エリアにフォーカスが当たるとテキストは消えます。このテキストは[SearchPicker SET HELP TEXT](Methods/Methods/SearchPicker%20SET%20HELP%20TEXT.ja.md)コマンドで設定できます。
+* 削除ボタンはエリアの内容を消去するために使用します。このボタンは自動で動作します。
 
-During execution, you can launch your search method by clicking on a custom button in the form or via a form event. The area generates more particularly the **On Data Change** and **On Losing Focus** events. You can provide a dynamic search that is reevaluated each time the user enters another character by calling the search method in the **On Data Change** event.
+実行中、フォーム内カスタムボタンのクリックやフォームイベントを使用して検索メソッドを起動できます。エリアは特に`On Data Change`や`On Losing Focus`イベントを生成します。`On Data Change`イベントで検索メソッドを呼び出すことで、ユーザが他の文字を入力するたびに再評価を行うような動的検索を提供できます。
 
-### Creation
+## 作成
 
-You can insert a SearchPicker area in a form in two ways:
+フォーム上にSearchPickerエリアを挿入する方法は2つあります:
 
-1. By inserting a "SearchPicker" area from the preconfigured object library of 4D ("Entry areas" theme).
-2. By creating a subform area and assigning the **SearchPicker** detail form to it.  
-   ![Subform](images/pict308455.en.png)
+* 4Dの定義済みオブジェクトライブラリから"SearchPicker "エリアを挿入する ("入力エリア" テーマ)。
+* サブフォームエリアを作成し、**SearchPicker**詳細フォームを割り当てる。
+![SearchPicker Form](images/pict308455.en.png)
 
-Then specify the name of the variable bound with the subform ("Variable Name" property in the Property list). When the form is executed, this variable will automatically contain the value searched for by the user. You can then pass this value to your custom search method.
+そのうえで、サブフォームにバインドする変数の名前を指定します (プロパティリストの"変数名"プロパティ)。フォームが実行されると、この変数は自動でユーザーが検索のために入力した値が代入されます。この値をカスタム検索メソッドに渡すことができます。

@@ -2,16 +2,16 @@
 
 > TimePicker SET MAX TIME ( objectName ; maxTime )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 || 説明 |
 | --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| maxTime | Time | → | Upper limit of enterable time |
+| objectName | テキスト | → | サブフォームオブジェクト名 |
+| maxTime | 時間 | → | 入力可能な時間の上限 |
 
-## Description
+## 説明
 
-The `TimePicker SET MAX TIME` command is used to set the maximum enterable time that will be accepted by the object designated by `objectName`. If a higher time value is entered, it will be rejected.
+`TimePicker SET MAX TIME`コマンドを使用して、`objectName`で指定したオブジェクトが受け入れる時間の上限を設定できます。それよりも大きな時間が入力されると、受け入れられません。
 
-## See also
+## 参照
 
 [TimePicker SET DEFAULT MAX TIME](TimePicker%20SET%20DEFAULT%20MAX%20TIME.ja.md)  
 [TimePicker SET MIN TIME](TimePicker%20SET%20MIN%20TIME.ja.md)

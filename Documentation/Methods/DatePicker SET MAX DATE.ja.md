@@ -2,30 +2,30 @@
 
 > DatePicker SET MAX DATE ( objectName ; maxDate )
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| maxDate | Date | → | Upper limit of enterable date |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| objectName | テキスト | サブフォームオブジェクト名 |
+| maxDate | 日付 | 入力可能な日付の上限 |
 
-## Description
+## 説明
 
-The DatePicker SET MAX DATE command is used to specify the maximum enterable date in the DatePicker calendar (the days located after this maximum date appear grayed out in the calendar).
+`DatePicker SET MAX DATE`コマンドを使用して、DatePickerカレンダに入力可能な日付の上限を設定できます (上限より後の日付はカレンダ中で灰色に表示されます)。
 
-The `objectName` specifies the instance of the subform to which the command must be applied. In this parameter, you must pass the name of a subform object displayed in the current form.
+`objectName`引数では、コマンドを適用するサブフォームのインスタンスを指定します。この引数にはカレントフォーム中に表示されるサブフォームの名前を渡さなければなりません。
 
-The `maxDate` date must be expressed in the default entry format corresponding to the system language. If you pass a blank date (!00/00/00!), all the dates that follow the current date are enterable.
+`maxDate`はシステム言語に基づくデフォルト入力フォーマットで表現されなければなりません。空の日付 (!00/00/00!) を渡すと、今日の日付より後の日付はすべて入力可能になります。
 
-If the maximum enterable date is earlier than the minimum enterable date (see [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.ja.md)), no date will be enterable.
+日付の上限が下限より小さい場合([DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.ja.md)参照)、日付の入力はできなくなります。
 
-### Example  
+### 例題
 
-Disabling all dates after December 31, 2009 in the object named "ReturnDate":
+オブジェクト名"ReturnDate"で、2009/12/31より後を無効にする:
 
 ```4d
- DatePicker SET MAX DATE("ReturnDate";!12/31/2009!)
+DatePicker SET MAX DATE("ReturnDate";!2009/12/31!)
 ```
 
-## See also
+## 参照
 
-[DatePicker SET DEFAULT MAX DATE](DatePicker%20SET%20DEFAULT%20MAX%20DATE.ja.md)  
+[DatePicker SET DEFAULT MAX DATE](DatePicker%20SET%20DEFAULT%20MAX%20DATE.ja.md)
 [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.ja.md)

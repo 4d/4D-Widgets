@@ -32,7 +32,7 @@ Das Widget "Clock" ist in SVG gezeichnet, und ist ein Vektorbild, das Ändern vo
 
 Beachte das:
 
-* Für die Anzeige als Uhr lässt sich mit der Methode [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md) der Sekundenzeiger ein- oder ausblenden.
+* Für die Anzeige als Uhr lässt sich mit der Methode [TimePicker DISPLAY SECOND HAND](Methods/Methods/TimePicker%20DISPLAY%20SECOND%20HAND.de.md) der Sekundenzeiger ein- oder ausblenden.
 * Die Uhr wechselt, je nach Zeit, automatisch in den Tag- oder Nacht-Modus:  
     ![](images/pict1239740.fr.png)  
     Die Zeiteinteilung ist 8:00:00 -> 19:59:59 = Tag, 20:00 -> 07:59:59 = Nacht.

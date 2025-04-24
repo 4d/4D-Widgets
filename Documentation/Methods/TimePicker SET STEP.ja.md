@@ -2,29 +2,26 @@
 
 > TimePicker SET STEP ( objectName ; step )
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| step | Time | → | Interval between two time values |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| objectName | テキスト | サブフォームオブジェクト名 |
+| step | 時間 | 2つの時間値の間隔 |
 
-## Description
+## 説明
 
-The `TimePicker SET STEP` command is used to set the step between time values available for the object designated by `objectName`. This parameter only applies to TimePickers displayed as pop-up menus.
+`TimePicker SET STEP`コマンドを使用して、 `objectName`で指定したオブジェクトで利用される時間と時間の間のステップを設定できます。このパラメタはポップアップメニューとして表示されるTimePickerにのみ適用されます。
 
-The `step` value must be included between 1 minute and 1 hour and must be shown as whole divisions of 60 minutes. In practice, only the values 1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 and 60 min are possible. Any other value will automatically be rounded off in order to correspond to this principle.
+`step`値は1分から1時間の間で、60分を割り切れる整数値のみを指定できます。 つまり実際1, 2, 3, 4, 5, 6, 10, 12, 15, 20, 30 そして 60が利用可能です。他の値は自動でこの原則に沿うよう丸められます。
 
-### Example  
+## 例題
 
-Configuration of the TimePicker in the form of a pop-up menu named "time1", limitation of enterable times from 8:30 to 16:30 with 10-minute steps:
+"time1"という名前のポップアップメニュー形式のTimePickerを設定します。入力可能な時間は8:30から16:30で、間隔は10分です:
 
 ```4d
- TimePicker SET MIN TIME("time1";?08:30:00?)  
- TimePicker SET MAX TIME("time1";?16:30:00?)  
- TimePicker SET STEP("time1";?00:10:00?)
+TimePicker SET MIN TIME("time1";?08:30:00?)
+TimePicker SET MAX TIME("time1";?16:30:00?)
+TimePicker SET STEP("time1";?00:10:00?)
 ```
 
-![](../images/pict308616.en.png)
-
-## See also
-
+## 参照
 [TimePicker SET DEFAULT STEP](TimePicker%20SET%20DEFAULT%20STEP.ja.md)

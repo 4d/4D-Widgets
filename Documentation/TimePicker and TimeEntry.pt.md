@@ -32,7 +32,7 @@ Clock widgets are drawn in SVG, and therefore have a vector path allowing deform
 
 Note that:
 
-* For a standard clock, the second hand can be displayed or hidden using the [TimePicker DISPLAY SECOND HAND](Methods/TimePicker%20DISPLAY%20SECOND%20HAND.md) method.
+* For a standard clock, the second hand can be displayed or hidden using the [TimePicker DISPLAY SECOND HAND](Methods/Methods/TimePicker%20DISPLAY%20SECOND%20HAND.pt.md) method.
 * A standard clock automatically changes to "day mode" or "night mode" depending on the time:  
     ![](images/pict1239740.fr.png)  
     The time ranges are 8:00:00 -> 19:59:59 = Day, 20:00 -> 07:59:59 = Night.

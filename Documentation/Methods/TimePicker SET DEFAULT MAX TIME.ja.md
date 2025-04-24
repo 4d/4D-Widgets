@@ -2,17 +2,17 @@
 
 > TimePicker SET DEFAULT MAX TIME ( maxTime )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 || 説明 |
 | --- | --- | --- | --- |
-| maxTime | Time | → | Upper limit of enterable time |
+| maxTime | 時間 | → | 入力可能な時間の上限 |
 
-## Description
+## 説明
 
-The `TimePicker SET DEFAULT MAX TIME` command is used to specify the maximum enterable time that will be allowed by default for all the TimePicker objects.
+`TimePicker SET DEFAULT MAX TIME`コマンドを使用して、すべてのTimePickerオブジェクトで使用される入力可能な時間の上限を設定できます。
 
-This setting is only taken into account for objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md) command.
+この設定は後で作成されるオブジェクトに適用され、既存のオブジェクトには影響を与えない点に留意してください。既存のオブジェクトに適用したい場合は[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md)コマンドを使用します。
 
-## See also
+## 参照
 
 [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md)  
 [TimePicker SET MAX TIME](TimePicker%20SET%20MAX%20TIME.ja.md)

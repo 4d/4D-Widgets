@@ -9,14 +9,14 @@ With the SearchPicker widget, you can easily create standard search areas, simil
 **Mac OS:**  
 ![Mac OS](images/pict308435.en.png)
 
-The text displayed by default in the area can be controlled by programming, using the [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) component method.
+The text displayed by default in the area can be controlled by programming, using the [SearchPicker SET HELP TEXT](Methods/Methods/SearchPicker%20SET%20HELP%20TEXT.pt.md) component method.
 
 ### Functioning
 
 Besides its appearance, a SearchPicker search area is characterized by the following elements: grayed out text, an entry area, and a deletion icon.
 
 - **Entry area:** The user enters the value to be searched for. This value is automatically and dynamically assigned to the variable that you have bound with the area in the Property list ("Variable Name" property). You use this variable to supply the value searched for to the search method.
-- **Grayed out text:** An aid indicating the field(s) where the search will be carried out to the user. It disappears as soon as the area has the focus. This text can be set via the [SearchPicker SET HELP TEXT](Methods/SearchPicker%20SET%20HELP%20TEXT.md) command.
+- **Grayed out text:** An aid indicating the field(s) where the search will be carried out to the user. It disappears as soon as the area has the focus. This text can be set via the [SearchPicker SET HELP TEXT](Methods/Methods/SearchPicker%20SET%20HELP%20TEXT.pt.md) command.
 - **Deletion button:** Used to erase the contents of the area. Its functioning is automatic.
 
 During execution, you can launch your search method by clicking on a custom button in the form or via a form event. The area generates more particularly the **On Data Change** and **On Losing Focus** events. You can provide a dynamic search that is reevaluated each time the user enters another character by calling the search method in the **On Data Change** event.

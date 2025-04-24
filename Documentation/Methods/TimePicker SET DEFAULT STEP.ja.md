@@ -2,17 +2,17 @@
 
 > TimePicker SET DEFAULT STEP ( step )
 
-| Parameter | Type |     | Description |
+| 引数 | 型 || 説明 |
 | --- | --- | --- | --- |
-| step | Time | → | Interval between two time values |
+| step | 時間 | → | 2つの時間値の間隔 |
 
-## Description
+## 説明
 
-The `TimePicker SET DEFAULT STEP` command is used to set the step between time values for all the TimePicker objects.
+`TimePicker SET DEFAULT STEP`コマンドを使用して、すべてのTimePickerオブジェクトの時間と時間の間隔を設定できます。
 
-This setting is only taken into account for objects created subsequently and does not apply to any existing objects. If you want to apply it to existing objects, you must use the [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md) command.
+この設定は後で作成されるオブジェクトに適用され、既存のオブジェクトには影響を与えない点に留意してください。既存のオブジェクトに適用したい場合は[TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md)コマンドを使用します。
 
-## See also
+## 参照
 
 [TimePicker APPLY DEFAULT VALUES](TimePicker%20APPLY%20DEFAULT%20VALUES.ja.md)  
 [TimePicker SET STEP](TimePicker%20SET%20STEP.ja.md)

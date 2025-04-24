@@ -2,21 +2,21 @@
 
 > SearchPicker SET HELP TEXT ( objectName ; helpText )
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| objectName | Text | → | Name of subform object |
-| helpText | Text | → | Text to display |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| objectName | テキスト | サブフォームオブジェクト名 |
+| helpText | テキスト | 表示するテキスト |
 
-## Description
+## 説明
 
-The `SearchPicker SET HELP TEXT` command is used to display a non-enterable grayed-out text in the background of the search area specified by `objectName`. This text disappears when the user clicks in the area.
+`SearchPicker SET HELP TEXT`コマンドを使用して、 `objectName`で指定した検索エリアのバックグランドに、入力不可のグレイアウトされたテキストを表示できます。このテキストはユーザがエリア内をクリックすると消えます。
 
-### Example  
+### 例題
 
-Displays the word "Country" in the area, indicating that the search will concern this variable:
+エリア内に"Country"と表示します。これにより検索がこの変数に関連するものだということを示すことができます:
 
 ```4d
- SearchPicker SET HELP TEXT("vSearch";"Country")
+SearchPicker SET HELP TEXT("vSearch";"Country")
 ```
 
 ![](../images/pict308485.en.png)

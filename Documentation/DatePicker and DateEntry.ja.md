@@ -1,53 +1,53 @@
-# 🧩 DatePicker and DateEntry  
+# DatePickerとDateEntry
 
-The DatePicker widget is an intuitive, easy-to-use object that you can use to make the most of any fields that require dates to be entered or simply represented. This widget is provided in two forms:
+DatePickerウィジェットはフォームに日付を入力、表示するための直感的なグラフィックインタフェースオブジェクトを提供します。ウィジェットは2つの形式で提供されます: 
 
-* **DatePicker Calendar**: This object can be used either in a subform, or as a pull-down calendar displayed by clicking a button.
-* **DateEntry Area**: Date area associated with control buttons. This object can be only be used in a subform.
+* **DatePicker カレンダ**: このオブジェクトはサブフォーム中、あるいはボタンクリックに反応して表示されるプルダウンカレンダとしても利用できます。
+* **DateEntry エリア**: コントロールボタンが割り当てられた日付エリア。このオブジェクトはサブフォームの中でのみ利用できます。
 
-## DatePicker calendar  
+## DatePickerカレンダ
 
-A DatePicker calendar is an area displaying each month as a table of days. During execution, the user can scroll through the months of the calendar both forwards and backwards by clicking on the arrow buttons. They can also use the arrow keys of the keyboard.
+DatePickerカレンダは日付を月ごとに表形式で表示するエリアです。実行中、ユーザーは矢印ボタンをクリックすることでカレンダの月を前後に移動することができます。キーボードの矢印キーを使用することもできます。
 
-![](images/pict307767.en.png)
+![DatePicker Calendar](images/pict307767.en.png)
 
-When it is inserted into a subform, a DatePicker object can be used without programming thanks to the mechanism provided by the **bound variable**: you can work with the value of the variable bound with the subform object ("Variable Name" property in the Property List) in order to manage its display and entry.  
-When the form is executed, this date variable automatically contains the date selected by the user. Conversely, if you modify the value of this variable by programming, it will be shown automatically in the subform.
+これがサブフォームに挿入されると、DatePickerオブジェクトは**バインド変数**により提供されるメカニズムのおかげで、プログラミングを行うことなく利用することができます。つまり、サブフォームオブジェクトにバインドされた変数 (プロパティリストの"変数名"プロパティ) の値を使用して表示と入力を管理することができます。
+フォームが実行されると、この日付変数にはユーザーが選択した日付が自動で割り当てられます。逆に、プログラムで日付変数の値を変更すると、それがサブフォームにも自動で反映されます。
 
-However, if you want to customize the functioning of the DatePicker or display it as a pop-up menu, you must use the set of component methods that is provided.
+DatePickerの動作をカスタマイズしたい場合や、ポップアップメニューとして表示したい場合、提供される一連のコンポーネントメソッドを使用します。
 
-### Use in a subform  
+### サブフォームで使用する
 
-You can insert a DatePicker calendar into a form in two ways:
+DatePickerカレンダは２つの方法でフォームに挿入できます:
 
-* By inserting a "Date Picker" object from the preconfigured object library of 4D
-* By creating a subform area and assigning the detail form of the **DatePicker** to it.
+* 4Dの定義済みオブジェクトライブラリから"Date Picker"オブジェクトを挿入する。 
+* サブフォームエリアを作成し、**DatePicker**の詳細フォームを割り当てる。
 
-You can manage this area without programming via the bound variable mechanism (see above).
+バインド変数のメカニズムを使用すれば、プログラミングなしでこのエリアを管理できます (前述)。 
 
-### Use in a pop-up  
+### ポップアップで使用する
 
-You can use a DatePicker calendar as a pop-up window. To do this, you can either:
+DatePickerカレンダをポップアップウィンドウで使用できます。以下のいずれかの方法を使用します:
 
-* insert a "Pop up date" object from the preconfigured object library,
-* create a subform and assign the **DateButton** detail form to it.  
-    In both these cases, you can manage its display and entry by binding a date variable to the object.
-* create an object that calls the [DatePicker Display Dialog](Methods/DatePicker%20Display%20Dialog.md) component method. This method returns the date selected by the user.
+* 定義済みのオブジェクトライブラリから"Pop up date"を挿入する。
+* サブフォームエリアを作成し、**DateButton**詳細フォームを割り当てる。
+  これらの場合、オブジェクトに日付変数を割り当てることで表示と入力を管理できます。
+* [DatePicker Display Dialog](Methods/Methods/DatePicker%20Display%20Dialog.ja.md)コンポーネントメソッドを呼び出すオブジェクトを作成する。このメソッドからはユーザーが選択した日付が返されます。 
 
-## DateEntry area  
+### DateEntryエリア
 
-A DateEntry type area facilitates the entry of a date in the form specified in the system preferences (for example DD/MM/YY).  
-The area appears as a date type associated with buttons:
+DateEntryタイプのエリアはシステム環境設定で定義された形式 (例: YY/MM/DD) での日付入力を容易にします。
+このエリアはボタンが割り当てられた日付型として表示されます:
 
-![](images/pict307791.en.png)
+![DateEntry Area](images/pict307791.en.png)
 
-During execution, the buttons located to the right of the entry area are only displayed when the object has the focus. The user selects each element of the date (day, month or year) individually by clicking or hitting the Tab key and can scroll them using the numeric stepper or the arrow keys of the keyboard. The calendar icon to the right can be used to select a date from a DatePicker pop-up calendar.
+実行中、入力エリアの右にあるボタンはオブジェクトにフォーカスがあるときだけ表示されます。ユーザーはクリックやタブキーを使用して日付の各要素 (年、月、日) を個々に選択でき、数値ステッパーやキーボードの矢印キーを使用してスクロールできます。右側にあるカレンダアイコンを使用すれば、DatePickerポップアップカレンダから日付を選択することもできます。 
 
-A DateEntry object can be used without programming thanks to the mechanism provided by the bound variable (see the "DatePicker calendar" paragraph). However, if you want to customize the functioning, you can use the set of component methods that is provided. These methods are the same as those of the DatePicker object.
+バインド変数が提供するメカニズムのおかげで、DateEntryオブジェクトはプログラミングなしで利用できます ("DatePickerカレンダ"の段落参照)。動作をカスタマイズしたい場合は、提供される一連のコンポーネントメソッドを使用できます。これらのメソッドはDatePickerオブジェクトと同じものです。
 
-### Use in a subform  
+### サブフォームで使用する
 
-You can insert a DateEntry area into a form in two ways:
+DateEntry エリアは２つの方法でフォームに挿入できます:
 
-* By inserting a "DateEntry area" object from the preconfigured object library of 4D.
-* By creating a subform area and assign the **DateEntry** detail form to it.
+* 4Dの定義済みオブジェクトライブラリから"DateEntry area"オブジェクトを挿入する。 
+* サブフォームエリアを作成し、**DateEntry**の詳細フォームを割り当てる。

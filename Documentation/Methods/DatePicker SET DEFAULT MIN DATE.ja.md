@@ -2,26 +2,26 @@
 
 > DatePicker SET DEFAULT MIN DATE ( dateMin )
 
-| Parameter | Type |     | Description |
-| --- | --- | --- | --- |
-| dateMin | Date | → | Limite inférieure de date saisissable |
+| 引数 | 型 | 説明 |
+| --------- | -------- | ----------- |
+| dateMin | 日付 | 入力可能な日付の下限 |
 
-## Description
+## 説明
 
-The DatePicker SET DEFAULT MIN DATE command is used to set the minimum enterable day for all the calendars of the DatePicker component.
+`DatePicker SET DEFAULT MIN DATE`コマンドを使用して、DatePickerコンポーネントのすべてのカレンダの、入力可能な日付の下限を設定できます。
 
-Note that this parameter is only taken into account for calendars created subsequently and does not apply to any existing calendars. If you want to apply it to existing calendars, you must use the [DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md) command.
+このパラメタは後で作成されるカレンダに適用され、既存のカレンダには影響を与えない点に留意してください。既存のカレンダに適用したい場合は[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)コマンドを使用します。
 
-### Example  
+### 例題
 
-Designation of minimum date to January 1, 2000:
+日付の下限を2000年1月1日にする:
 
 ```4d
- DatePicker SET DEFAULT MIN DATE(!01/01/2000!)
+DatePicker SET DEFAULT MIN DATE(!2000/01/01!)
 ```
 
-## See also
+## 参照
 
-[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)  
-[DatePicker SET DEFAULT MAX DATE](DatePicker%20SET%20DEFAULT%20MAX%20DATE.ja.md)  
+[DatePicker APPLY DEFAULT VALUES](DatePicker%20APPLY%20DEFAULT%20VALUES.ja.md)
+[DatePicker SET DEFAULT MAX DATE](DatePicker%20SET%20DEFAULT%20MAX%20DATE.ja.md)
 [DatePicker SET MIN DATE](DatePicker%20SET%20MIN%20DATE.ja.md)
