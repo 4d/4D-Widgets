@@ -74,8 +74,3 @@ DEV/
 !.github/
 !.github/**/.*
 .github/.DS_Store
-
-#--------------------------------
-# Added by user
-#--------------------------------
-Project/Sources/dependencies.json
