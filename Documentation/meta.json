@@ -2,51 +2,51 @@
     "filters": [
         {
             "from": "Documentation/DatePicker and DateEntry.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/DatePicker-and-DateEntry.300-7477812.en.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/DatePicker-and-DateEntry.300-6343479.en.html"
         },
         {
             "from": "Documentation/DatePicker and DateEntry.fr.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/DatePicker-et-DateEntry.300-7477812.fr.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/DatePicker-et-DateEntry.300-6343479.fr.html"
         },
         {
             "from": "Documentation/DatePicker.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/DatePicker.201-7477806.en.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/DatePicker.201-6343456.en.html"
         },
         {
             "from": "Documentation/DatePicker.fr.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/DatePicker.201-7477806.fr.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/DatePicker.201-6343456.fr.html"
         },
         {
             "from": "Documentation/SearchPicker Overview.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/Presentation.300-7477839.fr.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/Overview.300-6343488.en.html"
         },
         {
             "from": "Documentation/SearchPicker Overview.fr.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/Overview.300-7477839.en.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/Presentation.300-6343488.fr.html"
         },
         {
             "from": "Documentation/SearchPicker.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/SearchPicker.201-7477808.en.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/SearchPicker.201-6343457.en.html"
         },
         {
             "from": "Documentation/SearchPicker.fr.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/SearchPicker.201-7477808.fr.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/SearchPicker.201-6343457.fr.html"
         },
         {
             "from": "Documentation/TimePicker and TimeEntry.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/TimePicker-and-TimeEntry.300-7477835.en.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/TimePicker-and-TimeEntry.300-6343474.en.html"
         },
         {
             "from": "Documentation/TimePicker and TimeEntry.fr.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/TimePicker-TimeEntry-et-TimeDisplay.300-7477835.fr.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/TimePicker-TimeEntry-et-TimeDisplay.300-6343474.fr.html"
         },
         {
             "from": "Documentation/TimePicker.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/TimePicker.201-7477807.en.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/TimePicker.201-6343454.en.html"
         },
         {
             "from": "Documentation/TimePicker.fr.md",
-            "to": "https://doc.4d.com/4Dv20R8/4D/20-R8/TimePicker.201-7477807.fr.html"
+            "to": "https://doc.4d.com/4Dv20/4D/20/TimePicker.201-6343454.fr.html"
         }
     ]
 } 

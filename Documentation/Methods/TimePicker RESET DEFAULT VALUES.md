@@ -15,5 +15,4 @@ Note that this parameter is only taken into account for TimePicker objects creat
 
 ## See also
 
-[TimePicker APPLY DEFAULT VALUES](TimePicker APPLY DEFAULT VALUES.m>
-d)
+[TimePicker APPLY DEFAULT VALUES](TimePicker APPLY DEFAULT VALUES.md)
