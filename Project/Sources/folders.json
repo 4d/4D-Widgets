@@ -1,10 +1,20 @@
-﻿{
-	"Compiler": {},
+{
+	"Compiler": {
+		"methods": [
+			"Compiler_Arrays_Inter",
+			"Compiler_Methods",
+			"Compiler_Variables",
+			"Compiler_Variables_Inter"
+		]
+	},
 	"DatePicker": {
 		"groups": [
 			"DatePicker Forms",
 			"DatePicker Private",
 			"DatePicker Shared"
+		],
+		"methods": [
+			"DatePicker__SetTarget"
 		]
 	},
 	"DatePicker Forms": {
@@ -60,6 +70,9 @@
 			"SearchPicker Forms",
 			"SearchPicker Private",
 			"SearchPicker Shared"
+		],
+		"methods": [
+			"SearchPicker__SetTarget"
 		]
 	},
 	"SearchPicker Forms": {
@@ -92,6 +105,9 @@
 			"TimePicker Forms",
 			"TimePicker Private",
 			"TimePicker Shared"
+		],
+		"methods": [
+			"TimePicker__SetTarget"
 		]
 	},
 	"TimePicker Forms": {
@@ -156,7 +172,9 @@
 	},
 	"Tools": {
 		"methods": [
+			"Tool_AdjustWindowPos",
 			"Tool_ObjectToVar",
+			"Tool_ScreenInfoFromPoint",
 			"Tool_VarToObject"
 		]
 	},

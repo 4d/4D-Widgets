@@ -1,23 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?><preferences stamp="21">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="22">
 	<com.4d>
 		<database>
 			<cache flush_buffer_delay="20s" size_fixed="32" size_maximum="100" size_reserved="128"/>
 			<cpu_priority/>
-			<misc use_ast_interpreter="false"/>
-                            		</database>
+			<misc use_ast_interpreter="false"/>                            </database>
 		<compiler>
 			<typage default_for_button="2" default_for_numeric="2"/>
-			<options AMD64_support="true" compilation_path="3" fat_binary="true"/>
-                            		</compiler>
+			<options AMD64_support="true" compilation_path="3" fat_binary="true" symbol_file="true" target="all"/>                            </compiler>
 		<interface>
 			<shortcuts>
 				<add_subform command="true" key_code="11311" shift="true"/>
 				<cancel_input_form key_code="13595"/>
-				<accept_input_form key_code="19459"/>
-                                                      			</shortcuts>
+				<accept_input_form key_code="19459"/>                                                      </shortcuts>
 			<developper allow_read_only_structure="false"/>
-			<user print_progress="false"/>
-                                        		</interface>
+			<user print_progress="false"/>                                        </interface>
 		<general execute_host_database_event="true">
 			<mover always_display_dialog="2"/>
 		</general>
@@ -60,6 +56,4 @@
 		<sql>
 			<publication port_number="19812"/>
 		</sql>
-		<php ip_address="127.0.0.1"/>
-                          	</com.4d>
-    </preferences>
+		<php ip_address="127.0.0.1"/>                          </com.4d>    </preferences>
