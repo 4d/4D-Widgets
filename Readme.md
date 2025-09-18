@@ -49,7 +49,7 @@ To create a widget via a subform type object:
 
  Widgets are based on 4D subforms and are therefore subject to the same operating principles. You should pay particular attention to their initialization.
 
-For optimization purposes, subform objects are instantiated by 4D only when the subform is displayed. This means that method calls via [EXECUTE METHOD IN SUBFORM](https://developer.4d.com/docs/FormObjects/subformOverview/#execute-method-in-subform-command) or access to dynamic objects in subforms are not possible until the subform is displayed on the current page.
+For optimization purposes, subform objects are instantiated by 4D only when the subform is displayed. This means that method calls via [EXECUTE METHOD IN SUBFORM](https://developer.4d.com/docs/commands/execute-method-in-subform) or access to dynamic objects in subforms are not possible until the subform is displayed on the current page.
 
 When you place widgets on form pages other than page 1, it is not possible to call an initialization method (such as [TimePicker SET STEP](Documentation/Methods/TimePicker%20SET%20STEP.md)) in the On Load form event, because at the time of its execution the widget will not be instantiated.
 
