@@ -82,6 +82,8 @@ DIALOG:C40($formName; $form)  //ACI0099621 use of form parameter when called as 
 
 If (ok=1)
 	$returnedDate:=$form.displayDate
+	//mark:ACI0105847
+	<>DatePicker_DefaultDate:=$returnedDate
 Else 
 	$returnedDate:=!00-00-00!
 End if 
