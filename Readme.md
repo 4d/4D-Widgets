@@ -1,4 +1,4 @@
-# 4D widgets
+# 4D Widgets
 
 4D widgets are functionalities provided as components that can be accessed from the Form editor and/or the preconfigured object library. These widgets are compound objects with predefined characteristics. They provide access to standard functions and are very simple to implement.
 
