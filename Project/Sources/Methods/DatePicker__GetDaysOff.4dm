@@ -18,12 +18,12 @@ If (Count parameters:C259>=3)
 	
 	Case of 
 		: ($type=0)
-			$PtrLocalArray:=Self:C308(Object named:K67:5; "_DaysOff1"; $Form)
+			$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff1"; $Form)
 			If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 				COPY ARRAY:C226($PtrLocalArray->; $ptrArray->)
 			End if 
 		: ($type=1)
-			$PtrLocalArray:=Self:C308(Object named:K67:5; "_DaysOff2"; $Form)
+			$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff2"; $Form)
 			If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 				COPY ARRAY:C226($PtrLocalArray->; $ptrArray->)
 			End if 

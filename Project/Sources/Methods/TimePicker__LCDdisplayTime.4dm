@@ -1,62 +1,51 @@
 //%attributes = {"invisible":true}
-var $1 : Text  // obejct name
-var $2 : Time  // time to display
-var $3 : Boolean  // blink or not
-var $4 : Integer  // display mode (12:00 or 24:00)
-var $5 : Text  // "HH MM {SS} {AMPM}"
+#DECLARE($objectName : Text; $time : Time; $blink : Boolean; $mode : Integer; $format : Text)
 
-var $blink : Boolean
-
-var $mode : Integer
-var $hours : Integer
-var $minuts : Integer
-var $seconds : Integer
-var $index : Integer
-var $digit; $segment : Integer
-
-var $objectName : Text
-var $AmPm : Text
-var $format : Text
-var $time_t : Text
-var $Value_t : Text
-var $id : Text
-
-var $time : Time
-
-$objectName:=$1
-$time:=$2
-$blink:=$3
-$mode:=$4  // 12 or 24
-$format:=$5  // "true" or ""
-
-$hours:=$time\3600
+var $hours : Integer:=$time\3600
 $time:=$time-($hours*3600)
 
-$minuts:=$time\60
+var $minuts : Integer:=$time\60
 $time:=$time-($minuts*60)
 
-$seconds:=$time+0
+var $seconds : Integer:=$time+0
 
 If ($format="true")
+	
 	If ($hours<12)
+		
 		$AmPm:="AM"
+		
 	Else 
+		
 		$AmPm:="PM"
+		
 	End if 
+	
 Else 
-	$AmPm:=""
+	
+	var $AmPm : Text
+	
 End if 
 
 If ($mode=12)
+	
 	Case of 
+			
+			//________________________________________________________________________________
 		: ($hours=0)
+			
 			$hours:=12
+			
+			//________________________________________________________________________________
 		: ($hours>12)
+			
 			$hours:=$hours-12
+			
+			//________________________________________________________________________________
 	End case 
 End if 
 
-$time_t:=String:C10($hours; "00")+String:C10($minuts; "00")+String:C10($seconds; "00")+$AmPm
+var $time_t : Text:=String:C10($hours; "00")+String:C10($minuts; "00")+String:C10($seconds; "00")+$AmPm
 
 //0 : ABCDEF
 //1 : BC
@@ -191,47 +180,74 @@ $Decoder{12}{6}:=1
 $Decoder{12}{7}:=0
 $Decoder{12}{8}:=1
 
-For ($digit; 1; Length:C16($time_t))
+
+var $digit : Integer
+For ($digit; 1; Length:C16($time_t); 1)
 	
-	$Value_t:=$time_t[[$digit]]
+	var $Value_t : Text:=$time_t[[$digit]]
+	
 	Case of 
-		: ($Value_t>="0") & ($Value_t<="9")
-			$index:=Num:C11($Value_t)
+			
+			//________________________________________________________________________________
+		: ($Value_t>="0")\
+			 & ($Value_t<="9")
+			
+			var $index : Integer:=Num:C11($Value_t)
+			
+			//________________________________________________________________________________
 		: ($Value_t="A")
+			
 			$index:=10
+			
+			//________________________________________________________________________________
 		: ($Value_t="P")
+			
 			$index:=11
+			
+			//________________________________________________________________________________
 		: ($Value_t="M")
+			
 			$index:=12
+			
+			//________________________________________________________________________________
 	End case 
 	
-	For ($segment; 1; 8)
+	var $segment : Integer
+	For ($segment; 1; 8; 1)
 		
-		$id:="dig"+String:C10($digit)+"_seg"+Char:C90(Character code:C91("A")+$segment-1)
+		var $id : Text:="dig"+String:C10($digit)+"_seg"+Char:C90(Character code:C91("A")+$segment-1)
 		
 		If ($Decoder{$index}{$segment}=1)
+			
 			SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "fill-opacity"; "1")
 			SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "stroke-opacity"; "1")
+			
 		Else 
-			If ($segment#8)  // barre vertical du M (exception)
+			
+			If ($segment#8)  // Barre vertical du M (exception)
+				
 				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "fill-opacity"; "0.05")
 				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "stroke-opacity"; "0.05")
+				
 			Else 
+				
 				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "fill-opacity"; "0")
 				SVG SET ATTRIBUTE:C1055(*; $objectName; $id; "stroke-opacity"; "0")
+				
 			End if 
 		End if 
-		
 	End for 
 End for 
 
-If (((Milliseconds:C459%1000)>500) | (Not:C34($blink)))
+If (((Milliseconds:C459%1000)>500)\
+ | (Not:C34($blink)))
+	
 	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "fill-opacity"; "1")
 	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "stroke-opacity"; "1")
+	
 Else 
+	
 	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "fill-opacity"; "0.05")
 	SVG SET ATTRIBUTE:C1055(*; $objectName; "blink"; "stroke-opacity"; "0.05")
+	
 End if 
-
-
-

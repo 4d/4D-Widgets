@@ -68,7 +68,7 @@ If (Count parameters:C259=3)
 								
 								Case of 
 									: ($selector=1)  //repeated every year
-										$PtrLocalArray:=Self:C308(Object named:K67:5; "_DaysOff1"; $Form)
+										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff1"; $Form)
 										If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 											COPY ARRAY:C226($ptrArray->; $PtrLocalArray->)
 											$n:=Size of array:C274($PtrLocalArray->)  //reformat for year 2000 (quick code later)
@@ -77,7 +77,7 @@ If (Count parameters:C259=3)
 											End for 
 										End if 
 									: ($selector=2)  //only once
-										$PtrLocalArray:=Self:C308(Object named:K67:5; "_DaysOff2"; $Form)
+										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff2"; $Form)
 										If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 											COPY ARRAY:C226($ptrArray->; $PtrLocalArray->)
 										End if 

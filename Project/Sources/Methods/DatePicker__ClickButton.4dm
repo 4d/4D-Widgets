@@ -6,7 +6,7 @@ If ($1#"")
 	var $FirstDisplayedDay : Date
 	var $ClickedDate : Date
 	
-	$PtrFirstDisplayedDay:=Self:C308(Object named:K67:5; "FirstDisplayedDay")
+	$PtrFirstDisplayedDay:=OBJECT Get pointer:C1124(Object named:K67:5; "FirstDisplayedDay")
 	If (Not:C34(Is nil pointer:C315($PtrFirstDisplayedDay)))
 		
 		$FirstDisplayedDay:=$PtrFirstDisplayedDay->

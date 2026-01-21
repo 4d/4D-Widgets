@@ -3,7 +3,7 @@
 var $ptr : Pointer
 var $Value : Integer
 
-$Ptr:=Self:C308(Object current:K67:2)
+$Ptr:=OBJECT Get pointer:C1124(Object current:K67:2)
 
 If (Not:C34(Is nil pointer:C315($Ptr)))
 	$Value:=$Ptr->

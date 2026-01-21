@@ -1,5 +1,4 @@
 //%attributes = {"invisible":true,"shared":true}
-var $1 : Text
-var $2 : Boolean
+#DECLARE($form : Text; $display : Boolean)
 
-EXECUTE METHOD IN SUBFORM:C1085($1; "TimePicker__DisplaySecondHand"; *; $2)
+EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplaySecondHand).source; *; $display)

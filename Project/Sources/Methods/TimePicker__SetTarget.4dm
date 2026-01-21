@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
 #DECLARE($time : Time)
 
-var $containerValue : Variant:=OBJECT Get subform container value:C1785
+var $containerValue:=OBJECT Get subform container value:C1785
 
 If (Value type:C1509($containerValue)=Is real:K8:4)\
  | (Value type:C1509($containerValue)=Is time:K8:8)

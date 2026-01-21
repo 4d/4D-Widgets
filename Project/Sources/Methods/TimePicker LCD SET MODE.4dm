@@ -1,26 +1,12 @@
 //%attributes = {"invisible":true,"shared":true}
-var $1 : Text  // form name
-var $2 : Integer  // mode 12 ou 24
-
-var $subFormName : Text
-var $ErrorText : Text
-var $mode : Integer
+#DECLARE($subFormName : Text; $mode : Integer)
 
 If (Count parameters:C259>=2)
 	
-	$subFormName:=$1
-	$mode:=$2
-	
-	EXECUTE METHOD IN SUBFORM:C1085($subFormName; "TimePicker__LCD SET MODE"; *; $mode)
+	EXECUTE METHOD IN SUBFORM:C1085($subFormName; Formula:C1597(TimePicker__LCD SET MODE).source; *; $mode)
 	
 Else 
-	//incorrect number of parameters
-	$ErrorText:=Localized string:C991("Errors_IncorrectParamNumbers")
-	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
-	ALERT:C41($ErrorText)
+	
+	ALERT:C41(Replace string:C233(Localized string:C991("Errors_IncorrectParamNumbers"); "[1]"; Current method name:C684))
+	
 End if 
-
-
-
-
-

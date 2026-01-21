@@ -1,21 +1,10 @@
 //%attributes = {"invisible":true}
+#DECLARE($displaySecondHand : Boolean)
 
-var $1 : Boolean
-var $displaySecondHand : Boolean
+var $ptr : Pointer:=OBJECT Get pointer:C1124(Object named:K67:5; "clockDisplaySecondHand")
+$Ptr->:=$displaySecondHand ? "true" : "false"
 
-$displaySecondHand:=$1
-
-var $ptr : Pointer
-var $PtrRebuild : Pointer
-
-$PtrRebuild:=OBJECT Get pointer:C1124(Object named:K67:5; "clockRebuild")
-$Ptr:=OBJECT Get pointer:C1124(Object named:K67:5; "clockDisplaySecondHand")
-
-If ($displaySecondHand)
-	$Ptr->:="true"
-Else 
-	$Ptr->:="false"
-End if 
-
+var $PtrRebuild : Pointer:=OBJECT Get pointer:C1124(Object named:K67:5; "clockRebuild")
 $PtrRebuild->:="true"
-SET TIMER:C645(-1)  // will redraw the image according to the associated variable
+
+SET TIMER:C645(-1)  // Will redraw the image according to the associated variable

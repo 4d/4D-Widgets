@@ -36,7 +36,7 @@ $PtrHours:=OBJECT Get pointer:C1124(Object named:K67:5; "Hours")
 If (Not:C34(Is nil pointer:C315($PtrHours)))
 	
 	$NbPopup:=1
-	$PtrMinuts:=Self:C308(Object named:K67:5; "Minuts")
+	$PtrMinuts:=OBJECT Get pointer:C1124(Object named:K67:5; "Minuts")
 	
 	If (Not:C34(Is nil pointer:C315($PtrMinuts)))
 		

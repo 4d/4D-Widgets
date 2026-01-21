@@ -1,26 +1,26 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305(<>DatePicker_ActivateArrows)
-C_BLOB:C604(<>DatePicker_Blob)
-C_BOOLEAN:C305(<>DatePicker_CloseDial)
-C_DATE:C307(<>DatePicker_DateMax)
-C_DATE:C307(<>DatePicker_DateMin)
-C_DATE:C307(<>DatePicker_DefaultDate)
-C_LONGINT:C283(<>DatePicker_FirstDayOfWeek)
-C_BOOLEAN:C305(<>DatePicker_GetBlob)
-C_BOOLEAN:C305(<>DatePicker_Inited)
-C_BOOLEAN:C305(<>SearchPicher_DefaultInited)
-C_TEXT:C284(<>SearchPicker_DummyText)
-C_TEXT:C284(<>SearchPicker_Menu)
-C_TEXT:C284(<>SearchPicker_PopupFunction)
-C_TEXT:C284(<>SearchPicker_SearchText)
-C_POINTER:C301(<>SearchPicker_Target)
-C_BOOLEAN:C305(<>TimePicker_CloseDial)
-C_TIME:C306(<>TimePicker_DummyTime)
-C_BOOLEAN:C305(<>TimePicker_Inited)
-C_TEXT:C284(<>TimePicker_LabelAM)
-C_TEXT:C284(<>TimePicker_LabelPM)
-C_TIME:C306(<>TimePicker_SelectedTime)
-C_TIME:C306(<>TimePicker_Step)
-C_POINTER:C301(<>TimePicker_Target)
-C_TIME:C306(<>TimePicker_TimeMax)
-C_TIME:C306(<>TimePicker_TimeMin)
+var <>DatePicker_ActivateArrows : Boolean
+var <>DatePicker_Blob : Blob
+var <>DatePicker_CloseDial : Boolean
+var <>DatePicker_DateMax : Date
+var <>DatePicker_DateMin : Date
+var <>DatePicker_DefaultDate : Date
+var <>DatePicker_FirstDayOfWeek : Integer
+var <>DatePicker_GetBlob : Boolean
+var <>DatePicker_Inited : Boolean
+var <>SearchPicher_DefaultInited : Boolean
+var <>SearchPicker_DummyText : Text
+var <>SearchPicker_Menu : Text
+var <>SearchPicker_PopupFunction : Text
+var <>SearchPicker_SearchText : Text
+var <>SearchPicker_Target : Pointer
+var <>TimePicker_CloseDial : Boolean
+var <>TimePicker_DummyTime : Time
+var <>TimePicker_Inited : Boolean
+var <>TimePicker_LabelAM : Text
+var <>TimePicker_LabelPM : Text
+var <>TimePicker_SelectedTime : Time
+var <>TimePicker_Step : Time
+var <>TimePicker_Target : Pointer
+var <>TimePicker_TimeMax : Time
+var <>TimePicker_TimeMin : Time

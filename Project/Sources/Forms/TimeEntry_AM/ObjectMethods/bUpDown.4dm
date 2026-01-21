@@ -1,5 +1,5 @@
 var $Ptr : Pointer
 
-$Ptr:=Self:C308(Object current:K67:2)
+$Ptr:=OBJECT Get pointer:C1124(Object current:K67:2)
 TimeEntry__Increase($Ptr->)  //+1 ou -1
 $Ptr->:=0

@@ -45,7 +45,7 @@ End if
 $Form:=""
 
 
-$ptrBtn:=Self:C308(Object named:K67:5; "DatePicker_Btn_1")
+$ptrBtn:=OBJECT Get pointer:C1124(Object named:K67:5; "DatePicker_Btn_1")
 If (Not:C34(Is nil pointer:C315($ptrBtn)))
 	
 	DatePicker__GetMinDate(->$minDate)
@@ -68,7 +68,7 @@ If (Not:C34(Is nil pointer:C315($ptrBtn)))
 	
 	// draw the name of the month and the initials of day of weeks
 	
-	$Ptr_ListDays:=Self:C308(Object named:K67:5; "_ListDays")
+	$Ptr_ListDays:=OBJECT Get pointer:C1124(Object named:K67:5; "_ListDays")
 	
 	If (Not:C34(Is nil pointer:C315($Ptr_ListDays)))
 		If (Size of array:C274($Ptr_ListDays->)=7)
@@ -161,7 +161,7 @@ If (Not:C34(Is nil pointer:C315($ptrBtn)))
 		
 		//is it the currently selected day  **********************************
 		
-		$ptrBtn:=Self:C308(Object named:K67:5; $ObjectName)
+		$ptrBtn:=OBJECT Get pointer:C1124(Object named:K67:5; $ObjectName)
 		
 		If ($date=$selectedDate)
 			$ptrBtn->:=1

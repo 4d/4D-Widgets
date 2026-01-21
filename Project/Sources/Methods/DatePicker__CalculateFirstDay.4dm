@@ -42,7 +42,7 @@ $CurrentYear:=Year of:C25($date)
 $Ptr_MonthesArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_ListMonthes"; $Form)
 If (Not:C34(Is nil pointer:C315($Ptr_MonthesArray)))
 	If (Size of array:C274($Ptr_MonthesArray->)>=12)
-		$PtrDisplayedMonth:=Self:C308(Object named:K67:5; "DisplayedMonth"; $Form)
+		$PtrDisplayedMonth:=OBJECT Get pointer:C1124(Object named:K67:5; "DisplayedMonth"; $Form)
 		If (Not:C34(Is nil pointer:C315($PtrDisplayedMonth)))
 			
 			// Affichage de l'entete (yyyy MMM ou MMM yyyy)

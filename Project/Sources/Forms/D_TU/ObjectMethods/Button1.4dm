@@ -1,20 +1,10 @@
-var vStaticTime1 : Time
-var vShift1 : Integer
+// Numérique = dynamique
+var vShift1 : Integer:=7200
+Form:C1466.shift1:=?00:00:00?+7200
 
-// numérique = dynamique
-vShift1:=7200
-Form:C1466.shift1:=?02:30:00?
+// Time = statique
+var vStaticTime1 : Time:=?10:15:30?
 
-//time = statique
-vStaticTime1:=?10:15:30?
-
-
-// only ONE exception
-// string = statique
-Form:C1466.staticTime1:="10:15:30"  // "10:20:50"
-
-
-
-
-
-
+// Only ONE exception
+// String = statique
+Form:C1466.staticTime1:=String:C10(vStaticTime1)

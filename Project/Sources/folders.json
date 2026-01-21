@@ -1,4 +1,54 @@
 {
+	"(TimePicker Private)": {},
+	"✅ TimePicker Private": {
+		"methods": [
+			"TimeEntry__Increase",
+			"TimeEntry__ManageFocus",
+			"TimePicker__BuildPopup",
+			"TimePicker__DisplaySecondHand",
+			"TimePicker__DisplayTimeInputs",
+			"TimePicker__DisplayTimePopups",
+			"TimePicker__GetLabelAM",
+			"TimePicker__GetLabelPM",
+			"TimePicker__GetSelectedTime",
+			"TimePicker__GetStep",
+			"TimePicker__GetTarget",
+			"TimePicker__GetTimeMax",
+			"TimePicker__GetTimeMin",
+			"TimePicker__InitForm",
+			"TimePicker__InitInter",
+			"TimePicker__LCD DISPLAY AMPM",
+			"TimePicker__LCD DISPLAY SECONDS",
+			"TimePicker__LCD SET COLOR",
+			"TimePicker__LCD SET MODE",
+			"TimePicker__LCDcreatePict",
+			"TimePicker__LCDdisplayTime",
+			"TimePicker__SetSelectedTime",
+			"TimePicker__SetTarget"
+		]
+	},
+	"✅ TimePicker Shared": {
+		"methods": [
+			"TimePicker APPLY DEFAULT VALUES",
+			"TimePicker DISPLAY SECOND HAND",
+			"TimePicker LCD DISPLAY AMPM",
+			"TimePicker LCD DISPLAY SECONDS",
+			"TimePicker LCD SET COLOR",
+			"TimePicker LCD SET MODE",
+			"TimePicker RESET DEFAULT VALUES",
+			"TimePicker SET DEFAULT LABEL AM",
+			"TimePicker SET DEFAULT LABEL PM",
+			"TimePicker SET DEFAULT MAX TIME",
+			"TimePicker SET DEFAULT MIN TIME",
+			"TimePicker SET DEFAULT STEP",
+			"TimePicker SET DEFAULT TIME",
+			"TimePicker SET LABEL AM",
+			"TimePicker SET LABEL PM",
+			"TimePicker SET MAX TIME",
+			"TimePicker SET MIN TIME",
+			"TimePicker SET STEP"
+		]
+	},
 	"Compiler": {
 		"methods": [
 			"Compiler_Arrays_Inter",
@@ -102,12 +152,9 @@
 	},
 	"TimePicker": {
 		"groups": [
-			"TimePicker Forms",
-			"TimePicker Private",
-			"TimePicker Shared"
-		],
-		"methods": [
-			"TimePicker__SetTarget"
+			"✅ TimePicker Private",
+			"✅ TimePicker Shared",
+			"TimePicker Forms"
 		]
 	},
 	"TimePicker Forms": {
@@ -122,54 +169,6 @@
 			"TimePicker_Pop2_AM"
 		]
 	},
-	"TimePicker Private": {
-		"methods": [
-			"TimeEntry__Increase",
-			"TimeEntry__ManageFocus",
-			"TimePicker__BuildPopup",
-			"TimePicker__DisplaySecondHand",
-			"TimePicker__DisplayTimeInputs",
-			"TimePicker__DisplayTimePopups",
-			"TimePicker__GetLabelAM",
-			"TimePicker__GetLabelPM",
-			"TimePicker__GetSelectedTime",
-			"TimePicker__GetStep",
-			"TimePicker__GetTarget",
-			"TimePicker__GetTimeMax",
-			"TimePicker__GetTimeMin",
-			"TimePicker__InitForm",
-			"TimePicker__InitInter",
-			"TimePicker__LCD DISPLAY AMPM",
-			"TimePicker__LCD DISPLAY SECONDS",
-			"TimePicker__LCD SET COLOR",
-			"TimePicker__LCD SET MODE",
-			"TimePicker__LCDcreatePict",
-			"TimePicker__LCDdisplayTime",
-			"TimePicker__SetSelectedTime"
-		]
-	},
-	"TimePicker Shared": {
-		"methods": [
-			"TimePicker APPLY DEFAULT VALUES",
-			"TimePicker DISPLAY SECOND HAND",
-			"TimePicker LCD DISPLAY AMPM",
-			"TimePicker LCD DISPLAY SECONDS",
-			"TimePicker LCD SET COLOR",
-			"TimePicker LCD SET MODE",
-			"TimePicker RESET DEFAULT VALUES",
-			"TimePicker SET DEFAULT LABEL AM",
-			"TimePicker SET DEFAULT LABEL PM",
-			"TimePicker SET DEFAULT MAX TIME",
-			"TimePicker SET DEFAULT MIN TIME",
-			"TimePicker SET DEFAULT STEP",
-			"TimePicker SET DEFAULT TIME",
-			"TimePicker SET LABEL AM",
-			"TimePicker SET LABEL PM",
-			"TimePicker SET MAX TIME",
-			"TimePicker SET MIN TIME",
-			"TimePicker SET STEP"
-		]
-	},
 	"Tools": {
 		"methods": [
 			"Tool_AdjustWindowPos",
@@ -178,5 +177,9 @@
 			"Tool_VarToObject"
 		]
 	},
-	"trash": {}
+	"trash": {
+		"groups": [
+			"(TimePicker Private)"
+		]
+	}
 }

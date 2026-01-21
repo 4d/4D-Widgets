@@ -1,22 +1,10 @@
 //%attributes = {"invisible":true}
-var $1 : Boolean
-var $displaySeconds : Boolean
+#DECLARE($displaySeconds : Boolean)
 
-$displaySeconds:=$1
+var $PtrRebuild:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdRebuild")
+var $ptr:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdDisplaySeconds")
 
-var $ptr : Pointer
-var $PtrRebuild : Pointer
-
-
-$PtrRebuild:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdRebuild")
-$ptr:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdDisplaySeconds")
-
-If ($displaySeconds)
-	$ptr->:="true"
-Else 
-	$ptr->:="false"
-End if 
+$ptr->:=$displaySeconds ? "true" : "false"
 
 $PtrRebuild->:="true"
-SET TIMER:C645(-1)  // will redraw the image according to the associated variable
-
+SET TIMER:C645(-1)  // Will redraw the image according to the associated variable
