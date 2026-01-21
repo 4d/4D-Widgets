@@ -1,18 +1,18 @@
 //%attributes = {"invisible":true}
-  //
-C_BOOLEAN:C305(<>SearchPicher_DefaultInited)
-  //
+//
+var <>SearchPicher_DefaultInited : Boolean
+//
 
-  //  //this part will NOT be "deinited" or reset automatically
-  //
+//  //this part will NOT be "deinited" or reset automatically
+//
 If (Not:C34(<>SearchPicher_DefaultInited))
 	
 	<>SearchPicher_DefaultInited:=True:C214
 	
-	C_TEXT:C284(<>SearchPicker_SearchText)
-	C_TEXT:C284(<>SearchPicker_PopupFunction)
+	var <>SearchPicker_SearchText : Text
+	var <>SearchPicker_PopupFunction : Text
 	
-	C_TEXT:C284(<>SearchPicker_Menu)
+	var <>SearchPicker_Menu : Text
 	
 	<>SearchPicker_SearchText:=""
 	<>SearchPicker_PopupFunction:="Scope"  //(or "Values")
@@ -20,8 +20,8 @@ If (Not:C34(<>SearchPicher_DefaultInited))
 	RELEASE MENU:C978(<>SearchPicker_Menu)
 	<>SearchPicker_Menu:=""
 	
-	C_TEXT:C284(<>SearchPicker_DummyText)
-	C_POINTER:C301(<>SearchPicker_Target)
+	var <>SearchPicker_DummyText : Text
+	var <>SearchPicker_Target : Pointer
 	<>SearchPicker_Target:=-><>SearchPicker_DummyText
 	
 End if 

@@ -1,14 +1,14 @@
 //%attributes = {"invisible":true}
-C_LONGINT:C283($1)  // type of days off (0 = repeated, 1 = only once)
-C_POINTER:C301($2)  // pointer on date array
-C_TEXT:C284($3)  // form name (if provided)
+var $1 : Integer  // type of days off (0 = repeated, 1 = only once)
+var $2 : Pointer  // pointer on date array
+var $3 : Text  // form name (if provided)
 
-C_LONGINT:C283($type)  // type of days off (0 = repeated, 1 = only once)
+var $type : Integer  // type of days off (0 = repeated, 1 = only once)
 
-C_POINTER:C301($ptrArray)  // pointer on date array
-C_POINTER:C301($PtrLocalArray)
+var $ptrArray : Pointer  // pointer on date array
+var $PtrLocalArray : Pointer
 
-C_TEXT:C284($Form)  // form name (if provided)
+var $Form : Text  // form name (if provided)
 
 $type:=$1
 $ptrArray:=$2

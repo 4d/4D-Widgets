@@ -1,11 +1,11 @@
 //%attributes = {"invisible":true}
-C_POINTER:C301($1)
-C_POINTER:C301($PtrTarget)
+var $1 : Pointer
+var $PtrTarget : Pointer
 
-C_TEXT:C284($2)
-C_TEXT:C284($Form)
+var $2 : Text
+var $Form : Text
 
-C_REAL:C285($FirstDayOfWeek)
+var $FirstDayOfWeek : Real
 
 If (Count parameters:C259>=2)
 	$Form:=$2
@@ -15,7 +15,7 @@ End if
 
 $PtrTarget:=$1
 
-Tool_ObjectToVar ("FirstDayOfWeek";->$FirstDayOfWeek;$Form)
+Tool_ObjectToVar("FirstDayOfWeek"; ->$FirstDayOfWeek; $Form)
 If ($FirstDayOfWeek=0)
 	$FirstDayOfWeek:=<>DatePicker_FirstDayOfWeek
 End if 

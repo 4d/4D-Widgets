@@ -1,5 +1,5 @@
-C_POINTER:C301($Ptr)
+var $Ptr : Pointer
 
 $Ptr:=Self:C308(Object current:K67:2)
-TimeEntry__Increase ($Ptr->)  //+1 ou -1
+TimeEntry__Increase($Ptr->)  //+1 ou -1
 $Ptr->:=0

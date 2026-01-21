@@ -1,20 +1,20 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($1)
+var $1 : Text
 
 If ($1#"")
-	C_POINTER:C301($PtrFirstDisplayedDay)
-	C_DATE:C307($FirstDisplayedDay)
-	C_DATE:C307($ClickedDate)
+	var $PtrFirstDisplayedDay : Pointer
+	var $FirstDisplayedDay : Date
+	var $ClickedDate : Date
 	
-	$PtrFirstDisplayedDay:=Self:C308(Object named:K67:5;"FirstDisplayedDay")
+	$PtrFirstDisplayedDay:=Self:C308(Object named:K67:5; "FirstDisplayedDay")
 	If (Not:C34(Is nil pointer:C315($PtrFirstDisplayedDay)))
 		
 		$FirstDisplayedDay:=$PtrFirstDisplayedDay->
 		$ClickedDate:=$FirstDisplayedDay+Num:C11($1)-1
 		
-		$ClickedDate:=DatePicker__SetSelectedDate ($ClickedDate;"")
-		DatePicker__CalculateFirstDay ($ClickedDate;"")
-		DatePicker__RedrawCalendar 
+		$ClickedDate:=DatePicker__SetSelectedDate($ClickedDate; "")
+		DatePicker__CalculateFirstDay($ClickedDate; "")
+		DatePicker__RedrawCalendar
 		
 		If (<>DatePicker_CloseDial)
 			Form:C1466.displayDate:=$ClickedDate
@@ -22,8 +22,8 @@ If ($1#"")
 		End if 
 		
 	Else 
-		  //ALERT("Debug: no FirstDisplayedDay local var")
+		//ALERT("Debug: no FirstDisplayedDay local var")
 	End if 
 Else 
-	  //ALERT("Debug: "+Current method name+" $1 is empty")
+	//ALERT("Debug: "+Current method name+" $1 is empty")
 End if 

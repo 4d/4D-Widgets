@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($1)
-C_TEXT:C284($rgb)
+var $1 : Text
+var $rgb : Text
 
-C_POINTER:C301($PtrColor)
+var $PtrColor : Pointer
 
 $rgb:=$1
 $PtrColor:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdDisplayColor")

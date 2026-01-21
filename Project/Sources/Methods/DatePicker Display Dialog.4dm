@@ -3,22 +3,22 @@
 
 //ACI0099964
 
-C_LONGINT:C283($1; $2)  //optional parameters for window position
-C_DATE:C307($3)  // optional parameter for default date
-C_DATE:C307($0)
+var $1; $2 : Integer  //optional parameters for window position
+var $3 : Date  // optional parameter for default date
+var $0 : Date
 
-C_DATE:C307($returnedDate)
+var $returnedDate : Date
 
-C_BOOLEAN:C305($CalcXY)
+var $CalcXY : Boolean
 
-C_LONGINT:C283($winLeft; $winTop; $winRight; $winBottom)
-C_LONGINT:C283($Win)
-C_LONGINT:C283($x1; $x2; $y1; $y2)
-C_LONGINT:C283($mouseX; $mouseY; $mouseClic)
-C_LONGINT:C283($Width; $Height)
+var $winLeft; $winTop; $winRight; $winBottom : Integer
+var $Win : Integer
+var $x1; $x2; $y1; $y2 : Integer
+var $mouseX; $mouseY; $mouseClic : Integer
+var $Width; $Height : Integer
 
-C_TEXT:C284($formName)
-C_OBJECT:C1216($form)
+var $formName : Text
+var $form : Object
 
 $formName:="DatePicker"
 
@@ -46,14 +46,14 @@ If ($CalcXY=True:C214)
 	If (Is Windows:C1573)
 		
 		GET WINDOW RECT:C443($winLeft; $winTop; $winRight; $winBottom)  // front most window
-		GET MOUSE:C468($mouseX; $mouseY; $mouseClic)  // front most window
+		MOUSE POSITION:C468($mouseX; $mouseY; $mouseClic)  // front most window
 		
 		$x1:=$mouseX+$winLeft
 		$y1:=$mouseY+$winTop
 		
 	Else   // macintosh
 		
-		GET MOUSE:C468($mouseX; $mouseY; $mouseClic; *)  // Global system
+		MOUSE POSITION:C468($mouseX; $mouseY; $mouseClic; *)  // Global system
 		$x1:=$mouseX
 		$y1:=$mouseY
 		

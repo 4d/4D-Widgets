@@ -1,10 +1,10 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($1)
+var $1 : Text
 
-C_TEXT:C284($searchObjectName)
-C_TEXT:C284($Format)
+var $searchObjectName : Text
+var $Format : Text
 
-C_POINTER:C301($target; $PtrSearchText)
+var $target; $PtrSearchText : Pointer
 
 Case of 
 	: ($1="Win")

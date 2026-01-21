@@ -9,28 +9,28 @@
 // test of bound variable type
 // added to widgets and picture library
 
-C_BOOLEAN:C305($AutoRun; $blinck; $ok)
+var $AutoRun; $blinck; $ok : Boolean
 
-C_LONGINT:C283($formEvent)
-C_LONGINT:C283($width; $height)
-C_LONGINT:C283($type)
-C_LONGINT:C283($timer)
+var $formEvent : Integer
+var $width; $height : Integer
+var $type : Integer
+var $timer : Integer
 
-C_TIME:C306($Gmt_Current_Time; $Gmt_offset)
+var $Gmt_Current_Time; $Gmt_offset : Time
 
-C_TEXT:C284($File_clock)
+var $File_clock : Text
 
-C_TEXT:C284($attribute)
+var $attribute : Text
 
-C_POINTER:C301($Ptr_container)
-C_POINTER:C301($PtrSeconds)
-C_POINTER:C301($PtrColor)
-C_POINTER:C301($ptrPict)
-C_POINTER:C301($ptrMode)
-C_POINTER:C301($ptrAmPm)
-C_POINTER:C301($PtrRebuild)
+var $Ptr_container : Pointer
+var $PtrSeconds : Pointer
+var $PtrColor : Pointer
+var $ptrPict : Pointer
+var $ptrMode : Pointer
+var $ptrAmPm : Pointer
+var $PtrRebuild : Pointer
 
-C_VARIANT:C1683($variant)
+var $variant
 
 // ----------------------------------------------------
 // Initialisations

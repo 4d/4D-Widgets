@@ -1,15 +1,15 @@
 //%attributes = {"invisible":true}
 
-C_BOOLEAN:C305($1)
-C_BOOLEAN:C305($displaySecondHand)
+var $1 : Boolean
+var $displaySecondHand : Boolean
 
 $displaySecondHand:=$1
 
-C_POINTER:C301($ptr)
-C_POINTER:C301($PtrRebuild)
+var $ptr : Pointer
+var $PtrRebuild : Pointer
 
-$PtrRebuild:=OBJECT Get pointer:C1124(Object named:K67:5;"clockRebuild")
-$Ptr:=OBJECT Get pointer:C1124(Object named:K67:5;"clockDisplaySecondHand")
+$PtrRebuild:=OBJECT Get pointer:C1124(Object named:K67:5; "clockRebuild")
+$Ptr:=OBJECT Get pointer:C1124(Object named:K67:5; "clockDisplaySecondHand")
 
 If ($displaySecondHand)
 	$Ptr->:="true"

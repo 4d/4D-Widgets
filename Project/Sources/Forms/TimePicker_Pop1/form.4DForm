@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingY": "fixed",
@@ -28,9 +28,8 @@
 					"top": 0,
 					"left": 0,
 					"width": 80,
-					"height": 20,
+					"height": 21,
 					"class": "Buttons_13",
-					"textAlign": "left",
 					"method": "ObjectMethods/Hours.4dm",
 					"events": [
 						"onClick",
@@ -224,7 +223,7 @@
 			"Vue 9": {}
 		}
 	},
-	"geometryStamp": 84,
+	"geometryStamp": 96,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

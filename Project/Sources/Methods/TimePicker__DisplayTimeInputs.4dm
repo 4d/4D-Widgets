@@ -1,16 +1,16 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305($1)  //true = recalc time from HH MM SS AM  input zones (true by default)
+var $1 : Boolean  //true = recalc time from HH MM SS AM  input zones (true by default)
 
-C_BOOLEAN:C305($recalc)
+var $recalc : Boolean
 
-C_TIME:C306($time)
-C_TIME:C306($minTime; $maxTime)
+var $time : Time
+var $minTime; $maxTime : Time
 
-C_LONGINT:C283($mode)
-C_LONGINT:C283($h; $m; $s)
+var $mode : Integer
+var $h; $m; $s : Integer
 
-C_POINTER:C301($PtrAmPm; $PtrHours; $PtrMinuts; $PtrSeconds)
-C_TEXT:C284($AMlabel; $PMlabel)
+var $PtrAmPm; $PtrHours; $PtrMinuts; $PtrSeconds : Pointer
+var $AMlabel; $PMlabel : Text
 
 If (Count parameters:C259>0)
 	$recalc:=$1

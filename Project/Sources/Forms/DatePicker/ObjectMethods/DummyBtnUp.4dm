@@ -1,6 +1,6 @@
 //up
 
-C_DATE:C307($selectedDate)
+var $selectedDate : Date
 Tool_ObjectToVar("SelectedDate"; ->$selectedDate)
 
 $selectedDate:=Add to date:C393($selectedDate; 0; 0; -7)

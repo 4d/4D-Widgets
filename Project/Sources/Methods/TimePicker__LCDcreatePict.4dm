@@ -1,22 +1,20 @@
 //%attributes = {"invisible":true}
-C_POINTER:C301($1)  // pointer on picture to be filled
-C_BOOLEAN:C305($2)  // true : with seconds, false : without seconds
-C_BOOLEAN:C305($3)  // true : with AmPm, false : without AmPm
+var $1 : Pointer  // pointer on picture to be filled
+var $2 : Boolean  // true : with seconds, false : without seconds
+var $3 : Boolean  // true : with AmPm, false : without AmPm
 
-C_BOOLEAN:C305($withSeconds; $withAmPm)
-C_TEXT:C284($Dom_svg)
-C_TEXT:C284($LCDsegment)
-C_POINTER:C301($PtrPict)
+var $withSeconds; $withAmPm : Boolean
+var $Dom_svg : Text
+var $PtrPict : Pointer
 
-C_TEXT:C284($Dom_svg)
-C_TEXT:C284($LCDsegment; $BlinkSegment; $Path)
-C_TEXT:C284($globalClockRef; $blinkRef)
-C_TEXT:C284($segmentA; $segmentB; $segmentC; $segmentD; $segmentE; $segmentF; $segmentG; $segmentH)
-C_TEXT:C284($digitRef; $dualDigitRef)
+var $LCDsegment; $BlinkSegment; $Path : Text
+var $globalClockRef; $blinkRef : Text
+var $segmentA; $segmentB; $segmentC; $segmentD; $segmentE; $segmentF; $segmentG; $segmentH : Text
+var $digitRef; $dualDigitRef : Text
 
-C_LONGINT:C283($digit; $segment)
-C_LONGINT:C283($NbDigits)
-C_LONGINT:C283($shift)
+var $digit; $segment : Integer
+var $NbDigits : Integer
+var $shift : Integer
 
 $withSeconds:=True:C214
 $withAmPm:=True:C214

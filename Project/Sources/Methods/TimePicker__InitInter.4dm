@@ -1,31 +1,32 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305(<>TimePicker_Inited)
+var <>TimePicker_Inited : Boolean
 
 If (Not:C34(<>TimePicker_Inited))
 	
 	<>TimePicker_Inited:=True:C214
 	
-	C_BOOLEAN:C305(<>TimePicker_CloseDial)
-	C_POINTER:C301(<>TimePicker_Target)
+	var <>TimePicker_CloseDial : Boolean
+	var <>TimePicker_Target : Pointer
 	
-	C_TEXT:C284(<>TimePicker_LabelAM)
-	C_TEXT:C284(<>TimePicker_LabelPM)
-	C_TIME:C306(<>TimePicker_TimeMin)
-	C_TIME:C306(<>TimePicker_TimeMax)
-	C_TIME:C306(<>TimePicker_Step)
+	var <>TimePicker_LabelAM : Text
+	var <>TimePicker_LabelPM : Text
+	var <>TimePicker_TimeMin : Time
+	var <>TimePicker_TimeMax : Time
+	var <>TimePicker_Step : Time
 	
-	C_TIME:C306(<>TimePicker_SelectedTime)
-	C_TIME:C306(<>TimePicker_DummyTime)
+	var <>TimePicker_SelectedTime : Time
+	var <>TimePicker_DummyTime : Time
 	
-	  // Default value
+	// Default value
 	
-	C_TEXT:C284($AMLabel)
-	C_TEXT:C284($PMLabel)
+	var $AMLabel : Text
+	var $PMLabel : Text
 	
-	GET SYSTEM FORMAT:C994(System time AM label:K60:15;$AMLabel)
-	GET SYSTEM FORMAT:C994(System time PM label:K60:16;$PMLabel)
+	GET SYSTEM FORMAT:C994(System time AM label:K60:15; $AMLabel)
+	GET SYSTEM FORMAT:C994(System time PM label:K60:16; $PMLabel)
 	
 	If (True:C214)
+		
 		<>TimePicker_LabelAM:=$AMLabel
 		<>TimePicker_LabelPM:=$PMLabel
 		<>TimePicker_TimeMin:=?08:00:00?
@@ -33,12 +34,14 @@ If (Not:C34(<>TimePicker_Inited))
 		<>TimePicker_Step:=?00:15:00?
 		
 		<>TimePicker_SelectedTime:=?00:00:00?
+		
 	Else 
-		TimePicker SET DEFAULT LABEL AM ($AMLabel)
-		TimePicker SET DEFAULT LABEL PM ($PMLabel)
-		TimePicker SET DEFAULT MIN TIME (?08:00:00?)
-		TimePicker SET DEFAULT MAX TIME (?20:00:00?)
-		TimePicker SET DEFAULT STEP (?00:15:00?)
+		
+		TimePicker SET DEFAULT LABEL AM($AMLabel)
+		TimePicker SET DEFAULT LABEL PM($PMLabel)
+		TimePicker SET DEFAULT MIN TIME(?08:00:00?)
+		TimePicker SET DEFAULT MAX TIME(?20:00:00?)
+		TimePicker SET DEFAULT STEP(?00:15:00?)
 		
 	End if 
 	

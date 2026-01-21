@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true}
-C_LONGINT:C283($1)
-C_LONGINT:C283($mode)
+var $1 : Integer
+var $mode : Integer
 
-C_POINTER:C301($PtrMode)
+var $PtrMode : Pointer
 
 $mode:=$1
 $PtrMode:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdDisplayMode")

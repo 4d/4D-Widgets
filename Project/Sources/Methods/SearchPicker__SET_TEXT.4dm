@@ -1,13 +1,13 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($1)
-C_TEXT:C284($2)  //destination parent form if provided
+var $1 : Text
+var $2 : Text  //destination parent form if provided
 
-C_TEXT:C284($CurrentText)
-C_TEXT:C284($Form)
-C_TEXT:C284($ErrorText)
-C_TEXT:C284($searchObjectName)
+var $CurrentText : Text
+var $Form : Text
+var $ErrorText : Text
+var $searchObjectName : Text
 
-C_POINTER:C301($target)
+var $target : Pointer
 
 If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	
@@ -40,7 +40,7 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	
 Else 
 	
-	$ErrorText:=Get localized string:C991("Errors_TextParameter")
+	$ErrorText:=Localized string:C991("Errors_TextParameter")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	

@@ -1,4 +1,4 @@
-C_TIME:C306($CurrentTime)
+var $CurrentTime : Time
 
 Case of 
 		

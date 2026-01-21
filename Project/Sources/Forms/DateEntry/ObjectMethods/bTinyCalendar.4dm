@@ -1,7 +1,7 @@
-C_DATE:C307($selectedDate)
-C_TEXT:C284($DayZoneName; $monthZoneName; $YearZoneName)
+var $selectedDate : Date
+var $DayZoneName; $monthZoneName; $YearZoneName : Text
 
-C_POINTER:C301($DayPtr; $monthPtr; $YearPtr)
+var $DayPtr; $monthPtr; $YearPtr : Pointer
 
 
 DatePicker__SetBlob  // Met dans un BLOB les contraintes définies par l'utilisateur (etc.)

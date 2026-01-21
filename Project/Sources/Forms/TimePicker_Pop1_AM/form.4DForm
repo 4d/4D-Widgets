@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingX": "fixed",
@@ -218,7 +218,7 @@
 			"Vue 9": {}
 		}
 	},
-	"geometryStamp": 31,
+	"geometryStamp": 33,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

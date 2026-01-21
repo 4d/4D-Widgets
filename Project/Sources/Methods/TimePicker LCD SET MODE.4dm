@@ -1,10 +1,10 @@
 //%attributes = {"invisible":true,"shared":true}
-C_TEXT:C284($1)  // form name
-C_LONGINT:C283($2)  // mode 12 ou 24
+var $1 : Text  // form name
+var $2 : Integer  // mode 12 ou 24
 
-C_TEXT:C284($subFormName)
-C_TEXT:C284($ErrorText)
-C_LONGINT:C283($mode)
+var $subFormName : Text
+var $ErrorText : Text
+var $mode : Integer
 
 If (Count parameters:C259>=2)
 	
@@ -15,7 +15,7 @@ If (Count parameters:C259>=2)
 	
 Else 
 	//incorrect number of parameters
-	$ErrorText:=Get localized string:C991("Errors_IncorrectParamNumbers")
+	$ErrorText:=Localized string:C991("Errors_IncorrectParamNumbers")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 End if 

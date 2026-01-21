@@ -1,13 +1,13 @@
 //%attributes = {"invisible":true,"shared":true}
 
-C_TEXT:C284($1)  //destination form MUST be provided
-C_DATE:C307($2)  //max date
+var $1 : Text  //destination form MUST be provided
+var $2 : Date  //max date
 
-C_TEXT:C284($Form)
-C_TEXT:C284($ErrorText)
+var $Form : Text
+var $ErrorText : Text
 
-C_DATE:C307($minDate)
-C_DATE:C307($maxDate)
+var $minDate : Date
+var $maxDate : Date
 
 DatePicker__InitInter
 
@@ -33,21 +33,21 @@ If (Count parameters:C259=2)
 			End if 
 		Else 
 			//pas une date en 2eme
-			$ErrorText:=Get localized string:C991("Errors_DateParameter")
+			$ErrorText:=Localized string:C991("Errors_DateParameter")
 			$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 			ALERT:C41($ErrorText)
 		End if 
 		
 	Else 
 		//Pas un texte en 1er
-		$ErrorText:=Get localized string:C991("Errors_TextParameter")
+		$ErrorText:=Localized string:C991("Errors_TextParameter")
 		$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 		ALERT:C41($ErrorText)
 	End if 
 	
 Else 
 	//incorrect number of parameters
-	$ErrorText:=Get localized string:C991("Errors_IncorrectParamNumbers")
+	$ErrorText:=Localized string:C991("Errors_IncorrectParamNumbers")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	

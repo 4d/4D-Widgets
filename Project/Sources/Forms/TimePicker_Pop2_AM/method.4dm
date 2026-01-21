@@ -1,4 +1,4 @@
-C_TIME:C306($CurrentTime)
+var $CurrentTime : Time
 
 Case of 
 	: (Form event code:C388=On Load:K2:1)

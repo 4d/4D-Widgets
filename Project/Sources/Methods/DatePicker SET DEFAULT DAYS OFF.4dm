@@ -3,16 +3,16 @@
 //$2 pointer on array tableau…
 //   … of booleans if $1 = 0 … of dates if $1 = 1 ou 2
 
-C_LONGINT:C283($1)  //number of the day (as contant like monday)
-C_POINTER:C301($2)
+var $1 : Integer  //number of the day (as contant like monday)
+var $2 : Pointer
 
-C_LONGINT:C283($selector)
-C_POINTER:C301($ptrArray)
-C_BOOLEAN:C305($Error)
+var $selector : Integer
+var $ptrArray : Pointer
+var $Error : Boolean
 
-C_LONGINT:C283($i; $n)
+var $i; $n : Integer
 
-C_TEXT:C284($ErrorText)
+var $ErrorText : Text
 
 DatePicker__InitInter
 
@@ -40,7 +40,7 @@ If (Count parameters:C259=2)
 					End if 
 					
 					If ($Error)
-						$ErrorText:=Get localized string:C991("Errors_ArrayPtrParameter")
+						$ErrorText:=Localized string:C991("Errors_ArrayPtrParameter")
 						$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 						ALERT:C41($ErrorText)
 					End if 
@@ -68,7 +68,7 @@ If (Count parameters:C259=2)
 					End if 
 					
 					If ($Error)
-						$ErrorText:=Get localized string:C991("Errors_DateArrayPtrParameter")
+						$ErrorText:=Localized string:C991("Errors_DateArrayPtrParameter")
 						$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 						ALERT:C41($ErrorText)
 					End if 
@@ -76,19 +76,19 @@ If (Count parameters:C259=2)
 			End case 
 			
 		Else 
-			$ErrorText:=Get localized string:C991("Errors_PointerParameter")
+			$ErrorText:=Localized string:C991("Errors_PointerParameter")
 			$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 			ALERT:C41($ErrorText)
 		End if 
 	Else 
-		$ErrorText:=Get localized string:C991("Errors_LongIntParameter")
+		$ErrorText:=Localized string:C991("Errors_LongIntParameter")
 		$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 		ALERT:C41($ErrorText)
 	End if 
 	
 Else 
 	//incorrect number of parameters
-	$ErrorText:=Get localized string:C991("Errors_IncorrectParamNumbers")
+	$ErrorText:=Localized string:C991("Errors_IncorrectParamNumbers")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	

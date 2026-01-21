@@ -1,27 +1,27 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($1)  // obejct name
-C_TIME:C306($2)  // time to display
-C_BOOLEAN:C305($3)  // blink or not
-C_LONGINT:C283($4)  // display mode (12:00 or 24:00)
-C_TEXT:C284($5)  // "HH MM {SS} {AMPM}"
+var $1 : Text  // obejct name
+var $2 : Time  // time to display
+var $3 : Boolean  // blink or not
+var $4 : Integer  // display mode (12:00 or 24:00)
+var $5 : Text  // "HH MM {SS} {AMPM}"
 
-C_BOOLEAN:C305($blink)
+var $blink : Boolean
 
-C_LONGINT:C283($mode)
-C_LONGINT:C283($hours)
-C_LONGINT:C283($minuts)
-C_LONGINT:C283($seconds)
-C_LONGINT:C283($index)
-C_LONGINT:C283($digit; $segment)
+var $mode : Integer
+var $hours : Integer
+var $minuts : Integer
+var $seconds : Integer
+var $index : Integer
+var $digit; $segment : Integer
 
-C_TEXT:C284($objectName)
-C_TEXT:C284($AmPm)
-C_TEXT:C284($format)
-C_TEXT:C284($time_t)
-C_TEXT:C284($Value_t)
-C_TEXT:C284($id)
+var $objectName : Text
+var $AmPm : Text
+var $format : Text
+var $time_t : Text
+var $Value_t : Text
+var $id : Text
 
-C_TIME:C306($time)
+var $time : Time
 
 $objectName:=$1
 $time:=$2

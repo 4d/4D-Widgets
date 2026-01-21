@@ -1,6 +1,6 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($CurrentText)
-C_TEXT:C284($scheme; $focus; $notFocus)
+var $CurrentText : Text
+var $scheme; $focus; $notFocus : Text
 
 
 $scheme:=FORM Get color scheme:C1761

@@ -1,21 +1,21 @@
 //%attributes = {"invisible":true,"shared":true}
 
-C_TEXT:C284($1)  //form name (if provided)
-C_LONGINT:C283($2)  //type of days off (0 = repeated each week, 1 = repeated earch year , 2 = only once)
-C_POINTER:C301($3)  // pointer on booelan or date array
+var $1 : Text  //form name (if provided)
+var $2 : Integer  //type of days off (0 = repeated each week, 1 = repeated earch year , 2 = only once)
+var $3 : Pointer  // pointer on booelan or date array
 
-C_TEXT:C284($Form)  //form name
-C_TEXT:C284($ErrorText)
+var $Form : Text  //form name
+var $ErrorText : Text
 
-C_LONGINT:C283($selector)  //type of days off (0 = repeated each week, 1 = repeated earch year , 2 = only once)
-C_LONGINT:C283($i; $n)
+var $selector : Integer  //type of days off (0 = repeated each week, 1 = repeated earch year , 2 = only once)
+var $i; $n : Integer
 
 
-C_POINTER:C301($ptrArray)  // pointer on booelan or date array
-C_POINTER:C301($Ptr_WeeklyDaysoff)
-C_POINTER:C301($PtrLocalArray)
+var $ptrArray : Pointer  // pointer on booelan or date array
+var $Ptr_WeeklyDaysoff : Pointer
+var $PtrLocalArray : Pointer
 
-C_BOOLEAN:C305($Error)
+var $Error : Boolean
 
 
 If (Count parameters:C259=3)
@@ -52,7 +52,7 @@ If (Count parameters:C259=3)
 						End if 
 						
 						If ($Error)
-							$ErrorText:=Get localized string:C991("Errors_ArrayPtrParameter")
+							$ErrorText:=Localized string:C991("Errors_ArrayPtrParameter")
 							$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 							ALERT:C41($ErrorText)
 						End if 
@@ -94,29 +94,29 @@ If (Count parameters:C259=3)
 				End case 
 				
 				If ($Error)
-					$ErrorText:=Get localized string:C991("Errors_DateArrayPtrParameter")
+					$ErrorText:=Localized string:C991("Errors_DateArrayPtrParameter")
 					$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 					ALERT:C41($ErrorText)
 				End if 
 			Else 
-				$ErrorText:=Get localized string:C991("Errors_PointerParameter")
+				$ErrorText:=Localized string:C991("Errors_PointerParameter")
 				$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 				ALERT:C41($ErrorText)
 			End if 
 		Else 
-			$ErrorText:=Get localized string:C991("Errors_LongIntParameter")
+			$ErrorText:=Localized string:C991("Errors_LongIntParameter")
 			$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 			ALERT:C41($ErrorText)
 		End if 
 	Else 
 		
-		$ErrorText:=Get localized string:C991("Errors_TextParameter")
+		$ErrorText:=Localized string:C991("Errors_TextParameter")
 		$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 		ALERT:C41($ErrorText)
 	End if 
 Else 
 	//incorrect number of parameters
-	$ErrorText:=Get localized string:C991("Errors_IncorrectParamNumbers")
+	$ErrorText:=Localized string:C991("Errors_IncorrectParamNumbers")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	

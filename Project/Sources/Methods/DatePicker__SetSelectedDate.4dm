@@ -13,17 +13,17 @@
 // it makes this date conform with local constraints (min/max)
 // it becames the default date
 
-C_DATE:C307($1)  // date
-C_TEXT:C284($2)  //destination parent form if provided
+var $1 : Date  // date
+var $2 : Text  //destination parent form if provided
 
-C_DATE:C307($0)  // returned date (that MAY be different from received one)
+var $0 : Date  // returned date (that MAY be different from received one)
 
-C_DATE:C307($date)
-C_DATE:C307($returnedDate)
-C_TEXT:C284($Form)
-C_TEXT:C284($ErrorText)
+var $date : Date
+var $returnedDate : Date
+var $Form : Text
+var $ErrorText : Text
 //C_POINTER($datePicker_Target)
-C_DATE:C307($datePicker_Target)
+var $datePicker_Target : Date
 
 DatePicker__InitInter
 
@@ -34,8 +34,8 @@ If (Type:C295($1)=Is date:K8:7)
 	If (Count parameters:C259>=2)  //for a specific parent subform object OR current form 
 		$Form:=$2
 		
-		C_DATE:C307($minDate)
-		C_DATE:C307($maxDate)
+		var $minDate : Date
+		var $maxDate : Date
 		
 		DatePicker__GetMinDate(->$minDate; $Form)
 		DatePicker__GetMaxDate(->$maxDate; $Form)
@@ -76,7 +76,7 @@ If (Type:C295($1)=Is date:K8:7)
 	
 Else 
 	
-	$ErrorText:=Get localized string:C991("Errors_DateParameter")
+	$ErrorText:=Localized string:C991("Errors_DateParameter")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	

@@ -1,5 +1,5 @@
-C_TIME:C306(vStaticTime1)
-C_LONGINT:C283(vShift1)
+var vStaticTime1 : Time
+var vShift1 : Integer
 
 // numérique = dynamique
 vShift1:=7200

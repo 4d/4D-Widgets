@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
-C_LONGINT:C283($1)
-C_LONGINT:C283($Event)
-C_BOOLEAN:C305($Visible)
+var $1 : Integer
+var $Event : Integer
+var $Visible : Boolean
 
 $Event:=$1
 

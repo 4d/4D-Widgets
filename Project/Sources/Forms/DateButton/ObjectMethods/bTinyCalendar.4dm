@@ -1,8 +1,8 @@
 
-C_DATE:C307($selectedDate)
+var $selectedDate : Date
 
 /*
-C_POINTER($datePicker_Target)
+var $datePicker_Target : Pointer
 $datePicker_Target:=DatePicker__GetTarget  //Always returns a valid pointer (but maybe not on the associated variable)
 // TM 2019-05-24 - don't use process variables to allow two instances.
 $selectedDate:=$datePicker_Target->

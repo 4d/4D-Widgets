@@ -1,6 +1,6 @@
-C_POINTER:C301($Ptr)
-C_LONGINT:C283($type)
-C_TEXT:C284($searchText)
+var $Ptr : Pointer
+var $type : Integer
+var $searchText : Text
 
 Case of 
 		

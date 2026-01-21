@@ -1,12 +1,12 @@
 //%attributes = {"invisible":true}
 
-C_LONGINT:C283($x1; $y1; $x2; $y2)
-C_LONGINT:C283($memoX1; $memoX2; $memoY1; $memoY2)
-C_LONGINT:C283($Width)
+var $x1; $y1; $x2; $y2 : Integer
+var $memoX1; $memoX2; $memoY1; $memoY2 : Integer
+var $Width : Integer
 
-C_TEXT:C284($searchObjectName; $searchClose; $Format)
+var $searchObjectName; $searchClose; $Format : Text
 
-C_POINTER:C301($PtrSearchText)
+var $PtrSearchText : Pointer
 
 If (Is Windows:C1573)  //----------- WIN -----------
 	$searchObjectName:="SearchText_Win"

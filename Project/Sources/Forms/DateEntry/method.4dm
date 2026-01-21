@@ -1,14 +1,14 @@
 //modified by RL on avril 2nd 2010  ∆∆∆
 // replace hard coded "/" system date separators
 
-C_DATE:C307($DisplayedDate)
+var $DisplayedDate : Date
 
-C_LONGINT:C283($start; $i)
-C_LONGINT:C283($dayWidth; $monthWidth; $yearWidth)
+var $start; $i : Integer
+var $dayWidth; $monthWidth; $yearWidth : Integer
 
-C_TEXT:C284($dateSeparator)
-C_TEXT:C284($PositionDay_t; $PositionMonth_t; $PositionYear_t)
-C_TEXT:C284($DayZoneName; $monthZoneName; $YearZoneName)
+var $dateSeparator : Text
+var $PositionDay_t; $PositionMonth_t; $PositionYear_t : Text
+var $DayZoneName; $monthZoneName; $YearZoneName : Text
 
 Case of 
 		

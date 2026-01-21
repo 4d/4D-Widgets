@@ -1,21 +1,7 @@
 //%attributes = {"invisible":true}
+#DECLARE($PtrTarget : Pointer; $Form : Text)
 
-C_POINTER:C301($1)
-C_POINTER:C301($PtrTarget)
-
-C_TEXT:C284($2)
-C_TEXT:C284($Form)
-
-C_TIME:C306($time)
-
-$PtrTarget:=$1
-
-If (Count parameters:C259>=2)
-	$Form:=$2
-Else 
-	$Form:=""
-End if 
-
+var $time : Time
 Tool_ObjectToVar("MinTime"; ->$time; $Form)
 
 $PtrTarget->:=$time

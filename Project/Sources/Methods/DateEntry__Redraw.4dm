@@ -1,14 +1,14 @@
 //%attributes = {"invisible":true}
 
-C_DATE:C307($minDate)
-C_DATE:C307($maxDate)
-C_DATE:C307($selectedDate)
+var $minDate : Date
+var $maxDate : Date
+var $selectedDate : Date
 
-C_POINTER:C301($DayPtr; $monthPtr; $YearPtr)
-C_POINTER:C301($DayZoneNamePtr; $monthZoneNamePtr; $YearZoneNamePtr)
+var $DayPtr; $monthPtr; $YearPtr : Pointer
+var $DayZoneNamePtr; $monthZoneNamePtr; $YearZoneNamePtr : Pointer
 
-C_TEXT:C284($Form)
-C_TEXT:C284($DayZoneName; $monthZoneName; $YearZoneName)
+var $Form : Text
+var $DayZoneName; $monthZoneName; $YearZoneName : Text
 
 $DayZoneNamePtr:=OBJECT Get pointer:C1124(Object named:K67:5; "DayZoneName")
 $monthZoneNamePtr:=OBJECT Get pointer:C1124(Object named:K67:5; "MonthZoneName")

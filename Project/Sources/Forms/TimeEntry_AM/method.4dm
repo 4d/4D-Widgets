@@ -1,8 +1,8 @@
-C_POINTER:C301($target)
-C_TIME:C306($CurrentTime)
-C_TEXT:C284($localisation1; $localisation2)
-C_LONGINT:C283($i; $n)
-C_LONGINT:C283($x1; $y1; $x2; $y2; $width; $start)
+var $target : Pointer
+var $CurrentTime : Time
+var $localisation1; $localisation2 : Text
+var $i; $n : Integer
+var $x1; $y1; $x2; $y2; $width; $start : Integer
 
 Case of 
 		

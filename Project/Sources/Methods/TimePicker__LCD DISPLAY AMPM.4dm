@@ -1,14 +1,14 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305($1)
-C_BOOLEAN:C305($displayAmPm)
+var $1 : Boolean
+var $displayAmPm : Boolean
 
 $displayAmPm:=$1
 
-C_POINTER:C301($ptr)
-C_POINTER:C301($PtrRebuild)
+var $ptr : Pointer
+var $PtrRebuild : Pointer
 
-$PtrRebuild:=OBJECT Get pointer:C1124(Object named:K67:5;"lcdRebuild")
-$Ptr:=OBJECT Get pointer:C1124(Object named:K67:5;"lcdDisplayAmPm")
+$PtrRebuild:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdRebuild")
+$Ptr:=OBJECT Get pointer:C1124(Object named:K67:5; "lcdDisplayAmPm")
 
 If ($displayAmPm)
 	$Ptr->:="true"

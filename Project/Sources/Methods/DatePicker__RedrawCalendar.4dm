@@ -1,34 +1,34 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($1)
-C_TEXT:C284($Form)
+var $1 : Text
+var $Form : Text
 
-C_DATE:C307($date)
-C_DATE:C307($FindDate)
-C_DATE:C307($CurrentDate)
-C_DATE:C307($minDate)
-C_DATE:C307($maxDate)
-C_DATE:C307($selectedDate)
-C_DATE:C307($FirstDisplayedDay)
-C_DATE:C307($FirstOfNextMonth)
+var $date : Date
+var $FindDate : Date
+var $CurrentDate : Date
+var $minDate : Date
+var $maxDate : Date
+var $selectedDate : Date
+var $FirstDisplayedDay : Date
+var $FirstOfNextMonth : Date
 
-C_LONGINT:C283($p)
-C_LONGINT:C283($Day; $DayNumber; $DayWeek)
-C_LONGINT:C283($i)
-C_LONGINT:C283($FirstDayOfWeek)
-C_LONGINT:C283($ArraySize)
-C_LONGINT:C283($month; $CurrentMonth)
-C_LONGINT:C283($style)
-C_LONGINT:C283($Year)
+var $p : Integer
+var $Day; $DayNumber; $DayWeek : Integer
+var $i : Integer
+var $FirstDayOfWeek : Integer
+var $ArraySize : Integer
+var $month; $CurrentMonth : Integer
+var $style : Integer
+var $Year : Integer
 
-C_TEXT:C284($DayValue)
-C_TEXT:C284($ObjectName)
-C_TEXT:C284($label)
+var $DayValue : Text
+var $ObjectName : Text
+var $label : Text
 
-C_BOOLEAN:C305($someDaysOff)
-C_BOOLEAN:C305($DayOff)
+var $someDaysOff : Boolean
+var $DayOff : Boolean
 
-C_POINTER:C301($ptrBtn)
-C_POINTER:C301($Ptr_ListDays)
+var $ptrBtn : Pointer
+var $Ptr_ListDays : Pointer
 
 
 ARRAY BOOLEAN:C223($_WeeklyDaysOff; 7)

@@ -1,23 +1,13 @@
 //%attributes = {"invisible":true}
-C_POINTER:C301($1)
-C_POINTER:C301($PtrTarget)
+#DECLARE($PtrTarget : Pointer; $Form : Text)
 
-C_TEXT:C284($2)
-C_TEXT:C284($Form)
-
-C_TEXT:C284($text)
-
-$PtrTarget:=$1
-
-If (Count parameters:C259>=2)
-	$Form:=$2
-Else 
-	$Form:=""
-End if 
-
+var $text : Text
 Tool_ObjectToVar("PMlabel"; ->$text; $Form)
-If ($text="")
+
+If (Length:C16($text)=0)
+	
 	$text:=<>TimePicker_LabelPM
+	
 End if 
 
 $PtrTarget->:=$text

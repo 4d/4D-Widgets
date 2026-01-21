@@ -1,11 +1,11 @@
 //%attributes = {"invisible":true,"shared":true}
 
-C_TEXT:C284($1)  // form name
-C_BOOLEAN:C305($2)  // true = display AMPM, false : do not display AMPM
+var $1 : Text  // form name
+var $2 : Boolean  // true = display AMPM, false : do not display AMPM
 
-C_TEXT:C284($subFormName)
-C_TEXT:C284($ErrorText)
-C_BOOLEAN:C305($withAmPm)
+var $subFormName : Text
+var $ErrorText : Text
+var $withAmPm : Boolean
 
 
 If (Count parameters:C259>=2)
@@ -18,7 +18,7 @@ If (Count parameters:C259>=2)
 	
 Else 
 	//incorrect number of parameters
-	$ErrorText:=Get localized string:C991("Errors_IncorrectParamNumbers")
+	$ErrorText:=Localized string:C991("Errors_IncorrectParamNumbers")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	

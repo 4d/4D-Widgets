@@ -1,11 +1,11 @@
 //%attributes = {"invisible":true}
-C_LONGINT:C283($1)  //+1 or -1
+var $1 : Integer  //+1 or -1
 
-C_POINTER:C301($DayPtr; $monthPtr; $YearPtr; $ObjectPtr)
-C_TEXT:C284($DayZoneName; $monthZoneName; $YearZoneName)
+var $DayPtr; $monthPtr; $YearPtr; $ObjectPtr : Pointer
+var $DayZoneName; $monthZoneName; $YearZoneName : Text
 
-C_LONGINT:C283($Increment)
-C_DATE:C307($selectedDate)
+var $Increment : Integer
+var $selectedDate : Date
 
 $Increment:=$1
 

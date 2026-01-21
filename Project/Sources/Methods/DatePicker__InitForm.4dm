@@ -1,10 +1,10 @@
 //%attributes = {"invisible":true}
-C_POINTER:C301($PtrDefaultInited)
-C_POINTER:C301($Ptr_ListDays)
-C_POINTER:C301($Ptr_ListMonthes)
+var $PtrDefaultInited : Pointer
+var $Ptr_ListDays : Pointer
+var $Ptr_ListMonthes : Pointer
 
-C_DATE:C307($selectedDate)
-C_DATE:C307($FirstOfCurrentMonth)
+var $selectedDate : Date
+var $FirstOfCurrentMonth : Date
 
 $PtrDefaultInited:=OBJECT Get pointer:C1124(Object named:K67:5; "FormInited")
 If (Not:C34(Is nil pointer:C315($PtrDefaultInited)))

@@ -9,32 +9,32 @@
 // test of bound variable type
 // added to widgets and picture library
 
-C_BOOLEAN:C305($AutoRun; $ok)
+var $AutoRun; $ok : Boolean
 
-C_LONGINT:C283($formEvent; $i)
-C_LONGINT:C283($secondes; $secondAngle)
-C_LONGINT:C283($width; $height)
-C_LONGINT:C283($type)
-C_LONGINT:C283($timer)
+var $formEvent; $i : Integer
+var $secondes; $secondAngle : Integer
+var $width; $height : Integer
+var $type : Integer
+var $timer : Integer
 
-C_TIME:C306($Gmt_Current_Time; $Gmt_offset)
+var $Gmt_Current_Time; $Gmt_offset : Time
 
-C_POINTER:C301($Ptr_container)
-C_POINTER:C301($PtrRebuild)
-C_POINTER:C301($PtrSecondHand)
+var $Ptr_container : Pointer
+var $PtrRebuild : Pointer
+var $PtrSecondHand : Pointer
 
-C_REAL:C285($cx_r; $cy_r)
+var $cx_r; $cy_r : Real
 
-C_REAL:C285($hours_r; $minutes_r)
-C_REAL:C285($hourAngle_r; $minuteAngle_r)
+var $hours_r; $minutes_r : Real
+var $hourAngle_r; $minuteAngle_r : Real
 
 
-C_TEXT:C284($Dom_node; $Dom_root; $File_clock; $sVG_t)
+var $Dom_node; $Dom_root; $File_clock; $sVG_t : Text
 
-C_TEXT:C284($attributeFill; $attributeStroke)
-C_TEXT:C284($fillColor; $strokeColor)
+var $attributeFill; $attributeStroke : Text
+var $fillColor; $strokeColor : Text
 
-C_VARIANT:C1683($variant)
+var $variant
 
 // ----------------------------------------------------
 // Initialisations

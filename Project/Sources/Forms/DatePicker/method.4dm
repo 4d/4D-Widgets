@@ -1,4 +1,4 @@
-C_DATE:C307($DisplayedDate)
+var $DisplayedDate : Date
 
 Case of 
 		

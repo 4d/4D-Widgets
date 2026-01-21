@@ -1,11 +1,11 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305($1)
-C_BOOLEAN:C305($recalcDate)
+var $1 : Boolean
+var $recalcDate : Boolean
 
-C_DATE:C307($DisplayedDate; $selectedDate)
-C_POINTER:C301($DayPtr; $monthPtr; $YearPtr; $CurrentPtr)
+var $DisplayedDate; $selectedDate : Date
+var $DayPtr; $monthPtr; $YearPtr; $CurrentPtr : Pointer
 
-C_TEXT:C284($DayZoneName; $monthZoneName; $YearZoneName)
+var $DayZoneName; $monthZoneName; $YearZoneName : Text
 
 If (Count parameters:C259=1)
 	$recalcDate:=$1

@@ -1,11 +1,11 @@
 //%attributes = {"invisible":true}
-C_POINTER:C301($1)
-C_POINTER:C301($PtrTarget)
+var $1 : Pointer
+var $PtrTarget : Pointer
 
-C_TEXT:C284($2)
-C_TEXT:C284($Form)
+var $2 : Text
+var $Form : Text
 
-C_DATE:C307($date)
+var $date : Date
 
 $PtrTarget:=$1
 

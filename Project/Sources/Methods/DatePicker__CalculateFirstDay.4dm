@@ -2,26 +2,25 @@
 //Calculate the first displayed day of a month
 // usually this day belongs to the previous month
 
-C_DATE:C307($1)
-C_TEXT:C284($2)
+var $1 : Date
+var $2 : Text
 
-C_DATE:C307($date)
+var $date : Date
 
-C_REAL:C285($FirstDayOfWeek)
-C_REAL:C285($FirstDayOfWeek)
+var $FirstDayOfWeek : Real
 
-C_LONGINT:C283($CurrentMonth)
-C_LONGINT:C283($CurrentYear)
-C_LONGINT:C283($JapaneseYearCode)
+var $CurrentMonth : Integer
+var $CurrentYear : Integer
+var $JapaneseYearCode : Integer
 
-C_DATE:C307($FirstDisplayedDay)
+var $FirstDisplayedDay : Date
 
-C_POINTER:C301($Ptr_MonthesArray; $PtrDisplayedMonth)
+var $Ptr_MonthesArray; $PtrDisplayedMonth : Pointer
 
-C_TEXT:C284($Form)
-C_TEXT:C284($PositionMonth_t; $PositionYear_t)
-C_TEXT:C284($dateLongPattern)
-C_TEXT:C284($separator)
+var $Form : Text
+var $PositionMonth_t; $PositionYear_t : Text
+var $dateLongPattern : Text
+var $separator : Text
 
 
 If (Count parameters:C259>=1)

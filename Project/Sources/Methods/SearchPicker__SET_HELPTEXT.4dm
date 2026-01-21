@@ -1,9 +1,9 @@
 //%attributes = {"invisible":true}
-C_TEXT:C284($1)
+var $1 : Text
 
-C_TEXT:C284($CurrentHelp)
-C_TEXT:C284($ErrorText)
-C_TEXT:C284($searchObjectName)
+var $CurrentHelp : Text
+var $ErrorText : Text
+var $searchObjectName : Text
 
 If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	
@@ -21,7 +21,7 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	
 Else 
 	
-	$ErrorText:=Get localized string:C991("Errors_TextParameter")
+	$ErrorText:=Localized string:C991("Errors_TextParameter")
 	$ErrorText:=Replace string:C233($ErrorText; "[1]"; Current method name:C684)
 	ALERT:C41($ErrorText)
 	

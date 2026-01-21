@@ -1,164 +1,181 @@
 //%attributes = {"invisible":true}
-C_BOOLEAN:C305($1)  //true = recalc time from POPUP zones (true by default)
+#DECLARE($recalc : Boolean)  // True = recalc time from POPUP zones
 
-
-C_BOOLEAN:C305($recalc)
-C_BOOLEAN:C305($Exit)
-
-C_LONGINT:C283($NbPopup)
-C_LONGINT:C283($ValPopHours; $ValPopMinuts)
-C_LONGINT:C283($safety)
-C_LONGINT:C283($Id; $shift)
-
-C_TIME:C306($minTime)
-C_TIME:C306($maxTime)
-C_TIME:C306($step)
-C_TIME:C306($time)
-
-C_POINTER:C301($ptrHours; $ptrMinuts)
-
-If (Count parameters:C259>0)
-	$recalc:=$1
-Else 
-	$recalc:=True:C214
-End if 
-
+$recalc:=Count parameters:C259>0 ? $recalc : True:C214  // True by default
 
 //----------------- RÉCUPÉRATION DES POINTEURS VERS OBJETS --------------------------------------
+var $NbPopup : Integer
+var $PtrHours:=OBJECT Get pointer:C1124(Object named:K67:5; "Hours")
 
-$NbPopup:=0
-$PtrHours:=Self:C308(Object named:K67:5; "Hours")
 If (Not:C34(Is nil pointer:C315($PtrHours)))
+	
 	$NbPopup:=1
-	$PtrMinuts:=Self:C308(Object named:K67:5; "Minuts")
+	var $ptrMinuts:=OBJECT Get pointer:C1124(Object named:K67:5; "Minuts")
+	
 	If (Not:C34(Is nil pointer:C315($PtrMinuts)))
+		
 		$NbPopup:=2
+		
 	End if 
 End if 
 
-If ($NbPopup>0)
+If ($NbPopup=0)
 	
-	//----------------- RÉCUPÉRATION DESCONTRAINTES --------------------------------------
+	// Generic call, do nothing
+	return 
 	
-	TimePicker__GetTimeMin(->$minTime)
-	TimePicker__GetTimeMax(->$maxTime)
-	TimePicker__GetStep(->$step)
+End if 
+
+//----------------- RÉCUPÉRATION DESCONTRAINTES --------------------------------------
+var $minTime; $maxTime; $step : Time
+TimePicker__GetTimeMin(->$minTime)
+TimePicker__GetTimeMax(->$maxTime)
+TimePicker__GetStep(->$step)
+
+//----------------- RECALCUL (OU NON) DE L'HEURE SAISIE --------------------------------------
+var $time:=?00:00:00?
+
+If ($recalc)
 	
-	//----------------- RECALCUL (OU NON) DE L'HEURE SAISIE --------------------------------------
+	Case of 
+			
+			//________________________________________________________________________________
+		: ($NbPopup=1)
+			
+			var $ValPopHours : Integer:=($PtrHours->)-1
+			$time:=$minTime+($step*$ValPopHours)
+			
+			//________________________________________________________________________________
+		: ($NbPopup=2)
+			
+			$ValPopHours:=($ptrHours->)-1
+			var $ValPopMinuts : Integer:=($ptrMinuts->)-1
+			
+			// Calcul de l'heure clicquée
+			$time:=(3600*Int:C8($minTime/3600))+(3600*($ValPopHours))+($step*$ValPopMinuts)
+			
+			//________________________________________________________________________________
+	End case 
 	
-	$time:=?00:00:00?
-	If ($recalc)
+Else 
+	
+	TimePicker__GetSelectedTime(->$time)
+	
+End if 
+
+//-------------------- MISE EN CONFORMITÉ PAR RAPPORT AUX CONTRAINTES ------------------------
+$time:=($time+?24:00:00?)%(24*3600)
+
+Case of 
 		
-		Case of 
+		//________________________________________________________________________________
+	: ($time<$minTime)
+		
+		$time:=$minTime
+		
+		//________________________________________________________________________________
+	: ($time>$maxTime)\
+		 && ($maxTime#?00:00:00?)
+		
+		$time:=$maxTime
+		
+		//________________________________________________________________________________
+End case 
+
+// ---------------------- RÉAFFECTATION DANS LES POPUPS DE SAISIE ----------------------------
+var $safety : Integer
+var $Exit : Boolean
+
+Repeat 
+	
+	$safety+=1
+	
+	Case of 
+			
+			//________________________________________________________________________________
+		: ($NbPopup=1)
+			
+			var $ID : Integer:=Round:C94(($time-$minTime)/$step; 0)+1
+			
+			If ($ID<=Size of array:C274($PtrHours->))
 				
-			: ($NbPopup=1)
+				$PtrHours->:=$ID
 				
+			Else 
 				
-				//$ValPopHours:=Num($PtrHours->{$PtrHours->})
-				//$time:=3600*$ValPopHours
+				$PtrHours->:=Size of array:C274($PtrHours->)
 				
+			End if 
+			
+			If (Not:C34($recalc))
+				
+				// Dans le cas ou l'heure n'as pas été saissie dans les popup, il faut la recalculer
+				// Car l'affectation des popup provoque un arrondi
 				$ValPopHours:=($PtrHours->)-1
 				$time:=$minTime+($step*$ValPopHours)
 				
-			: ($NbPopup=2)
+			End if 
+			
+			//________________________________________________________________________________
+		: ($NbPopup=2)
+			
+			$ID:=Round:C94(($time%3600)/$step; 0)+1
+			
+			If ($ID<=Size of array:C274($PtrMinuts->))
 				
-				//$ValPopHours:=Num($PtrHours->{$PtrHours->})  // ca ne marche pas a cause de AM/PM   num("3am") = num("3pm")
-				//$ValPopMinuts:=Num($PtrMinuts->{$PtrMinuts->})
-				//$time:=(3600*$ValPopHours)+(60*$ValPopMinuts)
+				$PtrMinuts->:=$ID
+				var $shift : Integer:=0
 				
-				$ValPopHours:=($ptrHours->)-1
-				$ValPopMinuts:=($ptrMinuts->)-1
-				//calcul de l'heure clicquée
-				$time:=(3600*Int:C8($minTime/3600))+(3600*($ValPopHours))+($step*$ValPopMinuts)
+			Else 
 				
-		End case 
-		
-	Else 
-		
-		TimePicker__GetSelectedTime(->$time)
-		
-	End if 
-	
-	//-------------------- MISE EN CONFORMITÉ PAR RAPPORT AUX CONTRAINTES ------------------------
-	
-	$time:=($time+?24:00:00?)%(24*3600)
-	
-	Case of 
-		: ($time<$minTime)
-			$time:=$minTime
-		: ($time>$maxTime) & ($maxTime#?00:00:00?)
-			$time:=$maxTime
+				// Passage a l'heure suivante
+				$PtrMinuts->:=1
+				$shift:=1
+				
+			End if 
+			
+			$ID:=Int:C8(($time-$minTime)/3600)+1+$shift
+			
+			If ($ID<=Size of array:C274($PtrHours->))
+				
+				$PtrHours->:=$ID
+				
+			Else 
+				
+				$PtrHours->:=Size of array:C274($PtrHours->)
+				
+			End if 
+			
+			// Recalculation is mandatory due to rounding that may occur when using drop-down menus.
+			$ValPopHours:=($ptrHours->)-1
+			$ValPopMinuts:=($ptrMinuts->)-1
+			
+			// Calcul de l'heure clicquée
+			$time:=(3600*Int:C8($minTime/3600))+(3600*$ValPopHours)+($step*$ValPopMinuts)
+			
+			//________________________________________________________________________________
 	End case 
 	
-	// ---------------------- RÉAFFECTATION DANS LES POPUPS DE SAISIE ----------------------------
-	
-	$safety:=0
-	
-	Repeat 
-		$safety:=$safety+1
-		
-		Case of 
-				
-			: ($NbPopup=1)
-				
-				$Id:=Round:C94(($time-$minTime)/$step; 0)+1
-				If ($Id<=Size of array:C274($PtrHours->))
-					$PtrHours->:=$ID
-				Else 
-					$PtrHours->:=Size of array:C274($PtrHours->)
-				End if 
-				
-				If (Not:C34($recalc))
-					//dans le cas ou l'heure n'as pas été saissie dans les popup, il faut la recalculer
-					// ca l'affectation des popup provoque un arrondi
-					$ValPopHours:=($PtrHours->)-1
-					$time:=$minTime+($step*$ValPopHours)
-				End if 
-				
-			: ($NbPopup=2)
-				
-				$Id:=Round:C94(($time%3600)/$step; 0)+1
-				If ($Id<=Size of array:C274($PtrMinuts->))
-					$PtrMinuts->:=$ID
-					$shift:=0
-				Else 
-					//passage a l'heure suivante
-					$PtrMinuts->:=1
-					$shift:=1
-				End if 
-				
-				$Id:=Int:C8(($time-$minTime)/3600)+1+$shift
-				If ($Id<=Size of array:C274($PtrHours->))
-					$PtrHours->:=$ID
-				Else 
-					$PtrHours->:=Size of array:C274($PtrHours->)
-				End if 
-				
-				// recalculation is mandatory because of rouds that may happen using dropdowns
-				
-				$ValPopHours:=($ptrHours->)-1
-				$ValPopMinuts:=($ptrMinuts->)-1
-				//calcul de l'heure clicquée
-				$time:=(3600*Int:C8($minTime/3600))+(3600*$ValPopHours)+($step*$ValPopMinuts)
-				
-		End case 
-		
-		$Exit:=False:C215
-		Case of 
-			: ($time<$minTime)
-				$time:=$time+$step
-			: ($time>$maxTime) & ($maxTime#?00:00:00?)
-				$time:=$time-$step
-			Else 
-				$Exit:=True:C214
-		End case 
-		
-	Until ($Exit) | ($safety>10)
-	
-	$time:=TimePicker__SetSelectedTime($time; "")
-	
-Else 
-	
-	// Generic call, do nothing
-	
-End if 
+	Case of 
+			
+			//________________________________________________________________________________
+		: ($time<$minTime)
+			
+			$time:=$time+$step
+			
+			//________________________________________________________________________________
+		: ($time>$maxTime)\
+			 & ($maxTime#?00:00:00?)
+			
+			$time:=$time-$step
+			
+			//________________________________________________________________________________
+		Else 
+			
+			break
+			
+			//________________________________________________________________________________
+	End case 
+Until ($safety>10)
+
+$time:=TimePicker__SetSelectedTime($time; "")

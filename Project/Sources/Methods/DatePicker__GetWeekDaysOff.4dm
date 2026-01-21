@@ -1,11 +1,11 @@
 //%attributes = {"invisible":true}
-C_POINTER:C301($1)  //pointer on boolean array to be filled
-C_POINTER:C301($targetDaysOff)
+var $1 : Pointer  //pointer on boolean array to be filled
+var $targetDaysOff : Pointer
 
-C_TEXT:C284($2)
+var $2 : Text
 
-C_TEXT:C284($Form)
-C_POINTER:C301($sourceDaysOff)
+var $Form : Text
+var $sourceDaysOff : Pointer
 
 $targetDaysOff:=$1
 
