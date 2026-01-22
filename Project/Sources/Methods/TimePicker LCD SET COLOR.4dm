@@ -18,4 +18,4 @@ If (Count parameters:C259=2)
 End if 
 
 var $rgb:="rgb("+String:C10($red)+","+String:C10($green)+","+String:C10($blue)+")"
-EXECUTE METHOD IN SUBFORM:C1085($subFormName; Formula:C1597(TimePicker__LCD SET COLOR).source; *; $rgb)
+EXECUTE METHOD IN SUBFORM:C1085($subFormName; Formula:C1597(TimePicker__LCD SET COLOR); *; $rgb)

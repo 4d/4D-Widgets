@@ -3,17 +3,17 @@
 var $1 : Text  //destination form 
 var $2 : Text  // label
 
-var $Form : Text
+var $form : Text
 var $CurrentHelp : Text
 var $ErrorText : Text
 
 If (Count parameters:C259=2)
 	If (Type:C295($1)=Is text:K8:3)
-		$Form:=$1
+		$form:=$1
 		If (Type:C295($2)=Is text:K8:3)
 			$CurrentHelp:=$2
 			
-			EXECUTE METHOD IN SUBFORM:C1085($Form; "SearchPicker__SET_HELPTEXT"; *; $CurrentHelp)
+			EXECUTE METHOD IN SUBFORM:C1085($form; "SearchPicker__SET_HELPTEXT"; *; $CurrentHelp)
 			
 		Else 
 			$ErrorText:=Localized string:C991("Errors_TextParameter")

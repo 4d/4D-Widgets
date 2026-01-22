@@ -3,7 +3,7 @@
 var $1 : Text  //destination form 
 var $2 : Boolean  //true or false
 
-var $Form : Text
+var $form : Text
 var $ErrorText : Text
 var $searchObjectName : Text
 
@@ -11,7 +11,7 @@ var $Enterable : Boolean
 
 If (Count parameters:C259=2)
 	If (Type:C295($1)=Is text:K8:3)
-		$Form:=$1
+		$form:=$1
 		If (Type:C295($2)=Is boolean:K8:9)
 			$Enterable:=$2
 			
@@ -21,7 +21,7 @@ If (Count parameters:C259=2)
 				$searchObjectName:="SearchText_Mac"
 			End if 
 			
-			EXECUTE METHOD IN SUBFORM:C1085($Form; "SearchPicker__SET_ENTERABLE"; *; $searchObjectName; $Enterable)
+			EXECUTE METHOD IN SUBFORM:C1085($form; "SearchPicker__SET_ENTERABLE"; *; $searchObjectName; $Enterable)
 			
 		Else 
 			$ErrorText:=Localized string:C991("Errors_TextParameter")

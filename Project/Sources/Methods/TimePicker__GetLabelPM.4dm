@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true}
-#DECLARE($PtrTarget : Pointer; $Form : Text)
+#DECLARE($PtrTarget : Pointer; $form : Text)
 
 var $text : Text
-Tool_ObjectToVar("PMlabel"; ->$text; $Form)
+Tool_ObjectToVar("PMlabel"; ->$text; $form)
 
 If (Length:C16($text)=0)
 	

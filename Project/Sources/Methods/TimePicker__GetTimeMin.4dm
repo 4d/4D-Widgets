@@ -1,7 +1,7 @@
 //%attributes = {"invisible":true}
-#DECLARE($PtrTarget : Pointer; $Form : Text)
+#DECLARE($PtrTarget : Pointer; $form : Text)
 
 var $time : Time
-Tool_ObjectToVar("MinTime"; ->$time; $Form)
+Tool_ObjectToVar("MinTime"; ->$time; $form)
 
 $PtrTarget->:=$time

@@ -17,7 +17,7 @@ var $FirstDisplayedDay : Date
 
 var $Ptr_MonthesArray; $PtrDisplayedMonth : Pointer
 
-var $Form : Text
+var $form : Text
 var $PositionMonth_t; $PositionYear_t : Text
 var $dateLongPattern : Text
 var $separator : Text
@@ -26,7 +26,7 @@ var $separator : Text
 If (Count parameters:C259>=1)
 	$date:=$1
 	If (Count parameters:C259>=2)
-		$Form:=$2
+		$form:=$2
 	End if 
 Else 
 	Tool_ObjectToVar("SelectedDate"; ->$date)
@@ -39,10 +39,10 @@ End if
 $CurrentMonth:=Month of:C24($date)
 $CurrentYear:=Year of:C25($date)
 
-$Ptr_MonthesArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_ListMonthes"; $Form)
+$Ptr_MonthesArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_ListMonthes"; $form)
 If (Not:C34(Is nil pointer:C315($Ptr_MonthesArray)))
 	If (Size of array:C274($Ptr_MonthesArray->)>=12)
-		$PtrDisplayedMonth:=OBJECT Get pointer:C1124(Object named:K67:5; "DisplayedMonth"; $Form)
+		$PtrDisplayedMonth:=OBJECT Get pointer:C1124(Object named:K67:5; "DisplayedMonth"; $form)
 		If (Not:C34(Is nil pointer:C315($PtrDisplayedMonth)))
 			
 			// Affichage de l'entete (yyyy MMM ou MMM yyyy)
@@ -71,8 +71,8 @@ If (Not:C34(Is nil pointer:C315($Ptr_MonthesArray)))
 			
 			$FirstDisplayedDay:=Add to date:C393(!00-00-00!; $CurrentYear; $CurrentMonth; 1)  //1er du mois affich
 			
-			DatePicker__GetWeekFirstDay(->$FirstDayOfWeek; $Form)  //1-2-3-4-5-6-7
-			Tool_VarToObject(->$FirstDisplayedDay; "FirstOfCurrentMonth"; $Form)
+			DatePicker__GetWeekFirstDay(->$FirstDayOfWeek; $form)  //1-2-3-4-5-6-7
+			Tool_VarToObject(->$FirstDisplayedDay; "FirstOfCurrentMonth"; $form)
 			
 			If ($FirstDayOfWeek>=1) & ($FirstDayOfWeek<=7)
 				//décrémente le 1er jour affichjusqu'tomber sur le jour semaine souhaitéô
@@ -81,7 +81,7 @@ If (Not:C34(Is nil pointer:C315($Ptr_MonthesArray)))
 				End while 
 			End if 
 			
-			Tool_VarToObject(->$FirstDisplayedDay; "FirstDisplayedDay"; $Form)
+			Tool_VarToObject(->$FirstDisplayedDay; "FirstDisplayedDay"; $form)
 			
 		Else 
 			//ALERT("Object "+"“DisplayedMonth”"+"not found")

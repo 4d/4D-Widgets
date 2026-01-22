@@ -7,6 +7,9 @@ Case of
 		
 		TimePicker__InitInter
 		TimePicker__InitForm
+		
+		OBJECT SET VALUE:C1742("AMlabel"; "<none>")
+		OBJECT SET VALUE:C1742("PMlabel"; "<none>")
 		TimePicker__BuildPopup
 		
 		var $CurrentTime : Time:=TimePicker__GetTarget

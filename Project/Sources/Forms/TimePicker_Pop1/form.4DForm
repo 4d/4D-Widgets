@@ -28,14 +28,15 @@
 					"top": 0,
 					"left": 0,
 					"width": 80,
-					"height": 21,
-					"class": "Buttons_13",
+					"height": 22,
 					"method": "ObjectMethods/Hours.4dm",
 					"events": [
 						"onClick",
 						"onDataChange"
 					],
-					"focusable": false
+					"focusable": false,
+					"sizingX": "grow",
+					"textAlign": "center"
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -44,9 +45,9 @@
 					"width": 80,
 					"height": 21,
 					"stroke": "automatic",
-					"fill": "automatic",
 					"borderRadius": 4,
-					"visibility": "hidden"
+					"visibility": "hidden",
+					"fill": "automatic"
 				},
 				"Text": {
 					"type": "text",
@@ -66,131 +67,120 @@
 					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
 					"pictureFormat": "scaled",
 					"visibility": "hidden"
-				}
-			}
-		},
-		{
-			"objects": {
+				},
 				"FormInited": {
 					"type": "input",
-					"top": 7,
-					"left": 292,
+					"top": 3,
+					"left": 401,
 					"width": 150,
 					"height": 16,
 					"dataSourceTypeHint": "number",
-					"class": "Default",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"MinTime": {
 					"type": "input",
-					"top": 43,
-					"left": 292,
+					"top": 39,
+					"left": 401,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
-					"class": "Default",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
 					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"MaxTime": {
 					"type": "input",
-					"top": 43,
-					"left": 372,
+					"top": 39,
+					"left": 481,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
-					"class": "Default",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
 					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"Step": {
 					"type": "input",
-					"top": 70,
-					"left": 292,
+					"top": 66,
+					"left": 401,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
-					"class": "Default",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
 					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"AMlabel": {
 					"type": "input",
-					"top": 70,
-					"left": 372,
+					"top": 66,
+					"left": 481,
 					"width": 70,
 					"height": 16,
-					"class": "Default",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"PMlabel": {
 					"type": "input",
-					"top": 70,
-					"left": 460,
+					"top": 66,
+					"left": 569,
 					"width": 70,
 					"height": 16,
-					"class": "Default",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"SelectedTime": {
 					"type": "input",
-					"top": 106,
-					"left": 292,
+					"top": 102,
+					"left": 401,
 					"width": 100,
 					"height": 16,
 					"dataSourceTypeHint": "time",
-					"class": "Default",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
 					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				}
 			}
 		}
@@ -200,30 +190,17 @@
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
-			"Vue 2": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 3": {
-				"visible": false,
-				"selectable": false
-			},
-			"Preview": {
+			"PREVIEW": {
 				"visible": false,
 				"objects": [
 					"Rectangle",
 					"Text",
 					"Static Picture1"
 				]
-			},
-			"Vue 5": {},
-			"Vue 6": {},
-			"Vue 7": {},
-			"Vue 8": {},
-			"Vue 9": {}
+			}
 		}
 	},
-	"geometryStamp": 96,
+	"geometryStamp": 153,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

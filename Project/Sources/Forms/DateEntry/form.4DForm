@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingX": "fixed",
@@ -113,7 +113,7 @@
 						"onDataChange"
 					]
 				},
-				"bUp": {
+				"up": {
 					"type": "button",
 					"top": 0,
 					"left": 442,
@@ -121,12 +121,12 @@
 					"height": 12,
 					"shortcutKey": "[up arrow]",
 					"display": false,
-					"method": "ObjectMethods/bUp.4dm",
+					"method": "ObjectMethods/up.4dm",
 					"events": [
 						"onClick"
 					]
 				},
-				"bDown": {
+				"down": {
 					"type": "button",
 					"top": 12,
 					"left": 442,
@@ -134,7 +134,7 @@
 					"height": 12,
 					"shortcutKey": "[down arrow]",
 					"display": false,
-					"method": "ObjectMethods/bDown.4dm",
+					"method": "ObjectMethods/down.4dm",
 					"events": [
 						"onClick"
 					]
@@ -648,8 +648,8 @@
 			"FocusRing": {
 				"objects": [
 					"FocusRingBackGround",
-					"bUp",
-					"bDown",
+					"up",
+					"down",
 					"YearZoneName",
 					"MonthZoneName",
 					"DayZoneName"
@@ -687,5 +687,5 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 50
+	"geometryStamp": 52
 }

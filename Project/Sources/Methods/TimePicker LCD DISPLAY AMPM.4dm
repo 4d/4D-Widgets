@@ -3,7 +3,7 @@
 
 If (Count parameters:C259>=2)
 	
-	EXECUTE METHOD IN SUBFORM:C1085($subFormName; Formula:C1597(TimePicker__LCD DISPLAY AMPM).source; *; $withAmPm)
+	EXECUTE METHOD IN SUBFORM:C1085($subFormName; Formula:C1597(TimePicker__LCD DISPLAY AMPM); *; $withAmPm)
 	
 Else 
 	

@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true}
-#DECLARE($ObjectName : Text; $PtrTarget : Pointer; $ParentName : Text)  // Form (if provided)
+#DECLARE($ObjectName : Text; $PtrTarget : Pointer; $ParentName : Text)
 
 If (Length:C16($ParentName)#0)
 	

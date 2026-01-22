@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true}
-#DECLARE($Form : Text; $Label : Text)
+#DECLARE($form : Text; $Label : Text)
 
 If (Count parameters:C259<2)
 	
@@ -11,12 +11,27 @@ End if
 
 TimePicker__InitInter
 
-Tool_VarToObject(->$Label; "AMlabel"; $Form)
+var $current : Text
+Tool_ObjectToVar("AMlabel"; ->$current)
 
-If (Length:C16($Form)#0)
+If ($current="<none>")
 	
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__BuildPopup")  // If no popup in form does nothing
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__DisplayTimeInputs"; *; False:C215)  // If no HH MM SS entry zones does nothing
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__DisplayTimePopups"; *; False:C215)  // If no popup in form does nothing
+	return 
+	
+End if 
+
+Tool_VarToObject(->$Label; "AMlabel"; $form)
+
+If (Length:C16($form)#0)
+	
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__BuildPopup))  // If no popup in form does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
+	
+Else 
+	
+	TimePicker__BuildPopup
+	TimePicker__DisplayTimeInputs(False:C215)
+	TimePicker__DisplayTimePopups(False:C215)
 	
 End if 

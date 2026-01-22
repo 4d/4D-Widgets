@@ -2,7 +2,7 @@
 var $1 : Text
 
 var $searchObjectName : Text
-var $Format : Text
+var $format : Text
 
 var $target; $PtrSearchText : Pointer
 
@@ -10,8 +10,8 @@ Case of
 	: ($1="Win")
 		$searchObjectName:="SearchText_Win"
 		
-		//$Format:=";file:Images/Win/SearchBox/searchbox_Glass.png"
-		//OBJECT SET FORMAT(*; "CloseButton_Win"; $Format)
+		//$format:=";file:Images/Win/SearchBox/searchbox_Glass.png"
+		//OBJECT SET FORMAT(*; "CloseButton_Win"; $format)
 		
 	: ($1="Mac")
 		$searchObjectName:="SearchText_Mac"

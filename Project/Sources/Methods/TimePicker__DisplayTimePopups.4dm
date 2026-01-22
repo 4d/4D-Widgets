@@ -10,9 +10,9 @@ var $PtrHours:=OBJECT Get pointer:C1124(Object named:K67:5; "Hours")
 If (Not:C34(Is nil pointer:C315($PtrHours)))
 	
 	$NbPopup:=1
-	var $ptrMinuts:=OBJECT Get pointer:C1124(Object named:K67:5; "Minuts")
+	var $ptrMinutes:=OBJECT Get pointer:C1124(Object named:K67:5; "Minutes")
 	
-	If (Not:C34(Is nil pointer:C315($PtrMinuts)))
+	If (Not:C34(Is nil pointer:C315($PtrMinutes)))
 		
 		$NbPopup:=2
 		
@@ -21,8 +21,7 @@ End if
 
 If ($NbPopup=0)
 	
-	// Generic call, do nothing
-	return 
+	return   // Generic call, do nothing
 	
 End if 
 
@@ -49,10 +48,10 @@ If ($recalc)
 		: ($NbPopup=2)
 			
 			$ValPopHours:=($ptrHours->)-1
-			var $ValPopMinuts : Integer:=($ptrMinuts->)-1
+			var $ValPopMinutes : Integer:=($ptrMinutes->)-1
 			
 			// Calcul de l'heure clicquée
-			$time:=(3600*Int:C8($minTime/3600))+(3600*($ValPopHours))+($step*$ValPopMinuts)
+			$time:=(3600*Int:C8($minTime/3600))+(3600*($ValPopHours))+($step*$ValPopMinutes)
 			
 			//________________________________________________________________________________
 	End case 
@@ -121,15 +120,15 @@ Repeat
 			
 			$ID:=Round:C94(($time%3600)/$step; 0)+1
 			
-			If ($ID<=Size of array:C274($PtrMinuts->))
+			If ($ID<=Size of array:C274($PtrMinutes->))
 				
-				$PtrMinuts->:=$ID
+				$PtrMinutes->:=$ID
 				var $shift : Integer:=0
 				
 			Else 
 				
 				// Passage a l'heure suivante
-				$PtrMinuts->:=1
+				$PtrMinutes->:=1
 				$shift:=1
 				
 			End if 
@@ -148,10 +147,10 @@ Repeat
 			
 			// Recalculation is mandatory due to rounding that may occur when using drop-down menus.
 			$ValPopHours:=($ptrHours->)-1
-			$ValPopMinuts:=($ptrMinuts->)-1
+			$ValPopMinutes:=($ptrMinutes->)-1
 			
 			// Calcul de l'heure clicquée
-			$time:=(3600*Int:C8($minTime/3600))+(3600*$ValPopHours)+($step*$ValPopMinuts)
+			$time:=(3600*Int:C8($minTime/3600))+(3600*$ValPopHours)+($step*$ValPopMinutes)
 			
 			//________________________________________________________________________________
 	End case 

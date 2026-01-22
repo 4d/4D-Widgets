@@ -7,7 +7,7 @@ var $selectedDate : Date
 var $DayPtr; $monthPtr; $YearPtr : Pointer
 var $DayZoneNamePtr; $monthZoneNamePtr; $YearZoneNamePtr : Pointer
 
-var $Form : Text
+var $form : Text
 var $DayZoneName; $monthZoneName; $YearZoneName : Text
 
 $DayZoneNamePtr:=OBJECT Get pointer:C1124(Object named:K67:5; "DayZoneName")
@@ -26,8 +26,8 @@ If ((Not:C34(Is nil pointer:C315($DayZoneNamePtr))) & (Not:C34(Is nil pointer:C3
 	
 	If ((Not:C34(Is nil pointer:C315($DayPtr))) & (Not:C34(Is nil pointer:C315($monthPtr))) & (Not:C34(Is nil pointer:C315($YearPtr))))
 		
-		Tool_ObjectToVar("MinDate"; ->$minDate; $Form)
-		Tool_ObjectToVar("MaxDate"; ->$maxDate; $Form)
+		Tool_ObjectToVar("MinDate"; ->$minDate; $form)
+		Tool_ObjectToVar("MaxDate"; ->$maxDate; $form)
 		
 		DatePicker__GetSelectedDate(->$selectedDate)
 		If ($selectedDate<$minDate) & ($minDate#!00-00-00!)

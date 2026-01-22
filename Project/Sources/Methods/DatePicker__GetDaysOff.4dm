@@ -8,22 +8,22 @@ var $type : Integer  // type of days off (0 = repeated, 1 = only once)
 var $ptrArray : Pointer  // pointer on date array
 var $PtrLocalArray : Pointer
 
-var $Form : Text  // form name (if provided)
+var $form : Text  // form name (if provided)
 
 $type:=$1
 $ptrArray:=$2
 
 If (Count parameters:C259>=3)
-	$Form:=$3
+	$form:=$3
 	
 	Case of 
 		: ($type=0)
-			$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff1"; $Form)
+			$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff1"; $form)
 			If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 				COPY ARRAY:C226($PtrLocalArray->; $ptrArray->)
 			End if 
 		: ($type=1)
-			$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff2"; $Form)
+			$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff2"; $form)
 			If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 				COPY ARRAY:C226($PtrLocalArray->; $ptrArray->)
 			End if 

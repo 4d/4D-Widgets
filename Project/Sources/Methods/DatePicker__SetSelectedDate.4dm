@@ -20,7 +20,7 @@ var $0 : Date  // returned date (that MAY be different from received one)
 
 var $date : Date
 var $returnedDate : Date
-var $Form : Text
+var $form : Text
 var $ErrorText : Text
 //C_POINTER($datePicker_Target)
 var $datePicker_Target : Date
@@ -32,13 +32,13 @@ If (Type:C295($1)=Is date:K8:7)
 	$date:=$1
 	
 	If (Count parameters:C259>=2)  //for a specific parent subform object OR current form 
-		$Form:=$2
+		$form:=$2
 		
 		var $minDate : Date
 		var $maxDate : Date
 		
-		DatePicker__GetMinDate(->$minDate; $Form)
-		DatePicker__GetMaxDate(->$maxDate; $Form)
+		DatePicker__GetMinDate(->$minDate; $form)
+		DatePicker__GetMaxDate(->$maxDate; $form)
 		
 		Case of 
 			: ($date<$minDate) & ($minDate#!00-00-00!)
@@ -47,7 +47,7 @@ If (Type:C295($1)=Is date:K8:7)
 				$date:=$maxDate
 		End case 
 		
-		Tool_VarToObject(->$date; "SelectedDate"; $Form)
+		Tool_VarToObject(->$date; "SelectedDate"; $form)
 		
 		$datePicker_Target:=DatePicker__GetTarget
 		// TM 2019-05-24 - don't use process variables to allow two instances.

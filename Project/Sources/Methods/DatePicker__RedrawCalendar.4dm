@@ -1,6 +1,6 @@
 //%attributes = {"invisible":true}
 var $1 : Text
-var $Form : Text
+var $form : Text
 
 var $date : Date
 var $FindDate : Date
@@ -35,14 +35,14 @@ ARRAY BOOLEAN:C223($_WeeklyDaysOff; 7)
 
 
 If (Count parameters:C259>=1)
-	$Form:=$1
+	$form:=$1
 Else 
-	$Form:=""
+	$form:=""
 End if 
 
 //this parameter seems to be useless
 // (but "if it ain't broken, don't fix it")
-$Form:=""
+$form:=""
 
 
 $ptrBtn:=OBJECT Get pointer:C1124(Object named:K67:5; "DatePicker_Btn_1")

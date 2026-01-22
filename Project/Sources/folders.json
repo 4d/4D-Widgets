@@ -1,5 +1,13 @@
 {
 	"(TimePicker Private)": {},
+	"✅ TimePicker Forms": {
+		"forms": [
+			"TimeDisplay",
+			"TimeDisplayLCD",
+			"TimeEntry",
+			"TimeEntry_AM"
+		]
+	},
 	"✅ TimePicker Private": {
 		"methods": [
 			"TimeEntry__Increase",
@@ -47,6 +55,14 @@
 			"TimePicker SET MAX TIME",
 			"TimePicker SET MIN TIME",
 			"TimePicker SET STEP"
+		]
+	},
+	"🕒 TimePicker": {
+		"groups": [
+			"✅ TimePicker Forms",
+			"✅ TimePicker Private",
+			"✅ TimePicker Shared",
+			"TimePicker Forms"
 		]
 	},
 	"Compiler": {
@@ -150,19 +166,8 @@
 			"SearchPicker SET HELP TEXT"
 		]
 	},
-	"TimePicker": {
-		"groups": [
-			"✅ TimePicker Private",
-			"✅ TimePicker Shared",
-			"TimePicker Forms"
-		]
-	},
 	"TimePicker Forms": {
 		"forms": [
-			"TimeDisplay",
-			"TimeDisplayLCD",
-			"TimeEntry",
-			"TimeEntry_AM",
 			"TimePicker_Pop1",
 			"TimePicker_Pop1_AM",
 			"TimePicker_Pop2",

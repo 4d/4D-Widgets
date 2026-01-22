@@ -3,7 +3,7 @@ var $1 : Text
 var $2 : Text  //destination parent form if provided
 
 var $CurrentText : Text
-var $Form : Text
+var $form : Text
 var $ErrorText : Text
 var $searchObjectName : Text
 
@@ -16,7 +16,7 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 	$CurrentText:=$1
 	
 	If (Count parameters:C259>=2)  //for a specific parent subform object OR current form 
-		$Form:=$2
+		$form:=$2
 		
 		If (Is Windows:C1573)
 			$searchObjectName:="SearchText_Win"
@@ -24,7 +24,7 @@ If (Type:C295($1)=Is text:K8:3) | (Type:C295($1)=Is alpha field:K8:1)
 			$searchObjectName:="SearchText_Mac"
 		End if 
 		
-		Tool_VarToObject(->$CurrentText; $searchObjectName; $Form)
+		Tool_VarToObject(->$CurrentText; $searchObjectName; $form)
 		
 		
 		SearchPicker__SetTarget($CurrentText)

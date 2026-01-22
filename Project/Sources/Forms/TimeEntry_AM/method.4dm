@@ -17,12 +17,12 @@ Case of
 			
 			// Reorder objects
 			ARRAY TEXT:C222($_objectNames; 0)
-			APPEND TO ARRAY:C911($_objectNames; "AmPmEntry")
-			APPEND TO ARRAY:C911($_objectNames; "HoursEntry")
+			APPEND TO ARRAY:C911($_objectNames; "am_pm")
+			APPEND TO ARRAY:C911($_objectNames; "hours")
 			APPEND TO ARRAY:C911($_objectNames; "Separator1")
-			APPEND TO ARRAY:C911($_objectNames; "MinutsEntry")
+			APPEND TO ARRAY:C911($_objectNames; "minutes")
 			APPEND TO ARRAY:C911($_objectNames; "Separator2")
-			APPEND TO ARRAY:C911($_objectNames; "SecondsEntry")
+			APPEND TO ARRAY:C911($_objectNames; "seconds")
 			
 			var $n:=Size of array:C274($_objectNames)
 			var $left; $top; $right; $bottom : Integer

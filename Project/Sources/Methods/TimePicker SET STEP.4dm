@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true}
-#DECLARE($Form : Text; $time : Time)
+#DECLARE($form : Text; $time : Time)
 
 If (Count parameters:C259<2)
 	
@@ -25,17 +25,18 @@ Case of
 		
 		//________________________________________________________________________________
 	Else 
+		
 		$time:=3600/Round:C94(3600/$time; 0)
 		
 		//________________________________________________________________________________
 End case 
 
-Tool_VarToObject(->$time; "Step"; $Form)
+Tool_VarToObject(->$time; "Step"; $form)
 
-If (Length:C16($Form)#0)
+If (Length:C16($form)#0)
 	
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__BuildPopup")
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__DisplayTimePopups"; *; False:C215)  // If no popup in form does nothing
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__DisplayTimeInputs"; *; False:C215)  // If no HH MM SS entry zones does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__BuildPopup))
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
 	
 End if 

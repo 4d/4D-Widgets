@@ -12,7 +12,7 @@
 // It makes this time conform with local constraints (min/max)
 // It becames the default time
 
-#DECLARE($time : Time; $Form : Text) : Time  // Returned time (that MAY be different from received one)
+#DECLARE($time : Time; $form : Text) : Time  // Returned time (that MAY be different from received one)
 
 TimePicker__InitInter
 
@@ -40,7 +40,7 @@ If (Count parameters:C259>=2)  // For a specific parent subform object OR curren
 			// ________________________________________________________________________________
 	End case 
 	
-	Tool_VarToObject(->$time; "SelectedTime"; $Form)
+	Tool_VarToObject(->$time; "SelectedTime"; $form)
 	
 	var $targetTime:=TimePicker__GetTarget
 	

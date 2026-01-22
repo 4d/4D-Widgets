@@ -4,7 +4,7 @@ var $x1; $y1; $x2; $y2 : Integer
 var $memoX1; $memoX2; $memoY1; $memoY2 : Integer
 var $Width : Integer
 
-var $searchObjectName; $searchClose; $Format : Text
+var $searchObjectName; $searchClose; $format : Text
 
 var $PtrSearchText : Pointer
 
@@ -21,15 +21,15 @@ $PtrSearchText:=OBJECT Get pointer:C1124(Object named:K67:5; $searchObjectName)
 
 If (Is Windows:C1573)  //----------- WIN -----------
 	
-	$Format:=OBJECT Get format:C894(*; $searchClose)
+	$format:=OBJECT Get format:C894(*; $searchClose)
 	
 	If ($PtrSearchText->#"")
-		$Format:=";file:Images/Win/SearchBox/Searchbox_close.png"
+		$format:=";file:Images/Win/SearchBox/Searchbox_close.png"
 	Else 
-		$Format:=";file:Images/Win/SearchBox/Searchbox_glass.png"
+		$format:=";file:Images/Win/SearchBox/Searchbox_glass.png"
 	End if 
 	
-	OBJECT SET FORMAT:C236(*; $searchClose; $Format)
+	OBJECT SET FORMAT:C236(*; $searchClose; $format)
 	
 Else   //---------------  MAC ------------------
 	

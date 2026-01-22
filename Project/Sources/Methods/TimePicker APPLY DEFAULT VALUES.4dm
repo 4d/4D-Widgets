@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true}
-#DECLARE($Form : Text)
+#DECLARE($form : Text)
 
 If (Count parameters:C259=0)
 	
@@ -8,17 +8,17 @@ If (Count parameters:C259=0)
 	
 End if 
 
-TimePicker__InitInter  // Just in case a "DISPOSE had been called before
+TimePicker__InitInter
 
-TimePicker SET MIN TIME($Form; <>TimePicker_TimeMin)
-TimePicker SET MAX TIME($Form; <>TimePicker_TimeMax)
-TimePicker SET LABEL AM($Form; <>TimePicker_LabelAM)
-TimePicker SET LABEL PM($Form; <>TimePicker_LabelPM)
-TimePicker SET STEP($Form; <>TimePicker_Step)
+TimePicker SET MIN TIME($form; <>TimePicker_TimeMin)
+TimePicker SET MAX TIME($form; <>TimePicker_TimeMax)
+TimePicker SET LABEL AM($form; <>TimePicker_LabelAM)
+TimePicker SET LABEL PM($form; <>TimePicker_LabelPM)
+TimePicker SET STEP($form; <>TimePicker_Step)
 
-If (Length:C16($Form)#0)
+If (Length:C16($form)#0)
 	
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__DisplayTimeInputs"; *; False:C215)  // If no HH MM SS entry zones does nothing
-	EXECUTE METHOD IN SUBFORM:C1085($Form; "TimePicker__DisplayTimePopups"; *; False:C215)  // If no popup in form does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
 	
 End if 

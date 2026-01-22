@@ -4,7 +4,7 @@ var $1 : Text  //form name (if provided)
 var $2 : Integer  //type of days off (0 = repeated each week, 1 = repeated earch year , 2 = only once)
 var $3 : Pointer  // pointer on booelan or date array
 
-var $Form : Text  //form name
+var $form : Text  //form name
 var $ErrorText : Text
 
 var $selector : Integer  //type of days off (0 = repeated each week, 1 = repeated earch year , 2 = only once)
@@ -21,7 +21,7 @@ var $Error : Boolean
 If (Count parameters:C259=3)
 	
 	If (Type:C295($1)=Is text:K8:3)
-		$Form:=$1
+		$form:=$1
 		If (Type:C295($2)=Is longint:K8:6)
 			$selector:=$2
 			If (Type:C295($3)=Is pointer:K8:14)
@@ -38,7 +38,7 @@ If (Count parameters:C259=3)
 								If (Size of array:C274($ptrArray->)=7)
 									$Error:=False:C215
 									
-									$Ptr_WeeklyDaysoff:=OBJECT Get pointer:C1124(Object named:K67:5; "_WeeklyDaysOff"; $Form)
+									$Ptr_WeeklyDaysoff:=OBJECT Get pointer:C1124(Object named:K67:5; "_WeeklyDaysOff"; $form)
 									
 									If (Not:C34(Is nil pointer:C315($Ptr_WeeklyDaysoff)))
 										COPY ARRAY:C226($ptrArray->; $Ptr_WeeklyDaysoff->)
@@ -68,7 +68,7 @@ If (Count parameters:C259=3)
 								
 								Case of 
 									: ($selector=1)  //repeated every year
-										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff1"; $Form)
+										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff1"; $form)
 										If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 											COPY ARRAY:C226($ptrArray->; $PtrLocalArray->)
 											$n:=Size of array:C274($PtrLocalArray->)  //reformat for year 2000 (quick code later)
@@ -77,14 +77,14 @@ If (Count parameters:C259=3)
 											End for 
 										End if 
 									: ($selector=2)  //only once
-										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff2"; $Form)
+										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff2"; $form)
 										If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
 											COPY ARRAY:C226($ptrArray->; $PtrLocalArray->)
 										End if 
 								End case 
 								
-								If ($Form#"")
-									EXECUTE METHOD IN SUBFORM:C1085($Form; "DatePicker__RedrawCalendar")
+								If ($form#"")
+									EXECUTE METHOD IN SUBFORM:C1085($form; "DatePicker__RedrawCalendar")
 								End if 
 								
 								$Error:=False:C215

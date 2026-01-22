@@ -1,8 +1,8 @@
 //%attributes = {"invisible":true}
-#DECLARE($PtrTarget : Pointer; $Form : Text)
+#DECLARE($PtrTarget : Pointer; $form : Text)
 
 var $time : Time
-Tool_ObjectToVar("MaxTime"; ->$time; $Form)
+Tool_ObjectToVar("MaxTime"; ->$time; $form)
 
 If ($time=?00:00:00?)
 	

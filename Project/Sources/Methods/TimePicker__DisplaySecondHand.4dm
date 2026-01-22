@@ -1,10 +1,7 @@
 //%attributes = {"invisible":true}
-#DECLARE($displaySecondHand : Boolean)
+#DECLARE($on : Boolean)
 
-var $ptr : Pointer:=OBJECT Get pointer:C1124(Object named:K67:5; "clockDisplaySecondHand")
-$Ptr->:=$displaySecondHand ? "true" : "false"
-
-var $PtrRebuild : Pointer:=OBJECT Get pointer:C1124(Object named:K67:5; "clockRebuild")
-$PtrRebuild->:="true"
+OBJECT SET VALUE:C1742("withSeconds"; $on)
+OBJECT SET VALUE:C1742("redraw"; True:C214)
 
 SET TIMER:C645(-1)  // Will redraw the image according to the associated variable

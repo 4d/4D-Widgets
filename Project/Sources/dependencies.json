@@ -1,7 +1,12 @@
 {
+	"version": 2130,
 	"dependencies": {
 		"4D SVG": {
 			"github": "4d/4D-SVG",
+			"version": "4d"
+		},
+		"4DPop Macros": {
+			"github": "vdelachaux/4DPop-Macros",
 			"version": "4d"
 		}
 	}

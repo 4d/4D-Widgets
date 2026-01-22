@@ -1,12 +1,7 @@
 //%attributes = {"invisible":true}
-#DECLARE($Increment : Integer)
+#DECLARE($step : Integer)
 
-var $PtrCurrentObject:=OBJECT Get pointer:C1124(Object with focus:K67:3)
-
-var $PtrHours:=OBJECT Get pointer:C1124(Object named:K67:5; "HoursEntry")
-var $PtrMinuts:=OBJECT Get pointer:C1124(Object named:K67:5; "MinutsEntry")
-var $PtrSeconds:=OBJECT Get pointer:C1124(Object named:K67:5; "SecondsEntry")
-var $PtrAmPm:=OBJECT Get pointer:C1124(Object named:K67:5; "AmPmEntry")
+var $target:=OBJECT Get name:C1087(Object with focus:K67:3)
 
 var $CurrentTime:=?00:00:00?
 TimePicker__GetSelectedTime(->$CurrentTime; "")
@@ -14,29 +9,29 @@ TimePicker__GetSelectedTime(->$CurrentTime; "")
 Case of 
 		
 		// ________________________________________________________________________________
-	: ($PtrCurrentObject=$PtrAmPm)
+	: ($target="am_pm")
 		
-		$Increment:=12*3600*$Increment
-		
-		// ________________________________________________________________________________
-	: ($PtrCurrentObject=$PtrHours)
-		
-		$Increment:=3600*$Increment
+		$step:=12*3600*$step
 		
 		// ________________________________________________________________________________
-	: ($PtrCurrentObject=$PtrMinuts)
+	: ($target="hours")
 		
-		$Increment:=60*$Increment
+		$step:=3600*$step
 		
 		// ________________________________________________________________________________
-	: ($PtrCurrentObject=$PtrSeconds)
+	: ($target="minutes")
 		
-		$Increment:=$Increment
+		$step:=60*$step
+		
+		// ________________________________________________________________________________
+	: ($target="seconds")
+		
+		$step:=$step
 		
 		// ________________________________________________________________________________
 End case 
 
-$CurrentTime+=$Increment
+$CurrentTime+=$step
 
 // Save the calculated value in the local variable of the form.
 $CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")

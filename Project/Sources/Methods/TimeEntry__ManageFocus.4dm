@@ -1,16 +1,16 @@
 //%attributes = {"invisible":true}
-#DECLARE($Event : Integer)
+#DECLARE($eventCode : Integer)
 
 Case of 
 		
 		//________________________________________________________________________________
-	: ($Event=On Activate:K2:9)
+	: ($eventCode=On Activate:K2:9)
 		
 		var $Visible:=True:C214
-		GOTO OBJECT:C206(*; "HoursEntry")
+		GOTO OBJECT:C206(*; "hours")
 		
 		//________________________________________________________________________________
-	: ($Event=On Deactivate:K2:10)
+	: ($eventCode=On Deactivate:K2:10)
 		
 		$Visible:=False:C215
 		
@@ -18,6 +18,6 @@ Case of
 End case 
 
 OBJECT SET VISIBLE:C603(*; "FocusRing@"; $Visible)
-OBJECT SET VISIBLE:C603(*; "bUp@"; $Visible)
-OBJECT SET VISIBLE:C603(*; "bDown@"; $Visible)
-OBJECT SET VISIBLE:C603(*; "bUpDown"; $Visible)
+OBJECT SET VISIBLE:C603(*; "up"; $Visible)
+OBJECT SET VISIBLE:C603(*; "down"; $Visible)
+OBJECT SET VISIBLE:C603(*; "stepper"; $Visible)

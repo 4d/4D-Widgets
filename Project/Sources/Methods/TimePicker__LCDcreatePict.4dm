@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true}
-#DECLARE($PtrPict : Pointer; $withSeconds : Boolean; $withAmPm : Boolean)
+#DECLARE($withSeconds : Boolean; $withAmPm : Boolean) : Picture
 
 $withSeconds:=Count parameters:C259>=2 ? $withSeconds : True:C214
 $withAmPm:=Count parameters:C259>=3 ? $withAmPm : True:C214
@@ -163,4 +163,7 @@ If ($withSeconds)
 	
 End if 
 
-SVG EXPORT TO PICTURE:C1017($Dom_svg; $PtrPict->; Own XML data source:K45:18)
+var $pict : Picture
+SVG EXPORT TO PICTURE:C1017($Dom_svg; $pict; Own XML data source:K45:18)
+
+return $pict

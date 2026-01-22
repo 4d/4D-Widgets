@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingX": "fixed",
@@ -28,27 +28,27 @@
 					"left": 0,
 					"width": 60,
 					"height": 20,
-					"class": "Buttons_13",
 					"method": "ObjectMethods/Hours.4dm",
 					"events": [
 						"onClick",
 						"onDataChange"
 					],
-					"focusable": false
+					"focusable": false,
+					"textAlign": "center"
 				},
-				"Minuts": {
+				"Minutes": {
 					"type": "dropdown",
 					"top": 0,
 					"left": 70,
 					"width": 60,
 					"height": 20,
-					"class": "Buttons_13",
-					"method": "ObjectMethods/Minuts.4dm",
+					"method": "ObjectMethods/Minutes.4dm",
 					"events": [
 						"onClick",
 						"onDataChange"
 					],
-					"focusable": false
+					"focusable": false,
+					"textAlign": "center"
 				},
 				"Texte1": {
 					"type": "text",
@@ -120,15 +120,11 @@
 					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
 					"pictureFormat": "scaled",
 					"visibility": "hidden"
-				}
-			}
-		},
-		{
-			"objects": {
+				},
 				"FormInited": {
 					"type": "input",
-					"top": 7,
-					"left": 292,
+					"top": 11,
+					"left": 371,
 					"width": 150,
 					"height": 16,
 					"dataSourceTypeHint": "number",
@@ -140,12 +136,14 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"MinTime": {
 					"type": "input",
-					"top": 43,
-					"left": 292,
+					"top": 47,
+					"left": 371,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -158,12 +156,14 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"MaxTime": {
 					"type": "input",
-					"top": 43,
-					"left": 372,
+					"top": 47,
+					"left": 451,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -176,12 +176,14 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"Step": {
 					"type": "input",
-					"top": 70,
-					"left": 292,
+					"top": 74,
+					"left": 371,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -194,12 +196,14 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"AMlabel": {
 					"type": "input",
-					"top": 70,
-					"left": 372,
+					"top": 74,
+					"left": 451,
 					"width": 70,
 					"height": 16,
 					"class": "Default",
@@ -210,12 +214,14 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"PMlabel": {
 					"type": "input",
-					"top": 70,
-					"left": 458,
+					"top": 74,
+					"left": 537,
 					"width": 70,
 					"height": 16,
 					"class": "Default",
@@ -226,12 +232,14 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				},
 				"SelectedTime": {
 					"type": "input",
-					"top": 106,
-					"left": 292,
+					"top": 110,
+					"left": 371,
 					"width": 100,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -244,7 +252,9 @@
 					"dropping": "custom",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"visibility": "hidden",
+					"fill": "transparent"
 				}
 			}
 		}
@@ -254,15 +264,7 @@
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
-			"Vue 2": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 3": {
-				"visible": false,
-				"selectable": false
-			},
-			"Preview": {
+			"PREVIEW": {
 				"visible": false,
 				"objects": [
 					"Rectangle",
@@ -272,30 +274,10 @@
 					"Static Picture1",
 					"Static Picture2"
 				]
-			},
-			"Vue 5": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 6": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 7": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 8": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 9": {
-				"visible": false,
-				"selectable": false
 			}
 		}
 	},
-	"geometryStamp": 59,
+	"geometryStamp": 75,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

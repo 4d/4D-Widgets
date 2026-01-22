@@ -4,12 +4,12 @@
 $recalc:=Count parameters:C259>0 ? $recalc : True:C214  // True by default
 
 //----------------- GET POINTERS ON FORM OBJECTS --------------------------------------
-var $PtrHours:=OBJECT Get pointer:C1124(Object named:K67:5; "HoursEntry")
-var $PtrMinuts:=OBJECT Get pointer:C1124(Object named:K67:5; "MinutsEntry")
-var $PtrSeconds:=OBJECT Get pointer:C1124(Object named:K67:5; "SecondsEntry")
-var $PtrAmPm:=OBJECT Get pointer:C1124(Object named:K67:5; "AmPmEntry")
+var $PtrHours:=OBJECT Get pointer:C1124(Object named:K67:5; "hours")
+var $PtrMinutes:=OBJECT Get pointer:C1124(Object named:K67:5; "minutes")
+var $PtrSeconds:=OBJECT Get pointer:C1124(Object named:K67:5; "seconds")
+var $PtrAmPm:=OBJECT Get pointer:C1124(Object named:K67:5; "am_pm")
 
-If (Is nil pointer:C315($PtrHours) || Is nil pointer:C315($PtrMinuts) || Is nil pointer:C315($PtrSeconds))
+If (Is nil pointer:C315($PtrHours) || Is nil pointer:C315($PtrMinutes) || Is nil pointer:C315($PtrSeconds))
 	
 	// Generic call, do nothing
 	return 
@@ -42,7 +42,7 @@ TimePicker__GetTimeMax(->$maxTime; "")
 var $time:=?00:00:00?
 If ($recalc)
 	
-	$time:=(3600*Num:C11($PtrHours->))+(60*Num:C11($PtrMinuts->))+Num:C11($PtrSeconds->)
+	$time:=(3600*Num:C11($PtrHours->))+(60*Num:C11($PtrMinutes->))+Num:C11($PtrSeconds->)
 	
 	If ($mode=1)  // 12:00:00 PM
 		
@@ -113,7 +113,7 @@ Else   // 12 hours am/pm mode
 	End case 
 End if 
 
-$PtrMinuts->:=String:C10($m; "00")
+$PtrMinutes->:=String:C10($m; "00")
 $PtrSeconds->:=String:C10($s; "00")
 
 

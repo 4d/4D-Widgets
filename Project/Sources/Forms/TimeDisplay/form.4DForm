@@ -1,4 +1,4 @@
-﻿{
+{
 	"shared": true,
 	"windowMaxWidth": 32000,
 	"windowMaxHeight": 32000,
@@ -52,20 +52,18 @@
 					"pictureFormat": "scaled",
 					"picture": "Images/Preview.png"
 				},
-				"clockDisplaySecondHand": {
+				"withSeconds": {
 					"type": "input",
-					"top": 60,
-					"left": 519,
-					"width": 181,
+					"top": 58,
+					"left": 155,
+					"width": 121,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
 					"sizingY": "move",
-					"stroke": "#FFFFFF",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
@@ -78,22 +76,21 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"dataSourceTypeHint": "boolean"
 				},
-				"clockRebuild": {
+				"redraw": {
 					"type": "input",
-					"top": 24,
-					"left": 519,
-					"width": 181,
+					"top": 22,
+					"left": 155,
+					"width": 121,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
 					"sizingY": "move",
-					"stroke": "#EE0000",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
@@ -106,7 +103,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"dataSourceTypeHint": "boolean"
 				}
 			}
 		}
@@ -117,14 +115,15 @@
 		"views": {
 			"Vue 1": {},
 			"Vue 2": {
+				"visible": false,
 				"objects": [
 					"Picture2"
 				]
 			},
 			"Vue 3": {
 				"objects": [
-					"clockDisplaySecondHand",
-					"clockRebuild"
+					"withSeconds",
+					"redraw"
 				]
 			},
 			"Vue 4": {},
@@ -139,5 +138,5 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 51
+	"geometryStamp": 57
 }

@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"width": 256,
@@ -21,20 +21,18 @@
 		null,
 		{
 			"objects": {
-				"lcdDisplayAmPm": {
+				"withAMPM": {
 					"type": "input",
-					"top": 626,
-					"left": 1218,
+					"top": 47,
+					"left": 330,
 					"width": 141,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
 					"sizingY": "move",
-					"stroke": "#FFFFFF",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
@@ -47,22 +45,21 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"dataSourceTypeHint": "boolean"
 				},
-				"lcdDisplaySeconds": {
+				"withSeconds": {
 					"type": "input",
-					"top": 650,
-					"left": 1218,
+					"top": 71,
+					"left": 330,
 					"width": 131,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
 					"sizingY": "move",
-					"stroke": "#FFFFFF",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
@@ -75,22 +72,21 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"dataSourceTypeHint": "boolean"
 				},
-				"lcdDisplayColor": {
+				"color": {
 					"type": "input",
-					"top": 579,
-					"left": 1218,
+					"top": 0,
+					"left": 330,
 					"width": 111,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
 					"sizingY": "move",
-					"stroke": "#EE0000",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
@@ -132,21 +128,19 @@
 					"pictureFormat": "truncatedTopLeft",
 					"picture": "Images/Preview.png"
 				},
-				"lcdDisplayMode": {
+				"mode": {
 					"type": "input",
-					"top": 674,
-					"left": 1218,
+					"top": 95,
+					"left": 330,
 					"width": 121,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
 					"sizingY": "move",
 					"dataSourceTypeHint": "number",
-					"stroke": "#FFFFFF",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
@@ -161,20 +155,18 @@
 						"onPrintingDetail"
 					]
 				},
-				"lcdRebuild": {
+				"redraw": {
 					"type": "input",
-					"top": 602,
-					"left": 1218,
+					"top": 23,
+					"left": 330,
 					"width": 121,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
 					"sizingY": "move",
-					"stroke": "#EE0000",
 					"textAlign": "left",
 					"focusable": false,
 					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"dragging": "none",
@@ -187,7 +179,8 @@
 						"onDisplayDetail",
 						"onDataChange",
 						"onPrintingDetail"
-					]
+					],
+					"dataSourceTypeHint": "boolean"
 				}
 			}
 		}
@@ -204,11 +197,11 @@
 			},
 			"View 3": {
 				"objects": [
-					"lcdDisplayAmPm",
-					"lcdDisplaySeconds",
-					"lcdDisplayColor",
-					"lcdDisplayMode",
-					"lcdRebuild"
+					"withAMPM",
+					"withSeconds",
+					"color",
+					"mode",
+					"redraw"
 				]
 			},
 			"View 4": {
@@ -225,5 +218,5 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 4
+	"geometryStamp": 11
 }

@@ -17,7 +17,8 @@ End case
 OBJECT SET VISIBLE:C603(*; "FocusRing@"; $Visible)
 OBJECT SET VISIBLE:C603(*; "bRuler@"; $Visible)
 OBJECT SET VISIBLE:C603(*; "bTinyCalendar@"; $Visible)
-OBJECT SET VISIBLE:C603(*; "bUp@"; $Visible)
-OBJECT SET VISIBLE:C603(*; "bDown@"; $Visible)
+OBJECT SET VISIBLE:C603(*; "up"; $Visible)
+OBJECT SET VISIBLE:C603(*; "down"; $Visible)
+OBJECT SET VISIBLE:C603(*; "stepper"; $Visible)
 
 

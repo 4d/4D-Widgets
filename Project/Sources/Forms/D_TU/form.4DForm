@@ -76,7 +76,7 @@
 				},
 				"Input2": {
 					"type": "input",
-					"left": 227,
+					"left": 99,
 					"top": 131,
 					"width": 132,
 					"height": 17,
@@ -468,11 +468,27 @@
 					"height": 17,
 					"dataSource": "Form:C1466.startDate",
 					"dataSourceTypeHint": "date"
+				},
+				"Line": {
+					"type": "line",
+					"top": 314,
+					"left": 21,
+					"width": 716,
+					"height": 0,
+					"stroke": "#ff0000"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 19,
+					"left": 744,
+					"width": 0,
+					"height": 664,
+					"stroke": "#ff0000"
 				}
 			}
 		}
 	],
-	"geometryStamp": 418,
+	"geometryStamp": 423,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

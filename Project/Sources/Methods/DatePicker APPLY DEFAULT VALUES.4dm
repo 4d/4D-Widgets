@@ -3,24 +3,24 @@
 
 var $1 : Text  //destination form (MUST be provided)
 
-var $Form : Text
+var $form : Text
 var $ErrorText : Text
 
 If (Count parameters:C259=1)
 	
 	If (Type:C295($1)=Is text:K8:3)
-		$Form:=$1
+		$form:=$1
 		
 		DatePicker__InitInter  //just in case a "DISPOSE had been called before
 		
-		DatePicker SET MIN DATE($Form; <>DatePicker_DateMin)
-		DatePicker SET MAX DATE($Form; <>DatePicker_DateMax)
-		DatePicker SET WEEK FIRST DAY($Form; <>DatePicker_FirstDayOfWeek)
-		DatePicker SET DAYS OFF($Form; 0; -><>_DatePicker_DaysOff0)
-		DatePicker SET DAYS OFF($Form; 1; -><>_DatePicker_DaysOff1)
-		DatePicker SET DAYS OFF($Form; 2; -><>_DatePicker_DaysOff2)
+		DatePicker SET MIN DATE($form; <>DatePicker_DateMin)
+		DatePicker SET MAX DATE($form; <>DatePicker_DateMax)
+		DatePicker SET WEEK FIRST DAY($form; <>DatePicker_FirstDayOfWeek)
+		DatePicker SET DAYS OFF($form; 0; -><>_DatePicker_DaysOff0)
+		DatePicker SET DAYS OFF($form; 1; -><>_DatePicker_DaysOff1)
+		DatePicker SET DAYS OFF($form; 2; -><>_DatePicker_DaysOff2)
 		
-		EXECUTE METHOD IN SUBFORM:C1085($Form; "DatePicker__RedrawCalendar")
+		EXECUTE METHOD IN SUBFORM:C1085($form; "DatePicker__RedrawCalendar")
 		
 	Else 
 		

@@ -6,7 +6,7 @@ var $2 : Integer  //number of the day (as contant like monday)
 var $FirstDayOfWeek : Integer
 var $FirstDisplayedDay : Date
 
-var $Form : Text
+var $form : Text
 var $ErrorText : Text
 
 DatePicker__InitInter
@@ -15,27 +15,27 @@ DatePicker__InitInter
 If (Count parameters:C259=2)
 	
 	If (Type:C295($1)=Is text:K8:3)
-		$Form:=$1
+		$form:=$1
 		
 		If (Type:C295($2)=Is longint:K8:6)
 			$FirstDayOfWeek:=$2
 			
 			If ($FirstDayOfWeek>=1) & ($FirstDayOfWeek<=7)
 				
-				Tool_VarToObject(->$FirstDayOfWeek; "FirstDayOfWeek"; $Form)  //specific form
+				Tool_VarToObject(->$FirstDayOfWeek; "FirstDayOfWeek"; $form)  //specific form
 				
 				//loads the 1st day currently displayed
-				Tool_ObjectToVar("FirstDisplayedDay"; ->$FirstDisplayedDay; $Form)
+				Tool_ObjectToVar("FirstDisplayedDay"; ->$FirstDisplayedDay; $form)
 				
 				If ($FirstDisplayedDay=!00-00-00!)
 					$FirstDisplayedDay:=Current date:C33
 				End if 
 				
 				$FirstDisplayedDay:=Add to date:C393($FirstDisplayedDay; 0; 0; 15)
-				DatePicker__CalculateFirstDay($FirstDisplayedDay; $Form)
+				DatePicker__CalculateFirstDay($FirstDisplayedDay; $form)
 				
-				If ($Form#"")
-					EXECUTE METHOD IN SUBFORM:C1085($Form; "DatePicker__RedrawCalendar")
+				If ($form#"")
+					EXECUTE METHOD IN SUBFORM:C1085($form; "DatePicker__RedrawCalendar")
 				End if 
 				
 			Else 
