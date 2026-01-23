@@ -1,0 +1,1 @@
+TimePicker LCD DISPLAY SECONDS("LCD"; Bool:C1537(OBJECT Get value:C1743(OBJECT Get name:C1087)))

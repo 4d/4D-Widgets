@@ -1,0 +1,4 @@
+TimePicker RESET DEFAULT VALUES
+
+TimePicker APPLY DEFAULT VALUES("timePickerOne")
+TimePicker APPLY DEFAULT VALUES("timePickerOneAMPM")

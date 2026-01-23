@@ -12,21 +12,7 @@
 	"rightMargin": 20,
 	"bottomMargin": 20,
 	"events": [
-		"onLoad",
-		"onPageChange",
-		"onValidate",
-		"onClick",
-		"onDoubleClick",
-		"onOutsideCall",
-		"onBeginDragOver",
-		"onDragOver",
-		"onDrop",
-		"onAfterKeystroke",
-		"onMenuSelect",
-		"onPluginArea",
-		"onAfterEdit",
-		"onTimer",
-		"onBoundVariableChange"
+		"onLoad"
 	],
 	"windowTitle": "window title",
 	"destination": "detailScreen",
@@ -36,16 +22,177 @@
 		},
 		{
 			"objects": {
+				"LCD": {
+					"type": "subform",
+					"left": 356,
+					"top": 27,
+					"width": 279,
+					"height": 59,
+					"detailForm": "TimeDisplayLCD"
+				},
+				"clock": {
+					"type": "subform",
+					"left": 14,
+					"top": 13,
+					"width": 200,
+					"height": 200,
+					"detailForm": "TimeDisplay",
+					"dataSourceTypeHint": "number"
+				},
+				"secondHand": {
+					"type": "checkbox",
+					"text": "Second Hand",
+					"top": 252,
+					"left": 14,
+					"width": 139,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/secondHand.4dm",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"Button": {
+					"type": "button",
+					"text": "Reset",
+					"top": 493,
+					"left": 500,
+					"width": 135,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"timePickerOne": {
+					"type": "subform",
+					"left": 14,
+					"top": 327,
+					"width": 84,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "Min",
+					"top": 324,
+					"left": 118,
+					"width": 80,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"timePickerOneAMPM": {
+					"type": "subform",
+					"left": 14,
+					"top": 374,
+					"width": 112,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1_AM"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Min",
+					"top": 374,
+					"left": 146,
+					"width": 80,
+					"height": 22,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "Color",
+					"top": 106,
+					"left": 356,
+					"width": 82,
+					"height": 30,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm",
+					"focusable": false
+				},
+				"mode": {
+					"type": "checkbox",
+					"text": "24h",
+					"top": 111,
+					"left": 458,
+					"width": 58,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/mode.4dm",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"ampm": {
+					"type": "checkbox",
+					"text": "AM/PM",
+					"top": 111,
+					"left": 536,
+					"width": 75,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/ampm.4dm",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"seconds": {
+					"type": "checkbox",
+					"text": "Seconds",
+					"top": 136,
+					"left": 536,
+					"width": 75,
+					"height": 20,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/seconds.4dm",
+					"dataSourceTypeHint": "boolean",
+					"focusable": false
+				},
+				"Line": {
+					"type": "line",
+					"top": 294,
+					"left": 11,
+					"width": 624,
+					"height": 0
+				},
 				"Subform": {
 					"type": "subform",
-					"left": 51,
-					"top": 108,
-					"width": 438,
-					"height": 95,
-					"detailForm": "TimeDisplayLCD"
+					"left": 14,
+					"top": 421,
+					"width": 134,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2"
+				},
+				"Subform1": {
+					"type": "subform",
+					"left": 14,
+					"top": 469,
+					"width": 155,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2_AM"
 				}
 			}
 		}
 	],
-	"geometryStamp": 2
+	"geometryStamp": 118,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	},
+	"method": "method.4dm"
 }
