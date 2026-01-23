@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true}
-#DECLARE($clock : Text; $time : Time; $blink : Boolean; $mode : Integer; $format : Boolean)
+#DECLARE($clock : Text; $time : Time; $blink : Boolean; $mode : Integer; $withAmPm : Boolean)
 
 var $hours : Integer:=$time\3600
 $time:=$time-($hours*3600)
@@ -9,7 +9,7 @@ $time:=$time-($minutes*60)
 
 var $seconds : Integer:=$time+0
 
-var $AmPm:=$format ? ($hours<12 ? "AM" : "PM") : ""
+var $AmPm:=$withAmPm ? ($hours<12 ? "AM" : "PM") : ""
 
 If ($mode=12)
 	
@@ -156,32 +156,32 @@ $decoder{12}{8}:=1
 var $digit : Integer
 For ($digit; 1; Length:C16($timeString); 1)
 	
-	var $Value_t : Text:=$timeString[[$digit]]
+	var $t : Text:=$timeString[[$digit]]
 	
 	Case of 
 			
-			//________________________________________________________________________________
-		: ($Value_t>="0")\
-			 & ($Value_t<="9")
+			//----------------------------------
+		: ($t>="0")\
+			 & ($t<="9")
 			
-			var $indx : Integer:=Num:C11($Value_t)
+			var $indx : Integer:=Num:C11($t)
 			
-			//________________________________________________________________________________
-		: ($Value_t="A")
+			//----------------------------------
+		: ($t="A")
 			
 			$indx:=10
 			
-			//________________________________________________________________________________
-		: ($Value_t="P")
+			//----------------------------------
+		: ($t="P")
 			
 			$indx:=11
 			
-			//________________________________________________________________________________
-		: ($Value_t="M")
+			//----------------------------------
+		: ($t="M")
 			
 			$indx:=12
 			
-			//________________________________________________________________________________
+			//----------------------------------
 	End case 
 	
 	var $segment : Integer

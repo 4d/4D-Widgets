@@ -26,7 +26,9 @@ If (Type:C295($1)=Is pointer:K8:14)
 				$sourceDaysOff:=-><>_DatePicker_DaysOff0
 			End if 
 			
+			//%W-518.1
 			COPY ARRAY:C226($sourceDaysOff->; $targetDaysOff->)
+			//%W+518.1
 			
 		End if 
 	End if 

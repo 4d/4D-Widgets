@@ -21,7 +21,38 @@
 		"paperHeight": "842pt"
 	},
 	"pages": [
-		null,
+		{
+			"objects": {
+				"up": {
+					"type": "button",
+					"top": 0,
+					"left": 464,
+					"width": 20,
+					"height": 12,
+					"shortcutKey": "[up arrow]",
+					"display": false,
+					"method": "ObjectMethods/up.4dm",
+					"events": [
+						"onClick"
+					],
+					"focusable": false
+				},
+				"down": {
+					"type": "button",
+					"top": 12,
+					"left": 464,
+					"width": 20,
+					"height": 12,
+					"shortcutKey": "[down arrow]",
+					"display": false,
+					"method": "ObjectMethods/down.4dm",
+					"events": [
+						"onClick"
+					],
+					"focusable": false
+				}
+			}
+		},
 		{
 			"objects": {
 				"FocusRingBackGround": {
@@ -53,34 +84,6 @@
 					"class": "Default",
 					"textAlign": "center",
 					"text": ":"
-				},
-				"up": {
-					"type": "button",
-					"top": 118,
-					"left": 299,
-					"width": 20,
-					"height": 12,
-					"shortcutKey": "[up arrow]",
-					"display": false,
-					"method": "ObjectMethods/up.4dm",
-					"events": [
-						"onClick"
-					],
-					"focusable": false
-				},
-				"down": {
-					"type": "button",
-					"top": 130,
-					"left": 299,
-					"width": 20,
-					"height": 12,
-					"shortcutKey": "[down arrow]",
-					"display": false,
-					"method": "ObjectMethods/down.4dm",
-					"events": [
-						"onClick"
-					],
-					"focusable": false
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -181,11 +184,21 @@
 					"class": "Default",
 					"textAlign": "center",
 					"text": "00:00:00"
-				},
+				}
+			},
+			"entryOrder": [
+				"hours",
+				"minutes",
+				"seconds",
+				"stepper"
+			]
+		},
+		{
+			"objects": {
 				"FormInited": {
 					"type": "input",
-					"top": 4,
-					"left": 293,
+					"top": 31,
+					"left": 465,
 					"width": 150,
 					"height": 16,
 					"dataSourceTypeHint": "number",
@@ -202,8 +215,8 @@
 				},
 				"MinTime": {
 					"type": "input",
-					"top": 28,
-					"left": 293,
+					"top": 55,
+					"left": 465,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -221,8 +234,8 @@
 				},
 				"MaxTime": {
 					"type": "input",
-					"top": 28,
-					"left": 373,
+					"top": 55,
+					"left": 545,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -240,8 +253,8 @@
 				},
 				"Step": {
 					"type": "input",
-					"top": 55,
-					"left": 293,
+					"top": 82,
+					"left": 465,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -259,8 +272,8 @@
 				},
 				"AMlabel": {
 					"type": "input",
-					"top": 55,
-					"left": 373,
+					"top": 82,
+					"left": 545,
 					"width": 30,
 					"height": 16,
 					"contextMenu": "none",
@@ -276,8 +289,8 @@
 				},
 				"PMlabel": {
 					"type": "input",
-					"top": 55,
-					"left": 413,
+					"top": 82,
+					"left": 585,
 					"width": 30,
 					"height": 16,
 					"contextMenu": "none",
@@ -293,8 +306,8 @@
 				},
 				"SelectedTime": {
 					"type": "input",
-					"top": 82,
-					"left": 293,
+					"top": 109,
+					"left": 465,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -310,22 +323,7 @@
 					"enterable": false,
 					"fill": "transparent"
 				}
-			},
-			"entryOrder": [
-				"hours",
-				"minutes",
-				"seconds",
-				"stepper",
-				"FormInited",
-				"MinTime",
-				"MaxTime",
-				"Step",
-				"AMlabel",
-				"PMlabel",
-				"SelectedTime",
-				"up",
-				"down"
-			]
+			}
 		}
 	],
 	"editor": {
@@ -334,7 +332,6 @@
 		"views": {
 			"View 1": {},
 			"PREVIEW": {
-				"visible": false,
 				"selectable": false,
 				"objects": [
 					"Rectangle",
@@ -347,5 +344,5 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 55
+	"geometryStamp": 71
 }

@@ -34,7 +34,9 @@ If (Count parameters:C259=2)
 						If (Type:C295($ptrArray->)=Boolean array:K8:21)
 							If (Size of array:C274($ptrArray->)=7)
 								$Error:=False:C215
+								//%W-518.1
 								COPY ARRAY:C226($ptrArray->; <>_DatePicker_DaysOff0)
+								//%W+518.1
 							End if 
 						End if 
 					End if 
@@ -55,13 +57,17 @@ If (Count parameters:C259=2)
 							
 							Case of 
 								: ($selector=1)  //repeated every year
+									//%W-518.1
 									COPY ARRAY:C226($ptrArray->; <>_DatePicker_DaysOff1)
+									//%W+518.1
 									$n:=Size of array:C274(<>_DatePicker_DaysOff1)
 									For ($i; 1; $n)  //reformat for year 2000 (quick code later)
 										<>_DatePicker_DaysOff1{$i}:=Add to date:C393(!00-00-00!; 2000; Month of:C24(<>_DatePicker_DaysOff1{$i}); Day of:C23(<>_DatePicker_DaysOff1{$i}))
 									End for 
 								: ($selector=2)  //only once
+									//%W-518.1
 									COPY ARRAY:C226($ptrArray->; <>_DatePicker_DaysOff2)
+									//%W+518.1
 							End case 
 							
 						End if 

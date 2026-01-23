@@ -41,7 +41,9 @@ If (Count parameters:C259=3)
 									$Ptr_WeeklyDaysoff:=OBJECT Get pointer:C1124(Object named:K67:5; "_WeeklyDaysOff"; $form)
 									
 									If (Not:C34(Is nil pointer:C315($Ptr_WeeklyDaysoff)))
+										//%W-518.1
 										COPY ARRAY:C226($ptrArray->; $Ptr_WeeklyDaysoff->)
+										//%W+518.1
 									Else 
 										// this should NEVER happend
 										//ALERT("“_WeeklyDaysOff” Object not found")
@@ -70,7 +72,9 @@ If (Count parameters:C259=3)
 									: ($selector=1)  //repeated every year
 										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff1"; $form)
 										If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
+											//%W-518.1
 											COPY ARRAY:C226($ptrArray->; $PtrLocalArray->)
+											//%W+518.1
 											$n:=Size of array:C274($PtrLocalArray->)  //reformat for year 2000 (quick code later)
 											For ($i; 1; $n)
 												$PtrLocalArray->{$i}:=Add to date:C393(!00-00-00!; 2000; Month of:C24($PtrLocalArray->{$i}); Day of:C23($PtrLocalArray->{$i}))
@@ -79,7 +83,9 @@ If (Count parameters:C259=3)
 									: ($selector=2)  //only once
 										$PtrLocalArray:=OBJECT Get pointer:C1124(Object named:K67:5; "_DaysOff2"; $form)
 										If (Not:C34(Is nil pointer:C315($PtrLocalArray)))
+											//%W-518.1
 											COPY ARRAY:C226($ptrArray->; $PtrLocalArray->)
+											//%W+518.1
 										End if 
 								End case 
 								

@@ -17,8 +17,9 @@ Case of
 		//__________________________________________________________________________________
 	: ($e.code=On Load:K2:1)
 		
-		OBJECT SET VALUE:C1742("redraw"; False:C215)
+		// Default values
 		OBJECT SET VALUE:C1742("withSeconds"; True:C214)
+		OBJECT SET VALUE:C1742("redraw"; False:C215)
 		
 		var $file:=File:C1566("/RESOURCES/clock.svg"; *)
 		
@@ -119,6 +120,7 @@ Case of
 		
 		SET TIMER:C645(0)
 		
+		// Resize to fit the container
 		OBJECT GET SUBFORM CONTAINER SIZE:C1148($width; $height)
 		OBJECT MOVE:C664(*; "gClock"; 1; 1; $width-1; $height-1; *)
 		
@@ -126,8 +128,6 @@ Case of
 			
 			SVG SET ATTRIBUTE:C1055(*; "gClock"; "seconds-hand"; "visibility"; OBJECT Get value:C1743("withSeconds") ? "visible" : "hidden")
 			OBJECT SET VALUE:C1742("redraw"; False:C215)  // Done
-			
-			return 
 			
 		End if 
 		
@@ -143,7 +143,7 @@ Case of
 				 || ($variant=Null:C1517)
 				
 				$AutoRun:=True:C214
-				var $offset : Time:=$variant
+				var $offset : Time:=$variant#Null:C1517 ? $variant : ?00:00:00?
 				var $currentTime : Time:=Current time:C178+$offset
 				$currentTime:=$currentTime>?24:00:00? ? $currentTime-?24:00:00? : $currentTime
 				
@@ -169,24 +169,24 @@ Case of
 		var $hourAngle:=(($hours_r-(12*Num:C11($hours_r>12)))*30)+180
 		
 		// Modifie the rotation of the 3 hands : according to the user value of cx cy if any
-		var $cx_r; $cy_r : Real
-		SVG GET ATTRIBUTE:C1056(*; "gClock"; "seconds-hand"; "d4:cx"; $cx_r)
-		SVG GET ATTRIBUTE:C1056(*; "gClock"; "seconds-hand"; "d4:cy"; $cy_r)
-		$cx_r:=Choose:C955($cx_r=0; 200; $cx_r)
-		$cy_r:=Choose:C955($cy_r=0; 200; $cy_r)
-		SVG SET ATTRIBUTE:C1055(*; "gClock"; "seconds-hand"; "transform"; "rotate("+String:C10($secondAngle; "&xml")+","+String:C10($cx_r; "&xml")+","+String:C10($cy_r; "&xml")+")")
+		var $cx; $cy : Real
+		SVG GET ATTRIBUTE:C1056(*; "gClock"; "seconds-hand"; "d4:cx"; $cx)
+		SVG GET ATTRIBUTE:C1056(*; "gClock"; "seconds-hand"; "d4:cy"; $cy)
+		$cx:=$cx=0 ? 200 : $cx
+		$cy:=$cy=0 ? 200 : $cy
+		SVG SET ATTRIBUTE:C1055(*; "gClock"; "seconds-hand"; "transform"; "rotate("+String:C10($secondAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
 		
-		SVG GET ATTRIBUTE:C1056(*; "gClock"; "minutes-hand"; "d4:cx"; $cx_r)
-		SVG GET ATTRIBUTE:C1056(*; "gClock"; "minutes-hand"; "d4:cy"; $cy_r)
-		$cx_r:=Choose:C955($cx_r=0; 200; $cx_r)
-		$cy_r:=Choose:C955($cy_r=0; 200; $cy_r)
-		SVG SET ATTRIBUTE:C1055(*; "gClock"; "minutes-hand"; "transform"; "rotate("+String:C10($minuteAngle; "&xml")+","+String:C10($cx_r; "&xml")+","+String:C10($cy_r; "&xml")+")")
+		SVG GET ATTRIBUTE:C1056(*; "gClock"; "minutes-hand"; "d4:cx"; $cx)
+		SVG GET ATTRIBUTE:C1056(*; "gClock"; "minutes-hand"; "d4:cy"; $cy)
+		$cx:=$cx=0 ? 200 : $cx
+		$cy:=$cy=0 ? 200 : $cy
+		SVG SET ATTRIBUTE:C1055(*; "gClock"; "minutes-hand"; "transform"; "rotate("+String:C10($minuteAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
 		
-		SVG GET ATTRIBUTE:C1056(*; "gClock"; "hours-hand"; "d4:cx"; $cx_r)
-		SVG GET ATTRIBUTE:C1056(*; "gClock"; "hours-hand"; "d4:cy"; $cy_r)
-		$cx_r:=Choose:C955($cx_r=0; 200; $cx_r)
-		$cy_r:=Choose:C955($cy_r=0; 200; $cy_r)
-		SVG SET ATTRIBUTE:C1055(*; "gClock"; "hours-hand"; "transform"; "rotate("+String:C10($hourAngle; "&xml")+","+String:C10($cx_r; "&xml")+","+String:C10($cy_r; "&xml")+")")
+		SVG GET ATTRIBUTE:C1056(*; "gClock"; "hours-hand"; "d4:cx"; $cx)
+		SVG GET ATTRIBUTE:C1056(*; "gClock"; "hours-hand"; "d4:cy"; $cy)
+		$cx:=$cx=0 ? 200 : $cx
+		$cy:=$cy=0 ? 200 : $cy
+		SVG SET ATTRIBUTE:C1055(*; "gClock"; "hours-hand"; "transform"; "rotate("+String:C10($hourAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
 		
 		// Set the background according to the daylight if any
 		If ($currentTime>=?08:00:00?)\

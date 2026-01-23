@@ -9,7 +9,7 @@ Case of
 		TimePicker__InitForm
 		
 		var $CurrentTime : Time:=TimePicker__GetTarget
-		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime)
 		TimePicker__DisplayTimeInputs(False:C215)
 		
 		OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
@@ -18,7 +18,7 @@ Case of
 	: (Form event code:C388=On Bound Variable Change:K2:52)
 		
 		$CurrentTime:=TimePicker__GetTarget
-		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime)
 		TimePicker__DisplayTimeInputs(False:C215)
 		
 		//________________________________________________________________________________

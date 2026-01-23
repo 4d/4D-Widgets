@@ -25,15 +25,12 @@ If ($NbPopup=0)
 	
 End if 
 
-//----------------- RÉCUPÉRATION DESCONTRAINTES --------------------------------------
-var $minTime; $maxTime; $step : Time
-TimePicker__GetTimeMin(->$minTime)
-TimePicker__GetTimeMax(->$maxTime)
-TimePicker__GetStep(->$step)
+//----------------- RÉCUPÉRATION DES CONTRAINTES --------------------------------------
+var $minTime : Time:=objectGetValue("MinTime")
+var $maxTime : Time:=objectGetValue("MaxTime") || <>TimePicker_TimeMax
+var $step : Time:=TimePicker__GetStep
 
 //----------------- RECALCUL (OU NON) DE L'HEURE SAISIE --------------------------------------
-var $time:=?00:00:00?
-
 If ($recalc)
 	
 	Case of 
@@ -58,7 +55,7 @@ If ($recalc)
 	
 Else 
 	
-	TimePicker__GetSelectedTime(->$time)
+	var $time:=TimePicker__GetSelectedTime
 	
 End if 
 
@@ -83,7 +80,6 @@ End case
 
 // ---------------------- RÉAFFECTATION DANS LES POPUPS DE SAISIE ----------------------------
 var $safety : Integer
-var $Exit : Boolean
 
 Repeat 
 	
@@ -177,4 +173,4 @@ Repeat
 	End case 
 Until ($safety>10)
 
-$time:=TimePicker__SetSelectedTime($time; "")
+$time:=TimePicker__SetSelectedTime($time)

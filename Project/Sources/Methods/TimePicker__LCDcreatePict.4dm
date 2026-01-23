@@ -1,10 +1,14 @@
 //%attributes = {"invisible":true}
 #DECLARE($withSeconds : Boolean; $withAmPm : Boolean) : Picture
 
-$withSeconds:=Count parameters:C259>=2 ? $withSeconds : True:C214
-$withAmPm:=Count parameters:C259>=3 ? $withAmPm : True:C214
+$withSeconds:=Count parameters:C259>=1 ? $withSeconds : True:C214
+$withAmPm:=Count parameters:C259>=2 ? $withAmPm : True:C214
 
-SVG_SET_OPTIONS(SVG_Get_options ?+ 5)
+If (Not:C34(Is compiled mode:C492))
+	
+	SVG_SET_OPTIONS(SVG_Get_options ?+ 5)
+	
+End if 
 
 Case of 
 		

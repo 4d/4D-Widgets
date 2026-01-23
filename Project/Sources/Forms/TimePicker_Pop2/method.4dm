@@ -13,14 +13,14 @@ Case of
 		TimePicker__BuildPopup
 		
 		var $CurrentTime : Time:=TimePicker__GetTarget
-		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime)
 		TimePicker__DisplayTimePopups(False:C215)
 		
 		//________________________________________________________________________________
 	: (Form event code:C388=On Bound Variable Change:K2:52)
 		
 		$CurrentTime:=TimePicker__GetTarget
-		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime)
 		TimePicker__DisplayTimePopups(False:C215)
 		
 		//________________________________________________________________________________

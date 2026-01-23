@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true}
-#DECLARE($form : Text; $minTime : Time)
+#DECLARE($widget : Text; $time : Time)
 
 If (Count parameters:C259<2)
 	
@@ -12,20 +12,16 @@ End if
 TimePicker__InitInter
 
 // Get the max time of the form
-var $maxTime : Time
-Tool_ObjectToVar("MaxTime"; ->$maxTime; $form)
+var $maxTime : Time:=objectGetValue("MaxTime"; $widget)
 
 // Then set the min time only if <= to maxtime
-If (($minTime<=$maxTime)\
- | ($maxTime=?00:00:00?))
+If (($time<=$maxTime)\
+ || ($maxTime=?00:00:00?))
 	
-	Tool_VarToObject(->$minTime; "MinTime"; $form)
+	objectSetValue("MinTime"; $time; $widget)
 	
-	If (Length:C16($form)#0)
-		
-		EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__BuildPopup))  // If no popup in form does nothing
-		EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
-		EXECUTE METHOD IN SUBFORM:C1085($form; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
-		
-	End if 
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__BuildPopup))  // If no popup in form does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
+	
 End if 

@@ -1,9 +1,10 @@
 //%attributes = {"invisible":true,"shared":true}
-#DECLARE($subFormName : Text; $red : Integer; $green : Integer; $blue : Integer)
+#DECLARE($widget : Text; $red : Integer; $green : Integer; $blue : Integer)
 
 If (Count parameters:C259<2)
 	
 	ALERT:C41(Replace string:C233(Localized string:C991("Errors_IncorrectParamNumbers"); "[1]"; Current method name:C684))
+	
 	return 
 	
 End if 
@@ -18,4 +19,4 @@ If (Count parameters:C259=2)
 End if 
 
 var $rgb:="rgb("+String:C10($red)+","+String:C10($green)+","+String:C10($blue)+")"
-EXECUTE METHOD IN SUBFORM:C1085($subFormName; Formula:C1597(TimePicker__LCD SET COLOR); *; $rgb)
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(OBJECT SET VALUE:C1742("color"; $rgb)))

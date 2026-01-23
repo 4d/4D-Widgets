@@ -16,30 +16,16 @@ If (Is nil pointer:C315($PtrHours) || Is nil pointer:C315($PtrMinutes) || Is nil
 	
 End if 
 
-var $AMlabel:=""
-var $PMlabel:=""
-var $mode : Integer:=0
+var $AMlabel : Text:=TimePicker__GetLabelAM  // Local label or default label
+var $PMlabel : Text:=TimePicker__GetLabelPM  // Local label or default label
 
-If (Not:C34(Is nil pointer:C315($PtrAmPm)))
-	
-	$PtrAmPm->:=""
-	TimePicker__GetLabelAM(->$AMlabel; "")
-	TimePicker__GetLabelPM(->$PMlabel; "")
-	
-	If ($AMlabel#"")\
-		 || ($PMlabel#"")  // One or the other must contain something to draw in 12 hours mode
-		
-		$mode:=1
-		
-	End if 
-End if 
+// One or the other must contain something to draw in 12 hours mode
+var $mode : Integer:=Num:C11(Length:C16($AMlabel+$PMlabel))
 
-var $minTime; $maxTime : Time
-TimePicker__GetTimeMin(->$minTime; "")
-TimePicker__GetTimeMax(->$maxTime; "")
+var $minTime : Time:=objectGetValue("MinTime")
+var $maxTime : Time:=objectGetValue("MaxTime") || <>TimePicker_TimeMax
 
 //----------------- RECALCULATION (OR NOT) OF THE ENTERED DATE --------------------------------------
-var $time:=?00:00:00?
 If ($recalc)
 	
 	$time:=(3600*Num:C11($PtrHours->))+(60*Num:C11($PtrMinutes->))+Num:C11($PtrSeconds->)
@@ -47,9 +33,8 @@ If ($recalc)
 	If ($mode=1)  // 12:00:00 PM
 		
 		If ($PtrAmPm->=$PMlabel)\
-			 & ($time<?13:00:00?)\
-			 & (($time+(12*3600))<=($maxTime+0))  // If label = PM
-			
+			 && ($time<?13:00:00?)\
+			 && (($time+(12*3600))<=($maxTime+0))  // If label = PM
 			
 			$time:=$time+(12*3600)  // ADD 12 hours to time (11 = 23)
 			
@@ -58,7 +43,7 @@ If ($recalc)
 	
 Else 
 	
-	TimePicker__GetSelectedTime(->$time)
+	var $time:=TimePicker__GetSelectedTime
 	
 End if 
 
@@ -117,4 +102,4 @@ $PtrMinutes->:=String:C10($m; "00")
 $PtrSeconds->:=String:C10($s; "00")
 
 
-$time:=TimePicker__SetSelectedTime($time; "")
+$time:=TimePicker__SetSelectedTime($time)

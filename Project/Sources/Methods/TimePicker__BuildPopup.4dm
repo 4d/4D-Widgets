@@ -1,15 +1,11 @@
 //%attributes = {"invisible":true}
-var $minTime : Time
-var $maxTime : Time
-var $step : Time
-TimePicker__GetTimeMin(->$minTime)
-TimePicker__GetTimeMax(->$maxTime)
-TimePicker__GetStep(->$step)
 
-var $AMlabel : Text
-var $PMlabel : Text
-TimePicker__GetLabelAM(->$AMlabel)  // Local label or default label
-TimePicker__GetLabelPM(->$PMlabel)  // Local label or default label
+var $minTime : Time:=objectGetValue("MinTime")
+var $maxTime : Time:=objectGetValue("MaxTime") || <>TimePicker_TimeMax
+var $step : Time:=TimePicker__GetStep
+
+var $AMlabel : Text:=TimePicker__GetLabelAM  // Local label or default label
+var $PMlabel : Text:=TimePicker__GetLabelPM  // Local label or default label
 
 $AMlabel:=$AMLabel="<none>" ? "" : $AMLabel
 $PMlabel:=$PMlabel="<none>" ? "" : $PMlabel
@@ -79,8 +75,16 @@ Case of
 							//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 						: ($pickerTime<?24:00:00?)
 							
-							$Label:=$PMLabel
-							$hours:=Int:C8(($pickerTime-?12:00:00?)/3600)
+							If ($PMLabel#"")
+								
+								$Label:=$PMLabel
+								$hours:=Int:C8(($pickerTime-?12:00:00?)/3600)
+								
+							Else 
+								
+								$hours:=Int:C8(($pickerTime)/3600)
+								
+							End if 
 							
 							//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
 						: ($pickerTime>=?24:00:00?)
@@ -202,8 +206,10 @@ Case of
 		End if 
 		
 		//%W-518.1
-		COPY ARRAY:C226($_TimePickerHours; (OBJECT Get pointer:C1124(Object named:K67:5; "Hours"))->)
-		COPY ARRAY:C226($_TimePickerMinutes; (OBJECT Get pointer:C1124(Object named:K67:5; "Minutes"))->)
+		var $ptr:=OBJECT Get pointer:C1124(Object named:K67:5; "Hours")
+		COPY ARRAY:C226($_TimePickerHours; $ptr->)
+		$ptr:=OBJECT Get pointer:C1124(Object named:K67:5; "Minutes")
+		COPY ARRAY:C226($_TimePickerMinutes; $ptr->)
 		//%W+518.1
 		
 		//________________________________________________________________________________

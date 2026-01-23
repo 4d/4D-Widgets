@@ -11,7 +11,7 @@ Case of
 		
 		// Common code
 		var $CurrentTime:=TimePicker__GetTarget
-		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime)
 		TimePicker__DisplayTimePopups(False:C215)
 		
 		//________________________________________________________________________________
@@ -19,7 +19,7 @@ Case of
 		
 		// Common code
 		$CurrentTime:=TimePicker__GetTarget
-		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+		$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime)
 		TimePicker__DisplayTimePopups(False:C215)
 		
 		//________________________________________________________________________________

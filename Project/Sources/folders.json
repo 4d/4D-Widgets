@@ -1,11 +1,16 @@
 {
+	"(TimePicker Forms)": {},
 	"(TimePicker Private)": {},
 	"✅ TimePicker Forms": {
 		"forms": [
 			"TimeDisplay",
 			"TimeDisplayLCD",
 			"TimeEntry",
-			"TimeEntry_AM"
+			"TimeEntry_AM",
+			"TimePicker_Pop1",
+			"TimePicker_Pop1_AM",
+			"TimePicker_Pop2",
+			"TimePicker_Pop2_AM"
 		]
 	},
 	"✅ TimePicker Private": {
@@ -13,7 +18,6 @@
 			"TimeEntry__Increase",
 			"TimeEntry__ManageFocus",
 			"TimePicker__BuildPopup",
-			"TimePicker__DisplaySecondHand",
 			"TimePicker__DisplayTimeInputs",
 			"TimePicker__DisplayTimePopups",
 			"TimePicker__GetLabelAM",
@@ -21,14 +25,8 @@
 			"TimePicker__GetSelectedTime",
 			"TimePicker__GetStep",
 			"TimePicker__GetTarget",
-			"TimePicker__GetTimeMax",
-			"TimePicker__GetTimeMin",
 			"TimePicker__InitForm",
 			"TimePicker__InitInter",
-			"TimePicker__LCD DISPLAY AMPM",
-			"TimePicker__LCD DISPLAY SECONDS",
-			"TimePicker__LCD SET COLOR",
-			"TimePicker__LCD SET MODE",
 			"TimePicker__LCDcreatePict",
 			"TimePicker__LCDdisplayTime",
 			"TimePicker__SetSelectedTime",
@@ -61,8 +59,7 @@
 		"groups": [
 			"✅ TimePicker Forms",
 			"✅ TimePicker Private",
-			"✅ TimePicker Shared",
-			"TimePicker Forms"
+			"✅ TimePicker Shared"
 		]
 	},
 	"Compiler": {
@@ -166,14 +163,6 @@
 			"SearchPicker SET HELP TEXT"
 		]
 	},
-	"TimePicker Forms": {
-		"forms": [
-			"TimePicker_Pop1",
-			"TimePicker_Pop1_AM",
-			"TimePicker_Pop2",
-			"TimePicker_Pop2_AM"
-		]
-	},
 	"Tools": {
 		"methods": [
 			"Tool_AdjustWindowPos",
@@ -184,6 +173,7 @@
 	},
 	"trash": {
 		"groups": [
+			"(TimePicker Forms)",
 			"(TimePicker Private)"
 		]
 	}

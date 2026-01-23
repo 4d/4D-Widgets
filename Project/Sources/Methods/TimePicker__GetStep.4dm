@@ -1,8 +1,7 @@
 //%attributes = {"invisible":true}
-#DECLARE($PtrTarget : Pointer; $form : Text)
+#DECLARE() : Time
 
-var $time : Time
-Tool_ObjectToVar("Step"; ->$time; $form)
+var $time : Time:=objectGetValue("Step")
 
 If ($time=?00:00:00?)
 	
@@ -10,4 +9,4 @@ If ($time=?00:00:00?)
 	
 End if 
 
-$PtrTarget->:=$time
+return $time

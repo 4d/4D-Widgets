@@ -42,7 +42,7 @@
 					"dragging": "none",
 					"dropping": "none"
 				},
-				"Picture2": {
+				"poster": {
 					"type": "picture",
 					"top": 0,
 					"left": 0,
@@ -51,12 +51,16 @@
 					"visibility": "hidden",
 					"pictureFormat": "scaled",
 					"picture": "Images/Preview.png"
-				},
+				}
+			}
+		},
+		{
+			"objects": {
 				"withSeconds": {
 					"type": "input",
-					"top": 58,
-					"left": 155,
-					"width": 121,
+					"top": 35,
+					"left": 9,
+					"width": 101,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
@@ -81,9 +85,9 @@
 				},
 				"redraw": {
 					"type": "input",
-					"top": 22,
-					"left": 155,
-					"width": 121,
+					"top": 11,
+					"left": 9,
+					"width": 101,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
@@ -114,29 +118,16 @@
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
-			"Vue 2": {
-				"visible": false,
+			"PREVIEW": {
 				"objects": [
-					"Picture2"
+					"poster"
 				]
-			},
-			"Vue 3": {
-				"objects": [
-					"withSeconds",
-					"redraw"
-				]
-			},
-			"Vue 4": {},
-			"Vue 5": {},
-			"Vue 6": {},
-			"Vue 7": {},
-			"Vue 8": {},
-			"Vue 9": {}
+			}
 		}
 	},
 	"$4d": {
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 57
+	"geometryStamp": 65
 }

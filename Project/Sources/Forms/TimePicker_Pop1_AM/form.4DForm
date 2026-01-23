@@ -66,11 +66,15 @@
 					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
 					"pictureFormat": "scaled",
 					"visibility": "hidden"
-				},
+				}
+			}
+		},
+		{
+			"objects": {
 				"FormInited": {
 					"type": "input",
-					"top": 7,
-					"left": 292,
+					"top": 5,
+					"left": 127,
 					"width": 150,
 					"height": 16,
 					"dataSourceTypeHint": "number",
@@ -87,8 +91,8 @@
 				},
 				"MinTime": {
 					"type": "input",
-					"top": 43,
-					"left": 292,
+					"top": 41,
+					"left": 127,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -106,8 +110,8 @@
 				},
 				"MaxTime": {
 					"type": "input",
-					"top": 43,
-					"left": 372,
+					"top": 41,
+					"left": 207,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -125,8 +129,8 @@
 				},
 				"Step": {
 					"type": "input",
-					"top": 70,
-					"left": 292,
+					"top": 68,
+					"left": 127,
 					"width": 70,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -144,8 +148,8 @@
 				},
 				"AMlabel": {
 					"type": "input",
-					"top": 70,
-					"left": 372,
+					"top": 68,
+					"left": 207,
 					"width": 70,
 					"height": 16,
 					"focusable": false,
@@ -161,8 +165,8 @@
 				},
 				"PMlabel": {
 					"type": "input",
-					"top": 70,
-					"left": 460,
+					"top": 68,
+					"left": 295,
 					"width": 70,
 					"height": 16,
 					"focusable": false,
@@ -178,8 +182,8 @@
 				},
 				"SelectedTime": {
 					"type": "input",
-					"top": 106,
-					"left": 292,
+					"top": 104,
+					"left": 127,
 					"width": 100,
 					"height": 16,
 					"dataSourceTypeHint": "time",
@@ -213,7 +217,7 @@
 			}
 		}
 	},
-	"geometryStamp": 59,
+	"geometryStamp": 64,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

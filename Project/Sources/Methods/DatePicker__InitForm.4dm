@@ -13,6 +13,8 @@ If (Not:C34(Is nil pointer:C315($PtrDefaultInited)))
 		
 		$PtrDefaultInited->:=1
 		
+		//%W-518.1
+		//%W-518.5
 		$Ptr_ListDays:=OBJECT Get pointer:C1124(Object named:K67:5; "_ListDays")
 		If (Not:C34(Is nil pointer:C315($Ptr_ListDays)))
 			ARRAY TEXT:C222($Ptr_ListDays->; 0)
@@ -24,6 +26,8 @@ If (Not:C34(Is nil pointer:C315($PtrDefaultInited)))
 			ARRAY TEXT:C222($Ptr_ListMonthes->; 0)
 			COPY ARRAY:C226(<>_DatePicker_ListMonthes; $Ptr_ListMonthes->)
 		End if 
+		//%W+518.1
+		//%W+518.5
 		
 		// Affectation des valeurs par defaut dans le formulaire
 		$selectedDate:=DatePicker__SetSelectedDate(<>DatePicker_DefaultDate; "")

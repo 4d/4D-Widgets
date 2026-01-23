@@ -3,8 +3,7 @@
 
 var $target:=OBJECT Get name:C1087(Object with focus:K67:3)
 
-var $CurrentTime:=?00:00:00?
-TimePicker__GetSelectedTime(->$CurrentTime; "")
+var $CurrentTime:=TimePicker__GetSelectedTime
 
 Case of 
 		
@@ -34,7 +33,7 @@ End case
 $CurrentTime+=$step
 
 // Save the calculated value in the local variable of the form.
-$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime; "")
+$CurrentTime:=TimePicker__SetSelectedTime($CurrentTime)
 
 // Check min/max and recalculation if needed
 TimePicker__DisplayTimeInputs(False:C215)

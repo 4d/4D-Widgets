@@ -21,11 +21,42 @@
 		null,
 		{
 			"objects": {
+				"gClock": {
+					"type": "input",
+					"top": 0,
+					"left": 0,
+					"width": 256,
+					"height": 48,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSourceTypeHint": "picture",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"pictureFormat": "scaled",
+					"dragging": "custom"
+				},
+				"poster": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 256,
+					"height": 48,
+					"visibility": "hidden",
+					"pictureFormat": "truncatedTopLeft",
+					"picture": "Images/Preview.png"
+				}
+			}
+		},
+		{
+			"objects": {
 				"withAMPM": {
 					"type": "input",
-					"top": 47,
-					"left": 330,
-					"width": 141,
+					"top": 6,
+					"left": 166,
+					"width": 81,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
@@ -50,9 +81,9 @@
 				},
 				"withSeconds": {
 					"type": "input",
-					"top": 71,
-					"left": 330,
-					"width": 131,
+					"top": 28,
+					"left": 152,
+					"width": 95,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
@@ -77,9 +108,9 @@
 				},
 				"color": {
 					"type": "input",
-					"top": 0,
-					"left": 330,
-					"width": 111,
+					"top": 28,
+					"left": 8,
+					"width": 51,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
@@ -101,38 +132,11 @@
 						"onPrintingDetail"
 					]
 				},
-				"gClock": {
-					"type": "input",
-					"top": 0,
-					"left": 0,
-					"width": 256,
-					"height": 48,
-					"sizingX": "grow",
-					"sizingY": "grow",
-					"dataSourceTypeHint": "picture",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"contextMenu": "none",
-					"pictureFormat": "scaled",
-					"dragging": "custom"
-				},
-				"Picture5": {
-					"type": "picture",
-					"top": 0,
-					"left": 0,
-					"width": 256,
-					"height": 48,
-					"visibility": "hidden",
-					"pictureFormat": "truncatedTopLeft",
-					"picture": "Images/Preview.png"
-				},
 				"mode": {
 					"type": "input",
-					"top": 95,
-					"left": 330,
-					"width": 121,
+					"top": 28,
+					"left": 75,
+					"width": 61,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
@@ -157,9 +161,9 @@
 				},
 				"redraw": {
 					"type": "input",
-					"top": 23,
-					"left": 330,
-					"width": 121,
+					"top": 6,
+					"left": 8,
+					"width": 61,
 					"height": 16,
 					"visibility": "hidden",
 					"sizingX": "move",
@@ -190,33 +194,16 @@
 		"defaultView": "View 1",
 		"views": {
 			"View 1": {},
-			"View 2": {
+			"PREVIEW": {
 				"objects": [
-					"Picture5"
+					"poster"
 				]
-			},
-			"View 3": {
-				"objects": [
-					"withAMPM",
-					"withSeconds",
-					"color",
-					"mode",
-					"redraw"
-				]
-			},
-			"View 4": {
-				"selectable": false
-			},
-			"View 5": {},
-			"View 6": {},
-			"View 7": {},
-			"View 8": {},
-			"View 9": {}
+			}
 		}
 	},
 	"$4d": {
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 11
+	"geometryStamp": 55
 }

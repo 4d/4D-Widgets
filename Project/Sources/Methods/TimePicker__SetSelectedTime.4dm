@@ -12,17 +12,14 @@
 // It makes this time conform with local constraints (min/max)
 // It becames the default time
 
-#DECLARE($time : Time; $form : Text) : Time  // Returned time (that MAY be different from received one)
+#DECLARE($time : Time) : Time  // Returned time (that MAY be different from received one)
 
 TimePicker__InitInter
 
 If (Count parameters:C259>=2)  // For a specific parent subform object OR current form
 	
-	var $minTime : Time
-	TimePicker__GetTimeMin(->$minTime; "")
-	
-	var $maxTime : Time
-	TimePicker__GetTimeMax(->$maxTime; "")
+	var $minTime : Time:=objectGetValue("MinTime")
+	var $maxTime : Time:=objectGetValue("MaxTime") || <>TimePicker_TimeMax
 	
 	Case of 
 			
@@ -40,7 +37,7 @@ If (Count parameters:C259>=2)  // For a specific parent subform object OR curren
 			// ________________________________________________________________________________
 	End case 
 	
-	Tool_VarToObject(->$time; "SelectedTime"; $form)
+	objectSetValue("SelectedTime"; $time)
 	
 	var $targetTime:=TimePicker__GetTarget
 	

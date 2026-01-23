@@ -1,13 +1,4 @@
 //%attributes = {"invisible":true}
-#DECLARE($PtrTarget : Pointer; $form : Text)
+#DECLARE($form : Text) : Text
 
-var $text : Text
-Tool_ObjectToVar("PMlabel"; ->$text; $form)
-
-If (Length:C16($text)=0)
-	
-	$text:=<>TimePicker_LabelPM
-	
-End if 
-
-$PtrTarget->:=$text
+return objectGetValue("PMlabel"; $form) || <>TimePicker_LabelPM

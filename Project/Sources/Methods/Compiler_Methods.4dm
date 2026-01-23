@@ -93,7 +93,7 @@ C_DATE:C307(DatePicker SET MAX DATE; $2)
 
 C_TEXT:C284(SearchPicker__SET_TEXT; $1)
 C_TEXT:C284(SearchPicker__SET_TEXT; $2)
-C_TEXT:C284(TimePicker APPLY DEFAULT VALUES; $1)
+
 C_DATE:C307(DatePicker__CalculateFirstDay; $1)
 C_TEXT:C284(DatePicker__CalculateFirstDay; $2)
 C_POINTER:C301(Tool_AdjustWindowPos; $1)

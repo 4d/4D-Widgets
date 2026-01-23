@@ -17,6 +17,12 @@ Case of
 		//__________________________________________________________________________________
 	: ($e.code=On Load:K2:1)
 		
+		// Default values
+		OBJECT SET VALUE:C1742("withSeconds"; True:C214)
+		OBJECT SET VALUE:C1742("withAMPM"; True:C214)
+		OBJECT SET VALUE:C1742("mode"; 12)
+		OBJECT SET VALUE:C1742("redraw"; False:C215)
+		
 		var $file:=File:C1566("/RESOURCES/clockLCD.svg"; *)
 		
 		If ($file.exists)  // User clock
@@ -26,11 +32,6 @@ Case of
 			OBJECT SET VALUE:C1742("gClock"; $pict)
 			
 		Else 
-			
-			OBJECT SET VALUE:C1742("redraw"; False:C215)
-			OBJECT SET VALUE:C1742("withSeconds"; True:C214)
-			OBJECT SET VALUE:C1742("withAMPM"; True:C214)
-			OBJECT SET VALUE:C1742("mode"; 12)
 			
 			$pict:=TimePicker__LCDcreatePict(True:C214; True:C214)  // seconds + AmPm
 			
@@ -47,7 +48,6 @@ Case of
 		SET TIMER:C645(-1)
 		
 		//__________________________________________________________________________________
-		
 	: ($e.code=On Bound Variable Change:K2:52)
 		
 		SET TIMER:C645(-1)
@@ -57,6 +57,7 @@ Case of
 		
 		SET TIMER:C645(0)
 		
+		// Resize to fit the container
 		OBJECT GET SUBFORM CONTAINER SIZE:C1148($width; $height)
 		OBJECT MOVE:C664(*; "gClock"; 1; 1; $width-1; $height-1; *)
 		
@@ -75,22 +76,19 @@ Case of
 			
 			// Then the image can be rebuilt !!!
 			OBJECT SET VALUE:C1742("gClock"; TimePicker__LCDcreatePict(OBJECT Get value:C1743("withSeconds"); OBJECT Get value:C1743("withAMPM")))
-			
 			OBJECT SET VALUE:C1742("redraw"; False:C215)  // Done
-			
-			return 
 			
 		End if 
 		
-		// Change display color ?
+		// Apply display color
 		var $color : Text:=OBJECT Get value:C1743("color")
-		
 		If ($color#"")
 			
 			SVG SET ATTRIBUTE:C1055(*; "gClock"; "globalClock"; "fill"; $color)
-			OBJECT SET VALUE:C1742("color"; "")  // Done
 			
-			return 
+		Else 
+			
+			SVG SET ATTRIBUTE:C1055(*; "gClock"; "globalClock"; "fill"; FORM Get color scheme:C1761="dark" ? "white" : "black")
 			
 		End if 
 		
@@ -100,32 +98,32 @@ Case of
 		
 		Case of 
 				
-				// ________________________________________________________________________________
+				//----------------------------------
 			: ($type=Is longint:K8:6)\
 				 || ($type=Is real:K8:4)\
 				 || ($variant=Null:C1517)
 				
 				$AutoRun:=True:C214
 				
-				var $offset : Time:=$variant
+				var $offset : Time:=$variant#Null:C1517 ? $variant : ?00:00:00?
 				var $currentTime : Time:=Current time:C178+$offset
 				$currentTime:=$currentTime>?24:00:00? ? $currentTime-?24:00:00? : $currentTime
 				
-				// ________________________________________________________________________________
+				//----------------------------------
 			: ($type=Is time:K8:8)
 				
 				$currentTime:=$variant
 				
-				// ________________________________________________________________________________
+				//----------------------------------
 			Else   // Any other type will TRY to provide a STATIC clock
 				
 				$currentTime:=Time:C179(String:C10($variant))
 				
-				// ________________________________________________________________________________
+				//----------------------------------
 		End case 
 		
-		var $blinck:=$AutoRun
-		TimePicker__LCDdisplayTime("gClock"; $currentTime; $Blinck; OBJECT Get value:C1743("mode"); OBJECT Get value:C1743("withAMPM"))
+		var $blink:=$AutoRun
+		TimePicker__LCDdisplayTime("gClock"; $currentTime; $blink; OBJECT Get value:C1743("mode"); OBJECT Get value:C1743("withAMPM"))
 		
 		SET TIMER:C645($AutoRun ? 10 : 0)
 		

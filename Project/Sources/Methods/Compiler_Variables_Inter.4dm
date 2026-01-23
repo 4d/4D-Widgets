@@ -24,3 +24,5 @@ var <>TimePicker_Step : Time
 //var <>TimePicker_Target : Pointer
 var <>TimePicker_TimeMax : Time
 var <>TimePicker_TimeMin : Time
+
+var <>Time_separator : Text

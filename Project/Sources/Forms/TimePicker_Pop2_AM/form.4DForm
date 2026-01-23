@@ -52,17 +52,6 @@
 					"focusable": false,
 					"textAlign": "center"
 				},
-				"Texte1": {
-					"type": "text",
-					"top": 2,
-					"left": 87,
-					"width": 6,
-					"height": 16,
-					"sizingX": "move",
-					"textAlign": "center",
-					"fontWeight": "bold",
-					"text": ":"
-				},
 				"Rectangle": {
 					"type": "rectangle",
 					"top": 0,
@@ -123,6 +112,39 @@
 					"pictureFormat": "scaled",
 					"visibility": "hidden"
 				},
+				"separator": {
+					"type": "input",
+					"left": 88,
+					"top": 2,
+					"width": 5,
+					"height": 16,
+					"dataSource": "<>Time_separator",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fontSize": 13,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"fontWeight": "bold",
+					"textAlign": "center"
+				},
+				"Texte1": {
+					"type": "text",
+					"top": 2,
+					"left": 87,
+					"width": 7,
+					"height": 16,
+					"class": "Default",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"text": ":",
+					"visibility": "hidden",
+					"fill": "automatic"
+				}
+			}
+		},
+		{
+			"objects": {
 				"FormInited": {
 					"type": "input",
 					"top": 7,
@@ -289,12 +311,13 @@
 					"Rectangle1",
 					"Text1",
 					"Static Picture1",
-					"Static Picture2"
+					"Static Picture2",
+					"Texte1"
 				]
 			}
 		}
 	},
-	"geometryStamp": 115,
+	"geometryStamp": 133,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
