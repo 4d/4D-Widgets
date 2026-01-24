@@ -1,4 +1,4 @@
-
+property widget : Text
 
 Class constructor($force : Boolean)
 	
@@ -26,5 +26,10 @@ Class constructor($force : Boolean)
 	End if 
 	
 	
+Function resize()
 	
+	// Resize to fit the container
+	var $width; $height : Integer
+	OBJECT GET SUBFORM CONTAINER SIZE:C1148($width; $height)
+	OBJECT MOVE:C664(*; This:C1470.widget; 1; 1; $width-1; $height-1; *)
 	

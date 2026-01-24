@@ -28,7 +28,8 @@
 					"top": 27,
 					"width": 279,
 					"height": 59,
-					"detailForm": "TimeDisplayLCD"
+					"detailForm": "TimeDisplayLCD",
+					"dataSourceTypeHint": "number"
 				},
 				"clock": {
 					"type": "subform",

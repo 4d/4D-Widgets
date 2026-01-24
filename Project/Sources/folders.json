@@ -27,8 +27,6 @@
 			"TimePicker__GetTarget",
 			"TimePicker__InitForm",
 			"TimePicker__InitInter",
-			"TimePicker__LCDcreatePict",
-			"TimePicker__LCDdisplayTime",
 			"TimePicker__SetSelectedTime",
 			"TimePicker__SetTarget"
 		]
