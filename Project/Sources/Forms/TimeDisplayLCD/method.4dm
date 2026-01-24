@@ -23,21 +23,21 @@ Case of
 		OBJECT SET VALUE:C1742("mode"; 12)
 		OBJECT SET VALUE:C1742("redraw"; False:C215)
 		
-		var $file:=File:C1566("/RESOURCES/clockLCD.svg"; *)
+		//var $file:=File("/RESOURCES/clockLCD.svg"; *)
 		
-		If ($file.exists)  // User clock
-			
-			var $pict : Picture
-			READ PICTURE FILE:C678($file.platformPath; $pict)
-			OBJECT SET VALUE:C1742("gClock"; $pict)
-			
-		Else 
-			
-			$pict:=TimePicker__LCDcreatePict(True:C214; True:C214)  // seconds + AmPm
-			
-		End if 
+		//If ($file.exists)  // User clock
 		
-		OBJECT SET VALUE:C1742("gClock"; $pict)
+		//var $pict : Picture
+		//READ PICTURE FILE($file.platformPath; $pict)
+		
+		//Else 
+		
+		//$pict:=TimePicker__LCDcreatePict(True; True)  // seconds + AmPm
+		
+		//End if 
+		
+		//OBJECT SET VALUE("gClock"; $pict)
+		OBJECT SET VALUE:C1742("gClock"; Form:C1466.clock)
 		
 		var $width; $height : Integer
 		OBJECT GET SUBFORM CONTAINER SIZE:C1148($width; $height)

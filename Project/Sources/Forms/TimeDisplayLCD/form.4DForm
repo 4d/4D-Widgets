@@ -205,5 +205,6 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 55
+	"geometryStamp": 55,
+	"formClass": "_Analog"
 }
