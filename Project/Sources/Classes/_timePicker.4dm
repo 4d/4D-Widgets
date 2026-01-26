@@ -211,11 +211,7 @@ Function constraints($time : Time) : Time
 Function increase($step : Integer)
 	
 	var $target:=OBJECT Get name:C1087(Object with focus:K67:3)
-	
-	var $CurrentTime:=TimePicker__GetSelectedTime
-	
-	var $o:=This:C1470.getContainerValue()
-	var $time : Time:=$o.value
+	var $time : Time:=This:C1470.getContainerValue().value
 	
 	Case of 
 			
