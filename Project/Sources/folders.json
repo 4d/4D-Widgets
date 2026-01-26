@@ -3,8 +3,6 @@
 	"(TimePicker Private)": {},
 	"✅ TimePicker Forms": {
 		"forms": [
-			"TimeDisplay",
-			"TimeDisplayLCD",
 			"TimeEntry",
 			"TimeEntry_AM",
 			"TimePicker_Pop1",
@@ -34,11 +32,6 @@
 	"✅ TimePicker Shared": {
 		"methods": [
 			"TimePicker APPLY DEFAULT VALUES",
-			"TimePicker DISPLAY SECOND HAND",
-			"TimePicker LCD DISPLAY AMPM",
-			"TimePicker LCD DISPLAY SECONDS",
-			"TimePicker LCD SET COLOR",
-			"TimePicker LCD SET MODE",
 			"TimePicker RESET DEFAULT VALUES",
 			"TimePicker SET DEFAULT LABEL AM",
 			"TimePicker SET DEFAULT LABEL PM",
@@ -53,11 +46,31 @@
 			"TimePicker SET STEP"
 		]
 	},
+	"🕒 TimeDisplay": {
+		"groups": [
+			"TimeDisplay_Shared"
+		],
+		"methods": [
+			"DISPLAY FORM METHOD"
+		],
+		"forms": [
+			"TimeDisplay",
+			"TimeDisplayLCD"
+		],
+		"classes": [
+			"_analogic",
+			"_clock",
+			"_digital"
+		]
+	},
 	"🕒 TimePicker": {
 		"groups": [
 			"✅ TimePicker Forms",
 			"✅ TimePicker Private",
 			"✅ TimePicker Shared"
+		],
+		"classes": [
+			"_timePicker"
 		]
 	},
 	"Compiler": {
@@ -159,6 +172,15 @@
 		"methods": [
 			"SearchPicker SET ENTERABLE",
 			"SearchPicker SET HELP TEXT"
+		]
+	},
+	"TimeDisplay_Shared": {
+		"methods": [
+			"TimePicker DISPLAY SECOND HAND",
+			"TimePicker LCD DISPLAY AMPM",
+			"TimePicker LCD DISPLAY SECONDS",
+			"TimePicker LCD SET COLOR",
+			"TimePicker LCD SET MODE"
 		]
 	},
 	"Tools": {

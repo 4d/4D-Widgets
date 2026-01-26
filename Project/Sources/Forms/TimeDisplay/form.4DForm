@@ -12,7 +12,6 @@
 		"onTimer",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
@@ -53,64 +52,6 @@
 					"picture": "Images/Preview.png"
 				}
 			}
-		},
-		{
-			"objects": {
-				"withSeconds": {
-					"type": "input",
-					"top": 35,
-					"left": 9,
-					"width": 101,
-					"height": 16,
-					"visibility": "hidden",
-					"sizingX": "move",
-					"sizingY": "move",
-					"textAlign": "left",
-					"focusable": false,
-					"fill": "transparent",
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					],
-					"dataSourceTypeHint": "boolean"
-				},
-				"redraw": {
-					"type": "input",
-					"top": 11,
-					"left": 9,
-					"width": 101,
-					"height": 16,
-					"visibility": "hidden",
-					"sizingX": "move",
-					"sizingY": "move",
-					"textAlign": "left",
-					"focusable": false,
-					"fill": "transparent",
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					],
-					"dataSourceTypeHint": "boolean"
-				}
-			}
 		}
 	],
 	"editor": {
@@ -129,5 +70,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 65
+	"geometryStamp": 74,
+	"formClass": "_analogic",
+	"method": "DISPLAY FORM METHOD"
 }

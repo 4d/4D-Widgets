@@ -63,26 +63,6 @@
 					],
 					"focusable": false
 				},
-				"Texte": {
-					"type": "text",
-					"top": 4,
-					"left": 20,
-					"width": 8,
-					"height": 16,
-					"class": "Default",
-					"textAlign": "center",
-					"text": ":"
-				},
-				"Texte1": {
-					"type": "text",
-					"top": 4,
-					"left": 44,
-					"width": 8,
-					"height": 16,
-					"class": "Default",
-					"textAlign": "center",
-					"text": ":"
-				},
 				"hours": {
 					"type": "input",
 					"top": 4,
@@ -91,7 +71,6 @@
 					"height": 16,
 					"textAlign": "left",
 					"fill": "transparent",
-					"borderStyle": "none",
 					"hideFocusRing": false,
 					"contextMenu": "none",
 					"textFormat": "00",
@@ -102,7 +81,8 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13
+					"fontSize": 13,
+					"borderStyle": "none"
 				},
 				"minutes": {
 					"type": "input",
@@ -112,7 +92,6 @@
 					"height": 16,
 					"textAlign": "left",
 					"fill": "transparent",
-					"borderStyle": "none",
 					"hideFocusRing": false,
 					"contextMenu": "none",
 					"textFormat": "00",
@@ -123,7 +102,8 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13
+					"fontSize": 13,
+					"borderStyle": "none"
 				},
 				"seconds": {
 					"type": "input",
@@ -133,7 +113,6 @@
 					"height": 16,
 					"textAlign": "left",
 					"fill": "transparent",
-					"borderStyle": "none",
 					"hideFocusRing": false,
 					"contextMenu": "none",
 					"textFormat": "00",
@@ -144,7 +123,8 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13
+					"fontSize": 13,
+					"borderStyle": "none"
 				},
 				"am_pm": {
 					"type": "input",
@@ -155,7 +135,6 @@
 					"sizingX": "grow",
 					"textAlign": "left",
 					"fill": "transparent",
-					"borderStyle": "none",
 					"hideFocusRing": false,
 					"contextMenu": "none",
 					"entryFilter": "~A",
@@ -165,7 +144,8 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13
+					"fontSize": 13,
+					"borderStyle": "none"
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -219,7 +199,8 @@
 						"onDataChange"
 					],
 					"visibility": "hidden",
-					"fill": "transparent"
+					"fill": "transparent",
+					"borderStyle": "none"
 				},
 				"MinTime": {
 					"type": "input",
@@ -236,7 +217,8 @@
 						"onDataChange"
 					],
 					"visibility": "hidden",
-					"fill": "transparent"
+					"fill": "transparent",
+					"borderStyle": "none"
 				},
 				"MaxTime": {
 					"type": "input",
@@ -253,7 +235,8 @@
 						"onDataChange"
 					],
 					"visibility": "hidden",
-					"fill": "transparent"
+					"fill": "transparent",
+					"borderStyle": "none"
 				},
 				"Step": {
 					"type": "input",
@@ -270,7 +253,8 @@
 						"onDataChange"
 					],
 					"visibility": "hidden",
-					"fill": "transparent"
+					"fill": "transparent",
+					"borderStyle": "none"
 				},
 				"AMlabel": {
 					"type": "input",
@@ -285,7 +269,8 @@
 						"onDataChange"
 					],
 					"visibility": "hidden",
-					"fill": "transparent"
+					"fill": "transparent",
+					"borderStyle": "none"
 				},
 				"PMlabel": {
 					"type": "input",
@@ -300,7 +285,8 @@
 						"onDataChange"
 					],
 					"visibility": "hidden",
-					"fill": "transparent"
+					"fill": "transparent",
+					"borderStyle": "none"
 				},
 				"SelectedTime": {
 					"type": "input",
@@ -317,7 +303,40 @@
 						"onDataChange"
 					],
 					"visibility": "hidden",
-					"fill": "transparent"
+					"fill": "transparent",
+					"borderStyle": "none"
+				},
+				"Separator1": {
+					"type": "input",
+					"left": 21,
+					"top": 4,
+					"width": 5,
+					"height": 16,
+					"dataSource": "<>Time_separator",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fontSize": 13,
+					"fill": "transparent",
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"borderStyle": "none"
+				},
+				"separator2": {
+					"type": "input",
+					"left": 45,
+					"top": 4,
+					"width": 5,
+					"height": 16,
+					"dataSource": "<>Time_separator",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fontSize": 13,
+					"fill": "transparent",
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"borderStyle": "none"
 				}
 			},
 			"entryOrder": [
@@ -334,7 +353,9 @@
 				"PMlabel",
 				"SelectedTime",
 				"up",
-				"down"
+				"down",
+				"Separator1",
+				"separator2"
 			]
 		}
 	],
@@ -356,5 +377,6 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 70
+	"geometryStamp": 88,
+	"formClass": "_timePicker"
 }

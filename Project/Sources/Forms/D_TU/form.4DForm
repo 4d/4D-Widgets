@@ -94,7 +94,8 @@
 					"width": 120,
 					"height": 120,
 					"detailForm": "TimeDisplay",
-					"dataSource": "vShift1"
+					"dataSource": "vShift1",
+					"dataSourceTypeHint": "undefined"
 				},
 				"Button1": {
 					"type": "button",
@@ -125,7 +126,8 @@
 					"width": 120,
 					"height": 120,
 					"detailForm": "TimeDisplay",
-					"dataSource": "vStaticTime1"
+					"dataSource": "vStaticTime1",
+					"dataSourceTypeHint": "time"
 				},
 				"Subform8": {
 					"type": "subform",
@@ -134,7 +136,8 @@
 					"width": 120,
 					"height": 120,
 					"detailForm": "TimeDisplay",
-					"dataSource": "Form:C1466.shift1"
+					"dataSource": "Form:C1466.shift1",
+					"dataSourceTypeHint": "undefined"
 				},
 				"Subform10": {
 					"type": "subform",
@@ -143,7 +146,8 @@
 					"width": 120,
 					"height": 120,
 					"detailForm": "TimeDisplay",
-					"dataSource": "Form:C1466.staticTime1"
+					"dataSource": "Form:C1466.staticTime1",
+					"dataSourceTypeHint": "time"
 				},
 				"Text1": {
 					"type": "text",
@@ -184,7 +188,7 @@
 					"detailForm": "TimeDisplayLCD",
 					"borderStyle": "sunken",
 					"dataSource": "vShift1",
-					"dataSourceTypeHint": "integer"
+					"dataSourceTypeHint": "undefined"
 				},
 				"Subform7": {
 					"type": "subform",
@@ -206,7 +210,7 @@
 					"detailForm": "TimeDisplayLCD",
 					"borderStyle": "sunken",
 					"dataSource": "Form:C1466.shift1",
-					"dataSourceTypeHint": "integer"
+					"dataSourceTypeHint": "undefined"
 				},
 				"Subform11": {
 					"type": "subform",

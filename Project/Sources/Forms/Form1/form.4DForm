@@ -29,7 +29,8 @@
 					"width": 279,
 					"height": 59,
 					"detailForm": "TimeDisplayLCD",
-					"dataSourceTypeHint": "number"
+					"dataSourceTypeHint": "undefined",
+					"borderStyle": "dotted"
 				},
 				"clock": {
 					"type": "subform",
@@ -38,7 +39,8 @@
 					"width": 200,
 					"height": 200,
 					"detailForm": "TimeDisplay",
-					"dataSourceTypeHint": "number"
+					"dataSourceTypeHint": "number",
+					"borderStyle": "dotted"
 				},
 				"secondHand": {
 					"type": "checkbox",
@@ -57,8 +59,8 @@
 				"Button": {
 					"type": "button",
 					"text": "Reset",
-					"top": 493,
-					"left": 500,
+					"top": 630,
+					"left": 14,
 					"width": 135,
 					"height": 30,
 					"events": [
@@ -68,8 +70,8 @@
 				},
 				"timePickerOne": {
 					"type": "subform",
-					"left": 14,
-					"top": 327,
+					"left": 317,
+					"top": 415,
 					"width": 84,
 					"height": 24,
 					"detailForm": "TimePicker_Pop1"
@@ -77,8 +79,8 @@
 				"Button1": {
 					"type": "button",
 					"text": "Min",
-					"top": 324,
-					"left": 118,
+					"top": 412,
+					"left": 421,
 					"width": 80,
 					"height": 22,
 					"events": [
@@ -88,8 +90,8 @@
 				},
 				"timePickerOneAMPM": {
 					"type": "subform",
-					"left": 14,
-					"top": 374,
+					"left": 317,
+					"top": 462,
 					"width": 112,
 					"height": 24,
 					"detailForm": "TimePicker_Pop1_AM"
@@ -97,8 +99,8 @@
 				"Button2": {
 					"type": "button",
 					"text": "Min",
-					"top": 374,
-					"left": 146,
+					"top": 462,
+					"left": 449,
 					"width": 80,
 					"height": 22,
 					"events": [
@@ -170,24 +172,88 @@
 				},
 				"Subform": {
 					"type": "subform",
-					"left": 14,
-					"top": 421,
+					"left": 317,
+					"top": 509,
 					"width": 134,
 					"height": 24,
 					"detailForm": "TimePicker_Pop2"
 				},
 				"Subform1": {
 					"type": "subform",
-					"left": 14,
-					"top": 469,
+					"left": 317,
+					"top": 557,
 					"width": 155,
 					"height": 24,
 					"detailForm": "TimePicker_Pop2_AM"
+				},
+				"timeEntry": {
+					"type": "subform",
+					"left": 11,
+					"top": 314,
+					"width": 96,
+					"height": 24,
+					"detailForm": "TimeEntry",
+					"borderStyle": "dotted",
+					"dataSource": "vTime",
+					"dataSourceTypeHint": "time",
+					"focusable": false
+				},
+				"Button4": {
+					"type": "button",
+					"text": "Close",
+					"top": 648,
+					"left": 481,
+					"width": 125,
+					"height": 34,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Esc]"
+				},
+				"Input": {
+					"type": "input",
+					"left": 121,
+					"top": 318,
+					"width": 170,
+					"height": 17,
+					"dataSource": "vTime",
+					"dataSourceTypeHint": "time",
+					"enterable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "#1e90ff",
+					"textAlign": "left"
+				},
+				"TimePicker1": {
+					"type": "subform",
+					"top": 314,
+					"left": 311,
+					"width": 96,
+					"height": 24,
+					"dataSource": "vStartTime",
+					"dataSourceTypeHint": "time",
+					"detailForm": "TimeEntry",
+					"focusable": false,
+					"hideFocusRing": true,
+					"deletableInList": false,
+					"doubleClickInRowAction": "editSubrecord",
+					"doubleClickInEmptyAreaAction": "addSubrecord",
+					"selectionMode": "multiple",
+					"printFrame": "variable",
+					"method": "ObjectMethods/TimePicker1.4dm",
+					"events": [
+						"onLoad"
+					]
 				}
 			}
 		}
 	],
-	"geometryStamp": 118,
+	"geometryStamp": 161,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

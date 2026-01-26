@@ -65,26 +65,6 @@
 					"fill": "automatic",
 					"stroke": "#808080"
 				},
-				"Texte": {
-					"type": "text",
-					"top": 4,
-					"left": 20,
-					"width": 8,
-					"height": 16,
-					"class": "Default",
-					"textAlign": "center",
-					"text": ":"
-				},
-				"Texte1": {
-					"type": "text",
-					"top": 4,
-					"left": 44,
-					"width": 8,
-					"height": 16,
-					"class": "Default",
-					"textAlign": "center",
-					"text": ":"
-				},
 				"Rectangle": {
 					"type": "rectangle",
 					"top": 0,
@@ -184,146 +164,48 @@
 					"class": "Default",
 					"textAlign": "center",
 					"text": "00:00:00"
+				},
+				"separator": {
+					"type": "input",
+					"left": 21,
+					"top": 4,
+					"width": 5,
+					"height": 16,
+					"dataSource": "<>Time_separator",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fontSize": 13,
+					"fill": "transparent",
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"borderStyle": "none"
+				},
+				"separator1": {
+					"type": "input",
+					"left": 45,
+					"top": 4,
+					"width": 5,
+					"height": 16,
+					"dataSource": "<>Time_separator",
+					"enterable": false,
+					"focusable": false,
+					"contextMenu": "none",
+					"fontSize": 13,
+					"fill": "transparent",
+					"fontWeight": "bold",
+					"textAlign": "center",
+					"borderStyle": "none"
 				}
 			},
 			"entryOrder": [
 				"hours",
 				"minutes",
 				"seconds",
-				"stepper"
+				"stepper",
+				"separator",
+				"separator1"
 			]
-		},
-		{
-			"objects": {
-				"FormInited": {
-					"type": "input",
-					"top": 31,
-					"left": 465,
-					"width": 150,
-					"height": 16,
-					"dataSourceTypeHint": "number",
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"focusable": false,
-					"enterable": false,
-					"fill": "transparent"
-				},
-				"MinTime": {
-					"type": "input",
-					"top": 55,
-					"left": 465,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"focusable": false,
-					"enterable": false,
-					"fill": "transparent"
-				},
-				"MaxTime": {
-					"type": "input",
-					"top": 55,
-					"left": 545,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"focusable": false,
-					"enterable": false,
-					"fill": "transparent"
-				},
-				"Step": {
-					"type": "input",
-					"top": 82,
-					"left": 465,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"focusable": false,
-					"enterable": false,
-					"fill": "transparent"
-				},
-				"AMlabel": {
-					"type": "input",
-					"top": 82,
-					"left": 545,
-					"width": 30,
-					"height": 16,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"focusable": false,
-					"enterable": false,
-					"fill": "transparent"
-				},
-				"PMlabel": {
-					"type": "input",
-					"top": 82,
-					"left": 585,
-					"width": 30,
-					"height": 16,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"focusable": false,
-					"enterable": false,
-					"fill": "transparent"
-				},
-				"SelectedTime": {
-					"type": "input",
-					"top": 109,
-					"left": 465,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"focusable": false,
-					"enterable": false,
-					"fill": "transparent"
-				}
-			}
 		}
 	],
 	"editor": {
@@ -332,7 +214,7 @@
 		"views": {
 			"View 1": {},
 			"PREVIEW": {
-				"selectable": false,
+				"visible": false,
 				"objects": [
 					"Rectangle",
 					"Text"
@@ -344,5 +226,6 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 71
+	"geometryStamp": 74,
+	"formClass": "_timePicker"
 }
