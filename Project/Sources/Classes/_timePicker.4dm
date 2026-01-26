@@ -64,9 +64,7 @@ Function init()
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function update()
 	
-	var $o:=This:C1470.getContainerValue()
-	
-	var $time : Time:=Time:C179($o.value)
+	var $time : Time:=Time:C179(This:C1470.getContainerValue().value)
 	This:C1470.setSelectedTime($time)
 	This:C1470.displayTimeInputs()
 	
