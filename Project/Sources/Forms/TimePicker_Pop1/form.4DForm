@@ -208,5 +208,6 @@
 	"$4d": {
 		"version": "1",
 		"kind": "form"
-	}
+	},
+	"formClass": "_timePicker"
 }

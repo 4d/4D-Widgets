@@ -4,12 +4,12 @@ property withAMPM:=True:C214
 property mode : Integer:=12
 property color:=""
 
-// === === === === === === === === === === === === === === === === === === === === === === === === 
+// === === === === === === === === === === === === === === === === === === === === === === === ===
 Class constructor
 	
 	Super:C1705()
 	
-	// === === === === === === === === === === === === === === === === === === === === === === === === 
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function getClock() : Picture
 	
 	var $file:=File:C1566("/RESOURCES/clockLCD.svg"; *)
@@ -46,8 +46,8 @@ Function getClock() : Picture
 	
 	return This:C1470.loadClock($file)
 	
-	// === === === === === === === === === === === === === === === === === === === === === === === === 
-Function update()
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function Update()
 	
 	This:C1470.resize()
 	
@@ -91,16 +91,16 @@ Function update()
 	End if 
 	
 /*
- 0 : ABCDEF
- 1 : BC
- 2 : ABEDG
- 3 : ABGCD
- 4 : FGBC
- 5 : AFGCD
- 6 : AFEDCG
- 7 : ABC
- 8 : ABCDEFG
- 9 : FABGCD
+0 : ABCDEF
+1 : BC
+2 : ABEDG
+3 : ABGCD
+4 : FGBC
+5 : AFGCD
+6 : AFEDCG
+7 : ABC
+8 : ABCDEFG
+9 : FABGCD
 10 : EFABC (A)
 11 : EFABG (P)
 /12 : EFABCH (M)

@@ -22,6 +22,14 @@
 		},
 		{
 			"objects": {
+				"Group Box": {
+					"type": "groupBox",
+					"text": "",
+					"top": 350,
+					"left": 11,
+					"width": 363,
+					"height": 111
+				},
 				"LCD": {
 					"type": "subform",
 					"left": 356,
@@ -59,54 +67,14 @@
 				"Button": {
 					"type": "button",
 					"text": "Reset",
-					"top": 630,
-					"left": 14,
+					"top": 650,
+					"left": 18,
 					"width": 135,
 					"height": 30,
 					"events": [
 						"onClick"
 					],
 					"method": "ObjectMethods/Button.4dm"
-				},
-				"timePickerOne": {
-					"type": "subform",
-					"left": 317,
-					"top": 415,
-					"width": 84,
-					"height": 24,
-					"detailForm": "TimePicker_Pop1"
-				},
-				"Button1": {
-					"type": "button",
-					"text": "Min",
-					"top": 412,
-					"left": 421,
-					"width": 80,
-					"height": 22,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button1.4dm"
-				},
-				"timePickerOneAMPM": {
-					"type": "subform",
-					"left": 317,
-					"top": 462,
-					"width": 112,
-					"height": 24,
-					"detailForm": "TimePicker_Pop1_AM"
-				},
-				"Button2": {
-					"type": "button",
-					"text": "Min",
-					"top": 462,
-					"left": 449,
-					"width": 80,
-					"height": 22,
-					"events": [
-						"onClick"
-					],
-					"method": "ObjectMethods/Button2.4dm"
 				},
 				"Button3": {
 					"type": "button",
@@ -170,33 +138,22 @@
 					"width": 624,
 					"height": 0
 				},
-				"Subform": {
-					"type": "subform",
-					"left": 317,
-					"top": 509,
-					"width": 134,
-					"height": 24,
-					"detailForm": "TimePicker_Pop2"
-				},
-				"Subform1": {
-					"type": "subform",
-					"left": 317,
-					"top": 557,
-					"width": 155,
-					"height": 24,
-					"detailForm": "TimePicker_Pop2_AM"
-				},
 				"timeEntry": {
 					"type": "subform",
-					"left": 11,
-					"top": 314,
-					"width": 96,
+					"left": 23,
+					"top": 358,
+					"width": 95,
 					"height": 24,
 					"detailForm": "TimeEntry",
 					"borderStyle": "dotted",
-					"dataSource": "vTime",
+					"dataSource": "Form:C1466.timeEntry",
 					"dataSourceTypeHint": "time",
-					"focusable": false
+					"focusable": false,
+					"events": [
+						"onLoad",
+						"onGettingFocus",
+						"onDataChange"
+					]
 				},
 				"Button4": {
 					"type": "button",
@@ -217,43 +174,109 @@
 				},
 				"Input": {
 					"type": "input",
-					"left": 121,
-					"top": 318,
-					"width": 170,
+					"left": 225,
+					"top": 358,
+					"width": 140,
 					"height": 17,
-					"dataSource": "vTime",
+					"dataSource": "Time:C179(Form:C1466.timeEntry)",
 					"dataSourceTypeHint": "time",
-					"enterable": false,
 					"fill": "transparent",
 					"borderStyle": "none",
-					"stroke": "#1e90ff",
-					"textAlign": "left"
+					"stroke": "#1e90ff"
 				},
-				"TimePicker1": {
+				"timeEntry1": {
 					"type": "subform",
+					"left": 23,
 					"top": 314,
-					"left": 311,
-					"width": 96,
+					"width": 95,
 					"height": 24,
-					"dataSource": "vStartTime",
-					"dataSourceTypeHint": "time",
 					"detailForm": "TimeEntry",
+					"borderStyle": "dotted",
 					"focusable": false,
-					"hideFocusRing": true,
-					"deletableInList": false,
-					"doubleClickInRowAction": "editSubrecord",
-					"doubleClickInEmptyAreaAction": "addSubrecord",
-					"selectionMode": "multiple",
-					"printFrame": "variable",
-					"method": "ObjectMethods/TimePicker1.4dm",
+					"dataSourceTypeHint": "undefined"
+				},
+				"timeEntryAmPm": {
+					"type": "subform",
+					"left": 23,
+					"top": 397,
+					"width": 130,
+					"height": 24,
+					"detailForm": "TimeEntry_AM",
+					"borderStyle": "sunken",
+					"dataSourceTypeHint": "time",
+					"dataSource": "Form:C1466.timeMeridien"
+				},
+				"min": {
+					"type": "input",
+					"left": 225,
+					"top": 429,
+					"width": 49,
+					"height": 17,
 					"events": [
-						"onLoad"
-					]
+						"onDataChange"
+					],
+					"method": "ObjectMethods/min.4dm",
+					"dataSourceTypeHint": "integer",
+					"entryFilter": "&9"
+				},
+				"max": {
+					"type": "input",
+					"left": 316,
+					"top": 429,
+					"width": 49,
+					"height": 17,
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/max.4dm",
+					"dataSourceTypeHint": "integer",
+					"entryFilter": "&9"
+				},
+				"Text": {
+					"type": "text",
+					"text": "min",
+					"top": 429,
+					"left": 173,
+					"width": 41,
+					"height": 16,
+					"textAlign": "right"
+				},
+				"Text1": {
+					"type": "text",
+					"text": "max",
+					"top": 429,
+					"left": 269,
+					"width": 41,
+					"height": 16,
+					"textAlign": "right"
+				},
+				"Input1": {
+					"type": "input",
+					"left": 225,
+					"top": 401,
+					"width": 140,
+					"height": 17,
+					"dataSource": "Time:C179(Form:C1466.timeMeridien)",
+					"dataSourceTypeHint": "time",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "#1e90ff"
+				},
+				"Subform": {
+					"type": "subform",
+					"left": 474,
+					"top": 354,
+					"width": 84,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1",
+					"borderStyle": "sunken",
+					"dataSourceTypeHint": "time",
+					"dataSource": "Form:C1466.pickerOne"
 				}
 			}
 		}
 	],
-	"geometryStamp": 161,
+	"geometryStamp": 221,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

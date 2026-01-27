@@ -1,30 +1,9 @@
 property widget : Text
 
 // === === === === === === === === === === === === === === === === === === === === === === === ===
-Class constructor($force : Boolean)
+Class constructor()
 	
-	var <>TimePicker_Inited : Boolean
-	
-	If (Not:C34(<>TimePicker_Inited) || $force)
-		
-		var <>TimePicker_CloseDial : Boolean
-		
-		// Default value
-		var <>TimePicker_LabelAM : Text
-		GET SYSTEM FORMAT:C994(System time AM label:K60:15; <>TimePicker_LabelAM)
-		var <>TimePicker_LabelPM : Text
-		GET SYSTEM FORMAT:C994(System time PM label:K60:16; <>TimePicker_LabelPM)
-		var <>Time_separator : Text
-		GET SYSTEM FORMAT:C994(Time separator:K60:11; <>Time_separator)
-		
-		var <>TimePicker_TimeMin:=?08:00:00?
-		var <>TimePicker_TimeMax:=?20:00:00?
-		var <>TimePicker_Step:=?00:15:00?
-		var <>TimePicker_SelectedTime:=?00:00:00?
-		
-		<>TimePicker_Inited:=True:C214
-		
-	End if 
+	//
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function resize()
@@ -75,18 +54,50 @@ Function setContainerValue($value; $type)
 			End if 
 			
 			//______________________________________________________
-		Else 
-			
-			// A "Case of" statement should never omit "Else"
-			
-			//______________________________________________________
 	End case 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function withWidget($name : Text) : Boolean
 	
 	ARRAY TEXT:C222($_widgets; 0)
-	FORM GET OBJECTS:C898($_widgets)
+	FORM GET OBJECTS:C898($_widgets; Form all pages:K67:7)
 	
 	return Find in array:C230($_widgets; $name)>0
 	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function clickedInWidget($widgets : Collection) : Text
+	
+	var $x; $y; $b : Integer
+	MOUSE POSITION:C468($x; $y; $b)
+	CONVERT COORDINATES:C1365($x; $y; XY Current window:K27:6; XY Current form:K27:5)
+	
+	If ($x>0)\
+		 && ($y>0)
+		
+		If ($widgets=Null:C1517)
+			
+			$widgets:=[]
+			
+			ARRAY TEXT:C222($_widgets; 0)
+			FORM GET OBJECTS:C898($_widgets)
+			ARRAY TO COLLECTION:C1563($widgets; $_widgets)
+			
+		End if 
+		
+		var $t : Text
+		
+		For each ($t; $widgets)
+			
+			var $left; $top; $right; $bottom : Integer
+			OBJECT GET COORDINATES:C663(*; $t; $left; $top; $right; $bottom)
+			
+			If ($x>=$left)\
+				 && ($x<=$right)\
+				 && ($y>=$top)\
+				 && ($y<=$bottom)
+				
+				return $t
+				
+			End if 
+		End for each 
+	End if 

@@ -3,8 +3,6 @@
 	"(TimePicker Private)": {},
 	"✅ TimePicker Forms": {
 		"forms": [
-			"TimeEntry",
-			"TimeEntry_AM",
 			"TimePicker_Pop1",
 			"TimePicker_Pop1_AM",
 			"TimePicker_Pop2",
@@ -46,31 +44,14 @@
 			"TimePicker SET STEP"
 		]
 	},
-	"🕒 TimeDisplay": {
+	"🕒 Time": {
 		"groups": [
-			"TimeDisplay_Shared"
-		],
-		"methods": [
-			"DISPLAY FORM METHOD"
-		],
-		"forms": [
-			"TimeDisplay",
-			"TimeDisplayLCD"
+			"Displays",
+			"Entries",
+			"Pickers"
 		],
 		"classes": [
-			"_analogic",
-			"_clock",
-			"_digital"
-		]
-	},
-	"🕒 TimePicker": {
-		"groups": [
-			"✅ TimePicker Forms",
-			"✅ TimePicker Private",
-			"✅ TimePicker Shared"
-		],
-		"classes": [
-			"_timePicker"
+			"_time"
 		]
 	},
 	"Compiler": {
@@ -137,6 +118,42 @@
 			"DatePicker SET MAX DATE",
 			"DatePicker SET MIN DATE",
 			"DatePicker SET WEEK FIRST DAY"
+		]
+	},
+	"Displays": {
+		"groups": [
+			"TimeDisplay_Shared"
+		],
+		"methods": [
+			"DISPLAY FORM METHOD"
+		],
+		"forms": [
+			"TimeDisplay",
+			"TimeDisplayLCD"
+		],
+		"classes": [
+			"_analogic",
+			"_clock",
+			"_digital"
+		]
+	},
+	"Entries": {
+		"forms": [
+			"TimeEntry",
+			"TimeEntry_AM"
+		],
+		"classes": [
+			"_timeEntry"
+		]
+	},
+	"Pickers": {
+		"groups": [
+			"✅ TimePicker Forms",
+			"✅ TimePicker Private",
+			"✅ TimePicker Shared"
+		],
+		"classes": [
+			"_timePicker"
 		]
 	},
 	"SearchPicker": {

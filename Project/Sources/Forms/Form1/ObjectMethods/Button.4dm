@@ -1,4 +1,4 @@
 TimePicker RESET DEFAULT VALUES
 
-TimePicker APPLY DEFAULT VALUES("timePickerOne")
-TimePicker APPLY DEFAULT VALUES("timePickerOneAMPM")
+var $time : Time:=?08:08:58?
+Form:C1466.startTime:=$time

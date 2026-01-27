@@ -1,4 +1,4 @@
-//%attributes = {}
+//%attributes = {"invisible":true}
 // ----------------------------------------------------
 // Form method : clock
 // Created 26/09/08 by vdl
@@ -40,7 +40,7 @@ Case of
 		
 		SET TIMER:C645(0)
 		
-		Form:C1466.update()
+		Form:C1466.Update()
 		
 		// __________________________________________________________________________________
 End case 

@@ -14,7 +14,6 @@
 		"onDeactivate",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
@@ -227,5 +226,6 @@
 		"kind": "form"
 	},
 	"geometryStamp": 74,
-	"formClass": "_timePicker"
+	"formClass": "_timeEntry",
+	"method": "ENTRY FORM METHOD"
 }

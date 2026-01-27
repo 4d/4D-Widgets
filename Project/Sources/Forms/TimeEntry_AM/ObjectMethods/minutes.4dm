@@ -1,1 +1,1 @@
-TimePicker__DisplayTimeInputs(True:C214)
+Form:C1466.Display(True:C214)

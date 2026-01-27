@@ -1,2 +1,2 @@
 //%attributes = {"invisible":true,"shared":true}
-TimePicker__InitInter(True:C214)
+cs:C1710._time.new().defaultValues(True:C214)
