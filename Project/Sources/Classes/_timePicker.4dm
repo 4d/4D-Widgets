@@ -250,15 +250,64 @@ Function Display($recalculation : Boolean)
 	
 	var $pop1 : Object:=OBJECT Get value:C1743("Hours")
 	
-	// MARK: Recalculation (or not) of the entered date
-	If ($recalculation)
+	var $e:=FORM Event:C1606
+	
+	If ($e.code=On Load:K2:1)
+		
+		//var $o:=This.getContainerValue()
+		
+		var $time:=This:C1470.getSelectedTime()
+		
+	Else 
+		
+		// MARK: Recalculation (or not) of the entered date
+		If ($recalculation)
+			
+			Case of 
+					
+					//________________________________________________________________________________
+				: (This:C1470.nbPopup=1)
+					
+					$time:=Time:C179($pop1.currentValue)
+					
+					//________________________________________________________________________________
+				: (This:C1470.nbPopup=2)
+					
+/*
+$ValPopHours:=($ptrHours->)-1
+var $ValPopMinutes : Integer:=($ptrMinutes->)-1
+				
+// Calcul de l'heure clicquée
+$time:=(3600*Int($minTime/3600))+(3600*($ValPopHours))+($step*$ValPopMinutes)
+*/
+					
+					//________________________________________________________________________________
+			End case 
+			
+		Else 
+			
+			$time:=This:C1470.time
+			
+		End if 
+	End if 
+	
+	$time:=This:C1470.constraints(($time+?24:00:00?)%(24*3600))
+	This:C1470.time:=$time
+	
+	If ($e.code=On Load:K2:1)
 		
 		Case of 
 				
 				//________________________________________________________________________________
 			: (This:C1470.nbPopup=1)
 				
-				$time:=Time:C179($pop1.currentValue)
+				
+				var $t:=String:C10(Time:C179($time); HH MM:K7:2)
+				$pop1.index:=$pop1.values.indexOf($t)
+				$pop1.currentValue:=$t
+				
+				OBJECT SET VALUE:C1742("Hours"; $pop1)
+				
 				
 				//________________________________________________________________________________
 			: (This:C1470.nbPopup=2)
@@ -266,53 +315,17 @@ Function Display($recalculation : Boolean)
 /*
 $ValPopHours:=($ptrHours->)-1
 var $ValPopMinutes : Integer:=($ptrMinutes->)-1
-				
+			
 // Calcul de l'heure clicquée
 $time:=(3600*Int($minTime/3600))+(3600*($ValPopHours))+($step*$ValPopMinutes)
 */
+				
 				
 				//________________________________________________________________________________
 		End case 
-		
-	Else 
-		
-		var $time:=This:C1470.time
-		
 	End if 
 	
-	$time:=This:C1470.constraints(($time+?24:00:00?)%(24*3600))
-	This:C1470.time:=$time
-	
-	Case of 
-			
-			//________________________________________________________________________________
-		: (This:C1470.nbPopup=1)
-			
-			var $t:=String:C10(Time:C179($time); HH MM:K7:2)
-			$pop1.index:=$pop1.values.indexOf($t)
-			$pop1.currentValue:=$t
-			
-			OBJECT SET VALUE:C1742("Hours"; $pop1)
-			
-			//var $ValPopHours : Integer:=($PtrHours->)-1
-			//$time:=$minTime+($step*$ValPopHours)
-			
-			
-			
-			//________________________________________________________________________________
-		: (This:C1470.nbPopup=2)
-			
-/*
-$ValPopHours:=($ptrHours->)-1
-var $ValPopMinutes : Integer:=($ptrMinutes->)-1
-			
-// Calcul de l'heure clicquée
-$time:=(3600*Int($minTime/3600))+(3600*($ValPopHours))+($step*$ValPopMinutes)
-*/
-			
-			
-			//________________________________________________________________________________
-	End case 
+	This:C1470.setSelectedTime($time)
 	
 	
 	

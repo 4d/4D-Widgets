@@ -264,7 +264,7 @@
 				},
 				"Subform": {
 					"type": "subform",
-					"left": 474,
+					"left": 406,
 					"top": 354,
 					"width": 84,
 					"height": 24,
@@ -272,11 +272,23 @@
 					"borderStyle": "sunken",
 					"dataSourceTypeHint": "time",
 					"dataSource": "Form:C1466.pickerOne"
+				},
+				"Input2": {
+					"type": "input",
+					"left": 510,
+					"top": 358,
+					"width": 140,
+					"height": 17,
+					"dataSource": "Time:C179(Form:C1466.pickerOne)",
+					"dataSourceTypeHint": "time",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "#1e90ff"
 				}
 			}
 		}
 	],
-	"geometryStamp": 221,
+	"geometryStamp": 224,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

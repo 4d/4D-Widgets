@@ -51,6 +51,18 @@ Function defaultValues($force : Boolean)
 	End if 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function getSelectedTime() : Time
+	
+	var $o:=This:C1470.getContainerValue()
+	
+	If ($o.type=Is real:K8:4)\
+		 | ($o.type=Is time:K8:8)
+		
+		return Time:C179($o.value)
+		
+	End if 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function setSelectedTime($time : Time)
 	
 	This:C1470.time:=This:C1470.constraints($time)
