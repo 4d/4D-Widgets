@@ -19,6 +19,8 @@ Class constructor()
 	This:C1470.minTime:=<>TimePicker_TimeMin
 	This:C1470.maxTime:=<>TimePicker_TimeMax
 	This:C1470.step:=<>TimePicker_Step
+	This:C1470.AM:=<>TimePicker_LabelAM
+	This:C1470.PM:=<>TimePicker_LabelPM
 	
 	This:C1470.hours:=0
 	This:C1470.minutes:=0
@@ -69,15 +71,7 @@ Function setSelectedTime($time : Time)
 	
 	var $o:=This:C1470.getContainerValue()
 	
-	If ($o.type=Is real:K8:4)\
-		 | ($o.type=Is time:K8:8)
-		
-		If (Time:C179($o.value)#$time)
-			
-			This:C1470.setContainerValue($time; [Is real:K8:4; Is time:K8:8])
-			
-		End if 
-	End if 
+	This:C1470.setContainerValue($time; [Is real:K8:4; Is time:K8:8; Is undefined:K8:13])
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function constraints($time : Time) : Time
@@ -99,4 +93,3 @@ Function constraints($time : Time) : Time
 	End case 
 	
 	return Time:C179($time)
-	

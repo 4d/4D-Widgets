@@ -14,7 +14,6 @@
 	"events": [
 		"onLoad"
 	],
-	"windowTitle": "window title",
 	"destination": "detailScreen",
 	"pages": [
 		{
@@ -22,14 +21,6 @@
 		},
 		{
 			"objects": {
-				"Group Box": {
-					"type": "groupBox",
-					"text": "",
-					"top": 350,
-					"left": 11,
-					"width": 363,
-					"height": 111
-				},
 				"LCD": {
 					"type": "subform",
 					"left": 356,
@@ -158,8 +149,8 @@
 				"Button4": {
 					"type": "button",
 					"text": "Close",
-					"top": 648,
-					"left": 481,
+					"top": 646,
+					"left": 525,
 					"width": 125,
 					"height": 34,
 					"events": [
@@ -174,9 +165,9 @@
 				},
 				"Input": {
 					"type": "input",
-					"left": 225,
-					"top": 358,
-					"width": 140,
+					"left": 132,
+					"top": 362,
+					"width": 90,
 					"height": 17,
 					"dataSource": "Time:C179(Form:C1466.timeEntry)",
 					"dataSourceTypeHint": "time",
@@ -198,63 +189,23 @@
 				"timeEntryAmPm": {
 					"type": "subform",
 					"left": 23,
-					"top": 397,
+					"top": 402,
 					"width": 130,
 					"height": 24,
 					"detailForm": "TimeEntry_AM",
-					"borderStyle": "sunken",
+					"borderStyle": "dotted",
 					"dataSourceTypeHint": "time",
-					"dataSource": "Form:C1466.timeMeridien"
-				},
-				"min": {
-					"type": "input",
-					"left": 225,
-					"top": 429,
-					"width": 49,
-					"height": 17,
+					"dataSource": "Form:C1466.timeMeridien",
+					"method": "ObjectMethods/timeEntryAmPm.4dm",
 					"events": [
 						"onDataChange"
-					],
-					"method": "ObjectMethods/min.4dm",
-					"dataSourceTypeHint": "integer",
-					"entryFilter": "&9"
-				},
-				"max": {
-					"type": "input",
-					"left": 316,
-					"top": 429,
-					"width": 49,
-					"height": 17,
-					"events": [
-						"onDataChange"
-					],
-					"method": "ObjectMethods/max.4dm",
-					"dataSourceTypeHint": "integer",
-					"entryFilter": "&9"
-				},
-				"Text": {
-					"type": "text",
-					"text": "min",
-					"top": 429,
-					"left": 173,
-					"width": 41,
-					"height": 16,
-					"textAlign": "right"
-				},
-				"Text1": {
-					"type": "text",
-					"text": "max",
-					"top": 429,
-					"left": 269,
-					"width": 41,
-					"height": 16,
-					"textAlign": "right"
+					]
 				},
 				"Input1": {
 					"type": "input",
-					"left": 225,
-					"top": 401,
-					"width": 140,
+					"left": 168,
+					"top": 406,
+					"width": 90,
 					"height": 17,
 					"dataSource": "Time:C179(Form:C1466.timeMeridien)",
 					"dataSourceTypeHint": "time",
@@ -264,22 +215,101 @@
 				},
 				"Subform": {
 					"type": "subform",
-					"left": 406,
-					"top": 354,
-					"width": 84,
+					"left": 376,
+					"top": 314,
+					"width": 80,
 					"height": 24,
 					"detailForm": "TimePicker_Pop1",
-					"borderStyle": "sunken",
+					"borderStyle": "dotted",
 					"dataSourceTypeHint": "time",
-					"dataSource": "Form:C1466.pickerOne"
+					"dataSource": "Form:C1466.pickerOne",
+					"method": "ObjectMethods/Subform.4dm",
+					"events": [
+						"onDataChange"
+					]
 				},
 				"Input2": {
 					"type": "input",
-					"left": 510,
-					"top": 358,
-					"width": 140,
+					"left": 480,
+					"top": 318,
+					"width": 90,
 					"height": 17,
 					"dataSource": "Time:C179(Form:C1466.pickerOne)",
+					"dataSourceTypeHint": "time",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "#1e90ff"
+				},
+				"Subform1": {
+					"type": "subform",
+					"left": 376,
+					"top": 358,
+					"width": 108,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1_AM",
+					"borderStyle": "sunken",
+					"dataSourceTypeHint": "undefined",
+					"method": "ObjectMethods/Subform1.4dm",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Subform2": {
+					"type": "subform",
+					"left": 376,
+					"top": 402,
+					"width": 134,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2",
+					"borderStyle": "sunken",
+					"dataSourceTypeHint": "undefined",
+					"dataSource": "Form:C1466.pickerTwo",
+					"events": [
+						"onDataChange"
+					],
+					"method": "ObjectMethods/Subform2.4dm"
+				},
+				"Input3": {
+					"type": "input",
+					"left": 521,
+					"top": 406,
+					"width": 90,
+					"height": 17,
+					"dataSource": "Time:C179(Form:C1466.pickerTwo)",
+					"dataSourceTypeHint": "time",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "#1e90ff"
+				},
+				"Input4": {
+					"type": "input",
+					"left": 504,
+					"top": 362,
+					"width": 90,
+					"height": 17,
+					"dataSource": "Time:C179(OBJECT Get value:C1743(\"Subform1\"))",
+					"dataSourceTypeHint": "time",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "#1e90ff"
+				},
+				"Subform3": {
+					"type": "subform",
+					"left": 376,
+					"top": 446,
+					"width": 155,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2_AM",
+					"borderStyle": "sunken",
+					"dataSourceTypeHint": "time"
+				},
+				"Input5": {
+					"type": "input",
+					"left": 545,
+					"top": 450,
+					"width": 90,
+					"height": 17,
+					"dataSource": "Time:C179(OBJECT Get value:C1743(\"Subform3\"))",
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -288,7 +318,7 @@
 			}
 		}
 	],
-	"geometryStamp": 224,
+	"geometryStamp": 259,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

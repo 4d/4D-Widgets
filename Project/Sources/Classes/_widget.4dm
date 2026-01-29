@@ -43,15 +43,9 @@ Function setContainerValue($value; $type)
 			End if 
 			
 			//______________________________________________________
-		: (Value type:C1509($type)=Is real:K8:4)\
-			 || (Value type:C1509($type)=Is time:K8:8)
+		: (Value type:C1509($variant)=Num:C11($type))
 			
-			If (Value type:C1509($variant)=Is real:K8:4)\
-				 || (Value type:C1509($variant)=Is time:K8:8)
-				
-				OBJECT SET SUBFORM CONTAINER VALUE:C1784($value)
-				
-			End if 
+			OBJECT SET SUBFORM CONTAINER VALUE:C1784($value)
 			
 			//______________________________________________________
 	End case 

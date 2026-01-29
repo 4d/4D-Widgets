@@ -1,1 +1,0 @@
-TimePicker SET MIN TIME("timeEntryAmPm"; Time:C179(Num:C11(OBJECT Get value:C1743(OBJECT Get name:C1087(Object current:K67:2)))*3600))
