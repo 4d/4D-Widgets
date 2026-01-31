@@ -1,4 +1,5 @@
-property widget : Text
+property currentForm : Text
+property type : Text
 
 // === === === === === === === === === === === === === === === === === === === === === === === ===
 Class constructor()
@@ -6,12 +7,11 @@ Class constructor()
 	//
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function resize()
+Function init()
 	
-	// Resize to fit the container
-	var $width; $height : Integer
-	OBJECT GET SUBFORM CONTAINER SIZE:C1148($width; $height)
-	OBJECT MOVE:C664(*; This:C1470.widget; 1; 1; $width-1; $height-1; *)
+	This:C1470.currentForm:=Current form name:C1298
+	
+	This:C1470.callParent()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function callParent()

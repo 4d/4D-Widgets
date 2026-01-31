@@ -6,7 +6,10 @@ Class constructor
 	Super:C1705()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Init()
+Function init()
+	
+	OBJECT SET TITLE:C194(*; "Separator1"; <>Time_separator)
+	OBJECT SET TITLE:C194(*; "Separator2"; <>Time_separator)
 	
 	This:C1470.withMeridien:=This:C1470.withWidget("am_pm")
 	
@@ -45,6 +48,82 @@ Function Init()
 	This:C1470.Update()
 	
 	This:C1470.callParent()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function handleEvents($e : Object)
+	
+	$e:=$e || FORM Event:C1606
+	
+	// MARK:Form Method
+	If ($e.objectName=Null:C1517)
+		
+		Try
+			
+			Case of 
+					
+					//________________________________________________________________________________
+				: ($e.code=On Load:K2:1)
+					
+					This:C1470.init()
+					
+					//________________________________________________________________________________
+				: ($e.code=On Bound Variable Change:K2:52)
+					
+					This:C1470.Update()
+					
+					//________________________________________________________________________________
+				: ($e.code=On Activate:K2:9)\
+					 || ($e.code=On Deactivate:K2:10)
+					
+					This:C1470.ManageFocus($e)
+					
+					//________________________________________________________________________________
+			End case 
+			
+			return 
+			
+		Catch
+			
+			ALERT:C41(".The type of the time selector must be numeric, time, or undefined.")
+			OBJECT SET VISIBLE:C603(*; "@"; False:C215)
+			
+		End try
+	End if 
+	
+	// MARK: Widget Methods
+	Case of 
+			// ______________________________________________________
+		: ($e.code=On Activate:K2:9)\
+			 || ($e.code=On Deactivate:K2:10)
+			
+			This:C1470.ManageFocus($e)
+			
+			// ______________________________________________________
+		: ($e.objectName="Hours")\
+			 || ($e.objectName="Minutes")\
+			 || ($e.objectName="seconds")\
+			 || ($e.objectName="am_pm")
+			
+			This:C1470.Display(True:C214)
+			
+			// ______________________________________________________
+		: ($e.objectName="stepper")
+			
+			This:C1470.Increase(OBJECT Get value:C1743("stepper"))  // +1 ou -1
+			OBJECT SET VALUE:C1742("stepper"; 0)
+			
+			// ______________________________________________________
+		: ($e.objectName="up")
+			
+			This:C1470.Increase(1)
+			
+			// ______________________________________________________
+		: ($e.objectName="down")
+			
+			This:C1470.Increase(-1)
+			
+			// ______________________________________________________
+	End case 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function Update()

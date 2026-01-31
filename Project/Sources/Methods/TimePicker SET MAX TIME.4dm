@@ -13,17 +13,15 @@ End if
 var $minTime : Time
 EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.minTime); $minTime)
 
-
 If (($time>=$minTime)\
  || ($minTime=?00:00:00?))
 	
 	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.maxTime:=$1); *; $time)
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.Display()))
 	
-	If (False:C215)
+	Try
 		
-		EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__BuildPopup))  // If no popup in form does nothing
-		//EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
+		EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.buildPopup()))
+		EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.Display()))
 		
-	End if 
+	End try
 End if 

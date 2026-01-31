@@ -10,6 +10,8 @@
 	"markerFooter": 24,
 	"events": [
 		"onLoad",
+		"onClick",
+		"onDataChange",
 		"onBoundVariableChange"
 	],
 	"pageFormat": {
@@ -26,9 +28,8 @@
 					"top": 0,
 					"left": 0,
 					"width": 108,
-					"height": 20,
+					"height": 23,
 					"sizingX": "grow",
-					"method": "ObjectMethods/Hours.4dm",
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -86,7 +87,7 @@
 			}
 		}
 	},
-	"geometryStamp": 72,
+	"geometryStamp": 75,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
@@ -94,5 +95,5 @@
 	"formClass": "_timePicker",
 	"windowMinWidth": 108,
 	"windowMaxWidth": 200,
-	"method": "TIMEPICKER AM FORM MEHOD"
+	"method": "WIDGET FORM METHOD"
 }

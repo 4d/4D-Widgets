@@ -1,3 +1,47 @@
+var $e : Object
+
+$e:=$e || FORM Event:C1606
+
+// MARK:Form Method
+If ($e.objectName=Null:C1517)
+	
+	//Try
+	
+	Case of 
+			
+			//________________________________________________________________________________
+		: ($e.code=On Load:K2:1)
+			
+			Form:C1466.init()
+			
+			//________________________________________________________________________________
+		: ($e.code=On Bound Variable Change:K2:52)
+			
+			Form:C1466.Update()
+			
+			//________________________________________________________________________________
+		: ($e.code=On Activate:K2:9)\
+			 || ($e.code=On Deactivate:K2:10)
+			
+			Form:C1466.ManageFocus($e)
+			
+			//________________________________________________________________________________
+	End case 
+	
+	return 
+	
+	//Catch
+	
+	//ALERT(".The type of the time selector must be numeric, time, or undefined.")
+	//OBJECT SET VISIBLE(*; "@"; False)
+	
+	//End try
+End if 
+
+
+
+
+
 //modified by RL on avril 2nd 2010  ∆∆∆
 // replace hard coded "/" system date separators
 

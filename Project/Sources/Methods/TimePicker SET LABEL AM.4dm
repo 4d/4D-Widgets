@@ -21,11 +21,10 @@ If (Length:C16($current)=0)\
 End if 
 
 EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.AM:=$1); *; $label)
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.Display()))
 
-If (False:C215)
+Try
 	
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__BuildPopup))  // If no popup in form does nothing
-	//EXECUTE METHOD IN SUBFORM($widget; Formula(TimePicker__DisplayTimePopups); *; False)  // If no popup in form does nothing
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.buildPopup()))
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.Display()))
 	
-End if 
+End try

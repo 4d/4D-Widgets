@@ -1,0 +1,1 @@
+TimePicker SET STEP("Subform2"; ?00:05:00?)

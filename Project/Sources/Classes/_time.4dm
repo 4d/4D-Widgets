@@ -9,6 +9,8 @@ property meridien : Text
 
 property time : Time
 
+property inited:=False:C215
+
 // === === === === === === === === === === === === === === === === === === === === === === === ===
 Class constructor()
 	
@@ -27,13 +29,31 @@ Class constructor()
 	This:C1470.seconds:=0
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function init()
+	
+	Super:C1706.init()
+	
+	Case of 
+			
+			// ______________________________________________________
+		: (This:C1470.currentForm="TimeEntry@")
+			
+			This:C1470.type:="entry"
+			
+			// ______________________________________________________
+		: (This:C1470.currentForm="TimePicker@")
+			
+			This:C1470.type:="picker"
+			
+			// ______________________________________________________
+	End case 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function defaultValues($force : Boolean)
 	
-	var <>TimePicker_Inited : Boolean
-	
-	If (Not:C34(<>TimePicker_Inited) || $force)
+	If (Not:C34(This:C1470.inited) || $force)
 		
-		var <>TimePicker_CloseDial : Boolean
+		//var <>TimePicker_CloseDial : Boolean
 		
 		// Default value
 		var <>TimePicker_LabelAM : Text
@@ -43,12 +63,13 @@ Function defaultValues($force : Boolean)
 		var <>Time_separator : Text
 		GET SYSTEM FORMAT:C994(Time separator:K60:11; <>Time_separator)
 		
+		
 		var <>TimePicker_TimeMin:=?08:00:00?
 		var <>TimePicker_TimeMax:=?20:00:00?
 		var <>TimePicker_Step:=?00:15:00?
 		var <>TimePicker_SelectedTime:=?00:00:00?
 		
-		<>TimePicker_Inited:=True:C214
+		This:C1470.inited:=True:C214
 		
 	End if 
 	
@@ -69,9 +90,7 @@ Function setSelectedTime($time : Time)
 	
 	This:C1470.time:=This:C1470.constraints($time)
 	
-	var $o:=This:C1470.getContainerValue()
-	
-	This:C1470.setContainerValue($time; [Is real:K8:4; Is time:K8:8; Is undefined:K8:13])
+	This:C1470.setContainerValue(This:C1470.time; [Is real:K8:4; Is time:K8:8; Is undefined:K8:13])
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function constraints($time : Time) : Time

@@ -11,15 +11,79 @@ Class constructor
 	Super:C1705()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Init($withMeridien : Boolean)
+Function init()
 	
-	This:C1470.withMeridien:=$withMeridien
+	Super:C1706.init()
+	
+	This:C1470.withMeridien:=This:C1470.currentForm="@_AM"
 	This:C1470.nbPopup:=Num:C11(This:C1470.withWidget("Hours"))+Num:C11(This:C1470.withWidget("Minutes"))
 	
 	This:C1470.buildPopup()
 	This:C1470.Display()
 	
 	This:C1470.callParent()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function handleEvents($e : Object)
+	
+	$e:=$e || FORM Event:C1606
+	
+	// MARK:Form Method
+	If ($e.objectName=Null:C1517)
+		
+		//Try
+		
+		Case of 
+				
+				// __________________________________________________________________________________
+			: ($e.code=On Load:K2:1)
+				
+				Form:C1466.init()
+				
+				// __________________________________________________________________________________
+			: ($e.code=On Bound Variable Change:K2:52)
+				
+				SET TIMER:C645(-1)
+				
+				// __________________________________________________________________________________
+			: ($e.code=On Timer:K2:25)
+				
+				SET TIMER:C645(0)
+				
+				Form:C1466.Update()
+				
+				// __________________________________________________________________________________
+		End case 
+		
+		//Catch
+		
+		//ALERT(Last errors.extract("message").join("\r"))
+		
+		//End try
+		
+		return 
+		
+	End if 
+	
+	// MARK: Widget Methods
+	Case of 
+			
+			// ______________________________________________________
+		: ($e.objectName="Hours")\
+			 || ($e.objectName="Minutes")
+			
+			This:C1470.Display(True:C214)
+			
+			// ______________________________________________________
+		: (False:C215)
+			
+			// ______________________________________________________
+		Else 
+			
+			// A "Case of" statement should never omit "Else"
+			
+			// ______________________________________________________
+	End case 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function Update()
@@ -173,11 +237,11 @@ Function buildPopup()
 					
 					If (This:C1470.isJA)
 						
-						//APPEND TO ARRAY($_TimePickerHours; $Label+" "+String($hours; "00"))
+						$values.push($Label+" "+String:C10($hours; "00"))
 						
 					Else 
 						
-						//APPEND TO ARRAY($_TimePickerHours; String($hours; "00")+" "+$Label)
+						$values.push(String:C10($hours; "00")+" "+$Label)
 						
 					End if 
 					

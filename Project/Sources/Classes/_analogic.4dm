@@ -29,7 +29,7 @@ Function Update()
 	
 	If (This:C1470.redraw)
 		
-		SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "seconds-hand"; "visibility"; This:C1470.withSeconds ? "visible" : "hidden")
+		SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "seconds-hand"; "visibility"; This:C1470.withSeconds ? "visible" : "hidden")
 		This:C1470.redraw:=False:C215  // Done
 		
 	End if 
@@ -45,23 +45,23 @@ Function Update()
 	
 	// MARK: Modifie the rotation of the 3 hands : according to the user value of cx cy if any
 	var $cx; $cy : Real
-	SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; "seconds-hand"; "d4:cx"; $cx)
-	SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; "seconds-hand"; "d4:cy"; $cy)
+	SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; "seconds-hand"; "d4:cx"; $cx)
+	SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; "seconds-hand"; "d4:cy"; $cy)
 	$cx:=$cx=0 ? 200 : $cx
 	$cy:=$cy=0 ? 200 : $cy
-	SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "seconds-hand"; "transform"; "rotate("+String:C10($secondAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
+	SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "seconds-hand"; "transform"; "rotate("+String:C10($secondAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
 	
-	SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; "minutes-hand"; "d4:cx"; $cx)
-	SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; "minutes-hand"; "d4:cy"; $cy)
+	SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; "minutes-hand"; "d4:cx"; $cx)
+	SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; "minutes-hand"; "d4:cy"; $cy)
 	$cx:=$cx=0 ? 200 : $cx
 	$cy:=$cy=0 ? 200 : $cy
-	SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "minutes-hand"; "transform"; "rotate("+String:C10($minuteAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
+	SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "minutes-hand"; "transform"; "rotate("+String:C10($minuteAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
 	
-	SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; "hours-hand"; "d4:cx"; $cx)
-	SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; "hours-hand"; "d4:cy"; $cy)
+	SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; "hours-hand"; "d4:cx"; $cx)
+	SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; "hours-hand"; "d4:cy"; $cy)
 	$cx:=$cx=0 ? 200 : $cx
 	$cy:=$cy=0 ? 200 : $cy
-	SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "hours-hand"; "transform"; "rotate("+String:C10($hourAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
+	SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "hours-hand"; "transform"; "rotate("+String:C10($hourAngle; "&xml")+","+String:C10($cx; "&xml")+","+String:C10($cy; "&xml")+")")
 	
 	// MARK: Set the background according to the daylight if any
 	If ($o.daylight)
@@ -80,19 +80,19 @@ Function Update()
 	
 	For each ($id; ["watch-dial"; "hours-hand"; "minutes-hand"; "seconds-hand"; "labels"; "clock-glass"])
 		
-		SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; $id; $fill; $fillColor)
+		SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; $id; $fill; $fillColor)
 		
 		If (Length:C16($fillColor)#0)
 			
-			SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "fill"; $fillColor)
+			SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "fill"; $fillColor)
 			
 		End if 
 		
-		SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; $id; $stroke; $strokeColor)
+		SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; $id; $stroke; $strokeColor)
 		
 		If (Length:C16($strokeColor)#0)
 			
-			SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "stroke"; $strokeColor)
+			SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "stroke"; $strokeColor)
 			
 		End if 
 	End for each 

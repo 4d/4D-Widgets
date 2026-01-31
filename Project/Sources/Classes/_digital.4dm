@@ -56,12 +56,12 @@ Function Update()
 		If (This:C1470.color="")
 			
 			var $attribute : Text
-			SVG GET ATTRIBUTE:C1056(*; This:C1470.widget; "globalClock"; "fill"; $attribute)
+			SVG GET ATTRIBUTE:C1056(*; This:C1470.clock; "globalClock"; "fill"; $attribute)
 			This:C1470.color:=$attribute
 			
 		End if 
 		
-		OBJECT SET VALUE:C1742(This:C1470.widget; Form:C1466.getClock())
+		OBJECT SET VALUE:C1742(This:C1470.clock; Form:C1466.getClock())
 		This:C1470.redraw:=False:C215  // Done
 		
 	End if 
@@ -69,11 +69,11 @@ Function Update()
 	// MARK: Apply display color
 	If (This:C1470.color#"")
 		
-		SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "globalClock"; "fill"; This:C1470.color)
+		SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "globalClock"; "fill"; This:C1470.color)
 		
 	Else 
 		
-		SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "globalClock"; "fill"; FORM Get color scheme:C1761="dark" ? "white" : "black")
+		SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "globalClock"; "fill"; FORM Get color scheme:C1761="dark" ? "white" : "black")
 		
 	End if 
 	
@@ -241,20 +241,20 @@ Function Update()
 			
 			If ($decoder{$indx}{$segment}=1)
 				
-				SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "fill-opacity"; "1")
-				SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "stroke-opacity"; "1")
+				SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "fill-opacity"; "1")
+				SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "stroke-opacity"; "1")
 				
 			Else 
 				
 				If ($segment#8)  // Vertical bar of the M (exception)
 					
-					SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "fill-opacity"; "0.05")
-					SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "stroke-opacity"; "0.05")
+					SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "fill-opacity"; "0.05")
+					SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "stroke-opacity"; "0.05")
 					
 				Else 
 					
-					SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "fill-opacity"; "0")
-					SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; $id; "stroke-opacity"; "0")
+					SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "fill-opacity"; "0")
+					SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; $id; "stroke-opacity"; "0")
 					
 				End if 
 			End if 
@@ -263,13 +263,13 @@ Function Update()
 	
 	If (This:C1470.autorun) && (($seconds%2)=0)
 		
-		SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "blink"; "fill-opacity"; "1")
-		SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "blink"; "stroke-opacity"; "1")
+		SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "blink"; "fill-opacity"; "1")
+		SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "blink"; "stroke-opacity"; "1")
 		
 	Else 
 		
-		SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "blink"; "fill-opacity"; "0")
-		SVG SET ATTRIBUTE:C1055(*; This:C1470.widget; "blink"; "stroke-opacity"; "0.05")
+		SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "blink"; "fill-opacity"; "0")
+		SVG SET ATTRIBUTE:C1055(*; This:C1470.clock; "blink"; "stroke-opacity"; "0.05")
 		
 	End if 
 	

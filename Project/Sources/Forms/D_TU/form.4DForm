@@ -22,7 +22,7 @@
 				"Subform": {
 					"type": "subform",
 					"left": 433,
-					"top": 244,
+					"top": 224,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop2",
@@ -34,13 +34,12 @@
 				"Input": {
 					"type": "input",
 					"left": 431,
-					"top": 131,
+					"top": 111,
 					"width": 132,
 					"height": 17,
 					"dataSourceTypeHint": "time",
 					"dataSource": "Form:C1466.startTime",
 					"timeFormat": "hh_mm_ss",
-					"method": "ObjectMethods/Input.4dm",
 					"events": [
 						"onDataChange"
 					]
@@ -60,7 +59,7 @@
 				"Input2": {
 					"type": "input",
 					"left": 99,
-					"top": 131,
+					"top": 111,
 					"width": 132,
 					"height": 17,
 					"dataSourceTypeHint": "time",
@@ -209,7 +208,7 @@
 				"Subform1": {
 					"type": "subform",
 					"left": 431,
-					"top": 168,
+					"top": 148,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop1",
@@ -221,7 +220,7 @@
 				"Subform3": {
 					"type": "subform",
 					"left": 435,
-					"top": 282,
+					"top": 262,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop2_AM",
@@ -233,7 +232,7 @@
 				"Subform12": {
 					"type": "subform",
 					"left": 433,
-					"top": 209,
+					"top": 189,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop1_AM",
@@ -245,7 +244,7 @@
 				"Subform13": {
 					"type": "subform",
 					"left": 435,
-					"top": 326,
+					"top": 306,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimeEntry",
@@ -257,7 +256,7 @@
 				"Subform14": {
 					"type": "subform",
 					"left": 435,
-					"top": 360,
+					"top": 340,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimeEntry_AM",
@@ -269,7 +268,7 @@
 				"Subform2": {
 					"type": "subform",
 					"left": 99,
-					"top": 244,
+					"top": 224,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop2",
@@ -281,7 +280,7 @@
 				"Subform15": {
 					"type": "subform",
 					"left": 97,
-					"top": 168,
+					"top": 148,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop1",
@@ -293,7 +292,7 @@
 				"Subform16": {
 					"type": "subform",
 					"left": 101,
-					"top": 282,
+					"top": 262,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop2_AM",
@@ -305,7 +304,7 @@
 				"Subform17": {
 					"type": "subform",
 					"left": 99,
-					"top": 209,
+					"top": 189,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimePicker_Pop1_AM",
@@ -317,7 +316,7 @@
 				"Subform18": {
 					"type": "subform",
 					"left": 101,
-					"top": 326,
+					"top": 306,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimeEntry",
@@ -329,7 +328,7 @@
 				"Subform19": {
 					"type": "subform",
 					"left": 101,
-					"top": 360,
+					"top": 340,
 					"width": 160,
 					"height": 24,
 					"detailForm": "TimeEntry_AM",
@@ -341,7 +340,7 @@
 				"Text4": {
 					"type": "text",
 					"text": "VAR TIME",
-					"top": 108,
+					"top": 88,
 					"left": 97,
 					"width": 92,
 					"height": 16,
@@ -351,7 +350,7 @@
 				"Text5": {
 					"type": "text",
 					"text": "EXP TIME",
-					"top": 108,
+					"top": 88,
 					"left": 435,
 					"width": 92,
 					"height": 16,
@@ -458,7 +457,7 @@
 				},
 				"Line": {
 					"type": "line",
-					"top": 314,
+					"top": 393,
 					"left": 21,
 					"width": 716,
 					"height": 0,
@@ -475,7 +474,7 @@
 			}
 		}
 	],
-	"geometryStamp": 423,
+	"geometryStamp": 426,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

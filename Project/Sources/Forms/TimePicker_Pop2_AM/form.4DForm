@@ -10,6 +10,9 @@
 	"markerFooter": 24,
 	"events": [
 		"onLoad",
+		"onClick",
+		"onDataChange",
+		"onTimer",
 		"onBoundVariableChange"
 	],
 	"pageFormat": {
@@ -28,7 +31,6 @@
 					"width": 86,
 					"height": 20,
 					"sizingX": "grow",
-					"method": "ObjectMethods/Hours.4dm",
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -43,7 +45,6 @@
 					"width": 56,
 					"height": 20,
 					"sizingX": "move",
-					"method": "ObjectMethods/Minutes.4dm",
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -167,6 +168,6 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"method": "TIMEPICKER AM FORM MEHOD",
+	"method": "WIDGET FORM METHOD",
 	"formClass": "_timePicker"
 }

@@ -10,8 +10,10 @@
 	"markerFooter": 24,
 	"events": [
 		"onLoad",
+		"onClick",
 		"onActivate",
 		"onDeactivate",
+		"onDataChange",
 		"onBoundVariableChange"
 	],
 	"method": "method.4dm",
@@ -21,102 +23,12 @@
 		"paperHeight": "842pt"
 	},
 	"pages": [
-		null,
 		{
 			"objects": {
-				"FocusRingBackGround": {
-					"type": "rectangle",
-					"top": 2,
-					"left": 2,
-					"width": 88,
-					"height": 20,
-					"sizingX": "grow",
-					"fill": "automatic",
-					"stroke": "#808080",
-					"visibility": "hidden"
-				},
-				"Slash1": {
-					"type": "text",
-					"top": 4,
-					"left": 21,
-					"width": 8,
-					"height": 16,
-					"class": "Default",
-					"textAlign": "center",
-					"text": "/"
-				},
-				"Slash2": {
-					"type": "text",
-					"top": 4,
-					"left": 46,
-					"width": 8,
-					"height": 16,
-					"class": "Default",
-					"textAlign": "center",
-					"text": "/"
-				},
-				"LeftEntry": {
-					"type": "input",
-					"top": 4,
-					"left": 4,
-					"width": 17,
-					"height": 16,
-					"class": "Buttons_13",
-					"textAlign": "left",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"contextMenu": "none",
-					"entryFilter": "&9",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/LeftEntry.4dm",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"CenterEntry": {
-					"type": "input",
-					"top": 4,
-					"left": 29,
-					"width": 17,
-					"height": 16,
-					"class": "Buttons_13",
-					"textAlign": "left",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"contextMenu": "none",
-					"entryFilter": "&9",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/CenterEntry.4dm",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"RightEntry": {
-					"type": "input",
-					"top": 4,
-					"left": 54,
-					"width": 34,
-					"height": 16,
-					"sizingX": "grow",
-					"class": "Buttons_13",
-					"textAlign": "left",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"contextMenu": "none",
-					"entryFilter": "&9",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/RightEntry.4dm",
-					"events": [
-						"onDataChange"
-					]
-				},
 				"up": {
 					"type": "button",
-					"top": 0,
-					"left": 442,
+					"top": 6,
+					"left": 9,
 					"width": 20,
 					"height": 12,
 					"shortcutKey": "[up arrow]",
@@ -128,8 +40,8 @@
 				},
 				"down": {
 					"type": "button",
-					"top": 12,
-					"left": 442,
+					"top": 6,
+					"left": 49,
 					"width": 20,
 					"height": 12,
 					"shortcutKey": "[down arrow]",
@@ -138,78 +50,106 @@
 					"events": [
 						"onClick"
 					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"posterBakground": {
+					"type": "rectangle",
+					"top": -2,
+					"left": -2,
+					"width": 145,
+					"height": 28,
+					"visibility": "hidden",
+					"fill": "automatic",
+					"stroke": "transparent"
 				},
-				"YearZoneName": {
-					"type": "input",
-					"top": 39,
-					"left": 419,
-					"width": 79,
+				"FocusRingBackGround": {
+					"type": "rectangle",
+					"top": 4,
+					"left": 4,
+					"width": 84,
 					"height": 16,
-					"focusable": false,
-					"fill": "#FFFFC0",
+					"fill": "transparent",
+					"stroke": "transparent",
+					"visibility": "hidden"
+				},
+				"Slash1": {
+					"type": "text",
+					"top": 4,
+					"left": 21,
+					"width": 8,
+					"height": 16,
+					"textAlign": "center",
+					"text": "/"
+				},
+				"Slash2": {
+					"type": "text",
+					"top": 4,
+					"left": 46,
+					"width": 8,
+					"height": 16,
+					"textAlign": "center",
+					"text": "/",
+					"fontSize": 13
+				},
+				"LeftEntry": {
+					"type": "input",
+					"top": 4,
+					"left": 4,
+					"width": 17,
+					"height": 16,
+					"fill": "transparent",
 					"borderStyle": "none",
-					"enterable": false,
-					"hideFocusRing": true,
 					"contextMenu": "none",
+					"entryFilter": "&9",
+					"method": "ObjectMethods/LeftEntry.4dm",
+					"events": [
+						"onDataChange"
+					],
+					"hideFocusRing": true,
+					"dropping": "none",
+					"dragging": "none",
+					"fontSize": 13
+				},
+				"CenterEntry": {
+					"type": "input",
+					"top": 4,
+					"left": 29,
+					"width": 17,
+					"height": 16,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"contextMenu": "none",
+					"entryFilter": "&9",
 					"dragging": "none",
 					"dropping": "none",
+					"method": "ObjectMethods/CenterEntry.4dm",
 					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					]
+						"onDataChange"
+					],
+					"fontSize": 13,
+					"hideFocusRing": true
 				},
-				"MonthZoneName": {
+				"RightEntry": {
 					"type": "input",
-					"top": 39,
-					"left": 335,
-					"width": 79,
+					"top": 4,
+					"left": 54,
+					"width": 34,
 					"height": 16,
-					"focusable": false,
-					"fill": "#FFFFC0",
+					"fill": "transparent",
 					"borderStyle": "none",
-					"enterable": false,
-					"hideFocusRing": true,
 					"contextMenu": "none",
+					"entryFilter": "&9",
 					"dragging": "none",
 					"dropping": "none",
+					"method": "ObjectMethods/RightEntry.4dm",
 					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					]
-				},
-				"DayZoneName": {
-					"type": "input",
-					"top": 39,
-					"left": 251,
-					"width": 79,
-					"height": 16,
-					"focusable": false,
-					"fill": "#FFFFC0",
-					"borderStyle": "none",
-					"enterable": false,
-					"hideFocusRing": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					]
+						"onDataChange"
+					],
+					"fontSize": 13,
+					"hideFocusRing": true
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -222,7 +162,7 @@
 					"fill": "automatic",
 					"strokeWidth": 0
 				},
-				"Texte": {
+				"poster": {
 					"type": "text",
 					"top": 4,
 					"left": 4,
@@ -230,8 +170,9 @@
 					"height": 16,
 					"visibility": "hidden",
 					"fill": "automatic",
-					"class": "Default",
-					"text": "00/00/0000"
+					"text": "00/00/0000",
+					"textAlign": "center",
+					"fontSize": 13
 				},
 				"bTinyCalendar": {
 					"type": "button",
@@ -240,7 +181,6 @@
 					"width": 22,
 					"height": 24,
 					"sizingX": "move",
-					"class": "Default",
 					"focusable": false,
 					"icon": "/RESOURCES/Images/Calendar/IconCalendar.png",
 					"iconFrames": 4,
@@ -250,26 +190,28 @@
 						"onClick"
 					]
 				},
-				"bRuler": {
+				"stepper": {
 					"type": "stepper",
 					"top": 1,
-					"left": 94,
+					"left": 92,
 					"width": 22,
 					"height": 22,
 					"sizingX": "move",
 					"min": -100,
 					"max": 100,
-					"method": "ObjectMethods/bRuler.4dm",
+					"method": "ObjectMethods/stepper.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"focusable": false,
+					"visibility": "hidden"
 				}
 			},
 			"entryOrder": [
 				"LeftEntry",
 				"CenterEntry",
 				"RightEntry",
-				"bRuler"
+				"stepper"
 			]
 		},
 		{
@@ -629,57 +571,93 @@
 						"onDataChange"
 					]
 				},
-				"Subform": {
-					"type": "subform",
-					"left": 51,
-					"top": 252,
-					"width": 99,
-					"height": 117,
-					"dataSourceTypeHint": "undefined"
+				"YearZoneName": {
+					"type": "input",
+					"top": 55,
+					"left": 823,
+					"width": 79,
+					"height": 16,
+					"focusable": false,
+					"fill": "#FFFFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"MonthZoneName": {
+					"type": "input",
+					"top": 55,
+					"left": 739,
+					"width": 79,
+					"height": 16,
+					"focusable": false,
+					"fill": "#FFFFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
+				},
+				"DayZoneName": {
+					"type": "input",
+					"top": 55,
+					"left": 655,
+					"width": 79,
+					"height": 16,
+					"focusable": false,
+					"fill": "#FFFFC0",
+					"borderStyle": "none",
+					"enterable": false,
+					"hideFocusRing": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "none",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onDataChange",
+						"onPrintingDetail"
+					]
 				}
 			}
 		}
 	],
 	"editor": {
-		"activeView": "FocusRing",
+		"activeView": "Vue 1",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
-			"FocusRing": {
+			"PREVIEW": {
+				"visible": false,
 				"objects": [
-					"FocusRingBackGround",
-					"up",
-					"down",
-					"YearZoneName",
-					"MonthZoneName",
-					"DayZoneName"
-				]
-			},
-			"preview": {
-				"objects": [
+					"posterBakground",
 					"Rectangle",
-					"Texte"
+					"poster"
 				]
-			},
-			"Vue 5": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 6": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 7": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 8": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 9": {
-				"visible": false,
-				"selectable": false
 			}
 		}
 	},
@@ -687,5 +665,6 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 52
+	"geometryStamp": 139,
+	"formClass": "_dateEntry"
 }

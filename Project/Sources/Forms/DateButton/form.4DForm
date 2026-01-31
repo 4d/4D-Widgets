@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingX": "fixed",
@@ -10,6 +10,8 @@
 	"markerFooter": 16,
 	"events": [
 		"onLoad",
+		"onClick",
+		"onTimer",
 		"onBoundVariableChange"
 	],
 	"method": "method.4dm",
@@ -44,17 +46,12 @@
 			"objects": {
 				"DisplayedMonth": {
 					"type": "input",
-					"top": 8,
-					"left": 0,
-					"width": 160,
-					"height": 20,
-					"stroke": "#000000",
+					"top": 69,
+					"left": -1,
+					"width": 151,
+					"height": 15,
 					"class": "Buttons_11",
-					"textAlign": "center",
-					"fontWeight": "bold",
 					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
 					"enterable": false,
 					"contextMenu": "none",
 					"events": [
@@ -69,8 +66,8 @@
 				},
 				"FormInited": {
 					"type": "input",
-					"top": 16,
-					"left": 419,
+					"top": 46,
+					"left": -1,
 					"width": 151,
 					"height": 13,
 					"visibility": "hidden",
@@ -349,8 +346,8 @@
 				},
 				"FirstDayOfWeek": {
 					"type": "input",
-					"top": 285,
-					"left": 293,
+					"top": 92,
+					"left": -1,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -477,8 +474,8 @@
 				},
 				"SelectedDate": {
 					"type": "input",
-					"top": 305,
-					"left": 293,
+					"top": 116,
+					"left": -2,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -495,8 +492,8 @@
 				},
 				"MinDate": {
 					"type": "input",
-					"top": 344,
-					"left": 293,
+					"top": 141,
+					"left": -2,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -513,8 +510,8 @@
 				},
 				"MaxDate": {
 					"type": "input",
-					"top": 365,
-					"left": 293,
+					"top": 162,
+					"left": -2,
 					"width": 124,
 					"height": 13,
 					"visibility": "hidden",
@@ -531,8 +528,8 @@
 				},
 				"FirstDisplayedDay": {
 					"type": "input",
-					"top": 402,
-					"left": 295,
+					"top": 187,
+					"left": -1,
 					"width": 127,
 					"height": 13,
 					"visibility": "hidden",
@@ -549,8 +546,8 @@
 				},
 				"FirstOfCurrentMonth": {
 					"type": "input",
-					"top": 423,
-					"left": 295,
+					"top": 211,
+					"left": -1,
 					"width": 127,
 					"height": 13,
 					"visibility": "hidden",
@@ -564,83 +561,6 @@
 					"events": [
 						"onDataChange"
 					]
-				},
-				"Text": {
-					"type": "text",
-					"top": 345,
-					"left": 128,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "Min Date:"
-				},
-				"Text1": {
-					"type": "text",
-					"top": 365,
-					"left": 128,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "Max Date:"
-				},
-				"Text2": {
-					"type": "text",
-					"top": 16,
-					"left": 288,
-					"width": 118,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "zone Inited:"
-				},
-				"Text4": {
-					"type": "text",
-					"top": 305,
-					"left": 128,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "Selected Date:"
-				},
-				"Text5": {
-					"type": "text",
-					"top": 402,
-					"left": 100,
-					"width": 188,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "First displayed day:"
-				},
-				"Text6": {
-					"type": "text",
-					"top": 285,
-					"left": 128,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "First day of week:"
-				},
-				"Text3": {
-					"type": "text",
-					"top": 423,
-					"left": 100,
-					"width": 188,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "First of current displayed month"
 				}
 			}
 		}
@@ -659,5 +579,11 @@
 			"View 8": {},
 			"View 9": {}
 		}
-	}
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"geometryStamp": 17,
+	"formClass": "_dateButton"
 }
