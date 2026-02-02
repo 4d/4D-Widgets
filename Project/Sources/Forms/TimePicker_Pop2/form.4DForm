@@ -5,9 +5,6 @@
 	"windowSizingY": "fixed",
 	"width": 134,
 	"height": 24,
-	"markerBody": 24,
-	"markerBreak": 24,
-	"markerFooter": 24,
 	"events": [
 		"onLoad",
 		"onClick",
@@ -24,6 +21,17 @@
 		null,
 		{
 			"objects": {
+				"separator": {
+					"type": "text",
+					"text": "x",
+					"top": 2,
+					"left": 57,
+					"width": 16,
+					"height": 16,
+					"textAlign": "center",
+					"fontSize": 13,
+					"fontWeight": "bold"
+				},
 				"Hours": {
 					"type": "dropdown",
 					"top": 0,
@@ -113,22 +121,6 @@
 					"pictureFormat": "scaled",
 					"visibility": "hidden"
 				},
-				"separator": {
-					"type": "input",
-					"left": 63,
-					"top": 2,
-					"width": 5,
-					"height": 16,
-					"dataSource": "<>Time_separator",
-					"enterable": false,
-					"focusable": false,
-					"contextMenu": "none",
-					"fontSize": 13,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"fontWeight": "bold",
-					"textAlign": "center"
-				},
 				"Texte1": {
 					"type": "text",
 					"top": 2,
@@ -164,7 +156,7 @@
 			}
 		}
 	},
-	"geometryStamp": 105,
+	"geometryStamp": 116,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

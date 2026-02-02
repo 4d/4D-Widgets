@@ -4,9 +4,6 @@
 	"windowMaxHeight": 32000,
 	"width": 120,
 	"height": 120,
-	"markerBody": 120,
-	"markerBreak": 120,
-	"markerFooter": 120,
 	"events": [
 		"onLoad",
 		"onTimer",
@@ -70,7 +67,8 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 74,
+	"geometryStamp": 75,
 	"formClass": "_analogic",
-	"method": "WIDGET FORM METHOD"
+	"method": "WIDGET FORM METHOD",
+	"destination": "detailScreen"
 }

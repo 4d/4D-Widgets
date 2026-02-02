@@ -25,6 +25,6 @@ EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.AM:=$1); *; $l
 Try
 	
 	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.buildPopup()))
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.Display()))
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.display()))
 	
 End try

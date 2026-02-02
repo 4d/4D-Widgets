@@ -191,7 +191,8 @@
 					"height": 24,
 					"detailForm": "TimeEntry",
 					"dataSourceTypeHint": "undefined",
-					"borderStyle": "system"
+					"borderStyle": "system",
+					"dataSource": "Form:C1466.timeEntry"
 				},
 				"timeEntryAmPm": {
 					"type": "subform",
@@ -266,12 +267,12 @@
 					"width": 134,
 					"height": 24,
 					"detailForm": "TimePicker_Pop2",
-					"dataSourceTypeHint": "undefined",
 					"dataSource": "Form:C1466.pickerTwo",
 					"events": [
 						"onDataChange"
 					],
-					"method": "ObjectMethods/Subform2.4dm"
+					"method": "ObjectMethods/Subform2.4dm",
+					"dataSourceTypeHint": "undefined"
 				},
 				"Input3": {
 					"type": "input",
@@ -382,17 +383,6 @@
 					],
 					"method": "ObjectMethods/Button1.4dm"
 				},
-				"Subform22": {
-					"type": "subform",
-					"left": 40,
-					"top": 506,
-					"width": 19,
-					"height": 16,
-					"detailForm": "DateButton",
-					"borderStyle": "sunken",
-					"dataSource": "vStartDate",
-					"dataSourceTypeHint": "undefined"
-				},
 				"Subform4": {
 					"type": "subform",
 					"left": 40,
@@ -400,8 +390,12 @@
 					"width": 138,
 					"height": 24,
 					"detailForm": "DateEntry",
-					"borderStyle": "sunken",
-					"dataSourceTypeHint": "date"
+					"dataSourceTypeHint": "date",
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "vDate",
+					"borderStyle": "system"
 				},
 				"Text": {
 					"type": "text",
@@ -467,14 +461,6 @@
 					"width": 19,
 					"height": 17
 				},
-				"Text8": {
-					"type": "text",
-					"text": "❌",
-					"top": 506,
-					"left": 11,
-					"width": 19,
-					"height": 17
-				},
 				"Text9": {
 					"type": "text",
 					"text": "❌",
@@ -489,6 +475,14 @@
 					"left": 11,
 					"width": 315,
 					"height": 0
+				},
+				"Text10": {
+					"type": "text",
+					"text": "✅",
+					"top": 402,
+					"left": 342,
+					"width": 19,
+					"height": 17
 				}
 			},
 			"entryOrder": [
@@ -515,7 +509,6 @@
 				"Subform4",
 				"Input6",
 				"Button1",
-				"Subform22",
 				"BevelButton14",
 				"BevelButton6",
 				"Combo Box7",
@@ -524,7 +517,7 @@
 			]
 		}
 	],
-	"geometryStamp": 363,
+	"geometryStamp": 371,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -23,7 +23,7 @@ Function getClock() : Picture
 	return This:C1470.loadClock($file)
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Update()
+Function update()
 	
 	This:C1470.resize()
 	

@@ -1,13 +1,10 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingX": "fixed",
 	"windowSizingY": "fixed",
 	"width": 168,
 	"height": 190,
-	"markerBody": 190,
-	"markerBreak": 190,
-	"markerFooter": 190,
 	"events": [
 		"onLoad",
 		"onActivate",
@@ -1748,7 +1745,7 @@
 			"View 9": {}
 		}
 	},
-	"geometryStamp": 241,
+	"geometryStamp": 242,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

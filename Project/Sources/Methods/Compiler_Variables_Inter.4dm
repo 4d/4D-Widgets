@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true}
-var <>Date_separator : Text
+//var <>Date_separator : Text
 
 
 var <>DatePicker_ActivateArrows : Boolean
@@ -12,6 +12,13 @@ var <>DatePicker_FirstDayOfWeek : Integer
 var <>DatePicker_GetBlob : Boolean
 var <>DatePicker_Inited : Boolean
 
+var <>TimePicker_LabelAM : Text
+var <>TimePicker_LabelPM : Text
+
+var <>TimePicker_TimeMin : Time
+var <>TimePicker_TimeMax : Time
+var <>TimePicker_Step : Time
+var <>TimePicker_SelectedTime : Time
 
 
 
@@ -23,12 +30,4 @@ var <>SearchPicker_PopupFunction : Text
 var <>SearchPicker_SearchText : Text
 var <>SearchPicker_Target : Pointer
 
-var <>TimePicker_LabelAM : Text
-var <>TimePicker_LabelPM : Text
-var <>Time_separator : Text
-
-var <>TimePicker_TimeMin : Time
-var <>TimePicker_TimeMax : Time
-var <>TimePicker_Step : Time
-var <>TimePicker_SelectedTime : Time
 

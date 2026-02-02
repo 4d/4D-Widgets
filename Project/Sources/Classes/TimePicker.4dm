@@ -26,7 +26,7 @@ Function set minTime($time : Time)
 		 || ($maxTime=?00:00:00?))
 		
 		EXECUTE METHOD IN SUBFORM:C1085(This:C1470.name; Formula:C1597(Form:C1466.minTime:=$1); *; $time)
-		EXECUTE METHOD IN SUBFORM:C1085(This:C1470.name; Formula:C1597(Form:C1466.Display()))
+		EXECUTE METHOD IN SUBFORM:C1085(This:C1470.name; Formula:C1597(Form:C1466.display()))
 		
 	End if 
 	
@@ -47,6 +47,6 @@ Function set maxTime($time : Time)
 		 || ($minTime=?00:00:00?))
 		
 		EXECUTE METHOD IN SUBFORM:C1085(This:C1470.name; Formula:C1597(Form:C1466.maxTime:=$1); *; $time)
-		EXECUTE METHOD IN SUBFORM:C1085(This:C1470.name; Formula:C1597(Form:C1466.Display()))
+		EXECUTE METHOD IN SUBFORM:C1085(This:C1470.name; Formula:C1597(Form:C1466.display()))
 		
 	End if 

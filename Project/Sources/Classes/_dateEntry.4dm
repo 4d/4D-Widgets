@@ -32,6 +32,11 @@ Class constructor($data : cs:C1710._dateButton)
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function init()
 	
+	Super:C1706.init()
+	
+	OBJECT SET TITLE:C194(*; "Slash1"; This:C1470.separator)
+	OBJECT SET TITLE:C194(*; "Slash2"; This:C1470.separator)
+	
 	Case of 
 			//______________________________________________________
 		: (This:C1470.posDay=1)\
@@ -40,7 +45,7 @@ Function init()
 			
 			This:C1470.dayZoneName:=This:C1470.widgets[1]
 			This:C1470.monthZoneName:=This:C1470.widgets[3]
-			This:C1470.yearZoneName:=This:C1470.widgets[4]
+			This:C1470.yearZoneName:=This:C1470.widgets[5]
 			
 			This:C1470.width[1]:=This:C1470.dayWidth
 			This:C1470.width[3]:=This:C1470.monthWidth
@@ -53,7 +58,7 @@ Function init()
 			
 			This:C1470.dayZoneName:=This:C1470.widgets[1]
 			This:C1470.yearZoneName:=This:C1470.widgets[3]
-			This:C1470.monthZoneName:=This:C1470.widgets[4]
+			This:C1470.monthZoneName:=This:C1470.widgets[5]
 			
 			This:C1470.width[1]:=This:C1470.dayWidth
 			This:C1470.width[3]:=This:C1470.yearWidth
@@ -66,7 +71,7 @@ Function init()
 			
 			This:C1470.monthZoneName:=This:C1470.widgets[1]
 			This:C1470.dayZoneName:=This:C1470.widgets[3]
-			This:C1470.yearZoneName:=This:C1470.widgets[4]
+			This:C1470.yearZoneName:=This:C1470.widgets[5]
 			
 			This:C1470.width[1]:=This:C1470.monthWidth
 			This:C1470.width[3]:=This:C1470.dayWidth
@@ -79,7 +84,7 @@ Function init()
 			
 			This:C1470.yearZoneName:=This:C1470.widgets[1]
 			This:C1470.dayZoneName:=This:C1470.widgets[3]
-			This:C1470.monthZoneName:=This:C1470.widgets[4]
+			This:C1470.monthZoneName:=This:C1470.widgets[5]
 			
 			This:C1470.width[1]:=This:C1470.yearWidth
 			This:C1470.width[3]:=This:C1470.dayWidth
@@ -92,7 +97,7 @@ Function init()
 			
 			This:C1470.monthZoneName:=This:C1470.widgets[1]
 			This:C1470.yearZoneName:=This:C1470.widgets[3]
-			This:C1470.dayZoneName:=This:C1470.widgets[4]
+			This:C1470.dayZoneName:=This:C1470.widgets[5]
 			
 			This:C1470.width[1]:=This:C1470.monthWidth
 			This:C1470.width[3]:=This:C1470.yearWidth
@@ -105,7 +110,7 @@ Function init()
 			
 			This:C1470.yearZoneName:=This:C1470.widgets[1]
 			This:C1470.monthZoneName:=This:C1470.widgets[3]
-			This:C1470.dayZoneName:=This:C1470.widgets[4]
+			This:C1470.dayZoneName:=This:C1470.widgets[5]
 			
 			This:C1470.width[1]:=This:C1470.yearWidth
 			This:C1470.width[3]:=This:C1470.monthWidth
@@ -116,7 +121,7 @@ Function init()
 			
 			This:C1470.dayZoneName:=This:C1470.widgets[1]
 			This:C1470.monthZoneName:=This:C1470.widgets[3]
-			This:C1470.yearZoneName:=This:C1470.widgets[4]
+			This:C1470.yearZoneName:=This:C1470.widgets[5]
 			
 			This:C1470.width[1]:=This:C1470.dayWidth
 			This:C1470.width[3]:=This:C1470.monthWidth
@@ -126,14 +131,15 @@ Function init()
 	End case 
 	
 	// Resize objects (the order will NOT be changed !!!)
-	var $left; $top; $right; $bottom; $start; $i : Integer
+	var $left; $top; $right; $bottom : Integer
 	OBJECT GET COORDINATES:C663(*; This:C1470.widgets[1]; $left; $top; $right; $bottom)
-	$start:=$left
+	//var $start:=$left
 	
+	var $i : Integer
 	For ($i; 1; 5; 1)
 		
-		OBJECT MOVE:C664(*; This:C1470.widgets[$i]; $start; $top; $start+This:C1470.width[$i]; $bottom; *)
-		$start+=This:C1470.width[$i]
+		OBJECT MOVE:C664(*; This:C1470.widgets[$i]; $left; $top; $left+This:C1470.width[$i]; $bottom; *)
+		$left+=This:C1470.width[$i]
 		
 	End for 
 	
@@ -141,19 +147,119 @@ Function init()
 	OBJECT SET FORMAT:C236(*; This:C1470.monthZoneName; "00")
 	OBJECT SET FORMAT:C236(*; This:C1470.yearZoneName; "0000")
 	
-	OBJECT SET TITLE:C194(*; This:C1470.widgets[2]; <>Date_separator)
-	OBJECT SET TITLE:C194(*; This:C1470.widgets[4]; <>Date_separator)
+	OBJECT SET TITLE:C194(*; This:C1470.widgets[2]; This:C1470.separator)
+	OBJECT SET TITLE:C194(*; This:C1470.widgets[4]; This:C1470.separator)
 	
-	OBJECT SET VALUE:C1742(This:C1470.dayZoneName; String:C10(Day of:C23(This:C1470.date); "00"))
-	OBJECT SET VALUE:C1742(This:C1470.monthZoneName; String:C10(Day of:C23(This:C1470.date); "00"))
-	OBJECT SET VALUE:C1742(This:C1470.yearZoneName; String:C10(Day of:C23(This:C1470.date); "0000"))
+	This:C1470.date:=This:C1470.getSelectedDate() || Current date:C33
 	
+	This:C1470.firstDayOfMonth:=Add to date:C393(!00-00-00!; Year of:C25(This:C1470.date); Month of:C24(This:C1470.date); 1)
+	This:C1470.firstDayOfWeek:=<>DatePicker_FirstDayOfWeek
 	
 	OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
 	
+	This:C1470.update()
+	
+	This:C1470.callParent()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function ManageFocus($e : Object)
+Function handleEvents($e : Object)
+	
+	$e:=$e || FORM Event:C1606
+	
+	// MARK:Form Method
+	If ($e.objectName=Null:C1517)
+		
+		Case of 
+				
+				//________________________________________________________________________________
+			: ($e.code=On Load:K2:1)
+				
+				This:C1470.init()
+				
+				//________________________________________________________________________________
+			: ($e.code=On Bound Variable Change:K2:52)
+				
+				This:C1470.update()
+				
+				//________________________________________________________________________________
+			: ($e.code=On Activate:K2:9)\
+				 || ($e.code=On Deactivate:K2:10)
+				
+				This:C1470.manageFocus($e)
+				
+				//________________________________________________________________________________
+		End case 
+		
+		return 
+		
+	End if 
+	
+	// MARK: Widget Methods
+	Case of 
+			// ______________________________________________________
+		: ($e.code=On Activate:K2:9)\
+			 || ($e.code=On Deactivate:K2:10)
+			
+			This:C1470.manageFocus($e)
+			
+			// ______________________________________________________
+		: ($e.objectName="Hours")\
+			 || ($e.objectName="Minutes")\
+			 || ($e.objectName="seconds")\
+			 || ($e.objectName="am_pm")
+			
+			This:C1470.display(True:C214)
+			
+			// ______________________________________________________
+		: ($e.objectName="stepper")
+			
+			This:C1470.increase(OBJECT Get value:C1743("stepper"))  // +1 ou -1
+			OBJECT SET VALUE:C1742("stepper"; 0)
+			
+			// ______________________________________________________
+		: ($e.objectName="up")
+			
+			This:C1470.increase(1)
+			
+			// ______________________________________________________
+		: ($e.objectName="down")
+			
+			This:C1470.increase(-1)
+			
+			// ______________________________________________________
+	End case 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function update()
+	
+	//var $date:=This.getSelectedDate()
+	//This.setSelectedDate($date)
+	This:C1470.display()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function display($recalculation : Boolean)
+	
+	If ($recalculation)
+		
+		
+		
+		
+		
+	End if 
+	
+	
+	
+	
+	
+	
+	
+	
+	OBJECT SET VALUE:C1742(This:C1470.dayZoneName; String:C10(Day of:C23(This:C1470.date); "00"))
+	OBJECT SET VALUE:C1742(This:C1470.monthZoneName; String:C10(Month of:C24(This:C1470.date); "00"))
+	OBJECT SET VALUE:C1742(This:C1470.yearZoneName; String:C10(Year of:C25(This:C1470.date); "0000"))
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function manageFocus($e : Object)
 	
 	$e:=$e || FORM Event:C1606
 	var $visible : Boolean
@@ -180,3 +286,11 @@ Function ManageFocus($e : Object)
 	OBJECT SET VISIBLE:C603(*; "up"; $visible)
 	OBJECT SET VISIBLE:C603(*; "down"; $visible)
 	OBJECT SET VISIBLE:C603(*; "stepper"; $visible)
+	
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function increase($step : Integer)
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function Stepper()
+	

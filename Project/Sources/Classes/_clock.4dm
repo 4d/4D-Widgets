@@ -60,7 +60,7 @@ Function handleEvents($e : Object)
 					
 					SET TIMER:C645(0)
 					
-					Form:C1466.Update()
+					Form:C1466.update()
 					
 					// __________________________________________________________________________________
 			End case 

@@ -5,9 +5,6 @@
 	"windowSizingY": "fixed",
 	"width": 19,
 	"height": 16,
-	"markerBody": 16,
-	"markerBreak": 16,
-	"markerFooter": 16,
 	"events": [
 		"onLoad",
 		"onClick",
@@ -584,6 +581,6 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 17,
+	"geometryStamp": 18,
 	"formClass": "_dateButton"
 }

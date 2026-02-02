@@ -5,9 +5,6 @@
 	"windowSizingY": "fixed",
 	"width": 108,
 	"height": 24,
-	"markerBody": 24,
-	"markerBreak": 24,
-	"markerFooter": 24,
 	"events": [
 		"onLoad",
 		"onClick",
@@ -87,7 +84,7 @@
 			}
 		}
 	},
-	"geometryStamp": 75,
+	"geometryStamp": 76,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

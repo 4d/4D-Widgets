@@ -5,7 +5,7 @@ property AM; PM : Text
 property withMeridien : Boolean
 
 property hours; minutes; seconds : Integer
-property meridien : Text
+property meridien; separator : Text
 
 property time : Time
 
@@ -48,21 +48,20 @@ Function init()
 			// ______________________________________________________
 	End case 
 	
+	var $t : Text
+	GET SYSTEM FORMAT:C994(Time separator:K60:11; $t)
+	This:C1470.separator:=$t
+	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function defaultValues($force : Boolean)
 	
 	If (Not:C34(This:C1470.inited) || $force)
-		
-		//var <>TimePicker_CloseDial : Boolean
 		
 		// Default value
 		var <>TimePicker_LabelAM : Text
 		GET SYSTEM FORMAT:C994(System time AM label:K60:15; <>TimePicker_LabelAM)
 		var <>TimePicker_LabelPM : Text
 		GET SYSTEM FORMAT:C994(System time PM label:K60:16; <>TimePicker_LabelPM)
-		var <>Time_separator : Text
-		GET SYSTEM FORMAT:C994(Time separator:K60:11; <>Time_separator)
-		
 		
 		var <>TimePicker_TimeMin:=?08:00:00?
 		var <>TimePicker_TimeMax:=?20:00:00?

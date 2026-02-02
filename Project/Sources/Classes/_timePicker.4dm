@@ -15,11 +15,15 @@ Function init()
 	
 	Super:C1706.init()
 	
+	OBJECT SET TITLE:C194(*; "separator"; This:C1470.separator)
+	
 	This:C1470.withMeridien:=This:C1470.currentForm="@_AM"
 	This:C1470.nbPopup:=Num:C11(This:C1470.withWidget("Hours"))+Num:C11(This:C1470.withWidget("Minutes"))
 	
 	This:C1470.buildPopup()
-	This:C1470.Display()
+	This:C1470.display()
+	
+	OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
 	
 	This:C1470.callParent()
 	
@@ -30,8 +34,6 @@ Function handleEvents($e : Object)
 	
 	// MARK:Form Method
 	If ($e.objectName=Null:C1517)
-		
-		//Try
 		
 		Case of 
 				
@@ -50,16 +52,10 @@ Function handleEvents($e : Object)
 				
 				SET TIMER:C645(0)
 				
-				Form:C1466.Update()
+				Form:C1466.update()
 				
 				// __________________________________________________________________________________
 		End case 
-		
-		//Catch
-		
-		//ALERT(Last errors.extract("message").join("\r"))
-		
-		//End try
 		
 		return 
 		
@@ -72,7 +68,7 @@ Function handleEvents($e : Object)
 		: ($e.objectName="Hours")\
 			 || ($e.objectName="Minutes")
 			
-			This:C1470.Display(True:C214)
+			This:C1470.display(True:C214)
 			
 			// ______________________________________________________
 		: (False:C215)
@@ -86,11 +82,11 @@ Function handleEvents($e : Object)
 	End case 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Update()
+Function update()
 	
 	var $time : Time:=Time:C179(This:C1470.getContainerValue().value)
 	This:C1470.setSelectedTime($time)
-	This:C1470.Display()
+	This:C1470.display()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function buildPopup()
@@ -164,11 +160,11 @@ Function buildPopup()
 					
 					If (This:C1470.isJA)
 						
-						$values.push($Label+" "+String:C10($hours; "00")+<>Time_separator+String:C10($minutes; "00"))
+						$values.push($Label+" "+String:C10($hours; "00")+This:C1470.separator+String:C10($minutes; "00"))
 						
 					Else 
 						
-						$values.push(String:C10($hours; "00")+<>Time_separator+String:C10($minutes; "00")+" "+$Label)
+						$values.push(String:C10($hours; "00")+This:C1470.separator+String:C10($minutes; "00")+" "+$Label)
 						
 					End if 
 					
@@ -280,7 +276,7 @@ Function buildPopup()
 	End case 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Display($recalculation : Boolean)
+Function display($recalculation : Boolean)
 	
 	var $time:=?00:00:00?
 	var $hours : Object:=OBJECT Get value:C1743("Hours")
@@ -299,7 +295,7 @@ Function Display($recalculation : Boolean)
 				//________________________________________________________________________________
 			: (This:C1470.nbPopup=2)
 				
-				$time:=Time:C179($hours.currentValue+<>Time_separator+$minutes.currentValue)
+				$time:=Time:C179($hours.currentValue+This:C1470.separator+$minutes.currentValue)
 				
 				//________________________________________________________________________________
 		End case 

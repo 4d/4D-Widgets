@@ -5,8 +5,6 @@ $e:=$e || FORM Event:C1606
 // MARK:Form Method
 If ($e.objectName=Null:C1517)
 	
-	//Try
-	
 	Case of 
 			
 			//________________________________________________________________________________
@@ -17,27 +15,45 @@ If ($e.objectName=Null:C1517)
 			//________________________________________________________________________________
 		: ($e.code=On Bound Variable Change:K2:52)
 			
-			Form:C1466.Update()
+			SET TIMER:C645(-1)
 			
 			//________________________________________________________________________________
-		: ($e.code=On Activate:K2:9)\
-			 || ($e.code=On Deactivate:K2:10)
+		: ($e.code=On Timer:K2:25)
 			
-			Form:C1466.ManageFocus($e)
+			SET TIMER:C645(0)
+			
+			Form:C1466.update()
 			
 			//________________________________________________________________________________
 	End case 
 	
 	return 
 	
-	//Catch
-	
-	//ALERT(".The type of the time selector must be numeric, time, or undefined.")
-	//OBJECT SET VISIBLE(*; "@"; False)
-	
-	//End try
 End if 
 
+Case of 
+		//______________________________________________________
+	: ($e.code=On Activate:K2:9)\
+		 || ($e.code=On Deactivate:K2:10)
+		
+		Form:C1466.manageFocus($e)
+		
+		
+		
+		//______________________________________________________
+	: (False:C215)
+		
+		
+		
+		//______________________________________________________
+	Else 
+		
+		// A "Case of" statement should never omit "Else"
+		
+		//______________________________________________________
+End case 
+
+return 
 
 
 

@@ -34,6 +34,6 @@ EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.step:=$1); *; 
 Try
 	
 	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.buildPopup()))
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.Display()))
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.display()))
 	
 End try

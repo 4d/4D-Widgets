@@ -1,14 +1,14 @@
 Class extends _widget
 
-property date:=!00-00-00!
+property date; minDate; maxDate : Date
 
-property minDate; maxDate : Date
-
-property firstOfCurrentMonth : Date
+property firstDayOfMonth : Date
 property firstDayOfWeek : Integer
 
 property displayedMonth : Text
 property firstDisplayedDay : Date
+
+property separator : Text
 
 property dayOff0:=[]
 property dayOff1:=[]
@@ -41,7 +41,7 @@ Localized string:C991("Monthes_November"); \
 Localized string:C991("Monthes_December")\
 ]
 
-//property daysOff:=[].resize(8; False)
+property daysOff:=[].resize(8; False:C215)
 
 property inited:=False:C215
 
@@ -50,88 +50,26 @@ Class constructor()
 	
 	Super:C1705()
 	
+	This:C1470.defaultValues()
+	
 	This:C1470.minDate:=<>DatePicker_DateMin
 	This:C1470.maxDate:=<>DatePicker_DateMax
-	//This.firstDayOfWeek:=<>DatePicker_FirstDayOfWeek
 	
 	ARRAY TO COLLECTION:C1563(This:C1470.dayOff0; <>_DatePicker_DaysOff0)
 	ARRAY TO COLLECTION:C1563(This:C1470.dayOff1; <>_DatePicker_DaysOff1)
 	ARRAY TO COLLECTION:C1563(This:C1470.dayOff2; <>_DatePicker_DaysOff2)
 	
-/*
-This.daysOff[Saturday]:=True
-This.daysOff[Sunday]:=True
-*/
+	var $t : Text
+	GET SYSTEM FORMAT:C994(Date separator:K60:10; $t)
+	This:C1470.separator:=$t
 	
-	This:C1470.defaultValues()
+	This:C1470.daysOff[Saturday:K10:18]:=True:C214
+	This:C1470.daysOff[Sunday:K10:19]:=True:C214
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function init()
 	
 	Super:C1706.init()
-	
-	var $date:=This:C1470.date || Current date:C33
-	var $month:=Month of:C24($date)
-	var $year:=Year of:C25($date)
-	var $PositionMonth; $PositionYear : Text
-	GET SYSTEM FORMAT:C994(Short date month position:K60:13; $PositionMonth)
-	GET SYSTEM FORMAT:C994(Short date year position:K60:14; $PositionYear)
-	
-	If (Num:C11($PositionMonth)<Num:C11($PositionYear))  // standard case
-		
-		This:C1470.displayedMonth:=This:C1470.months[$month]+" "+String:C10($year; "0000")
-		
-	Else   // Japanese case (presumably)
-		
-		var $dateLongPattern : Text
-		GET SYSTEM FORMAT:C994(System date long pattern:K60:9; $dateLongPattern)
-		
-		var $JapaneseYearCode : Integer:=24180
-		
-		If (Position:C15(Char:C90($JapaneseYearCode); $dateLongPattern)>0)
-			
-			This:C1470.displayedMonth:=String:C10($year; "0000")+Char:C90($JapaneseYearCode)+This:C1470.months[$month]
-			
-		Else 
-			
-			// Not Japanese after all !!! ;o)
-			This:C1470.displayedMonth:=String:C10($year; "0000")+" "+This:C1470.months[$month]
-			
-		End if 
-		
-		This:C1470.displayedMonth:=String:C10($year; "0000")+<>Date_separator+This:C1470.months[$month]
-		
-	End if 
-	
-	This:C1470.firstDisplayedDay:=Add to date:C393(!00-00-00!; $year; $month; 1)
-	This:C1470.firstDayOfWeek:=This:C1470.firstDayOfWeek || <>DatePicker_FirstDayOfWeek
-	
-	If (This:C1470.firstDayOfWeek>=1)\
-		 & (This:C1470.firstDayOfWeek<=7)
-		
-		// Decrease the first day displayed until reaching the desired weekday.
-		While (Day number:C114(This:C1470.firstDisplayedDay)#This:C1470.firstDayOfWeek)
-			
-			This:C1470.firstDisplayedDay:=This:C1470.firstDisplayedDay-1
-			
-		End while 
-	End if 
-	
-	This:C1470.date:=<>DatePicker_DefaultDate#!00-00-00! ? <>DatePicker_DefaultDate : Current date:C33
-	
-	This:C1470.firstOfCurrentMonth:=Add to date:C393(!00-00-00!; Year of:C25(This:C1470.date); Month of:C24(This:C1470.date); 1)
-	
-	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Update()
-	
-	var $date:=This:C1470.getSelectedDate()
-	This:C1470.setSelectedDate($date)
-	This:C1470.Display()
-	
-	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Display($recalculation : Boolean)
-	
-	//
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function defaultValues($force : Boolean)
@@ -148,9 +86,6 @@ Function defaultValues($force : Boolean)
 		var <>DatePicker_DefaultDate:=!00-00-00!
 		var <>DatePicker_DateMin:=!00-00-00!
 		var <>DatePicker_DateMax:=!00-00-00!
-		
-		var <>Date_separator : Text
-		GET SYSTEM FORMAT:C994(Date separator:K60:10; <>Date_separator)
 		
 		var <>DatePicker_FirstDayOfWeek : Integer:=Monday:K10:13
 		

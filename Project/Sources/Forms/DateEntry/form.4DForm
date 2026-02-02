@@ -5,9 +5,6 @@
 	"windowSizingY": "fixed",
 	"width": 138,
 	"height": 24,
-	"markerBody": 24,
-	"markerBreak": 24,
-	"markerFooter": 24,
 	"events": [
 		"onLoad",
 		"onClick",
@@ -16,7 +13,6 @@
 		"onDataChange",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
@@ -55,6 +51,16 @@
 		},
 		{
 			"objects": {
+				"FocusRingBackGround": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 1,
+					"width": 87,
+					"height": 22,
+					"stroke": "#c0c0c0",
+					"visibility": "hidden",
+					"fill": "automatic"
+				},
 				"posterBakground": {
 					"type": "rectangle",
 					"top": -2,
@@ -65,16 +71,6 @@
 					"fill": "automatic",
 					"stroke": "transparent"
 				},
-				"FocusRingBackGround": {
-					"type": "rectangle",
-					"top": 4,
-					"left": 4,
-					"width": 84,
-					"height": 16,
-					"fill": "transparent",
-					"stroke": "transparent",
-					"visibility": "hidden"
-				},
 				"Slash1": {
 					"type": "text",
 					"top": 4,
@@ -82,7 +78,7 @@
 					"width": 8,
 					"height": 16,
 					"textAlign": "center",
-					"text": "/"
+					"text": "x"
 				},
 				"Slash2": {
 					"type": "text",
@@ -91,7 +87,7 @@
 					"width": 8,
 					"height": 16,
 					"textAlign": "center",
-					"text": "/",
+					"text": "x",
 					"fontSize": 13
 				},
 				"LeftEntry": {
@@ -99,7 +95,7 @@
 					"top": 4,
 					"left": 4,
 					"width": 17,
-					"height": 16,
+					"height": 17,
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -224,7 +220,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -242,7 +237,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -259,7 +253,6 @@
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
-					"class": "Buttons_11",
 					"textAlign": "right",
 					"text": "Min Date:"
 				},
@@ -270,7 +263,6 @@
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
-					"class": "Buttons_11",
 					"textAlign": "right",
 					"text": "Max Date:"
 				},
@@ -282,7 +274,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "number",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -299,7 +290,6 @@
 					"width": 118,
 					"height": 13,
 					"visibility": "hidden",
-					"class": "Buttons_11",
 					"textAlign": "right",
 					"text": "zone Inited:"
 				},
@@ -312,7 +302,6 @@
 					"visibility": "hidden",
 					"dataSourceTypeHint": "date",
 					"stroke": "#FF0000",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -329,7 +318,6 @@
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
-					"class": "Buttons_11",
 					"textAlign": "right",
 					"text": "Selected Date:"
 				},
@@ -341,7 +329,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -358,7 +345,6 @@
 					"width": 188,
 					"height": 13,
 					"visibility": "hidden",
-					"class": "Buttons_11",
 					"textAlign": "right",
 					"text": "First displayed day:"
 				},
@@ -370,7 +356,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "number",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -387,7 +372,6 @@
 					"width": 148,
 					"height": 13,
 					"visibility": "hidden",
-					"class": "Buttons_11",
 					"textAlign": "right",
 					"text": "First day of week:"
 				},
@@ -399,7 +383,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -416,18 +399,16 @@
 					"width": 188,
 					"height": 13,
 					"visibility": "hidden",
-					"class": "Buttons_11",
 					"textAlign": "right",
 					"text": "First of current displayed month"
 				},
 				"DisplayedMonth": {
 					"type": "input",
-					"top": 81,
-					"left": 7,
+					"top": 97,
+					"left": 650,
 					"width": 160,
 					"height": 20,
 					"stroke": "#000000",
-					"class": "Buttons_11",
 					"textAlign": "center",
 					"fontWeight": "bold",
 					"focusable": false,
@@ -453,7 +434,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -471,7 +451,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -489,7 +468,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -507,7 +485,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -525,7 +502,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -543,7 +519,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -561,7 +536,6 @@
 					"height": 13,
 					"visibility": "hidden",
 					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
 					"focusable": false,
 					"enterable": false,
 					"contextMenu": "none",
@@ -665,6 +639,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 139,
-	"formClass": "_dateEntry"
+	"geometryStamp": 226,
+	"formClass": "_dateEntry",
+	"method": "method.4dm"
 }

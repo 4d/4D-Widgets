@@ -11,3 +11,6 @@ Form:C1466.pickerOne:=?12:15:00?
 
 TimePicker SET MIN TIME("timeEntryAmPm"; ?00:00:00?)
 TimePicker SET MAX TIME("timeEntryAmPm"; ?24:00:00?)
+
+var vDate : Date:=!1958-08-08!
+Form:C1466.dateEntry:=vDate
