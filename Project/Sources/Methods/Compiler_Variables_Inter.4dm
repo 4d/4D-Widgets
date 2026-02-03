@@ -1,15 +1,11 @@
 //%attributes = {"invisible":true}
-//var <>Date_separator : Text
-
-
-var <>DatePicker_ActivateArrows : Boolean
 var <>DatePicker_Blob : Blob
-var <>DatePicker_CloseDial : Boolean
+var <>DatePicker_GetBlob : Boolean
+
 var <>DatePicker_DateMax : Date
 var <>DatePicker_DateMin : Date
 var <>DatePicker_DefaultDate : Date
 var <>DatePicker_FirstDayOfWeek : Integer
-var <>DatePicker_GetBlob : Boolean
 var <>DatePicker_Inited : Boolean
 
 var <>TimePicker_LabelAM : Text

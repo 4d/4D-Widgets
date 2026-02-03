@@ -21,7 +21,7 @@
 		null,
 		{
 			"objects": {
-				"bTinyCalendar": {
+				"tinyCalendar": {
 					"type": "button",
 					"top": 0,
 					"left": 0,
@@ -32,7 +32,7 @@
 					"icon": "/RESOURCES/Images/Calendar/IconCalendar.png",
 					"iconFrames": 4,
 					"style": "custom",
-					"method": "ObjectMethods/bTinyCalendar.4dm",
+					"method": "ObjectMethods/tinyCalendar.4dm",
 					"events": [
 						"onClick"
 					]
@@ -581,6 +581,6 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 18,
+	"geometryStamp": 19,
 	"formClass": "_dateButton"
 }

@@ -74,11 +74,11 @@ End if
 $Win:=Open form window:C675($formName; Pop up form window:K39:11; $x1; $y1)
 //Open window($x1;$y1;$x1+$Width;$y1+$Height;Pop up form window)
 
-<>DatePicker_CloseDial:=True:C214  //will close the dial on click on any date
-<>DatePicker_ActivateArrows:=True:C214  // will allow the use of arrows (which is not the case when displayed inside a form)
+//<>DatePicker_CloseDial:=True  //will close the dial on click on any date
+//<>DatePicker_ActivateArrows:=True  // will allow the use of arrows (which is not the case when displayed inside a form)
 DIALOG:C40($formName; $form)  //ACI0099621 use of form parameter when called as a dialog from another widget
-<>DatePicker_CloseDial:=False:C215
-<>DatePicker_ActivateArrows:=False:C215
+//<>DatePicker_CloseDial:=False
+//<>DatePicker_ActivateArrows:=False
 
 If (ok=1)
 	

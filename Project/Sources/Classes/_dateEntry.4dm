@@ -1,7 +1,7 @@
 Class extends _date
 
 property data : cs:C1710._dateButton
-property dayZoneName; monthZoneName; yearZoneName : Text
+property dayZoneName; monthZoneName; yearZoneName; shortPattern : Text
 property posDay; posMonth; posYear : Integer
 
 property dayWidth : Integer:=17
@@ -29,6 +29,9 @@ Class constructor($data : cs:C1710._dateButton)
 	GET SYSTEM FORMAT:C994(Short date year position:K60:14; $t)
 	This:C1470.posYear:=Num:C11($t)
 	
+	GET SYSTEM FORMAT:C994(System date short pattern:K60:7; $t)
+	This:C1470.shortPattern:=$t
+	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function init()
 	
@@ -38,7 +41,8 @@ Function init()
 	OBJECT SET TITLE:C194(*; "Slash2"; This:C1470.separator)
 	
 	Case of 
-			//______________________________________________________
+			
+			// ______________________________________________________
 		: (This:C1470.posDay=1)\
 			 && (This:C1470.posMonth=2)\
 			 && (This:C1470.posYear=3)  // DD/MM/YYYY
@@ -51,7 +55,7 @@ Function init()
 			This:C1470.width[3]:=This:C1470.monthWidth
 			This:C1470.width[5]:=This:C1470.yearWidth
 			
-			//______________________________________________________
+			// ______________________________________________________
 		: (This:C1470.posDay=1)\
 			 && (This:C1470.posYear=2)\
 			 && (This:C1470.posMonth=3)  // DD/YYYY/MM
@@ -64,7 +68,7 @@ Function init()
 			This:C1470.width[3]:=This:C1470.yearWidth
 			This:C1470.width[5]:=This:C1470.monthWidth
 			
-			//______________________________________________________
+			// ______________________________________________________
 		: (This:C1470.posMonth=1)\
 			 && (This:C1470.posDay=2)\
 			 && (This:C1470.posYear=3)  // MM/DD/YYYY
@@ -77,7 +81,7 @@ Function init()
 			This:C1470.width[3]:=This:C1470.dayWidth
 			This:C1470.width[5]:=This:C1470.yearWidth
 			
-			//______________________________________________________
+			// ______________________________________________________
 		: (This:C1470.posYear=1)\
 			 && (This:C1470.posDay=2)\
 			 && (This:C1470.posMonth=3)  // YYYY/DD/MM
@@ -90,7 +94,7 @@ Function init()
 			This:C1470.width[3]:=This:C1470.dayWidth
 			This:C1470.width[5]:=This:C1470.monthWidth
 			
-			//______________________________________________________
+			// ______________________________________________________
 		: (This:C1470.posMonth=1)\
 			 && (This:C1470.posYear=2)\
 			 && (This:C1470.posDay=3)  // MM/YYYY/DD
@@ -103,7 +107,7 @@ Function init()
 			This:C1470.width[3]:=This:C1470.yearWidth
 			This:C1470.width[5]:=This:C1470.dayWidth
 			
-			//______________________________________________________
+			// ______________________________________________________
 		: (This:C1470.posYear=1)\
 			 && (This:C1470.posMonth=2)\
 			 && (This:C1470.posDay=3)  // YYYY/MM/DD
@@ -116,24 +120,12 @@ Function init()
 			This:C1470.width[3]:=This:C1470.monthWidth
 			This:C1470.width[5]:=This:C1470.dayWidth
 			
-			//______________________________________________________
-		Else   // Default
-			
-			This:C1470.dayZoneName:=This:C1470.widgets[1]
-			This:C1470.monthZoneName:=This:C1470.widgets[3]
-			This:C1470.yearZoneName:=This:C1470.widgets[5]
-			
-			This:C1470.width[1]:=This:C1470.dayWidth
-			This:C1470.width[3]:=This:C1470.monthWidth
-			This:C1470.width[5]:=This:C1470.yearWidth
-			
-			//______________________________________________________
+			// ______________________________________________________
 	End case 
 	
 	// Resize objects (the order will NOT be changed !!!)
 	var $left; $top; $right; $bottom : Integer
 	OBJECT GET COORDINATES:C663(*; This:C1470.widgets[1]; $left; $top; $right; $bottom)
-	//var $start:=$left
 	
 	var $i : Integer
 	For ($i; 1; 5; 1)
@@ -152,12 +144,15 @@ Function init()
 	
 	This:C1470.date:=This:C1470.getSelectedDate() || Current date:C33
 	
-	This:C1470.firstDayOfMonth:=Add to date:C393(!00-00-00!; Year of:C25(This:C1470.date); Month of:C24(This:C1470.date); 1)
-	This:C1470.firstDayOfWeek:=<>DatePicker_FirstDayOfWeek
+	This:C1470.setSelectedDate(This:C1470.date)
+	This:C1470.display(True:C214)
+	
+/*
+This.firstDayOfMonth:=Add to date(!00-00-00!; Year of(This.date); Month of(This.date); 1)
+This.firstDayOfWeek:=<>DatePicker_FirstDayOfWeek
+*/
 	
 	OBJECT SET FOCUS RECTANGLE INVISIBLE:C1177(*; "@"; True:C214)
-	
-	This:C1470.update()
 	
 	This:C1470.callParent()
 	
@@ -196,6 +191,7 @@ Function handleEvents($e : Object)
 	
 	// MARK: Widget Methods
 	Case of 
+			
 			// ______________________________________________________
 		: ($e.code=On Activate:K2:9)\
 			 || ($e.code=On Deactivate:K2:10)
@@ -203,10 +199,9 @@ Function handleEvents($e : Object)
 			This:C1470.manageFocus($e)
 			
 			// ______________________________________________________
-		: ($e.objectName="Hours")\
-			 || ($e.objectName="Minutes")\
-			 || ($e.objectName="seconds")\
-			 || ($e.objectName="am_pm")
+		: ($e.objectName=This:C1470.dayZoneName)\
+			 || ($e.objectName=This:C1470.monthZoneName)\
+			 || ($e.objectName=This:C1470.yearZoneName)
 			
 			This:C1470.display(True:C214)
 			
@@ -227,13 +222,25 @@ Function handleEvents($e : Object)
 			This:C1470.increase(-1)
 			
 			// ______________________________________________________
+		: ($e.objectName="tinyCalendar")
+			
+			var $date:=cs:C1710._datePicker.new(This:C1470).date
+			
+			If ($date#!00-00-00!)
+				
+				This:C1470.setSelectedDate($date)
+				This:C1470.display()
+				
+			End if 
+			
+			// ______________________________________________________
 	End case 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function update()
 	
-	//var $date:=This.getSelectedDate()
-	//This.setSelectedDate($date)
+	var $date:=This:C1470.getSelectedDate()
+	This:C1470.setSelectedDate($date)
 	This:C1470.display()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
@@ -241,18 +248,26 @@ Function display($recalculation : Boolean)
 	
 	If ($recalculation)
 		
+		var $day : Integer:=Num:C11(OBJECT Get value:C1743(This:C1470.dayZoneName))
+		var $month : Integer:=Num:C11(OBJECT Get value:C1743(This:C1470.monthZoneName))
+		var $year : Integer:=Num:C11(OBJECT Get value:C1743(This:C1470.yearZoneName))
 		
+		// The default value is January 1 of the current year.
+		$day:=$day>0 ? $day : 1
+		$month:=$month>0 ? $month : 1
+		$year:=$year>0 ? $year : Year of:C25(Current date:C33)
 		
+		$year:=$year>=100 ? $year : $year<50 ? $year+2000 : $year+1900
 		
+		This:C1470.setSelectedDate(Add to date:C393(!00-00-00!; $year; $month; $day))
 		
 	End if 
 	
-	
-	
-	
-	
-	
-	
+	// TODO:MOVE TO _datePicker class
+	//If (This.currentForm="DatePicker")
+	//// Recalculate the first day in order to use the tiny popup properly 
+	//This.computeFirstDay()
+	//End if
 	
 	OBJECT SET VALUE:C1742(This:C1470.dayZoneName; String:C10(Day of:C23(This:C1470.date); "00"))
 	OBJECT SET VALUE:C1742(This:C1470.monthZoneName; String:C10(Month of:C24(This:C1470.date); "00"))
@@ -287,10 +302,32 @@ Function manageFocus($e : Object)
 	OBJECT SET VISIBLE:C603(*; "down"; $visible)
 	OBJECT SET VISIBLE:C603(*; "stepper"; $visible)
 	
-	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function increase($step : Integer)
 	
-	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function Stepper()
+	var $target:=OBJECT Get name:C1087(Object with focus:K67:3)
+	var $date : Date:=Add to date:C393(!00-00-00!; Year of:C25(This:C1470.date); Month of:C24(This:C1470.date); Day of:C23(This:C1470.date))
+	
+	Case of 
+			
+			// ________________________________________________________________________________
+		: ($target=This:C1470.yearZoneName)
+			
+			$date:=Add to date:C393($date; $step; 0; 0)
+			
+			// ________________________________________________________________________________
+		: ($target=This:C1470.monthZoneName)
+			
+			$date:=Add to date:C393($date; 0; $step; 0)
+			
+			// ________________________________________________________________________________
+		: ($target=This:C1470.dayZoneName)
+			
+			$date:=Add to date:C393($date; 0; 0; $step)
+			
+			// ________________________________________________________________________________
+	End case 
+	
+	This:C1470.setSelectedDate($date)
+	This:C1470.display()
 	

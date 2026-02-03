@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="23">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="24">
 	<com.4d>
 		<database>
 			<cache flush_buffer_delay="20s" size_fixed="32" size_maximum="100" size_reserved="128"/>
@@ -11,9 +11,9 @@
 		</compiler>
 		<interface>
 			<shortcuts>
-				<add_subform command="true" key_code="11311" shift="true"/>
-				<cancel_input_form key_code="13595"/>
-				<accept_input_form key_code="19459"/>
+				<add_subform alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
+				<cancel_input_form alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
+				<accept_input_form alt="false" command="false" ctrl="false" key_code="0" shift="false"/>
 			</shortcuts>
 			<developper allow_read_only_structure="false"/>
 			<user fluentUI="true" print_progress="false"/>

@@ -95,3 +95,110 @@ Function clickedInWidget($widgets : Collection) : Text
 			End if 
 		End for each 
 	End if 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function adjustWindowPos($form : Text; $x : Integer; $y : Integer) : Object
+	
+	var $screenInfo:={\
+		x: 0; \
+		y: 0; \
+		width: Screen width:C187; \
+		height: Screen height:C188}
+	
+	If (Is macOS:C1572)
+		
+		$screenInfo:=This:C1470.screenInfoFromPoint($x; $y)
+		
+	Else 
+		
+		var $appInfos:=Application info:C1599
+		var $isModal:=(Window kind:C445(Frontmost window:C447)=Modal dialog:K27:2)
+		
+		If ($isModal && Not:C34($appInfos.SDIMode))
+			
+			CONVERT COORDINATES:C1365($x; $x; XY Main window:K27:8; XY Screen:K27:7)
+			
+		End if 
+		
+		If ($isModal || $appInfos.SDIMode)
+			
+			$screenInfo:=This:C1470.screenInfoFromPoint($x; $y)
+			
+		End if 
+	End if 
+	
+	var $width; $height : Integer
+	FORM GET PROPERTIES:C674($form; $width; $height)
+	
+	Case of 
+			
+			//________________________________________________________________________________
+		: (($x+$width)>($screenInfo.x+$screenInfo.width))
+			
+			$x:=($screenInfo.x+$screenInfo.width)-$width-5
+			
+			//________________________________________________________________________________
+		: ($x<($screenInfo.x+5))
+			
+			$x:=$screenInfo.x+5
+			
+			//________________________________________________________________________________
+	End case 
+	
+	Case of 
+			
+			//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+		: (($y+$height)>($screenInfo.y+$screenInfo.height))
+			
+			$y:=($screenInfo.y+$screenInfo.height)-$height-10
+			
+			//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+		: ($y<($screenInfo.y+5))
+			
+			$y:=$screenInfo.y+5
+			
+			//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+	End case 
+	
+	If (Is Windows:C1573)
+		
+		If ($appInfos.SDIMode=False:C215 & $isModal)
+			
+			CONVERT COORDINATES:C1365($x; $x; XY Screen:K27:7; XY Main window:K27:8)
+			
+		End if 
+	End if 
+	
+	$screenInfo.x:=$x
+	$screenInfo.y:=$y
+	
+	return $screenInfo
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function screenInfoFromPoint($x : Integer; $y : Integer) : Object
+	
+	var $i : Integer
+	For ($i; 1; Count screens:C437; 1)
+		
+		var $left; $top; $right; $bottom : Integer
+		SCREEN COORDINATES:C438($left; $top; $right; $bottom; $i; Screen work area:K27:10)
+		
+		If (($x>=$left)\
+			 & ($x<$right)\
+			 & ($y>=$top)\
+			 & ($y<$bottom))
+			
+			return {\
+				x: $left; \
+				y: $top; \
+				width: $right-$left; \
+				height: $right-$left}
+			
+		End if 
+	End for 
+	
+	return {\
+		x: 0; \
+		y: 0; \
+		width: Screen width:C187; \
+		height: Screen height:C188}

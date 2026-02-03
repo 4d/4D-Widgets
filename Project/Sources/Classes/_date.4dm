@@ -3,16 +3,13 @@ Class extends _widget
 property date; minDate; maxDate : Date
 
 property firstDayOfMonth : Date
-property firstDayOfWeek : Integer
 
 property displayedMonth : Text
 property firstDisplayedDay : Date
 
 property separator : Text
 
-property dayOff0:=[]
-property dayOff1:=[]
-property dayOff2:=[]
+
 
 property days:=[\
 Null:C1517; \
@@ -55,10 +52,6 @@ Class constructor()
 	This:C1470.minDate:=<>DatePicker_DateMin
 	This:C1470.maxDate:=<>DatePicker_DateMax
 	
-	ARRAY TO COLLECTION:C1563(This:C1470.dayOff0; <>_DatePicker_DaysOff0)
-	ARRAY TO COLLECTION:C1563(This:C1470.dayOff1; <>_DatePicker_DaysOff1)
-	ARRAY TO COLLECTION:C1563(This:C1470.dayOff2; <>_DatePicker_DaysOff2)
-	
 	var $t : Text
 	GET SYSTEM FORMAT:C994(Date separator:K60:10; $t)
 	This:C1470.separator:=$t
@@ -89,8 +82,6 @@ Function defaultValues($force : Boolean)
 		
 		var <>DatePicker_FirstDayOfWeek : Integer:=Monday:K10:13
 		
-		var <>DatePicker_CloseDial : Boolean
-		var <>DatePicker_ActivateArrows : Boolean
 		
 		var <>DatePicker_GetBlob : Boolean
 		
@@ -110,6 +101,7 @@ Function getSelectedDate() : Date
 	End if 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
+	// Apply constraints, fills in This.date and updates the value of the container
 Function setSelectedDate($date : Date)
 	
 	This:C1470.date:=This:C1470.constraints($date)

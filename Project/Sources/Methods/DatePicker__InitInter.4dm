@@ -5,8 +5,8 @@ If (Not:C34(<>DatePicker_Inited))
 	
 	<>DatePicker_Inited:=True:C214
 	
-	var <>DatePicker_CloseDial : Boolean
-	var <>DatePicker_ActivateArrows : Boolean
+	//var <>DatePicker_CloseDial : Boolean
+	//var <>DatePicker_ActivateArrows : Boolean
 	//C_POINTER(datePicker_Target)
 	var <>DatePicker_GetBlob : Boolean
 	

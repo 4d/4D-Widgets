@@ -29,7 +29,6 @@
 					"height": 12,
 					"shortcutKey": "[up arrow]",
 					"display": false,
-					"method": "ObjectMethods/up.4dm",
 					"events": [
 						"onClick"
 					]
@@ -42,7 +41,6 @@
 					"height": 12,
 					"shortcutKey": "[down arrow]",
 					"display": false,
-					"method": "ObjectMethods/down.4dm",
 					"events": [
 						"onClick"
 					]
@@ -100,7 +98,6 @@
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"entryFilter": "&9",
-					"method": "ObjectMethods/LeftEntry.4dm",
 					"events": [
 						"onDataChange"
 					],
@@ -121,7 +118,6 @@
 					"entryFilter": "&9",
 					"dragging": "none",
 					"dropping": "none",
-					"method": "ObjectMethods/CenterEntry.4dm",
 					"events": [
 						"onDataChange"
 					],
@@ -140,7 +136,6 @@
 					"entryFilter": "&9",
 					"dragging": "none",
 					"dropping": "none",
-					"method": "ObjectMethods/RightEntry.4dm",
 					"events": [
 						"onDataChange"
 					],
@@ -170,18 +165,16 @@
 					"textAlign": "center",
 					"fontSize": 13
 				},
-				"bTinyCalendar": {
+				"tinyCalendar": {
 					"type": "button",
 					"top": 0,
-					"left": 113,
-					"width": 22,
+					"left": 114,
+					"width": 24,
 					"height": 24,
 					"sizingX": "move",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Calendar/IconCalendar.png",
-					"iconFrames": 4,
+					"icon": "/RESOURCES/Images/Calendar/calendar.svg",
 					"style": "custom",
-					"method": "ObjectMethods/bTinyCalendar.4dm",
 					"events": [
 						"onClick"
 					]
@@ -195,7 +188,6 @@
 					"sizingX": "move",
 					"min": -100,
 					"max": 100,
-					"method": "ObjectMethods/stepper.4dm",
 					"events": [
 						"onDataChange"
 					],
@@ -639,7 +631,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 226,
+	"geometryStamp": 231,
 	"formClass": "_dateEntry",
-	"method": "method.4dm"
+	"method": "WIDGET FORM METHOD"
 }

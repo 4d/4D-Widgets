@@ -16,7 +16,8 @@ If ($1#"")
 		DatePicker__CalculateFirstDay($ClickedDate; "")
 		DatePicker__RedrawCalendar
 		
-		If (<>DatePicker_CloseDial)
+		// If (<>DatePicker_CloseDial)
+		If (Bool:C1537(Form:C1466.autoClose))
 			Form:C1466.displayDate:=$ClickedDate
 			ACCEPT:C269
 		End if 

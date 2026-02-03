@@ -9,7 +9,9 @@ Case of
 		DatePicker__InitInter
 		DatePicker__InitForm
 		
-		If (<>DatePicker_ActivateArrows)
+		If (Bool:C1537(Form:C1466.useArrows))
+			
+			OBJECT SET SHORTCUT:C1185(*; "cancel"; Shortcut with Escape:K75:20)
 			
 			DatePicker__ManageFocus(On Activate:K2:9)
 			

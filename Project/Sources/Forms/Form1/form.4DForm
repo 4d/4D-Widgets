@@ -67,7 +67,7 @@
 				"Button": {
 					"type": "button",
 					"text": "Reset",
-					"top": 650,
+					"top": 805,
 					"left": 18,
 					"width": 135,
 					"height": 30,
@@ -160,16 +160,11 @@
 					"top": 646,
 					"left": 525,
 					"width": 125,
-					"height": 34,
+					"height": 45,
 					"events": [
 						"onClick"
 					],
-					"action": "cancel",
-					"shortcutAccel": false,
-					"shortcutControl": false,
-					"shortcutShift": false,
-					"shortcutAlt": false,
-					"shortcutKey": "[Esc]"
+					"action": "cancel"
 				},
 				"Input": {
 					"type": "input",
@@ -327,12 +322,11 @@
 					"height": 63,
 					"focusable": false,
 					"icon": "/RESOURCES/Images/Icons/Printers/Printer32.png",
-					"iconFrames": 4,
 					"style": "circular",
 					"events": [
 						"onClick"
 					],
-					"imageHugsTitle": true
+					"iconFrames": 4
 				},
 				"BevelButton6": {
 					"type": "button",
@@ -394,8 +388,8 @@
 					"events": [
 						"onDataChange"
 					],
-					"dataSource": "vDate",
-					"borderStyle": "system"
+					"dataSource": "Form:C1466.dateEntry",
+					"borderStyle": "none"
 				},
 				"Text": {
 					"type": "text",
@@ -408,7 +402,7 @@
 				"Text1": {
 					"type": "text",
 					"text": "🚧",
-					"top": 466,
+					"top": 506,
 					"left": 11,
 					"width": 19,
 					"height": 17
@@ -483,6 +477,38 @@
 					"left": 342,
 					"width": 19,
 					"height": 17
+				},
+				"Input7": {
+					"type": "input",
+					"left": 203,
+					"top": 466,
+					"width": 90,
+					"height": 17,
+					"dataSource": "Date:C102(Form:C1466.dateEntry)",
+					"dataSourceTypeHint": "date",
+					"fill": "transparent",
+					"borderStyle": "none",
+					"stroke": "#1e90ff",
+					"dateFormat": "systemShort"
+				},
+				"Text8": {
+					"type": "text",
+					"text": "✅",
+					"top": 466,
+					"left": 11,
+					"width": 19,
+					"height": 17
+				},
+				"Subform20": {
+					"type": "subform",
+					"left": 46,
+					"top": 506,
+					"width": 168,
+					"height": 190,
+					"detailForm": "DatePicker",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.dateEntry",
+					"dataSourceTypeHint": "date"
 				}
 			},
 			"entryOrder": [
@@ -513,11 +539,13 @@
 				"BevelButton6",
 				"Combo Box7",
 				"Button",
-				"Button4"
+				"Button4",
+				"Input7",
+				"Subform20"
 			]
 		}
 	],
-	"geometryStamp": 371,
+	"geometryStamp": 391,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

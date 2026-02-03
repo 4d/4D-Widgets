@@ -29,6 +29,19 @@
 					"stroke": "transparent",
 					"fill": "automatic",
 					"strokeWidth": 0
+				},
+				"cancel": {
+					"type": "button",
+					"top": 8,
+					"left": 7,
+					"width": 18,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"action": "cancel",
+					"text": "cancel",
+					"display": false
 				}
 			}
 		},
@@ -1125,7 +1138,7 @@
 						"onClick"
 					]
 				},
-				"Picture6": {
+				"poster": {
 					"type": "picture",
 					"top": 0,
 					"left": 0,
@@ -1730,22 +1743,15 @@
 		"defaultView": "View 1",
 		"views": {
 			"View 1": {},
-			"Preview": {
+			"PREVIEW": {
 				"visible": false,
 				"objects": [
-					"Picture6"
+					"poster"
 				]
-			},
-			"View 3": {},
-			"View 4": {},
-			"View 5": {},
-			"View 6": {},
-			"View 7": {},
-			"View 8": {},
-			"View 9": {}
+			}
 		}
 	},
-	"geometryStamp": 242,
+	"geometryStamp": 253,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
