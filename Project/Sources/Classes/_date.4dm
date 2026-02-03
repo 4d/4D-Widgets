@@ -38,7 +38,7 @@ Localized string:C991("Monthes_November"); \
 Localized string:C991("Monthes_December")\
 ]
 
-property daysOff:=[].resize(8; False:C215)
+property daysOff : Collection:=[].resize(8; False:C215)
 
 property inited:=False:C215
 

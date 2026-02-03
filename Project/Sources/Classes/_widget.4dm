@@ -112,7 +112,7 @@ Function adjustWindowPos($form : Text; $x : Integer; $y : Integer) : Object
 	Else 
 		
 		var $appInfos:=Application info:C1599
-		var $isModal:=(Window kind:C445(Frontmost window:C447)=Modal dialog:K27:2)
+		var $isModal : Boolean:=(Window kind:C445(Frontmost window:C447)=Modal dialog:K27:2)
 		
 		If ($isModal && Not:C34($appInfos.SDIMode))
 			

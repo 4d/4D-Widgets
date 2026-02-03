@@ -1,9 +1,4 @@
 {
 	"version": 2130,
-	"dependencies": {
-		"4DPop Macros": {
-			"github": "vdelachaux/4DPop-Macros",
-			"version": "4d"
-		}
-	}
+	"dependencies": {}
 }
