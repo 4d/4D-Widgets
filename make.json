@@ -1,8 +1,5 @@
 {
   "excludedPlatforms": "linux",
-  "components": [
-    "4D SVG"
-  ],
   "postBuild": {
     "remove": [
       "LICENSE.md",
