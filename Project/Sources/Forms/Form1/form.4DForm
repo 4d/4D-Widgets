@@ -498,17 +498,6 @@
 					"left": 11,
 					"width": 19,
 					"height": 17
-				},
-				"Subform20": {
-					"type": "subform",
-					"left": 46,
-					"top": 506,
-					"width": 168,
-					"height": 190,
-					"detailForm": "DatePicker",
-					"borderStyle": "sunken",
-					"dataSource": "Form:C1466.dateEntry",
-					"dataSourceTypeHint": "date"
 				}
 			},
 			"entryOrder": [
@@ -540,12 +529,11 @@
 				"Combo Box7",
 				"Button",
 				"Button4",
-				"Input7",
-				"Subform20"
+				"Input7"
 			]
 		}
 	],
-	"geometryStamp": 391,
+	"geometryStamp": 392,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

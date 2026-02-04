@@ -105,7 +105,7 @@ Function getSelectedDate() : Date
 Function setSelectedDate($date : Date)
 	
 	This:C1470.date:=This:C1470.constraints($date)
-	This:C1470.setContainerValue(This:C1470.date; [Is date:K8:7; Is undefined:K8:13])
+	This:C1470.setContainerValue(Date:C102(This:C1470.date); [Is date:K8:7; Is undefined:K8:13])
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function constraints($date : Date) : Date

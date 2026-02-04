@@ -13,18 +13,7 @@
 		]
 	},
 	"(✅ TimePicker Forms)": {},
-	"(✅ TimePicker Private)": {
-		"methods": [
-			"(TimePicker__GetLabelAM)",
-			"(TimePicker__GetLabelPM)",
-			"(TimePicker__GetSelectedTime)",
-			"(TimePicker__GetStep)",
-			"(TimePicker__GetTarget)",
-			"(TimePicker__InitForm)",
-			"(TimePicker__InitInter)",
-			"(TimePicker__SetTarget)"
-		]
-	},
+	"(✅ TimePicker Private)": {},
 	"📅 Date": {
 		"groups": [
 			"DatePicker Forms",

@@ -7,7 +7,7 @@ Class constructor
 	
 Function displayPicker()
 	
-	var $picker:=cs:C1710._datePicker.new(This:C1470)
+	var $picker:=cs:C1710._datePicker.new(True:C214)
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function init()
