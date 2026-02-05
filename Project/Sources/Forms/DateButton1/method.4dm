@@ -36,7 +36,6 @@ Case of
 		
 		Form:C1466.init()
 		
-		
 		//______________________________________________________
 	: ($e.code=On Bound Variable Change:K2:52)
 		

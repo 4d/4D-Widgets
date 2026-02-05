@@ -147,12 +147,12 @@
 					"detailForm": "TimeEntry",
 					"borderStyle": "dotted",
 					"dataSource": "Form:C1466.timeEntry",
-					"dataSourceTypeHint": "time",
 					"events": [
 						"onLoad",
 						"onGettingFocus",
 						"onDataChange"
-					]
+					],
+					"dataSourceTypeHint": "time"
 				},
 				"Button4": {
 					"type": "button",
@@ -176,7 +176,9 @@
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
-					"stroke": "#1e90ff"
+					"stroke": "#1e90ff",
+					"enterable": false,
+					"focusable": false
 				},
 				"timeEntry1": {
 					"type": "subform",
@@ -196,13 +198,13 @@
 					"width": 125,
 					"height": 24,
 					"detailForm": "TimeEntry_AM",
-					"dataSourceTypeHint": "time",
 					"dataSource": "Form:C1466.timeMeridien",
 					"method": "ObjectMethods/timeEntryAmPm.4dm",
 					"events": [
 						"onDataChange"
 					],
-					"borderStyle": "system"
+					"borderStyle": "system",
+					"dataSourceTypeHint": "time"
 				},
 				"Input1": {
 					"type": "input",
@@ -214,7 +216,9 @@
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
-					"stroke": "#1e90ff"
+					"stroke": "#1e90ff",
+					"enterable": false,
+					"focusable": false
 				},
 				"Subform": {
 					"type": "subform",
@@ -240,7 +244,9 @@
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
-					"stroke": "#1e90ff"
+					"stroke": "#1e90ff",
+					"enterable": false,
+					"focusable": false
 				},
 				"Subform1": {
 					"type": "subform",
@@ -279,7 +285,9 @@
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
-					"stroke": "#1e90ff"
+					"stroke": "#1e90ff",
+					"enterable": false,
+					"focusable": false
 				},
 				"Input4": {
 					"type": "input",
@@ -291,7 +299,9 @@
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
-					"stroke": "#1e90ff"
+					"stroke": "#1e90ff",
+					"enterable": false,
+					"focusable": false
 				},
 				"Subform3": {
 					"type": "subform",
@@ -312,7 +322,9 @@
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
-					"stroke": "#1e90ff"
+					"stroke": "#1e90ff",
+					"enterable": false,
+					"focusable": false
 				},
 				"BevelButton14": {
 					"type": "button",
@@ -363,7 +375,11 @@
 					"method": "ObjectMethods/Input6.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none",
+					"fill": "transparent"
 				},
 				"Button1": {
 					"type": "button",
@@ -384,12 +400,12 @@
 					"width": 138,
 					"height": 24,
 					"detailForm": "DateEntry",
-					"dataSourceTypeHint": "date",
 					"events": [
 						"onDataChange"
 					],
 					"dataSource": "Form:C1466.dateEntry",
-					"borderStyle": "none"
+					"borderStyle": "none",
+					"dataSourceTypeHint": "undefined"
 				},
 				"Text": {
 					"type": "text",
@@ -403,7 +419,7 @@
 					"type": "text",
 					"text": "🚧",
 					"top": 506,
-					"left": 11,
+					"left": 235,
 					"width": 19,
 					"height": 17
 				},
@@ -489,7 +505,9 @@
 					"fill": "transparent",
 					"borderStyle": "none",
 					"stroke": "#1e90ff",
-					"dateFormat": "systemShort"
+					"dateFormat": "systemShort",
+					"enterable": false,
+					"focusable": false
 				},
 				"Text8": {
 					"type": "text",
@@ -498,6 +516,49 @@
 					"left": 11,
 					"width": 19,
 					"height": 17
+				},
+				"Subform20": {
+					"type": "subform",
+					"left": 40,
+					"top": 506,
+					"width": 168,
+					"height": 190,
+					"detailForm": "DatePicker",
+					"borderStyle": "system",
+					"dataSource": "Form:C1466.date",
+					"dataSourceTypeHint": "date"
+				},
+				"Input8": {
+					"type": "input",
+					"left": 40,
+					"top": 716,
+					"width": 168,
+					"height": 17,
+					"dataSource": "Form:C1466.date",
+					"stroke": "#1e90ff",
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none",
+					"fill": "transparent"
+				},
+				"Text11": {
+					"type": "text",
+					"text": "✅",
+					"top": 506,
+					"left": 11,
+					"width": 19,
+					"height": 17
+				},
+				"Subform25": {
+					"type": "subform",
+					"left": 235,
+					"top": 524,
+					"width": 19,
+					"height": 16,
+					"detailForm": "DateButton",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startDate",
+					"dataSourceTypeHint": "date"
 				}
 			},
 			"entryOrder": [
@@ -529,11 +590,14 @@
 				"Combo Box7",
 				"Button",
 				"Button4",
-				"Input7"
+				"Input7",
+				"Subform20",
+				"Input8",
+				"Subform25"
 			]
 		}
 	],
-	"geometryStamp": 392,
+	"geometryStamp": 404,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

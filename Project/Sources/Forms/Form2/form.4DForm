@@ -1,0 +1,69 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Subform20": {
+					"type": "subform",
+					"left": 25,
+					"top": 138,
+					"width": 168,
+					"height": 190,
+					"detailForm": "DatePicker",
+					"borderStyle": "sunken",
+					"dataSource": "Form:C1466.date",
+					"dataSourceTypeHint": "date"
+				},
+				"Input": {
+					"type": "input",
+					"left": 239,
+					"top": 145,
+					"width": 136,
+					"height": 17,
+					"dataSource": "Form:C1466.date"
+				}
+			}
+		}
+	],
+	"geometryStamp": 4,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

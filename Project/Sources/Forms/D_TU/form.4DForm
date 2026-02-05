@@ -384,8 +384,9 @@
 					"width": 19,
 					"height": 16,
 					"detailForm": "DateButton",
-					"borderStyle": "sunken",
-					"dataSource": "vStartDate"
+					"borderStyle": "none",
+					"dataSource": "vStartDate",
+					"dataSourceTypeHint": "undefined"
 				},
 				"Text6": {
 					"type": "text",
@@ -424,7 +425,8 @@
 					"height": 190,
 					"detailForm": "DatePicker",
 					"borderStyle": "sunken",
-					"dataSource": "Form:C1466.startDate"
+					"dataSource": "Form:C1466.startDate",
+					"dataSourceTypeHint": "date"
 				},
 				"Subform24": {
 					"type": "subform",
@@ -443,8 +445,9 @@
 					"width": 19,
 					"height": 16,
 					"detailForm": "DateButton",
-					"borderStyle": "sunken",
-					"dataSource": "Form:C1466.startDate"
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.startDate",
+					"dataSourceTypeHint": "undefined"
 				},
 				"Input3": {
 					"type": "input",

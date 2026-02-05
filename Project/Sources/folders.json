@@ -14,24 +14,23 @@
 	},
 	"(✅ TimePicker Forms)": {},
 	"(✅ TimePicker Private)": {},
+	"(DatePicker Forms)": {},
 	"📅 Date": {
 		"groups": [
-			"DatePicker Forms",
+			"Date Entries",
+			"Date Picker",
 			"DatePicker Private",
 			"DatePicker Shared"
 		],
 		"classes": [
-			"_date",
-			"_dateButton",
-			"_dateEntry",
-			"_datePicker"
+			"_date"
 		]
 	},
 	"🕒 Time": {
 		"groups": [
-			"Displays",
-			"Entries",
-			"Pickers"
+			"Time Displays",
+			"Time Entries",
+			"Time Pickers"
 		],
 		"classes": [
 			"_time"
@@ -45,11 +44,23 @@
 			"Compiler_Variables_Inter"
 		]
 	},
-	"DatePicker Forms": {
+	"Date Entries": {
+		"forms": [
+			"DateEntry"
+		],
+		"classes": [
+			"_dateEntry"
+		]
+	},
+	"Date Picker": {
 		"forms": [
 			"DateButton",
-			"DateEntry",
-			"DatePicker"
+			"DatePicker",
+			"DatePickerPop"
+		],
+		"classes": [
+			"_dateButton",
+			"_datePicker"
 		]
 	},
 	"DatePicker Private": {
@@ -94,43 +105,6 @@
 			"DatePicker SET WEEK FIRST DAY"
 		]
 	},
-	"Displays": {
-		"groups": [
-			"TimeDisplay Shared"
-		],
-		"forms": [
-			"TimeDisplay",
-			"TimeDisplayLCD"
-		],
-		"classes": [
-			"_analogic",
-			"_clock",
-			"_digital"
-		]
-	},
-	"Entries": {
-		"forms": [
-			"TimeEntry",
-			"TimeEntry_AM"
-		],
-		"classes": [
-			"_timeEntry"
-		]
-	},
-	"Pickers": {
-		"groups": [
-			"TimePicker Shared"
-		],
-		"forms": [
-			"TimePicker_Pop1",
-			"TimePicker_Pop1_AM",
-			"TimePicker_Pop2",
-			"TimePicker_Pop2_AM"
-		],
-		"classes": [
-			"_timePicker"
-		]
-	},
 	"SearchPicker": {
 		"groups": [
 			"SearchPicker Forms",
@@ -164,6 +138,43 @@
 		"methods": [
 			"SearchPicker SET ENTERABLE",
 			"SearchPicker SET HELP TEXT"
+		]
+	},
+	"Time Displays": {
+		"groups": [
+			"TimeDisplay Shared"
+		],
+		"forms": [
+			"TimeDisplay",
+			"TimeDisplayLCD"
+		],
+		"classes": [
+			"_analogic",
+			"_clock",
+			"_digital"
+		]
+	},
+	"Time Entries": {
+		"forms": [
+			"TimeEntry",
+			"TimeEntry_AM"
+		],
+		"classes": [
+			"_timeEntry"
+		]
+	},
+	"Time Pickers": {
+		"groups": [
+			"TimePicker Shared"
+		],
+		"forms": [
+			"TimePicker_Pop1",
+			"TimePicker_Pop1_AM",
+			"TimePicker_Pop2",
+			"TimePicker_Pop2_AM"
+		],
+		"classes": [
+			"_timePicker"
 		]
 	},
 	"TimeDisplay Shared": {
@@ -203,7 +214,8 @@
 	"trash": {
 		"groups": [
 			"(✅ TimePicker Forms)",
-			"(✅ TimePicker Private)"
+			"(✅ TimePicker Private)",
+			"(DatePicker Forms)"
 		]
 	}
 }

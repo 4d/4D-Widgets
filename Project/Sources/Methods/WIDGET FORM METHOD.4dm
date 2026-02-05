@@ -1,13 +1,14 @@
 //%attributes = {"invisible":true}
 var $e:=FORM Event:C1606
 
-If (Structure file:C489=Structure file:C489(*))  // DEV
-	
-	Form:C1466.handleEvents($e)
-	
-	return 
-	
-End if 
+
+//If (Structure file=Structure file(*))  // DEV
+
+//Form.handleEvents($e)
+
+//return 
+
+//End if 
 
 If ($e.code=On Load:K2:1)
 	
@@ -25,13 +26,17 @@ If ($e.code=On Load:K2:1)
 			: ($t="TimeEntry@")\
 				 || ($t="TimePicker@")
 				
-				ALERT:C41("The type of the "+$t+" widget container must be numeric, time, or undefined.")
+				OBJECT SET TITLE:C194(*; "error"; "Bad container type")
 				
 				// ______________________________________________________
-			: ($t="DateEntry@")\
-				 || ($t="DatePicker@")
+			: ($t="DateEntry@")
 				
-				ALERT:C41("The type of the "+$t+" widget container must be numeric, date, or undefined.")
+				OBJECT SET TITLE:C194(*; "error"; "Bad container type")
+				
+				// ______________________________________________________
+			: ($t="DatePicker@")
+				
+				OBJECT SET TITLE:C194(*; "error"; Replace string:C233(Localized string:C991("dateInvalidContainerType"); "{name}"; $t))
 				
 				// ______________________________________________________
 			Else 
@@ -43,6 +48,7 @@ If ($e.code=On Load:K2:1)
 		
 		// Hide all objects
 		OBJECT SET VISIBLE:C603(*; "@"; False:C215)
+		OBJECT SET VISIBLE:C603(*; "error"; True:C214)
 		
 	End try
 	

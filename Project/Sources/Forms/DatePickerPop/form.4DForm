@@ -1,6 +1,6 @@
 {
 	"destination": "detailScreen",
-	"shared": true,
+	"shared": false,
 	"windowSizingX": "fixed",
 	"windowSizingY": "fixed",
 	"width": 168,
@@ -29,17 +29,6 @@
 					"stroke": "transparent",
 					"fill": "automatic",
 					"strokeWidth": 0
-				},
-				"error": {
-					"type": "text",
-					"text": "_xxx_",
-					"top": 42,
-					"left": 9,
-					"width": 150,
-					"height": 123,
-					"stroke": "#ff0000",
-					"textAlign": "center",
-					"visibility": "hidden"
 				},
 				"cancel": {
 					"type": "button",
@@ -1082,11 +1071,10 @@
 			}
 		}
 	},
-	"geometryStamp": 442,
+	"geometryStamp": 433,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
 	},
-	"formClass": "_datePicker",
 	"method": "WIDGET FORM METHOD"
 }

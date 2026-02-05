@@ -224,7 +224,7 @@ Function handleEvents($e : Object)
 			// ______________________________________________________
 		: ($e.objectName="tinyCalendar")
 			
-			var $date:=cs:C1710._datePicker.new(True:C214).date
+			var $date:=cs:C1710._datePicker.new(This:C1470.date).date
 			
 			If ($date#!00-00-00!)
 				

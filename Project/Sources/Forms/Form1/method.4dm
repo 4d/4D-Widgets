@@ -13,3 +13,4 @@ TimePicker SET MIN TIME("timeEntryAmPm"; ?00:00:00?)
 TimePicker SET MAX TIME("timeEntryAmPm"; ?24:00:00?)
 
 Form:C1466.dateEntry:=!1958-08-08!
+Form:C1466.date:=Current date:C33

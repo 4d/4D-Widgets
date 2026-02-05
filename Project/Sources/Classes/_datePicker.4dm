@@ -1,6 +1,6 @@
 Class extends _date
 
-property formName:="DatePicker"
+property formName:="DatePickerPop"
 
 property firstDayOfWeek : Integer
 
@@ -14,7 +14,7 @@ property autoClose : Boolean  // True will close the dial on click on any date
 property useArrows : Boolean  // True will allow the use of arrows (which is not the case when displayed inside a form)
 
 // === === === === === === === === === === === === === === === === === === === === === === === ===
-Class constructor($fromButton : Boolean)
+Class constructor($date : Date)
 	
 	Super:C1705()
 	
@@ -24,7 +24,9 @@ Class constructor($fromButton : Boolean)
 	ARRAY TO COLLECTION:C1563(This:C1470.dayOff1; <>_DatePicker_DaysOff1)
 	ARRAY TO COLLECTION:C1563(This:C1470.dayOff2; <>_DatePicker_DaysOff2)
 	
-	If ($fromButton)
+	This:C1470.date:=$date || Current date:C33
+	
+	If (Count parameters:C259>=1)
 		
 		This:C1470.date:=This:C1470.dialog(True:C214)
 		
@@ -49,111 +51,24 @@ Function init()
 		
 	End if 
 	
-	This:C1470.update(True:C214)
+	This:C1470.computeFirstDay(This:C1470.date)
+	This:C1470.setSelectedDate(This:C1470.date)
 	
-	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function handleEvents($e : Object)
-	
-	$e:=$e || FORM Event:C1606
-	
-	// MARK:Form Method
-	If ($e.objectName=Null:C1517)
-		
-		Case of 
-				
-				//________________________________________________________________________________
-			: ($e.code=On Load:K2:1)
-				
-				This:C1470.init()
-				
-				//________________________________________________________________________________
-			: ($e.code=On Bound Variable Change:K2:52)
-				
-				This:C1470.update(True:C214)
-				
-				//________________________________________________________________________________
-			: ($e.code=On Activate:K2:9)\
-				 || ($e.code=On Deactivate:K2:10)
-				
-				This:C1470.manageFocus($e)
-				
-				//________________________________________________________________________________
-		End case 
-		
-		return 
-		
-	End if 
-	
-	// MARK: Widget Methods
-	Case of 
-			
-			//________________________________________________________________________________
-		: ($e.objectName="BtnNext")
-			
-			This:C1470.nextPreviousMonth(1)
-			
-			//________________________________________________________________________________
-		: ($e.objectName="BtnPrevious")
-			
-			This:C1470.nextPreviousMonth(-1)
-			
-			//________________________________________________________________________________
-		: ($e.objectName="DummyBtnLeft")
-			
-			This:C1470.nextPreviousDay(-1)
-			
-			//________________________________________________________________________________
-		: ($e.objectName="DummyBtnUp")
-			
-			This:C1470.nextPreviousDay(-7)
-			
-			//________________________________________________________________________________
-		: ($e.objectName="DummyBtnRight")
-			
-			This:C1470.nextPreviousDay(1)
-			
-			//________________________________________________________________________________
-		: ($e.objectName="DummyBtnDown")
-			
-			This:C1470.nextPreviousDay(7)
-			
-			//________________________________________________________________________________
-		: ($e.objectName="cancel")
-			
-			//
-			
-			//________________________________________________________________________________
-		: ($e.code=On Clicked:K2:4)
-			
-			This:C1470.clicOnday($e)
-			
-			//________________________________________________________________________________
-		: ($e.code=On Bound Variable Change:K2:52)
-			
-			This:C1470.update(True:C214)
-			
-			//________________________________________________________________________________
-		: ($e.code=On Activate:K2:9)\
-			 || ($e.code=On Deactivate:K2:10)
-			
-			This:C1470.manageFocus($e)
-			
-			//________________________________________________________________________________
-	End case 
+	This:C1470.redraw()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function nextPreviousMonth($step : Integer)
 	
-	var $date : Date:=Add to date:C393(!00-00-00!; Year of:C25(This:C1470.firstDayOfMonth); Month of:C24(This:C1470.firstDayOfMonth)+$step; Day of:C23(This:C1470.date))
-	This:C1470.setSelectedDate($date)
+	var $date : Date:=Add to date:C393(This:C1470.date; 0; $step; 0)
 	This:C1470.computeFirstDay($date)
 	This:C1470.redraw()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function nextPreviousDay($step : Integer)
 	
-	This:C1470.date:=Add to date:C393(This:C1470.date; 0; 0; $step)
-	This:C1470.update(True:C214)
+	var $date : Date:=Add to date:C393(This:C1470.date; 0; 0; $step)
+	This:C1470.computeFirstDay($date)
+	This:C1470.redraw()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function update($redraw : Boolean)
@@ -340,9 +255,9 @@ Function dialog($fromButton : Boolean) : Date
 	End if 
 	
 	var $date:=This:C1470.date
-	var $winRef:=Open form window:C675(String:C10(This:C1470.formName); Movable form dialog box no title:K39:20; $left; $top)
+	var $winRef:=Open form window:C675(String:C10("DatePickerPop"); Pop up form window:K39:11; $left; $top)
 	
-	DIALOG:C40(This:C1470.formName; This:C1470)
+	DIALOG:C40("DatePickerPop"; This:C1470)
 	
 	If (Bool:C1537(OK))
 		

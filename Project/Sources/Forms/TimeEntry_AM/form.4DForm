@@ -50,6 +50,17 @@
 		},
 		{
 			"objects": {
+				"error": {
+					"type": "text",
+					"text": "_xxx_",
+					"top": 4,
+					"left": 0,
+					"width": 130,
+					"height": 16,
+					"stroke": "#ff0000",
+					"textAlign": "center",
+					"visibility": "hidden"
+				},
 				"FocusRingBackGround": {
 					"type": "rectangle",
 					"top": 1,
@@ -225,7 +236,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 235,
+	"geometryStamp": 244,
 	"formClass": "_timeEntry",
 	"method": "WIDGET FORM METHOD"
 }
