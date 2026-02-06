@@ -15,11 +15,11 @@
 	"(✅ TimePicker Forms)": {},
 	"(✅ TimePicker Private)": {},
 	"(DatePicker Forms)": {},
+	"(DatePicker Private)": {},
 	"📅 Date": {
 		"groups": [
 			"Date Entries",
 			"Date Picker",
-			"DatePicker Private",
 			"DatePicker Shared"
 		],
 		"classes": [
@@ -54,40 +54,13 @@
 	},
 	"Date Picker": {
 		"forms": [
+			"_datePicker",
 			"DateButton",
-			"DatePicker",
-			"DatePickerPop"
+			"DatePicker"
 		],
 		"classes": [
 			"_dateButton",
 			"_datePicker"
-		]
-	},
-	"DatePicker Private": {
-		"methods": [
-			"DateEntry__Increase",
-			"DateEntry__ManageFocus",
-			"DateEntry__Redraw",
-			"DatePicker SET DEFAULT DATE",
-			"DatePicker__CalculateFirstDay",
-			"DatePicker__ClickButton",
-			"DatePicker__DISPOSE",
-			"DatePicker__GetBlob",
-			"DatePicker__GetDaysOff",
-			"DatePicker__GetMaxDate",
-			"DatePicker__GetMinDate",
-			"DatePicker__GetSelectedDate",
-			"DatePicker__GetTarget",
-			"DatePicker__GetWeekDaysOff",
-			"DatePicker__GetWeekFirstDay",
-			"DatePicker__InitForm",
-			"DatePicker__InitInter",
-			"DatePicker__ManageFocus",
-			"DatePicker__RecalcDate",
-			"DatePicker__RedrawCalendar",
-			"DatePicker__SetBlob",
-			"DatePicker__SetSelectedDate",
-			"DatePicker__SetTarget"
 		]
 	},
 	"DatePicker Shared": {
@@ -97,6 +70,7 @@
 			"DatePicker RESET DEFAULT VALUES",
 			"DatePicker SET DAYS OFF",
 			"DatePicker SET DEFAULT 1ST DAY",
+			"DatePicker SET DEFAULT DATE",
 			"DatePicker SET DEFAULT DAYS OFF",
 			"DatePicker SET DEFAULT MAX DATE",
 			"DatePicker SET DEFAULT MIN DATE",
@@ -195,7 +169,6 @@
 			"TimePicker SET DEFAULT MAX TIME",
 			"TimePicker SET DEFAULT MIN TIME",
 			"TimePicker SET DEFAULT STEP",
-			"TimePicker SET DEFAULT TIME",
 			"TimePicker SET LABEL AM",
 			"TimePicker SET LABEL PM",
 			"TimePicker SET MAX TIME",
@@ -205,9 +178,7 @@
 	},
 	"Tools": {
 		"methods": [
-			"Tool_AdjustWindowPos",
 			"Tool_ObjectToVar",
-			"Tool_ScreenInfoFromPoint",
 			"Tool_VarToObject"
 		]
 	},
@@ -215,7 +186,8 @@
 		"groups": [
 			"(✅ TimePicker Forms)",
 			"(✅ TimePicker Private)",
-			"(DatePicker Forms)"
+			"(DatePicker Forms)",
+			"(DatePicker Private)"
 		]
 	}
 }

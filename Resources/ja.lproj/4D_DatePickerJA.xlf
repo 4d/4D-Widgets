@@ -107,9 +107,9 @@
           <source>Error: the method "[1]" was expecting a seven item boolean array pointer as parameter.</source>
           <target>エラー: メソッド "[1]" は7要素を持つブール配列へのポインターを引数として受け取ります。</target>
         </trans-unit>
-        <trans-unit id="14" resname="Errors_DatePtrParameter">
-          <source>Error: the method "[1]" was expecting a date pointer parameter.</source>
-          <target>エラー: メソッド "[1]" は日付ポインターを引数として受け取ります。</target>
+        <trans-unit id="14" resname="Errors_DateArrayPtrParameter">
+          <source>Error: the method "[1]" was expecting an array date pointer parameter.</source>
+          <target state="needs-review-translation">エラー: メソッド "[1]" は日付ポインターを引数として受け取ります。</target>
         </trans-unit>
         <trans-unit id="22" resname="Errors_TimeParameter">
           <source>Error: the method "[1]" was expecting a time as parameter.</source>

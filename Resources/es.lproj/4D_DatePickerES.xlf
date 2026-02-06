@@ -107,9 +107,9 @@
           <source>Error: the method "[1]" was expecting a seven item boolean array pointer as parameter.</source>
           <target>Error: el método "[1]" esperaba un parámetro de tipo puntero a un array booleano de siete elementos.</target>
         </trans-unit>
-        <trans-unit id="14" resname="Errors_DatePtrParameter">
-          <source>Error: the method "[1]" was expecting a date pointer parameter.</source>
-          <target>Error: el método "[1]" esperaba un parámetro puntero tipo fecha.</target>
+        <trans-unit id="14" resname="Errors_DateArrayPtrParameter">
+          <source>Error: the method "[1]" was expecting an array date pointer parameter.</source>
+          <target state="needs-review-translation">Error: el método "[1]" esperaba un parámetro puntero tipo fecha.</target>
         </trans-unit>
         <trans-unit id="22" resname="Errors_TimeParameter">
           <source>Error: the method "[1]" was expecting a time as parameter.</source>

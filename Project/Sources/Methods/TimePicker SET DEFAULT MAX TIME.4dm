@@ -9,8 +9,15 @@ If (Count parameters:C259=0)
 	
 End if 
 
-If ($time>=<>TimePicker_TimeMin)  // MAX must me superior or equal to timeMIN
+// MAX must me superior or equal to timeMIN
+Use (Storage:C1525)
 	
-	<>TimePicker_TimeMax:=$time
-	
-End if 
+	Use (Storage:C1525.time)
+		
+		If ($time>=Storage:C1525.time.minTime)
+			
+			Storage:C1525.time.maxTime:=$time
+			
+		End if 
+	End use 
+End use 

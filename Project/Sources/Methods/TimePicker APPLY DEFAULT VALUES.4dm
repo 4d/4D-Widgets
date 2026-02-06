@@ -9,8 +9,15 @@ If (Count parameters:C259=0)
 	
 End if 
 
-TimePicker SET MIN TIME($widget; <>TimePicker_TimeMin)
-TimePicker SET MAX TIME($widget; <>TimePicker_TimeMax)
-TimePicker SET LABEL AM($widget; <>TimePicker_LabelAM)
-TimePicker SET LABEL PM($widget; <>TimePicker_LabelPM)
-TimePicker SET STEP($widget; <>TimePicker_Step)
+Use (Storage:C1525)
+	
+	Use (Storage:C1525.time)
+		
+		TimePicker SET MIN TIME($widget; Storage:C1525.time.minTime)
+		TimePicker SET MAX TIME($widget; Storage:C1525.time.maxTime)
+		TimePicker SET LABEL AM($widget; Storage:C1525.time.AM)
+		TimePicker SET LABEL PM($widget; Storage:C1525.time.PM)
+		TimePicker SET STEP($widget; Storage:C1525.time.step)
+		
+	End use 
+End use 

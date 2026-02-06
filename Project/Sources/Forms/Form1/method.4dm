@@ -9,7 +9,7 @@ Form:C1466.timeMeridien:=$time+?12:00:00?
 
 Form:C1466.pickerOne:=?12:15:00?
 
-TimePicker SET MIN TIME("timeEntryAmPm"; ?00:00:00?)
+TimePicker SET MIN TIME("timeEntryAmPm"; ?05:00:00?)
 TimePicker SET MAX TIME("timeEntryAmPm"; ?24:00:00?)
 
 Form:C1466.dateEntry:=!1958-08-08!

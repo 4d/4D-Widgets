@@ -17,8 +17,8 @@ Function init()
 	
 	If (This:C1470.withMeridien)
 		
-		This:C1470.AM:=<>TimePicker_LabelAM
-		This:C1470.PM:=<>TimePicker_LabelPM
+		This:C1470.AM:=Storage:C1525.time.AM
+		This:C1470.PM:=Storage:C1525.time.PM
 		
 		This:C1470.meridien:=This:C1470.AM
 		
@@ -230,7 +230,7 @@ Function manageFocus($e : Object)
 Function increase($step : Integer)
 	
 	var $target:=OBJECT Get name:C1087(Object with focus:K67:3)
-	var $time : Time:=Try(This:C1470.getContainerValue().value) || ?00:00:00?
+	var $time:=This:C1470.time
 	
 	Case of 
 			

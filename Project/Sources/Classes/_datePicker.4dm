@@ -1,6 +1,6 @@
 Class extends _date
 
-property formName:="DatePickerPop"
+property formName:="_datePicker"
 
 property firstDayOfWeek : Integer
 
@@ -10,11 +10,11 @@ property dayOff2:=[]
 
 property weeklyDaysOff:=[]
 
+property backup : Date
 property autoClose : Boolean  // True will close the dial on click on any date
-property useArrows : Boolean  // True will allow the use of arrows (which is not the case when displayed inside a form)
 
 // === === === === === === === === === === === === === === === === === === === === === === === ===
-Class constructor($date : Date)
+Class constructor($date : Date; $left : Integer; $top : Integer)
 	
 	Super:C1705()
 	
@@ -25,10 +25,12 @@ Class constructor($date : Date)
 	ARRAY TO COLLECTION:C1563(This:C1470.dayOff2; <>_DatePicker_DaysOff2)
 	
 	This:C1470.date:=$date || Current date:C33
+	This:C1470.backup:=This:C1470.date
 	
 	If (Count parameters:C259>=1)
 		
-		This:C1470.date:=This:C1470.dialog(True:C214)
+		This:C1470.autoClose:=True:C214
+		This:C1470.date:=This:C1470.dialog(True:C214; $left; $top)
 		
 	End if 
 	
@@ -47,6 +49,16 @@ Function init()
 		
 	Else 
 		
+		// Do not allow navigation via shortcuts
+		OBJECT SET ENABLED:C1123(*; "previous@"; False:C215)
+		OBJECT SET ENABLED:C1123(*; "next@"; False:C215)
+		
+		OBJECT SET ENABLED:C1123(*; "previousMonth"; True:C214)
+		OBJECT SET ENABLED:C1123(*; "nextMonth"; True:C214)
+		
+		OBJECT SET ENABLED:C1123(*; "ok"; False:C215)
+		OBJECT SET ENABLED:C1123(*; "cancel"; False:C215)
+		
 		This:C1470.manageFocus({code: On Deactivate:K2:10})
 		
 	End if 
@@ -54,6 +66,93 @@ Function init()
 	This:C1470.computeFirstDay(This:C1470.date)
 	This:C1470.setSelectedDate(This:C1470.date)
 	
+	This:C1470.redraw()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function handleEvents($e : Object)
+	
+	$e:=$e || FORM Event:C1606
+	
+	// MARK: Form Method
+	If ($e.objectName=Null:C1517)
+		
+		Case of 
+				
+				// ________________________________________________________________________________
+			: ($e.code=On Load:K2:1)
+				
+				This:C1470.init()
+				
+				// ________________________________________________________________________________
+		End case 
+		
+		return 
+		
+	End if 
+	
+	// MARK: Widget Methods
+	Case of 
+			
+			// ______________________________________________________
+		: ($e.objectName="nextMonth")
+			
+			This:C1470.nextPreviousMonth(1)
+			
+			// ______________________________________________________
+		: ($e.objectName="previousMonth")
+			
+			This:C1470.nextPreviousMonth(-1)
+			
+			// ______________________________________________________
+		: ($e.objectName="nextDay")
+			
+			This:C1470.nextPreviousDay(1)
+			
+			// ______________________________________________________
+		: ($e.objectName="previousDay")
+			
+			This:C1470.nextPreviousDay(-1)
+			
+			// ______________________________________________________
+		: ($e.objectName="nextWeek")
+			
+			This:C1470.nextPreviousDay(7)
+			
+			// ______________________________________________________
+		: ($e.objectName="previousWeek")
+			
+			This:C1470.nextPreviousDay(-7)
+			
+			// ______________________________________________________
+		: ($e.objectName="day_@")
+			
+			This:C1470.clicOnday($e)
+			
+			// ______________________________________________________
+		: ($e.objectName="cancel")
+			
+			This:C1470.date:=This:C1470.backup
+			
+			CANCEL:C270
+			
+			// ______________________________________________________
+		: ($e.objectName="ok")
+			
+			ACCEPT:C269
+			
+			// ______________________________________________________
+		Else 
+			
+			// TODO: Clic on month -> menu with action + nex/previous year
+			
+			// ______________________________________________________
+	End case 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function nextPreviousYear($step : Integer)
+	
+	var $date : Date:=Add to date:C393(This:C1470.date; $step; 0; 0)
+	This:C1470.computeFirstDay($date)
 	This:C1470.redraw()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
@@ -89,20 +188,19 @@ Function redraw()
 	var $i : Integer
 	For ($i; 1; 7)
 		
-		OBJECT SET VALUE:C1742("DayName"+String:C10($i); Substring:C12(This:C1470.days[($i-2+This:C1470.firstDayOfWeek)%7+1]; 1; 2))
+		OBJECT SET VALUE:C1742("header"+String:C10($i); Substring:C12(This:C1470.days[($i-2+This:C1470.firstDayOfWeek)%7+1]; 1; 2))
 		
 	End for 
 	
 	If (This:C1470.firstDisplayedDay=!00-00-00!)
 		
-		//This.date:=Current date
 		This:C1470.computeFirstDay(Current date:C33)
 		
 	End if 
 	
 	var $CurrentMonth:=Month of:C24(This:C1470.firstDisplayedDay+7)
 	
-	OBJECT SET RGB COLORS:C628(*; "DatePicker_Btn_@"; 0; 0)
+	OBJECT SET RGB COLORS:C628(*; "day_@"; 0; 0)
 	
 	For ($i; 1; 42)  //42 objects to fill
 		
@@ -113,23 +211,14 @@ Function redraw()
 		var $Year:=Year of:C25($date)
 		
 		// Let's start by labeling the header button.
-		var $ObjectName:="DatePicker_Btn_"+String:C10($i)
+		var $ObjectName:="day_"+String:C10($i)
 		OBJECT SET TITLE:C194(*; $ObjectName; String:C10(Day of:C23($date)))
 		
 		// Is that day a day off?
 		var $DayOff:=(This:C1470.dayOff2.indexOf($date)>=0) | (This:C1470.dayOff1.indexOf($date)>=0)
 		
 		// Does this day belong to the defined range (if applicable)?
-		If ($date<This:C1470.minDate)\
-			 || ((This:C1470.maxDate#!00-00-00!) && ($date>This:C1470.maxDate))
-			
-			OBJECT SET ENABLED:C1123(*; $ObjectName; False:C215)
-			
-		Else 
-			
-			OBJECT SET ENABLED:C1123(*; $ObjectName; True:C214)
-			
-		End if 
+		OBJECT SET ENABLED:C1123(*; $ObjectName; This:C1470.inRange($date))
 		
 		// Is it a weekly day off?
 		var $style:=This:C1470.dayOff0[$dayWeek] ? Bold:K14:2+Italic:K14:3 : Plain:K14:1
@@ -174,11 +263,11 @@ Function redraw()
 		// Bold for LMMJVSD
 		If ($i<=7)
 			
-			OBJECT SET FONT STYLE:C166(*; "DayName"+String:C10($i); $style)
+			OBJECT SET FONT STYLE:C166(*; "header"+String:C10($i); $style)
 			
 		End if 
 		
-		OBJECT SET ENABLED:C1123(*; "BtnPrevious"; This:C1470.firstDisplayedDay>=This:C1470.minDate)
+		OBJECT SET ENABLED:C1123(*; "previousMonth"; This:C1470.firstDisplayedDay>=This:C1470.minDate)
 		
 		var $DayNumber:=Day of:C23($date)
 		var $FirstOfNextMonth:=Add to date:C393($date; 0; 0; (1+(($DayNumber)*(-1))))
@@ -186,11 +275,11 @@ Function redraw()
 		If ((This:C1470.maxDate#!00-00-00!)\
 			 && ($FirstOfNextMonth>This:C1470.maxDate))
 			
-			OBJECT SET ENABLED:C1123(*; "BtnNext"; False:C215)
+			OBJECT SET ENABLED:C1123(*; "nextMonth"; False:C215)
 			
 		Else 
 			
-			OBJECT SET ENABLED:C1123(*; "BtnNext"; True:C214)
+			OBJECT SET ENABLED:C1123(*; "nextMonth"; True:C214)
 			
 		End if 
 	End for 
@@ -221,43 +310,49 @@ Function manageFocus($e : Object)
 	OBJECT SET ENABLED:C1123(*; "DummyBtn@"; $visible)
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function dialog($fromButton : Boolean) : Date
+Function dialog($fromButton : Boolean; $left : Integer; $top : Integer) : Date
 	
-	If ($fromButton)
+	If (($left+$top)=0)
 		
-		If (Is macOS:C1572)
+		If ($fromButton)
 			
-			MOUSE POSITION:C468($mouseX; $mouseY; $mouseButton; *)  // Global system
 			
-			$left:=$mouseX
-			$top:=$mouseY
+			If (Is macOS:C1572)
+				
+				MOUSE POSITION:C468($mouseX; $mouseY; $mouseButton; *)  // Global system
+				
+				$left:=$mouseX
+				$top:=$mouseY
+				
+			Else 
+				
+				var $mouseX; $mouseY; $mouseButton : Integer
+				MOUSE POSITION:C468($mouseX; $mouseY; $mouseButton)  // Front most window
+				
+				var $right; $bottom : Integer
+				GET WINDOW RECT:C443($left; $top; $right; $bottom)  // Front most window
+				
+				$left+=$mouseX
+				$top+=$mouseY
+				
+			End if 
 			
-		Else 
-			
-			var $mouseX; $mouseY; $mouseButton : Integer
-			MOUSE POSITION:C468($mouseX; $mouseY; $mouseButton)  // front most window
-			
-			var $left; $top; $right; $bottom : Integer
-			GET WINDOW RECT:C443($left; $top; $right; $bottom)  // front most window
-			
-			$left+=$mouseX
-			$top+=$mouseY
+			var $cordinates:=This:C1470.adjustWindowPos(This:C1470.formName; $left; $top)
+			$left:=$cordinates.x
+			$top:=$cordinates.y
 			
 		End if 
 		
-		var $cordinates:=This:C1470.adjustWindowPos(This:C1470.formName; $left; $top)
-		$left:=$cordinates.x
-		$top:=$cordinates.y
+	Else 
 		
-		This:C1470.autoClose:=True:C214
-		This:C1470.useArrows:=True:C214
+		CONVERT COORDINATES:C1365($left; $top; XY Current window:K27:6; XY Screen:K27:7)
 		
 	End if 
 	
-	var $date:=This:C1470.date
-	var $winRef:=Open form window:C675(String:C10("DatePickerPop"); Pop up form window:K39:11; $left; $top)
+	var $date:=This:C1470.date  // Memorize the current date
 	
-	DIALOG:C40("DatePickerPop"; This:C1470)
+	var $winRef:=Open form window:C675(String:C10(This:C1470.formName); Pop up form window:K39:11; $left; $top)
+	DIALOG:C40(This:C1470.formName; This:C1470)
 	
 	If (Bool:C1537(OK))
 		
@@ -266,7 +361,7 @@ Function dialog($fromButton : Boolean) : Date
 		
 	Else 
 		
-		This:C1470.date:=$date
+		This:C1470.date:=$date  // Restore the stored date
 		
 	End if 
 	
@@ -311,3 +406,75 @@ Function computeFirstDay($date : Date)
 		End while 
 	End if 
 	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function applyDefaultValues()
+	
+	This:C1470.minDate:=<>DatePicker_DateMin
+	This:C1470.maxDate:=<>DatePicker_DateMin
+	This:C1470.firstDayOfWeek:=<>DatePicker_FirstDayOfWeek
+	
+	ARRAY TO COLLECTION:C1563(This:C1470.dayOff0; <>_DatePicker_DaysOff0)
+	This:C1470.dayOff0.insert(0; 1)  // [0] Un used [1]= Sunday [2] = Monday … [7] = Saturday
+	
+	ARRAY TO COLLECTION:C1563(This:C1470.dayOff1; <>_DatePicker_DaysOff1)
+	ARRAY TO COLLECTION:C1563(This:C1470.dayOff2; <>_DatePicker_DaysOff2)
+	
+	This:C1470.redraw()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function setDaysOff($type : Integer; $values : Collection)
+	
+	Case of 
+			
+			// ______________________________________________________
+		: ($type=0)  // Repeated each week
+			
+			This:C1470.dayOff0:=[]
+			This:C1470.dayOff0:=This:C1470.dayOff0.combine($values)
+			
+			// [0] Unused, [1]= Sunday, [2] = Monday, …, [7] = Saturday
+			This:C1470.dayOff0.insert(0; Null:C1517)
+			
+			// ______________________________________________________
+		: ($type=1)  // Repeated earch year
+			
+			ARRAY TO COLLECTION:C1563(This:C1470.dayOff1; $values)
+			
+			// ______________________________________________________
+		: ($type=2)  // Only once
+			
+			ARRAY TO COLLECTION:C1563(This:C1470.dayOff2; $values)
+			
+			// ______________________________________________________
+	End case 
+	
+	This:C1470.redraw()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function setFirstDayOffWeek($first : Integer)
+	
+	This:C1470.firstDayOfWeek:=$first
+	This:C1470.computeFirstDay()
+	This:C1470.redraw()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function setMinDate($date : Date)
+	
+	If (($date<=This:C1470.maxDate) || (This:C1470.maxDate=!00-00-00!))
+		
+		This:C1470.minDate:=$date
+		
+		This:C1470.redraw()
+		
+	End if 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function setMaxDate($date : Date)
+	
+	If (($date>=This:C1470.minDate) || (This:C1470.minDate=!00-00-00!))
+		
+		This:C1470.maxDate:=$date
+		
+		This:C1470.redraw()
+		
+	End if 

@@ -107,9 +107,9 @@
           <source>Error: the method "[1]" was expecting a seven item boolean array pointer as parameter.</source>
           <target>Fehler: die Methode "[1]" erwartet einen Zeiger auf ein Boolean Array mit sieben Elementen als Parameter.</target>
         </trans-unit>
-        <trans-unit id="14" resname="Errors_DatePtrParameter">
-          <source>Error: the method "[1]" was expecting a date pointer parameter.</source>
-          <target>Fehler: die Methode "[1]" erwartet einen Zeiger auf Datum als Parameter.</target>
+        <trans-unit id="14" resname="Errors_DateArrayPtrParameter">
+          <source>Error: the method "[1]" was expecting an array date pointer parameter.</source>
+          <target state="needs-review-translation">Fehler: die Methode "[1]" erwartet einen Zeiger auf Datum als Parameter.</target>
         </trans-unit>
         <trans-unit id="22" resname="Errors_TimeParameter">
           <source>Error: the method "[1]" was expecting a time as parameter.</source>

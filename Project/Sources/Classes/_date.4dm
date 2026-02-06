@@ -9,8 +9,6 @@ property firstDisplayedDay : Date
 
 property separator : Text
 
-
-
 property days:=[\
 Null:C1517; \
 Localized string:C991("Days_Sunday"); \
@@ -38,8 +36,6 @@ Localized string:C991("Monthes_November"); \
 Localized string:C991("Monthes_December")\
 ]
 
-property daysOff : Collection:=[].resize(8; False:C215)
-
 property inited:=False:C215
 
 // === === === === === === === === === === === === === === === === === === === === === === === ===
@@ -55,9 +51,6 @@ Class constructor()
 	var $t : Text
 	GET SYSTEM FORMAT:C994(Date separator:K60:10; $t)
 	This:C1470.separator:=$t
-	
-	This:C1470.daysOff[Saturday:K10:18]:=True:C214
-	This:C1470.daysOff[Sunday:K10:19]:=True:C214
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function init()
@@ -81,9 +74,6 @@ Function defaultValues($force : Boolean)
 		var <>DatePicker_DateMax:=!00-00-00!
 		
 		var <>DatePicker_FirstDayOfWeek : Integer:=Monday:K10:13
-		
-		
-		var <>DatePicker_GetBlob : Boolean
 		
 		This:C1470.inited:=True:C214
 		
@@ -128,3 +118,17 @@ Function constraints($date : Date) : Date
 	End case 
 	
 	return Date:C102($date)
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function inRange($date : Date) : Boolean
+	
+	If ($date>=This:C1470.minDate)
+		
+		return (This:C1470.maxDate=!00-00-00!) || ($date<=This:C1470.maxDate)
+		
+	End if 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function displayDialog($x : Integer; $y : Integer; $date : Date) : Date
+	
+	return cs:C1710._datePicker.new($date || Current date:C33; $x; $y).date

@@ -224,6 +224,7 @@ Function handleEvents($e : Object)
 			// ______________________________________________________
 		: ($e.objectName="tinyCalendar")
 			
+/*var $date:=cs._datePicker.new(This.date).date*/
 			var $date:=cs:C1710._datePicker.new(This:C1470.date).date
 			
 			If ($date#!00-00-00!)
@@ -330,4 +331,24 @@ Function increase($step : Integer)
 	
 	This:C1470.setSelectedDate($date)
 	This:C1470.display()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function setMinDate($date : Date)
+	
+	If (($date<=This:C1470.maxDate) || (This:C1470.maxDate=!00-00-00!))
+		
+		This:C1470.minDate:=$date
+		This:C1470.display()
+		
+	End if 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function setMaxDate($date : Date)
+	
+	If (($date>=This:C1470.minDate) | (This:C1470.minDate=!00-00-00!))
+		
+		This:C1470.maxDate:=$date
+		This:C1470.display()
+		
+	End if 
 	

@@ -6,7 +6,6 @@
 	"width": 19,
 	"height": 16,
 	"events": [
-		"onLoad",
 		"onClick"
 	],
 	"pageFormat": {
@@ -20,19 +19,19 @@
 			"objects": {
 				"Static Picture1": {
 					"type": "picture",
-					"top": -1,
-					"left": -2,
-					"width": 24,
-					"height": 19,
+					"top": 0,
+					"left": 1,
+					"width": 16,
+					"height": 16,
 					"picture": "/RESOURCES/Images/Calendar/calendar.svg",
 					"pictureFormat": "scaled"
 				},
 				"tinyCalendar": {
 					"type": "button",
-					"top": -1,
-					"left": -1,
-					"width": 21,
-					"height": 18,
+					"top": -2,
+					"left": -2,
+					"width": 22,
+					"height": 19,
 					"focusable": false,
 					"events": [
 						"onClick"
@@ -61,7 +60,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 85,
+	"geometryStamp": 127,
 	"formClass": "_dateButton",
 	"method": "WIDGET FORM METHOD"
 }

@@ -146,7 +146,6 @@
 					"height": 24,
 					"detailForm": "TimeEntry",
 					"borderStyle": "dotted",
-					"dataSource": "Form:C1466.timeEntry",
 					"events": [
 						"onLoad",
 						"onGettingFocus",
@@ -172,7 +171,7 @@
 					"top": 362,
 					"width": 90,
 					"height": 17,
-					"dataSource": "Time:C179(Form:C1466.timeEntry)",
+					"dataSource": "Time:C179(OBJECT Get value:C1743(\"timeEntry\"))",
 					"dataSourceTypeHint": "time",
 					"fill": "transparent",
 					"borderStyle": "none",
@@ -415,14 +414,6 @@
 					"width": 19,
 					"height": 17
 				},
-				"Text1": {
-					"type": "text",
-					"text": "🚧",
-					"top": 506,
-					"left": 235,
-					"width": 19,
-					"height": 17
-				},
 				"Text2": {
 					"type": "text",
 					"text": "✅",
@@ -549,16 +540,44 @@
 					"width": 19,
 					"height": 17
 				},
-				"Subform25": {
+				"Subform5": {
 					"type": "subform",
-					"left": 235,
-					"top": 524,
+					"left": 249,
+					"top": 663,
 					"width": 19,
 					"height": 16,
 					"detailForm": "DateButton",
 					"borderStyle": "none",
-					"dataSource": "Form:C1466.startDate",
+					"dataSource": "Form:C1466.date",
 					"dataSourceTypeHint": "date"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "Display Dialog",
+					"top": 694,
+					"left": 249,
+					"width": 180,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Text12": {
+					"type": "text",
+					"text": "✅",
+					"top": 663,
+					"left": 221,
+					"width": 19,
+					"height": 17
+				},
+				"Text1": {
+					"type": "text",
+					"text": "✅",
+					"top": 699,
+					"left": 220,
+					"width": 19,
+					"height": 17
 				}
 			},
 			"entryOrder": [
@@ -593,11 +612,12 @@
 				"Input7",
 				"Subform20",
 				"Input8",
-				"Subform25"
+				"Subform5",
+				"Button2"
 			]
 		}
 	],
-	"geometryStamp": 404,
+	"geometryStamp": 413,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

@@ -30,6 +30,17 @@
 					"fill": "automatic",
 					"strokeWidth": 0
 				},
+				"error": {
+					"type": "text",
+					"text": "_xxx_",
+					"top": 42,
+					"left": 9,
+					"width": 150,
+					"height": 123,
+					"stroke": "#ff0000",
+					"textAlign": "center",
+					"visibility": "hidden"
+				},
 				"cancel": {
 					"type": "button",
 					"top": 155,
@@ -39,10 +50,9 @@
 					"events": [
 						"onClick"
 					],
-					"text": "cancel",
 					"display": false
 				},
-				"DummyBtnUp": {
+				"previousWeek": {
 					"type": "button",
 					"top": 64,
 					"left": 68,
@@ -54,7 +64,7 @@
 						"onClick"
 					]
 				},
-				"DummyBtnLeft": {
+				"left": {
 					"type": "button",
 					"top": 88,
 					"left": 26,
@@ -66,7 +76,7 @@
 						"onClick"
 					]
 				},
-				"DummyBtnRight": {
+				"nextDay": {
 					"type": "button",
 					"top": 88,
 					"left": 111,
@@ -78,7 +88,7 @@
 						"onClick"
 					]
 				},
-				"DummyBtnDown": {
+				"nextWeek": {
 					"type": "button",
 					"top": 109,
 					"left": 68,
@@ -99,20 +109,19 @@
 					"events": [
 						"onClick"
 					],
-					"text": "cancel",
 					"display": false,
 					"shortcutAccel": false,
 					"shortcutControl": false,
 					"shortcutShift": false,
 					"shortcutAlt": false,
-					"shortcutKey": "[Return]",
+					"shortcutKey": "[Enter]",
 					"focusable": false
 				}
 			}
 		},
 		{
 			"objects": {
-				"DatePicker_Btn_1": {
+				"day_1": {
 					"type": "radio",
 					"top": 46,
 					"left": 0,
@@ -130,7 +139,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_2": {
+				"day_2": {
 					"type": "radio",
 					"top": 46,
 					"left": 24,
@@ -148,7 +157,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_3": {
+				"day_3": {
 					"type": "radio",
 					"top": 46,
 					"left": 48,
@@ -166,7 +175,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_4": {
+				"day_4": {
 					"type": "radio",
 					"top": 46,
 					"left": 72,
@@ -184,7 +193,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_5": {
+				"day_5": {
 					"type": "radio",
 					"top": 46,
 					"left": 96,
@@ -202,7 +211,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_6": {
+				"day_6": {
 					"type": "radio",
 					"top": 46,
 					"left": 120,
@@ -220,7 +229,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_7": {
+				"day_7": {
 					"type": "radio",
 					"top": 46,
 					"left": 144,
@@ -238,7 +247,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_8": {
+				"day_8": {
 					"type": "radio",
 					"top": 70,
 					"left": 0,
@@ -256,7 +265,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_9": {
+				"day_9": {
 					"type": "radio",
 					"top": 70,
 					"left": 24,
@@ -274,7 +283,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_10": {
+				"day_10": {
 					"type": "radio",
 					"top": 70,
 					"left": 48,
@@ -292,7 +301,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_11": {
+				"day_11": {
 					"type": "radio",
 					"top": 70,
 					"left": 72,
@@ -310,7 +319,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_12": {
+				"day_12": {
 					"type": "radio",
 					"top": 70,
 					"left": 96,
@@ -328,7 +337,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_13": {
+				"day_13": {
 					"type": "radio",
 					"top": 70,
 					"left": 120,
@@ -346,7 +355,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_14": {
+				"day_14": {
 					"type": "radio",
 					"top": 70,
 					"left": 144,
@@ -364,7 +373,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_15": {
+				"day_15": {
 					"type": "radio",
 					"top": 94,
 					"left": 0,
@@ -382,7 +391,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_16": {
+				"day_16": {
 					"type": "radio",
 					"top": 94,
 					"left": 24,
@@ -400,7 +409,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_17": {
+				"day_17": {
 					"type": "radio",
 					"top": 94,
 					"left": 48,
@@ -418,7 +427,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_18": {
+				"day_18": {
 					"type": "radio",
 					"top": 94,
 					"left": 72,
@@ -436,7 +445,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_19": {
+				"day_19": {
 					"type": "radio",
 					"top": 94,
 					"left": 96,
@@ -454,7 +463,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_20": {
+				"day_20": {
 					"type": "radio",
 					"top": 94,
 					"left": 120,
@@ -472,7 +481,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_21": {
+				"day_21": {
 					"type": "radio",
 					"top": 94,
 					"left": 144,
@@ -490,7 +499,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_22": {
+				"day_22": {
 					"type": "radio",
 					"top": 118,
 					"left": 0,
@@ -508,7 +517,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_23": {
+				"day_23": {
 					"type": "radio",
 					"top": 118,
 					"left": 24,
@@ -526,7 +535,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_24": {
+				"day_24": {
 					"type": "radio",
 					"top": 118,
 					"left": 48,
@@ -544,7 +553,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_25": {
+				"day_25": {
 					"type": "radio",
 					"top": 118,
 					"left": 72,
@@ -562,7 +571,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_26": {
+				"day_26": {
 					"type": "radio",
 					"top": 118,
 					"left": 96,
@@ -580,7 +589,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_27": {
+				"day_27": {
 					"type": "radio",
 					"top": 118,
 					"left": 120,
@@ -598,7 +607,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_28": {
+				"day_28": {
 					"type": "radio",
 					"top": 118,
 					"left": 144,
@@ -616,7 +625,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_29": {
+				"day_29": {
 					"type": "radio",
 					"top": 142,
 					"left": 0,
@@ -634,7 +643,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_30": {
+				"day_30": {
 					"type": "radio",
 					"top": 142,
 					"left": 24,
@@ -652,7 +661,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_31": {
+				"day_31": {
 					"type": "radio",
 					"top": 142,
 					"left": 48,
@@ -670,7 +679,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_32": {
+				"day_32": {
 					"type": "radio",
 					"top": 142,
 					"left": 72,
@@ -688,7 +697,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_33": {
+				"day_33": {
 					"type": "radio",
 					"top": 142,
 					"left": 96,
@@ -706,7 +715,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_34": {
+				"day_34": {
 					"type": "radio",
 					"top": 142,
 					"left": 120,
@@ -724,7 +733,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_35": {
+				"day_35": {
 					"type": "radio",
 					"top": 142,
 					"left": 144,
@@ -742,7 +751,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_36": {
+				"day_36": {
 					"type": "radio",
 					"top": 166,
 					"left": 0,
@@ -760,7 +769,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_37": {
+				"day_37": {
 					"type": "radio",
 					"top": 166,
 					"left": 24,
@@ -778,7 +787,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_38": {
+				"day_38": {
 					"type": "radio",
 					"top": 166,
 					"left": 48,
@@ -796,7 +805,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_39": {
+				"day_39": {
 					"type": "radio",
 					"top": 166,
 					"left": 72,
@@ -814,7 +823,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_40": {
+				"day_40": {
 					"type": "radio",
 					"top": 166,
 					"left": 96,
@@ -832,7 +841,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_41": {
+				"day_41": {
 					"type": "radio",
 					"top": 166,
 					"left": 120,
@@ -850,7 +859,7 @@
 					],
 					"fontSize": 12
 				},
-				"DatePicker_Btn_42": {
+				"day_42": {
 					"type": "radio",
 					"top": 166,
 					"left": 144,
@@ -887,7 +896,7 @@
 					],
 					"fontSize": 11
 				},
-				"DayName1": {
+				"header1": {
 					"type": "input",
 					"top": 29,
 					"left": 0,
@@ -904,7 +913,7 @@
 					"events": [],
 					"fontSize": 11
 				},
-				"DayName2": {
+				"header2": {
 					"type": "input",
 					"top": 29,
 					"left": 24,
@@ -921,7 +930,7 @@
 					"events": [],
 					"fontSize": 11
 				},
-				"DayName3": {
+				"header3": {
 					"type": "input",
 					"top": 29,
 					"left": 48,
@@ -938,7 +947,7 @@
 					"events": [],
 					"fontSize": 11
 				},
-				"DayName4": {
+				"header4": {
 					"type": "input",
 					"top": 29,
 					"left": 72,
@@ -955,7 +964,7 @@
 					"events": [],
 					"fontSize": 11
 				},
-				"DayName5": {
+				"header5": {
 					"type": "input",
 					"top": 29,
 					"left": 96,
@@ -972,7 +981,7 @@
 					"events": [],
 					"fontSize": 11
 				},
-				"DayName6": {
+				"header6": {
 					"type": "input",
 					"top": 29,
 					"left": 120,
@@ -989,7 +998,7 @@
 					"events": [],
 					"fontSize": 11
 				},
-				"DayName7": {
+				"header7": {
 					"type": "input",
 					"top": 29,
 					"left": 144,
@@ -1006,7 +1015,7 @@
 					"events": [],
 					"fontSize": 11
 				},
-				"BtnNext": {
+				"nextMonth": {
 					"type": "button",
 					"top": 5,
 					"left": 148,
@@ -1026,9 +1035,14 @@
 						"onPrintingFooter",
 						"onDisplayDetail",
 						"onPrintingDetail"
-					]
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": true,
+					"shortcutAlt": false,
+					"shortcutKey": "[right arrow]"
 				},
-				"BtnPrevious": {
+				"previousMonth": {
 					"type": "button",
 					"top": 5,
 					"left": 0,
@@ -1043,7 +1057,12 @@
 					"style": "custom",
 					"events": [
 						"onClick"
-					]
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": true,
+					"shortcutAlt": false,
+					"shortcutKey": "[left arrow]"
 				},
 				"poster": {
 					"type": "picture",
@@ -1071,7 +1090,7 @@
 			}
 		}
 	},
-	"geometryStamp": 433,
+	"geometryStamp": 493,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

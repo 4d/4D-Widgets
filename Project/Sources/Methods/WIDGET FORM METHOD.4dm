@@ -1,14 +1,13 @@
 //%attributes = {"invisible":true}
 var $e:=FORM Event:C1606
 
-
-//If (Structure file=Structure file(*))  // DEV
-
-//Form.handleEvents($e)
-
-//return 
-
-//End if 
+If (Structure file:C489=Structure file:C489(*))  // DEV
+	
+	Form:C1466.handleEvents($e)
+	
+	return 
+	
+End if 
 
 If ($e.code=On Load:K2:1)
 	

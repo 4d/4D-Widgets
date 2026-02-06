@@ -1,23 +1,9 @@
 //%attributes = {"invisible":true}
-var <>DatePicker_Blob : Blob
-var <>DatePicker_GetBlob : Boolean
-
 var <>DatePicker_DateMax : Date
 var <>DatePicker_DateMin : Date
 var <>DatePicker_DefaultDate : Date
 var <>DatePicker_FirstDayOfWeek : Integer
 var <>DatePicker_Inited : Boolean
-
-var <>TimePicker_LabelAM : Text
-var <>TimePicker_LabelPM : Text
-
-var <>TimePicker_TimeMin : Time
-var <>TimePicker_TimeMax : Time
-var <>TimePicker_Step : Time
-var <>TimePicker_SelectedTime : Time
-
-
-
 
 var <>SearchPicher_DefaultInited : Boolean
 var <>SearchPicker_DummyText : Text

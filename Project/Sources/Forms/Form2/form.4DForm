@@ -49,16 +49,134 @@
 				},
 				"Input": {
 					"type": "input",
-					"left": 239,
-					"top": 145,
+					"left": 213,
+					"top": 138,
 					"width": 136,
 					"height": 17,
 					"dataSource": "Form:C1466.date"
+				},
+				"Subform25": {
+					"type": "subform",
+					"left": 213,
+					"top": 175,
+					"width": 19,
+					"height": 16,
+					"detailForm": "DateButton",
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.date",
+					"dataSourceTypeHint": "date"
+				},
+				"Subform4": {
+					"type": "subform",
+					"left": 25,
+					"top": 52,
+					"width": 138,
+					"height": 24,
+					"detailForm": "DateEntry",
+					"events": [
+						"onDataChange"
+					],
+					"dataSource": "Form:C1466.dateEntry",
+					"borderStyle": "none",
+					"dataSourceTypeHint": "undefined"
+				},
+				"Button": {
+					"type": "button",
+					"text": "Display Dialog",
+					"top": 206,
+					"left": 213,
+					"width": 180,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button.4dm"
+				},
+				"Button1": {
+					"type": "button",
+					"text": "SET DAYS OFF",
+					"top": 243,
+					"left": 213,
+					"width": 180,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button1.4dm"
+				},
+				"Button2": {
+					"type": "button",
+					"text": "SET WEEK FIRST DAY",
+					"top": 280,
+					"left": 213,
+					"width": 180,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button2.4dm"
+				},
+				"Button3": {
+					"type": "button",
+					"text": "SET MAX DATE",
+					"top": 317,
+					"left": 213,
+					"width": 180,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button3.4dm"
+				},
+				"Button4": {
+					"type": "button",
+					"text": "SET MIN DATE",
+					"top": 354,
+					"left": 213,
+					"width": 180,
+					"height": 26,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/Button4.4dm"
+				},
+				"timeEntry1": {
+					"type": "subform",
+					"left": 40,
+					"top": 314,
+					"width": 93,
+					"height": 24,
+					"detailForm": "TimeEntry",
+					"dataSourceTypeHint": "undefined",
+					"borderStyle": "system",
+					"dataSource": "Form:C1466.timeEntry"
+				},
+				"timeEntry2": {
+					"type": "subform",
+					"left": 40,
+					"top": 314,
+					"width": 93,
+					"height": 24,
+					"detailForm": "TimeEntry",
+					"dataSourceTypeHint": "undefined",
+					"borderStyle": "system",
+					"dataSource": "Form:C1466.timeEntry"
+				},
+				"timeEntry3": {
+					"type": "subform",
+					"left": 498,
+					"top": 52,
+					"width": 93,
+					"height": 24,
+					"detailForm": "TimeEntry",
+					"dataSourceTypeHint": "undefined",
+					"borderStyle": "system",
+					"dataSource": "Form:C1466.timeEntry"
 				}
 			}
 		}
 	],
-	"geometryStamp": 4,
+	"geometryStamp": 56,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
