@@ -9,6 +9,6 @@ If (Count parameters:C259<1)
 	
 End if 
 
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(OBJECT SET VALUE:C1742("withSeconds"; $on)))
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(OBJECT SET VALUE:C1742("redraw"; True:C214)))
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.withSeconds:=$on))
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.redraw:=True:C214))
 EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(SET TIMER:C645(-1)))

@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingY": "fixed",
@@ -193,7 +193,7 @@
 		}
 	],
 	"editor": {
-		"activeView": "Search Win",
+		"activeView": "Search",
 		"defaultView": "Search",
 		"views": {
 			"Search": {},
@@ -206,6 +206,7 @@
 				]
 			},
 			"Search Win": {
+				"visible": false,
 				"objects": [
 					"Rectangle",
 					"BgndRing_Win",

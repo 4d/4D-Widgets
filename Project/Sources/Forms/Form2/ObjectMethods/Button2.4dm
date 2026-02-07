@@ -1,0 +1,1 @@
+DatePicker SET WEEK FIRST DAY("Subform20"; Sunday:K10:19)

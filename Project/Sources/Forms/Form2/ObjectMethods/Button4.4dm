@@ -1,0 +1,1 @@
+DatePicker SET MIN DATE("Subform20"; !2025-12-01!)

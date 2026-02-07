@@ -1,6 +1,6 @@
 // Numérique = dynamique
 var vShift1 : Integer:=7200
-Form:C1466.shift1:=?00:00:00?+?12:00:00?
+Form:C1466.shift1:=vShift1+?12:00:00?
 
 // Time = statique
 var vStaticTime1 : Time:=?10:15:30?

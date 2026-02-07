@@ -1,5 +1,5 @@
 //%attributes = {"invisible":true,"shared":true}
-#DECLARE($widget : Text; $time : Time)
+#DECLARE($widget : Text; $step : Time)
 
 If (Count parameters:C259<2)
 	
@@ -9,30 +9,31 @@ If (Count parameters:C259<2)
 	
 End if 
 
-TimePicker__InitInter
-
 Case of 
 		
 		// ________________________________________________________________________________
-	: ($time<?00:01:00?)
+	: ($step<?00:01:00?)
 		
-		$time:=?00:01:00?
+		$step:=?00:01:00?
 		
 		// ________________________________________________________________________________
-	: ($time>?01:00:00?)
+	: ($step>?01:00:00?)
 		
-		$time:=?01:00:00?
+		$step:=?01:00:00?
 		
 		// ________________________________________________________________________________
 	Else 
 		
-		$time:=3600/Round:C94(3600/$time; 0)
+		$step:=3600/Round:C94(3600/$step; 0)
 		
 		// ________________________________________________________________________________
 End case 
 
-objectSetValue("Step"; $time; $widget)
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.step:=$1); *; $step)
 
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__BuildPopup))
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
+Try
+	
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.buildPopup()))
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.display()))
+	
+End try

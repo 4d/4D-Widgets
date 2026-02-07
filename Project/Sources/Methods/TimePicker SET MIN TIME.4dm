@@ -9,19 +9,19 @@ If (Count parameters:C259<2)
 	
 End if 
 
-TimePicker__InitInter
+// Set the min time only if <= to maxtime
+var $maxTime : Time
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.maxTime); $maxTime)
 
-// Get the max time of the form
-var $maxTime : Time:=objectGetValue("MaxTime"; $widget)
-
-// Then set the min time only if <= to maxtime
 If (($time<=$maxTime)\
  || ($maxTime=?00:00:00?))
 	
-	objectSetValue("MinTime"; $time; $widget)
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.minTime:=$1); *; $time)
 	
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__BuildPopup))  // If no popup in form does nothing
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
-	
+	Try
+		
+		EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.buildPopup()))
+		EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.display()))
+		
+	End try
 End if 

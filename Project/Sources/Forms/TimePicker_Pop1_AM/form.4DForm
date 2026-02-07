@@ -1,18 +1,16 @@
 {
 	"destination": "detailScreen",
 	"shared": true,
-	"windowSizingX": "fixed",
+	"windowSizingX": "variable",
 	"windowSizingY": "fixed",
-	"width": 112,
+	"width": 108,
 	"height": 24,
-	"markerBody": 24,
-	"markerBreak": 24,
-	"markerFooter": 24,
 	"events": [
 		"onLoad",
+		"onClick",
+		"onDataChange",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
@@ -27,15 +25,16 @@
 					"top": 0,
 					"left": 0,
 					"width": 108,
-					"height": 20,
+					"height": 23,
 					"sizingX": "grow",
-					"method": "ObjectMethods/Hours.4dm",
 					"events": [
 						"onClick",
 						"onDataChange"
 					],
 					"focusable": false,
-					"textAlign": "center"
+					"textAlign": "center",
+					"dataSourceTypeHint": "object",
+					"timeFormat": "systemShort"
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -68,138 +67,6 @@
 					"visibility": "hidden"
 				}
 			}
-		},
-		{
-			"objects": {
-				"FormInited": {
-					"type": "input",
-					"top": 5,
-					"left": 127,
-					"width": 150,
-					"height": 16,
-					"dataSourceTypeHint": "number",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"fill": "transparent",
-					"visibility": "hidden"
-				},
-				"MinTime": {
-					"type": "input",
-					"top": 41,
-					"left": 127,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"fill": "transparent",
-					"visibility": "hidden"
-				},
-				"MaxTime": {
-					"type": "input",
-					"top": 41,
-					"left": 207,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"fill": "transparent",
-					"visibility": "hidden"
-				},
-				"Step": {
-					"type": "input",
-					"top": 68,
-					"left": 127,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"fill": "transparent",
-					"visibility": "hidden"
-				},
-				"AMlabel": {
-					"type": "input",
-					"top": 68,
-					"left": 207,
-					"width": 70,
-					"height": 16,
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"fill": "transparent",
-					"visibility": "hidden"
-				},
-				"PMlabel": {
-					"type": "input",
-					"top": 68,
-					"left": 295,
-					"width": 70,
-					"height": 16,
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"fill": "transparent",
-					"visibility": "hidden"
-				},
-				"SelectedTime": {
-					"type": "input",
-					"top": 104,
-					"left": 127,
-					"width": 100,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					],
-					"fill": "transparent",
-					"visibility": "hidden"
-				}
-			}
 		}
 	],
 	"editor": {
@@ -217,9 +84,13 @@
 			}
 		}
 	},
-	"geometryStamp": 64,
+	"geometryStamp": 76,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
-	}
+	},
+	"formClass": "_timePicker",
+	"windowMinWidth": 108,
+	"windowMaxWidth": 200,
+	"method": "WIDGET FORM METHOD"
 }

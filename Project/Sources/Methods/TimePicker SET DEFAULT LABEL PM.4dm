@@ -9,4 +9,11 @@ If (Count parameters:C259=0)
 	
 End if 
 
-<>TimePicker_LabelPM:=$label
+Use (Storage:C1525)
+	
+	Use (Storage:C1525.time)
+		
+		Storage:C1525.time.PM:=$label
+		
+	End use 
+End use 

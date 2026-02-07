@@ -19,4 +19,4 @@ If (Count parameters:C259=2)
 End if 
 
 var $rgb:="rgb("+String:C10($red)+","+String:C10($green)+","+String:C10($blue)+")"
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(OBJECT SET VALUE:C1742("color"; $rgb)))
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.color:=$rgb))

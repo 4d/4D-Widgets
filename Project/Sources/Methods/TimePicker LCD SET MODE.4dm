@@ -9,13 +9,13 @@ If (Count parameters:C259<1)
 	
 End if 
 
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(OBJECT SET VALUE:C1742("mode"; $mode)))
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.mode:=$mode))
 
 If ($mode=24)
 	
-	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(OBJECT SET VALUE:C1742("withAMPM"; False:C215)))
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.withAMPM:=False:C215))
 	
 End if 
 
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(OBJECT SET VALUE:C1742("redraw"; True:C214)))
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.redraw:=True:C214))
 EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(SET TIMER:C645(-1)))

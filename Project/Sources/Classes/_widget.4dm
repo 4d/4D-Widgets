@@ -1,0 +1,204 @@
+property currentForm : Text
+property type : Text
+
+// === === === === === === === === === === === === === === === === === === === === === === === ===
+Class constructor()
+	
+	//
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function init()
+	
+	This:C1470.currentForm:=Current form name:C1298
+	
+	This:C1470.callParent()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function callParent()
+	
+	CALL SUBFORM CONTAINER:C1086((-1)*On Load:K2:1)
+	SET TIMER:C645(-1)
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function getContainerValue() : Object
+	
+	var $variant:=OBJECT Get subform container value:C1785
+	
+	return {value: $variant; type: Value type:C1509($variant)}
+	SET TIMER:C645(-1)
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function setContainerValue($value; $type)
+	
+	var $variant:=OBJECT Get subform container value:C1785
+	
+	Case of 
+			//______________________________________________________
+		: (Value type:C1509($type)=Is collection:K8:32)
+			
+			If ($type.indexOf(Value type:C1509($variant))#-1)
+				
+				OBJECT SET SUBFORM CONTAINER VALUE:C1784($value)
+				
+			End if 
+			
+			//______________________________________________________
+		: (Value type:C1509($variant)=Num:C11($type))
+			
+			OBJECT SET SUBFORM CONTAINER VALUE:C1784($value)
+			
+			//______________________________________________________
+	End case 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function withWidget($name : Text) : Boolean
+	
+	ARRAY TEXT:C222($_widgets; 0)
+	FORM GET OBJECTS:C898($_widgets; Form all pages:K67:7)
+	
+	return Find in array:C230($_widgets; $name)>0
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function clickedInWidget($widgets : Collection) : Text
+	
+	var $x; $y; $b : Integer
+	MOUSE POSITION:C468($x; $y; $b)
+	CONVERT COORDINATES:C1365($x; $y; XY Current window:K27:6; XY Current form:K27:5)
+	
+	If ($x>0)\
+		 && ($y>0)
+		
+		If ($widgets=Null:C1517)
+			
+			$widgets:=[]
+			
+			ARRAY TEXT:C222($_widgets; 0)
+			FORM GET OBJECTS:C898($_widgets)
+			ARRAY TO COLLECTION:C1563($widgets; $_widgets)
+			
+		End if 
+		
+		var $t : Text
+		
+		For each ($t; $widgets)
+			
+			var $left; $top; $right; $bottom : Integer
+			OBJECT GET COORDINATES:C663(*; $t; $left; $top; $right; $bottom)
+			
+			If ($x>=$left)\
+				 && ($x<=$right)\
+				 && ($y>=$top)\
+				 && ($y<=$bottom)
+				
+				return $t
+				
+			End if 
+		End for each 
+	End if 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function adjustWindowPos($form : Text; $x : Integer; $y : Integer) : Object
+	
+	var $screenInfo:={\
+		x: 0; \
+		y: 0; \
+		width: Screen width:C187; \
+		height: Screen height:C188}
+	
+	If (Is macOS:C1572)
+		
+		$screenInfo:=This:C1470.screenInfoFromPoint($x; $y)
+		
+	Else 
+		
+		var $appInfos:=Application info:C1599
+		var $isModal : Boolean:=(Window kind:C445(Frontmost window:C447)=Modal dialog:K27:2)
+		
+		If ($isModal && Not:C34($appInfos.SDIMode))
+			
+			CONVERT COORDINATES:C1365($x; $x; XY Main window:K27:8; XY Screen:K27:7)
+			
+		End if 
+		
+		If ($isModal || $appInfos.SDIMode)
+			
+			$screenInfo:=This:C1470.screenInfoFromPoint($x; $y)
+			
+		End if 
+	End if 
+	
+	var $width; $height : Integer
+	FORM GET PROPERTIES:C674($form; $width; $height)
+	
+	Case of 
+			
+			//________________________________________________________________________________
+		: (($x+$width)>($screenInfo.x+$screenInfo.width))
+			
+			$x:=($screenInfo.x+$screenInfo.width)-$width-5
+			
+			//________________________________________________________________________________
+		: ($x<($screenInfo.x+5))
+			
+			$x:=$screenInfo.x+5
+			
+			//________________________________________________________________________________
+	End case 
+	
+	Case of 
+			
+			//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+		: (($y+$height)>($screenInfo.y+$screenInfo.height))
+			
+			$y:=($screenInfo.y+$screenInfo.height)-$height-10
+			
+			//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+		: ($y<($screenInfo.y+5))
+			
+			$y:=$screenInfo.y+5
+			
+			//┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅
+	End case 
+	
+	If (Is Windows:C1573)
+		
+		If ($appInfos.SDIMode=False:C215 & $isModal)
+			
+			CONVERT COORDINATES:C1365($x; $x; XY Screen:K27:7; XY Main window:K27:8)
+			
+		End if 
+	End if 
+	
+	$screenInfo.x:=$x
+	$screenInfo.y:=$y
+	
+	return $screenInfo
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function screenInfoFromPoint($x : Integer; $y : Integer) : Object
+	
+	var $i : Integer
+	For ($i; 1; Count screens:C437; 1)
+		
+		var $left; $top; $right; $bottom : Integer
+		SCREEN COORDINATES:C438($left; $top; $right; $bottom; $i; Screen work area:K27:10)
+		
+		If (($x>=$left)\
+			 & ($x<$right)\
+			 & ($y>=$top)\
+			 & ($y<$bottom))
+			
+			return {\
+				x: $left; \
+				y: $top; \
+				width: $right-$left; \
+				height: $right-$left}
+			
+		End if 
+	End for 
+	
+	return {\
+		x: 0; \
+		y: 0; \
+		width: Screen width:C187; \
+		height: Screen height:C188}

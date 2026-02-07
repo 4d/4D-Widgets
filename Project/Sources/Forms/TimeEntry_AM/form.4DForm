@@ -5,45 +5,29 @@
 	"windowSizingY": "fixed",
 	"width": 130,
 	"height": 24,
-	"markerBody": 24,
-	"markerBreak": 24,
-	"markerFooter": 24,
 	"events": [
 		"onLoad",
 		"onActivate",
 		"onDeactivate",
+		"onDataChange",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
 		"paperHeight": "842pt"
 	},
 	"pages": [
-		null,
 		{
 			"objects": {
-				"FocusRingBackGround": {
-					"type": "rectangle",
-					"top": 2,
-					"left": 2,
-					"width": 100,
-					"height": 20,
-					"visibility": "hidden",
-					"sizingX": "grow",
-					"fill": "automatic",
-					"stroke": "#808080"
-				},
 				"up": {
 					"type": "button",
-					"top": 130,
-					"left": 297,
+					"top": 7,
+					"left": 4,
 					"width": 20,
 					"height": 12,
 					"shortcutKey": "[up arrow]",
 					"display": false,
-					"method": "ObjectMethods/up.4dm",
 					"events": [
 						"onClick"
 					],
@@ -51,121 +35,42 @@
 				},
 				"down": {
 					"type": "button",
-					"top": 142,
-					"left": 297,
+					"top": 7,
+					"left": 33,
 					"width": 20,
 					"height": 12,
 					"shortcutKey": "[down arrow]",
 					"display": false,
-					"method": "ObjectMethods/down.4dm",
 					"events": [
 						"onClick"
 					],
 					"focusable": false
-				},
-				"Texte": {
+				}
+			}
+		},
+		{
+			"objects": {
+				"error": {
 					"type": "text",
+					"text": "_xxx_",
 					"top": 4,
-					"left": 20,
-					"width": 8,
+					"left": 0,
+					"width": 130,
 					"height": 16,
-					"class": "Default",
+					"stroke": "#ff0000",
 					"textAlign": "center",
-					"text": ":"
+					"visibility": "hidden"
 				},
-				"Texte1": {
-					"type": "text",
-					"top": 4,
-					"left": 44,
-					"width": 8,
-					"height": 16,
-					"class": "Default",
-					"textAlign": "center",
-					"text": ":"
-				},
-				"hours": {
-					"type": "input",
-					"top": 4,
-					"left": 4,
-					"width": 16,
-					"height": 16,
-					"textAlign": "left",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"hideFocusRing": false,
-					"contextMenu": "none",
-					"textFormat": "00",
-					"entryFilter": "&9",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/hours.4dm",
-					"events": [
-						"onDataChange"
-					],
-					"fontSize": 13
-				},
-				"minutes": {
-					"type": "input",
-					"top": 4,
-					"left": 28,
-					"width": 16,
-					"height": 16,
-					"textAlign": "left",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"hideFocusRing": false,
-					"contextMenu": "none",
-					"textFormat": "00",
-					"entryFilter": "&9",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/minutes.4dm",
-					"events": [
-						"onDataChange"
-					],
-					"fontSize": 13
-				},
-				"seconds": {
-					"type": "input",
-					"top": 4,
-					"left": 52,
-					"width": 16,
-					"height": 16,
-					"textAlign": "left",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"hideFocusRing": false,
-					"contextMenu": "none",
-					"textFormat": "00",
-					"entryFilter": "&9",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/seconds.4dm",
-					"events": [
-						"onDataChange"
-					],
-					"fontSize": 13
-				},
-				"am_pm": {
-					"type": "input",
-					"top": 4,
-					"left": 70,
-					"width": 30,
-					"height": 16,
+				"FocusRingBackGround": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 1,
+					"width": 101,
+					"height": 22,
+					"visibility": "hidden",
 					"sizingX": "grow",
-					"textAlign": "left",
-					"fill": "transparent",
-					"borderStyle": "none",
-					"hideFocusRing": false,
-					"contextMenu": "none",
-					"entryFilter": "~A",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/am_pm.4dm",
-					"events": [
-						"onDataChange"
-					],
-					"fontSize": 13
+					"fill": "automatic",
+					"stroke": "#c0c0c0"
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -177,17 +82,85 @@
 					"fill": "automatic",
 					"stroke": "transparent"
 				},
-				"Text": {
-					"type": "text",
+				"hours": {
+					"type": "input",
 					"top": 4,
 					"left": 4,
-					"width": 88,
+					"width": 16,
 					"height": 16,
-					"visibility": "hidden",
-					"fill": "automatic",
-					"class": "Default",
 					"textAlign": "center",
-					"text": "00:00:00:AM"
+					"fill": "transparent",
+					"hideFocusRing": false,
+					"contextMenu": "none",
+					"textFormat": "00",
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 13,
+					"borderStyle": "none"
+				},
+				"minutes": {
+					"type": "input",
+					"top": 4,
+					"left": 28,
+					"width": 16,
+					"height": 16,
+					"textAlign": "center",
+					"fill": "transparent",
+					"hideFocusRing": false,
+					"contextMenu": "none",
+					"textFormat": "00",
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 13,
+					"borderStyle": "none"
+				},
+				"seconds": {
+					"type": "input",
+					"top": 4,
+					"left": 52,
+					"width": 16,
+					"height": 16,
+					"textAlign": "center",
+					"fill": "transparent",
+					"hideFocusRing": false,
+					"contextMenu": "none",
+					"textFormat": "00",
+					"entryFilter": "&9",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 13,
+					"borderStyle": "none"
+				},
+				"am_pm": {
+					"type": "input",
+					"top": 4,
+					"left": 69,
+					"width": 30,
+					"height": 16,
+					"sizingX": "grow",
+					"textAlign": "center",
+					"fill": "transparent",
+					"hideFocusRing": false,
+					"contextMenu": "none",
+					"entryFilter": "~A",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					],
+					"fontSize": 13,
+					"borderStyle": "none"
 				},
 				"stepper": {
 					"type": "stepper",
@@ -199,125 +172,41 @@
 					"sizingX": "move",
 					"min": -1,
 					"max": 1,
-					"method": "ObjectMethods/stepper.4dm",
 					"events": [
 						"onDataChange"
 					],
 					"focusable": false
 				},
-				"FormInited": {
-					"type": "input",
-					"top": 7,
-					"left": 292,
-					"width": 239,
-					"height": 17,
-					"dataSourceTypeHint": "number",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"MinTime": {
-					"type": "input",
-					"top": 37,
-					"left": 292,
-					"width": 70,
+				"Separator1": {
+					"type": "text",
+					"text": "x",
+					"top": 4,
+					"left": 20,
+					"width": 8,
 					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
+					"textAlign": "center"
 				},
-				"MaxTime": {
-					"type": "input",
-					"top": 37,
-					"left": 372,
-					"width": 70,
+				"Separator2": {
+					"type": "text",
+					"text": "x",
+					"top": 4,
+					"left": 44,
+					"width": 8,
 					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
+					"textAlign": "center"
 				},
-				"Step": {
-					"type": "input",
-					"top": 64,
-					"left": 292,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
+				"Text": {
+					"type": "text",
+					"top": 4,
+					"left": 4,
+					"width": 98,
+					"height": 13,
 					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"AMlabel": {
-					"type": "input",
-					"top": 64,
-					"left": 372,
-					"width": 70,
-					"height": 17,
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"PMlabel": {
-					"type": "input",
-					"top": 63,
-					"left": 446,
-					"width": 85,
-					"height": 17,
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"SelectedTime": {
-					"type": "input",
-					"top": 93,
-					"left": 292,
-					"width": 113,
-					"height": 17,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
+					"class": "",
+					"textAlign": "center",
+					"text": "00:00:00:AM",
+					"fill": "automatic",
+					"fontSize": 13
 				}
 			},
 			"entryOrder": [
@@ -325,16 +214,7 @@
 				"minutes",
 				"seconds",
 				"am_pm",
-				"stepper",
-				"FormInited",
-				"MinTime",
-				"MaxTime",
-				"Step",
-				"AMlabel",
-				"PMlabel",
-				"SelectedTime",
-				"up",
-				"down"
+				"stepper"
 			]
 		}
 	],
@@ -356,5 +236,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 70
+	"geometryStamp": 244,
+	"formClass": "_timeEntry",
+	"method": "WIDGET FORM METHOD"
 }

@@ -5,35 +5,80 @@
 	"windowSizingY": "fixed",
 	"width": 138,
 	"height": 24,
-	"markerBody": 24,
-	"markerBreak": 24,
-	"markerFooter": 24,
 	"events": [
 		"onLoad",
+		"onClick",
 		"onActivate",
 		"onDeactivate",
+		"onDataChange",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
 		"paperHeight": "842pt"
 	},
 	"pages": [
-		null,
 		{
 			"objects": {
+				"up": {
+					"type": "button",
+					"top": 6,
+					"left": 9,
+					"width": 20,
+					"height": 12,
+					"shortcutKey": "[up arrow]",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"down": {
+					"type": "button",
+					"top": 6,
+					"left": 49,
+					"width": 20,
+					"height": 12,
+					"shortcutKey": "[down arrow]",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"error": {
+					"type": "text",
+					"text": "_xxx_",
+					"top": 4,
+					"left": 0,
+					"width": 138,
+					"height": 16,
+					"stroke": "#ff0000",
+					"textAlign": "center",
+					"visibility": "hidden"
+				},
 				"FocusRingBackGround": {
 					"type": "rectangle",
-					"top": 2,
-					"left": 2,
-					"width": 88,
-					"height": 20,
-					"sizingX": "grow",
+					"top": 1,
+					"left": 1,
+					"width": 87,
+					"height": 22,
+					"stroke": "#c0c0c0",
+					"visibility": "hidden",
+					"fill": "automatic"
+				},
+				"posterBakground": {
+					"type": "rectangle",
+					"top": -2,
+					"left": -2,
+					"width": 145,
+					"height": 28,
+					"visibility": "hidden",
 					"fill": "automatic",
-					"stroke": "#808080",
-					"visibility": "hidden"
+					"stroke": "transparent"
 				},
 				"Slash1": {
 					"type": "text",
@@ -41,9 +86,8 @@
 					"left": 21,
 					"width": 8,
 					"height": 16,
-					"class": "Default",
 					"textAlign": "center",
-					"text": "/"
+					"text": "x"
 				},
 				"Slash2": {
 					"type": "text",
@@ -51,28 +95,27 @@
 					"left": 46,
 					"width": 8,
 					"height": 16,
-					"class": "Default",
 					"textAlign": "center",
-					"text": "/"
+					"text": "x",
+					"fontSize": 13
 				},
 				"LeftEntry": {
 					"type": "input",
 					"top": 4,
 					"left": 4,
 					"width": 17,
-					"height": 16,
-					"class": "Buttons_13",
-					"textAlign": "left",
+					"height": 17,
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"entryFilter": "&9",
-					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/LeftEntry.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"hideFocusRing": true,
+					"dropping": "none",
+					"dragging": "none",
+					"fontSize": 13
 				},
 				"CenterEntry": {
 					"type": "input",
@@ -80,18 +123,17 @@
 					"left": 29,
 					"width": 17,
 					"height": 16,
-					"class": "Buttons_13",
-					"textAlign": "left",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"entryFilter": "&9",
 					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/CenterEntry.4dm",
+					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"fontSize": 13,
+					"hideFocusRing": true
 				},
 				"RightEntry": {
 					"type": "input",
@@ -99,117 +141,17 @@
 					"left": 54,
 					"width": 34,
 					"height": 16,
-					"sizingX": "grow",
-					"class": "Buttons_13",
-					"textAlign": "left",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
 					"entryFilter": "&9",
 					"dragging": "none",
-					"dropping": "custom",
-					"method": "ObjectMethods/RightEntry.4dm",
+					"dropping": "none",
 					"events": [
 						"onDataChange"
-					]
-				},
-				"up": {
-					"type": "button",
-					"top": 0,
-					"left": 442,
-					"width": 20,
-					"height": 12,
-					"shortcutKey": "[up arrow]",
-					"display": false,
-					"method": "ObjectMethods/up.4dm",
-					"events": [
-						"onClick"
-					]
-				},
-				"down": {
-					"type": "button",
-					"top": 12,
-					"left": 442,
-					"width": 20,
-					"height": 12,
-					"shortcutKey": "[down arrow]",
-					"display": false,
-					"method": "ObjectMethods/down.4dm",
-					"events": [
-						"onClick"
-					]
-				},
-				"YearZoneName": {
-					"type": "input",
-					"top": 39,
-					"left": 419,
-					"width": 79,
-					"height": 16,
-					"focusable": false,
-					"fill": "#FFFFC0",
-					"borderStyle": "none",
-					"enterable": false,
-					"hideFocusRing": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					]
-				},
-				"MonthZoneName": {
-					"type": "input",
-					"top": 39,
-					"left": 335,
-					"width": 79,
-					"height": 16,
-					"focusable": false,
-					"fill": "#FFFFC0",
-					"borderStyle": "none",
-					"enterable": false,
-					"hideFocusRing": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					]
-				},
-				"DayZoneName": {
-					"type": "input",
-					"top": 39,
-					"left": 251,
-					"width": 79,
-					"height": 16,
-					"focusable": false,
-					"fill": "#FFFFC0",
-					"borderStyle": "none",
-					"enterable": false,
-					"hideFocusRing": true,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "none",
-					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					]
+					],
+					"fontSize": 13,
+					"hideFocusRing": true
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -222,7 +164,7 @@
 					"fill": "automatic",
 					"strokeWidth": 0
 				},
-				"Texte": {
+				"poster": {
 					"type": "text",
 					"top": 4,
 					"left": 4,
@@ -230,456 +172,60 @@
 					"height": 16,
 					"visibility": "hidden",
 					"fill": "automatic",
-					"class": "Default",
-					"text": "00/00/0000"
+					"text": "00/00/0000",
+					"textAlign": "center",
+					"fontSize": 13
 				},
-				"bTinyCalendar": {
+				"tinyCalendar": {
 					"type": "button",
 					"top": 0,
-					"left": 113,
-					"width": 22,
+					"left": 114,
+					"width": 24,
 					"height": 24,
 					"sizingX": "move",
-					"class": "Default",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Calendar/IconCalendar.png",
-					"iconFrames": 4,
+					"icon": "/RESOURCES/Images/Calendar/calendar.svg",
 					"style": "custom",
-					"method": "ObjectMethods/bTinyCalendar.4dm",
 					"events": [
 						"onClick"
 					]
 				},
-				"bRuler": {
+				"stepper": {
 					"type": "stepper",
 					"top": 1,
-					"left": 94,
+					"left": 92,
 					"width": 22,
 					"height": 22,
 					"sizingX": "move",
 					"min": -100,
 					"max": 100,
-					"method": "ObjectMethods/bRuler.4dm",
 					"events": [
 						"onDataChange"
-					]
+					],
+					"focusable": false,
+					"visibility": "hidden"
 				}
 			},
 			"entryOrder": [
 				"LeftEntry",
 				"CenterEntry",
 				"RightEntry",
-				"bRuler"
+				"stepper"
 			]
-		},
-		{
-			"objects": {
-				"MinDate": {
-					"type": "input",
-					"top": 37,
-					"left": 439,
-					"width": 124,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"MaxDate": {
-					"type": "input",
-					"top": 58,
-					"left": 439,
-					"width": 124,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Text": {
-					"type": "text",
-					"top": 38,
-					"left": 274,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "Min Date:"
-				},
-				"Text1": {
-					"type": "text",
-					"top": 58,
-					"left": 274,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "Max Date:"
-				},
-				"FormInited": {
-					"type": "input",
-					"top": 4,
-					"left": 438,
-					"width": 151,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "number",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Text2": {
-					"type": "text",
-					"top": 4,
-					"left": 307,
-					"width": 118,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "zone Inited:"
-				},
-				"SelectedDate": {
-					"type": "input",
-					"top": 339,
-					"left": 442,
-					"width": 124,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "date",
-					"stroke": "#FF0000",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Text4": {
-					"type": "text",
-					"top": 339,
-					"left": 277,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "Selected Date:"
-				},
-				"FirstDisplayedDay": {
-					"type": "input",
-					"top": 260,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Text5": {
-					"type": "text",
-					"top": 260,
-					"left": 244,
-					"width": 188,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "First displayed day:"
-				},
-				"FirstDayOfWeek": {
-					"type": "input",
-					"top": 314,
-					"left": 442,
-					"width": 124,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "number",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Text6": {
-					"type": "text",
-					"top": 314,
-					"left": 277,
-					"width": 148,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "First day of week:"
-				},
-				"FirstOfCurrentMonth": {
-					"type": "input",
-					"top": 281,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "date",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Text3": {
-					"type": "text",
-					"top": 281,
-					"left": 244,
-					"width": 188,
-					"height": 13,
-					"visibility": "hidden",
-					"class": "Buttons_11",
-					"textAlign": "right",
-					"text": "First of current displayed month"
-				},
-				"DisplayedMonth": {
-					"type": "input",
-					"top": 81,
-					"left": 7,
-					"width": 160,
-					"height": 20,
-					"stroke": "#000000",
-					"class": "Buttons_11",
-					"textAlign": "center",
-					"fontWeight": "bold",
-					"focusable": false,
-					"fill": "transparent",
-					"borderStyle": "none",
-					"enterable": false,
-					"contextMenu": "none",
-					"events": [
-						"onClick",
-						"onHeader",
-						"onPrintingBreak",
-						"onPrintingFooter",
-						"onDisplayDetail",
-						"onDataChange",
-						"onPrintingDetail"
-					]
-				},
-				"_ListMonthes": {
-					"type": "input",
-					"top": 97,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"_ListDays": {
-					"type": "input",
-					"top": 117,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"_WeeklyDaysOff": {
-					"type": "input",
-					"top": 137,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"_DaysNames": {
-					"type": "input",
-					"top": 157,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"_MonthesNames": {
-					"type": "input",
-					"top": 177,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"_DaysOff1": {
-					"type": "input",
-					"top": 204,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"_DaysOff2": {
-					"type": "input",
-					"top": 227,
-					"left": 439,
-					"width": 127,
-					"height": 13,
-					"visibility": "hidden",
-					"dataSourceTypeHint": "undefined",
-					"class": "Buttons_11",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"dragging": "none",
-					"dropping": "custom",
-					"events": [
-						"onDataChange"
-					]
-				},
-				"Subform": {
-					"type": "subform",
-					"left": 51,
-					"top": 252,
-					"width": 99,
-					"height": 117,
-					"dataSourceTypeHint": "undefined"
-				}
-			}
 		}
 	],
 	"editor": {
-		"activeView": "FocusRing",
+		"activeView": "Vue 1",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
-			"FocusRing": {
+			"PREVIEW": {
+				"visible": false,
 				"objects": [
-					"FocusRingBackGround",
-					"up",
-					"down",
-					"YearZoneName",
-					"MonthZoneName",
-					"DayZoneName"
-				]
-			},
-			"preview": {
-				"objects": [
+					"posterBakground",
 					"Rectangle",
-					"Texte"
+					"poster"
 				]
-			},
-			"Vue 5": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 6": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 7": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 8": {
-				"visible": false,
-				"selectable": false
-			},
-			"Vue 9": {
-				"visible": false,
-				"selectable": false
 			}
 		}
 	},
@@ -687,5 +233,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 52
+	"geometryStamp": 252,
+	"formClass": "_dateEntry",
+	"method": "WIDGET FORM METHOD"
 }

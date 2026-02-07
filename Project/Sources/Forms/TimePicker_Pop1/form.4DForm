@@ -2,18 +2,16 @@
 	"destination": "detailScreen",
 	"shared": true,
 	"windowSizingY": "fixed",
-	"windowMinWidth": 84,
+	"windowMinWidth": 80,
 	"windowMaxWidth": 200,
-	"width": 84,
+	"width": 80,
 	"height": 24,
-	"markerBody": 24,
-	"markerBreak": 24,
-	"markerFooter": 24,
 	"events": [
 		"onLoad",
+		"onClick",
+		"onDataChange",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
@@ -28,15 +26,16 @@
 					"top": 0,
 					"left": 0,
 					"width": 80,
-					"height": 22,
-					"method": "ObjectMethods/Hours.4dm",
+					"height": 23,
 					"events": [
 						"onClick",
 						"onDataChange"
 					],
 					"focusable": false,
 					"sizingX": "grow",
-					"textAlign": "center"
+					"textAlign": "center",
+					"dataSourceTypeHint": "object",
+					"timeFormat": "systemShort"
 				},
 				"Rectangle": {
 					"type": "rectangle",
@@ -69,124 +68,6 @@
 					"visibility": "hidden"
 				}
 			}
-		},
-		{
-			"objects": {
-				"FormInited": {
-					"type": "input",
-					"top": 5,
-					"left": 111,
-					"width": 150,
-					"height": 16,
-					"dataSourceTypeHint": "number",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"MinTime": {
-					"type": "input",
-					"top": 41,
-					"left": 111,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"MaxTime": {
-					"type": "input",
-					"top": 41,
-					"left": 191,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"Step": {
-					"type": "input",
-					"top": 68,
-					"left": 111,
-					"width": 70,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"AMlabel": {
-					"type": "input",
-					"top": 68,
-					"left": 191,
-					"width": 70,
-					"height": 16,
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"PMlabel": {
-					"type": "input",
-					"top": 68,
-					"left": 279,
-					"width": 70,
-					"height": 16,
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				},
-				"SelectedTime": {
-					"type": "input",
-					"top": 104,
-					"left": 111,
-					"width": 100,
-					"height": 16,
-					"dataSourceTypeHint": "time",
-					"focusable": false,
-					"enterable": false,
-					"contextMenu": "none",
-					"timeFormat": "hh_mm_ss",
-					"events": [
-						"onDataChange"
-					],
-					"visibility": "hidden",
-					"fill": "transparent"
-				}
-			}
 		}
 	],
 	"editor": {
@@ -204,9 +85,11 @@
 			}
 		}
 	},
-	"geometryStamp": 158,
+	"geometryStamp": 185,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
-	}
+	},
+	"formClass": "_timePicker",
+	"method": "WIDGET FORM METHOD"
 }

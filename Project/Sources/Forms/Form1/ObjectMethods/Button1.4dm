@@ -1,1 +1,1 @@
-TimePicker SET MIN TIME("timePickerOne"; ?10:00:00?)
+TimePicker SET STEP("Subform2"; ?00:05:00?)

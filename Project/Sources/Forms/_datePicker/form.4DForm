@@ -1,0 +1,1099 @@
+{
+	"destination": "detailScreen",
+	"shared": false,
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"width": 168,
+	"height": 190,
+	"events": [
+		"onLoad",
+		"onClick",
+		"onActivate",
+		"onDeactivate",
+		"onBoundVariableChange"
+	],
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "595pt",
+		"paperHeight": "842pt"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 0,
+					"left": 0,
+					"width": 168,
+					"height": 190,
+					"stroke": "transparent",
+					"fill": "automatic",
+					"strokeWidth": 0
+				},
+				"error": {
+					"type": "text",
+					"text": "_xxx_",
+					"top": 42,
+					"left": 9,
+					"width": 150,
+					"height": 123,
+					"stroke": "#ff0000",
+					"textAlign": "center",
+					"visibility": "hidden"
+				},
+				"cancel": {
+					"type": "button",
+					"top": 155,
+					"left": 26,
+					"width": 18,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"display": false
+				},
+				"previousWeek": {
+					"type": "button",
+					"top": 64,
+					"left": 68,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[up arrow]",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"left": {
+					"type": "button",
+					"top": 88,
+					"left": 26,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[left arrow]",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"nextDay": {
+					"type": "button",
+					"top": 88,
+					"left": 111,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[right arrow]",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"nextWeek": {
+					"type": "button",
+					"top": 109,
+					"left": 68,
+					"width": 30,
+					"height": 30,
+					"shortcutKey": "[down arrow]",
+					"display": false,
+					"events": [
+						"onClick"
+					]
+				},
+				"ok": {
+					"type": "button",
+					"top": 155,
+					"left": 59,
+					"width": 18,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"display": false,
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Enter]",
+					"focusable": false
+				}
+			}
+		},
+		{
+			"objects": {
+				"day_1": {
+					"type": "radio",
+					"top": 46,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_2": {
+					"type": "radio",
+					"top": 46,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_3": {
+					"type": "radio",
+					"top": 46,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_4": {
+					"type": "radio",
+					"top": 46,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_5": {
+					"type": "radio",
+					"top": 46,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_6": {
+					"type": "radio",
+					"top": 46,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_7": {
+					"type": "radio",
+					"top": 46,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_8": {
+					"type": "radio",
+					"top": 70,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_9": {
+					"type": "radio",
+					"top": 70,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_10": {
+					"type": "radio",
+					"top": 70,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_11": {
+					"type": "radio",
+					"top": 70,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_12": {
+					"type": "radio",
+					"top": 70,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_13": {
+					"type": "radio",
+					"top": 70,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_14": {
+					"type": "radio",
+					"top": 70,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_15": {
+					"type": "radio",
+					"top": 94,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_16": {
+					"type": "radio",
+					"top": 94,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_17": {
+					"type": "radio",
+					"top": 94,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_18": {
+					"type": "radio",
+					"top": 94,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_19": {
+					"type": "radio",
+					"top": 94,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_20": {
+					"type": "radio",
+					"top": 94,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_21": {
+					"type": "radio",
+					"top": 94,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_22": {
+					"type": "radio",
+					"top": 118,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_23": {
+					"type": "radio",
+					"top": 118,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_24": {
+					"type": "radio",
+					"top": 118,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_25": {
+					"type": "radio",
+					"top": 118,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_26": {
+					"type": "radio",
+					"top": 118,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_27": {
+					"type": "radio",
+					"top": 118,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_28": {
+					"type": "radio",
+					"top": 118,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_29": {
+					"type": "radio",
+					"top": 142,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_30": {
+					"type": "radio",
+					"top": 142,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_31": {
+					"type": "radio",
+					"top": 142,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_32": {
+					"type": "radio",
+					"top": 142,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_33": {
+					"type": "radio",
+					"top": 142,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_34": {
+					"type": "radio",
+					"top": 142,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_35": {
+					"type": "radio",
+					"top": 142,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_36": {
+					"type": "radio",
+					"top": 166,
+					"left": 0,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_37": {
+					"type": "radio",
+					"top": 166,
+					"left": 24,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_38": {
+					"type": "radio",
+					"top": 166,
+					"left": 48,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_39": {
+					"type": "radio",
+					"top": 166,
+					"left": 72,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_40": {
+					"type": "radio",
+					"top": 166,
+					"left": 96,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_41": {
+					"type": "radio",
+					"top": 166,
+					"left": 120,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"day_42": {
+					"type": "radio",
+					"top": 166,
+					"left": 144,
+					"width": 24,
+					"height": 24,
+					"focusable": false,
+					"text": "x",
+					"icon": "/RESOURCES/Images/Calendar/AlphaButton.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onDoubleClick"
+					],
+					"fontSize": 12
+				},
+				"DisplayedMonth": {
+					"type": "input",
+					"top": 7,
+					"left": 14,
+					"width": 140,
+					"height": 20,
+					"stroke": "automatic",
+					"textAlign": "center",
+					"fontWeight": "bold",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"events": [
+						"onClick"
+					],
+					"fontSize": 11
+				},
+				"header1": {
+					"type": "input",
+					"top": 29,
+					"left": 0,
+					"width": 24,
+					"height": 14,
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [],
+					"fontSize": 11
+				},
+				"header2": {
+					"type": "input",
+					"top": 29,
+					"left": 24,
+					"width": 24,
+					"height": 14,
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [],
+					"fontSize": 11
+				},
+				"header3": {
+					"type": "input",
+					"top": 29,
+					"left": 48,
+					"width": 24,
+					"height": 14,
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [],
+					"fontSize": 11
+				},
+				"header4": {
+					"type": "input",
+					"top": 29,
+					"left": 72,
+					"width": 24,
+					"height": 14,
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [],
+					"fontSize": 11
+				},
+				"header5": {
+					"type": "input",
+					"top": 29,
+					"left": 96,
+					"width": 24,
+					"height": 14,
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [],
+					"fontSize": 11
+				},
+				"header6": {
+					"type": "input",
+					"top": 29,
+					"left": 120,
+					"width": 24,
+					"height": 14,
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [],
+					"fontSize": 11
+				},
+				"header7": {
+					"type": "input",
+					"top": 29,
+					"left": 144,
+					"width": 24,
+					"height": 14,
+					"textAlign": "center",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [],
+					"fontSize": 11
+				},
+				"nextMonth": {
+					"type": "button",
+					"top": 5,
+					"left": 148,
+					"width": 20,
+					"height": 20,
+					"fontFamily": "System Font Regular",
+					"fontSize": 12,
+					"focusable": false,
+					"icon": "/RESOURCES/Images/Calendar/IconNext.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick",
+						"onHeader",
+						"onPrintingBreak",
+						"onPrintingFooter",
+						"onDisplayDetail",
+						"onPrintingDetail"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": true,
+					"shortcutAlt": false,
+					"shortcutKey": "[right arrow]"
+				},
+				"previousMonth": {
+					"type": "button",
+					"top": 5,
+					"left": 0,
+					"width": 20,
+					"height": 20,
+					"fontFamily": "System Font Regular",
+					"fontSize": 12,
+					"focusable": false,
+					"icon": "/RESOURCES/Images/Calendar/IconPrevious.png",
+					"iconFrames": 4,
+					"textPlacement": "center",
+					"style": "custom",
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": true,
+					"shortcutAlt": false,
+					"shortcutKey": "[left arrow]"
+				},
+				"poster": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 168,
+					"height": 190,
+					"visibility": "hidden",
+					"pictureFormat": "tiled",
+					"picture": "/RESOURCES/Images/Calendar/CalendarPicker.png"
+				}
+			}
+		}
+	],
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {},
+			"PREVIEW": {
+				"visible": false,
+				"objects": [
+					"poster"
+				]
+			}
+		}
+	},
+	"geometryStamp": 493,
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"method": "WIDGET FORM METHOD"
+}

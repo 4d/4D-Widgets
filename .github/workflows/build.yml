@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ macOS,Windows,ubuntu-24.04 ]
+        os: [ macOS,Windows ]
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout
@@ -20,15 +20,6 @@ jobs:
       with:
         fetch-depth: 0
         lfs: true 
-
-    - name: Check out 4D-SVG
-      uses: actions/checkout@v4
-      with:
-        repository: 4d/4D-SVG
-        path: Components/4D-SVG.4dbase
-        ref : ${{ env.DEPENDENCIES_BRANCH }}
-        fetch-depth: 0
-        lfs: true
 
     - name: Build
       uses: 4d/build4d-action@main

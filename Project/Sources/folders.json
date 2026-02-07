@@ -1,65 +1,39 @@
 {
-	"(TimePicker Forms)": {},
-	"(TimePicker Private)": {},
-	"✅ TimePicker Forms": {
-		"forms": [
-			"TimeDisplay",
-			"TimeDisplayLCD",
-			"TimeEntry",
-			"TimeEntry_AM",
-			"TimePicker_Pop1",
-			"TimePicker_Pop1_AM",
-			"TimePicker_Pop2",
-			"TimePicker_Pop2_AM"
-		]
-	},
-	"✅ TimePicker Private": {
+	" Common": {
 		"methods": [
-			"TimeEntry__Increase",
-			"TimeEntry__ManageFocus",
-			"TimePicker__BuildPopup",
-			"TimePicker__DisplayTimeInputs",
-			"TimePicker__DisplayTimePopups",
-			"TimePicker__GetLabelAM",
-			"TimePicker__GetLabelPM",
-			"TimePicker__GetSelectedTime",
-			"TimePicker__GetStep",
-			"TimePicker__GetTarget",
-			"TimePicker__InitForm",
-			"TimePicker__InitInter",
-			"TimePicker__LCDcreatePict",
-			"TimePicker__LCDdisplayTime",
-			"TimePicker__SetSelectedTime",
-			"TimePicker__SetTarget"
+			"WIDGET FORM METHOD"
+		],
+		"classes": [
+			"_widget"
 		]
 	},
-	"✅ TimePicker Shared": {
-		"methods": [
-			"TimePicker APPLY DEFAULT VALUES",
-			"TimePicker DISPLAY SECOND HAND",
-			"TimePicker LCD DISPLAY AMPM",
-			"TimePicker LCD DISPLAY SECONDS",
-			"TimePicker LCD SET COLOR",
-			"TimePicker LCD SET MODE",
-			"TimePicker RESET DEFAULT VALUES",
-			"TimePicker SET DEFAULT LABEL AM",
-			"TimePicker SET DEFAULT LABEL PM",
-			"TimePicker SET DEFAULT MAX TIME",
-			"TimePicker SET DEFAULT MIN TIME",
-			"TimePicker SET DEFAULT STEP",
-			"TimePicker SET DEFAULT TIME",
-			"TimePicker SET LABEL AM",
-			"TimePicker SET LABEL PM",
-			"TimePicker SET MAX TIME",
-			"TimePicker SET MIN TIME",
-			"TimePicker SET STEP"
+	" NAMESPACE": {
+		"classes": [
+			"TimePicker"
 		]
 	},
-	"🕒 TimePicker": {
+	"(✅ TimePicker Forms)": {},
+	"(✅ TimePicker Private)": {},
+	"(DatePicker Forms)": {},
+	"(DatePicker Private)": {},
+	"📅 Date": {
 		"groups": [
-			"✅ TimePicker Forms",
-			"✅ TimePicker Private",
-			"✅ TimePicker Shared"
+			"Date Entries",
+			"Date Picker",
+			"DatePicker Shared"
+		],
+		"classes": [
+			"_date"
+		]
+	},
+	"🕒 Time": {
+		"groups": [
+			"Time Displays",
+			"Time Entries",
+			"Time Pickers"
+		],
+		"classes": [
+			"_time"
 		]
 	},
 	"Compiler": {
@@ -70,47 +44,23 @@
 			"Compiler_Variables_Inter"
 		]
 	},
-	"DatePicker": {
-		"groups": [
-			"DatePicker Forms",
-			"DatePicker Private",
-			"DatePicker Shared"
-		],
-		"methods": [
-			"DatePicker__SetTarget"
-		]
-	},
-	"DatePicker Forms": {
+	"Date Entries": {
 		"forms": [
-			"DateButton",
-			"DateEntry",
-			"DatePicker"
+			"DateEntry"
+		],
+		"classes": [
+			"_dateEntry"
 		]
 	},
-	"DatePicker Private": {
-		"methods": [
-			"DateEntry__Increase",
-			"DateEntry__ManageFocus",
-			"DateEntry__Redraw",
-			"DatePicker SET DEFAULT DATE",
-			"DatePicker__CalculateFirstDay",
-			"DatePicker__ClickButton",
-			"DatePicker__DISPOSE",
-			"DatePicker__GetBlob",
-			"DatePicker__GetDaysOff",
-			"DatePicker__GetMaxDate",
-			"DatePicker__GetMinDate",
-			"DatePicker__GetSelectedDate",
-			"DatePicker__GetTarget",
-			"DatePicker__GetWeekDaysOff",
-			"DatePicker__GetWeekFirstDay",
-			"DatePicker__InitForm",
-			"DatePicker__InitInter",
-			"DatePicker__ManageFocus",
-			"DatePicker__RecalcDate",
-			"DatePicker__RedrawCalendar",
-			"DatePicker__SetBlob",
-			"DatePicker__SetSelectedDate"
+	"Date Picker": {
+		"forms": [
+			"_datePicker",
+			"DateButton",
+			"DatePicker"
+		],
+		"classes": [
+			"_dateButton",
+			"_datePicker"
 		]
 	},
 	"DatePicker Shared": {
@@ -120,6 +70,7 @@
 			"DatePicker RESET DEFAULT VALUES",
 			"DatePicker SET DAYS OFF",
 			"DatePicker SET DEFAULT 1ST DAY",
+			"DatePicker SET DEFAULT DATE",
 			"DatePicker SET DEFAULT DAYS OFF",
 			"DatePicker SET DEFAULT MAX DATE",
 			"DatePicker SET DEFAULT MIN DATE",
@@ -163,18 +114,80 @@
 			"SearchPicker SET HELP TEXT"
 		]
 	},
+	"Time Displays": {
+		"groups": [
+			"TimeDisplay Shared"
+		],
+		"forms": [
+			"TimeDisplay",
+			"TimeDisplayLCD"
+		],
+		"classes": [
+			"_analogic",
+			"_clock",
+			"_digital"
+		]
+	},
+	"Time Entries": {
+		"forms": [
+			"TimeEntry",
+			"TimeEntry_AM"
+		],
+		"classes": [
+			"_timeEntry"
+		]
+	},
+	"Time Pickers": {
+		"groups": [
+			"TimePicker Shared"
+		],
+		"forms": [
+			"TimePicker_Pop1",
+			"TimePicker_Pop1_AM",
+			"TimePicker_Pop2",
+			"TimePicker_Pop2_AM"
+		],
+		"classes": [
+			"_timePicker"
+		]
+	},
+	"TimeDisplay Shared": {
+		"methods": [
+			"TimePicker DISPLAY SECOND HAND",
+			"TimePicker LCD DISPLAY AMPM",
+			"TimePicker LCD DISPLAY SECONDS",
+			"TimePicker LCD SET COLOR",
+			"TimePicker LCD SET MODE"
+		]
+	},
+	"TimePicker Shared": {
+		"methods": [
+			"TimePicker APPLY DEFAULT VALUES",
+			"TimePicker RESET DEFAULT VALUES",
+			"TimePicker SET DEFAULT LABEL AM",
+			"TimePicker SET DEFAULT LABEL PM",
+			"TimePicker SET DEFAULT MAX TIME",
+			"TimePicker SET DEFAULT MIN TIME",
+			"TimePicker SET DEFAULT STEP",
+			"TimePicker SET LABEL AM",
+			"TimePicker SET LABEL PM",
+			"TimePicker SET MAX TIME",
+			"TimePicker SET MIN TIME",
+			"TimePicker SET STEP"
+		]
+	},
 	"Tools": {
 		"methods": [
-			"Tool_AdjustWindowPos",
 			"Tool_ObjectToVar",
-			"Tool_ScreenInfoFromPoint",
 			"Tool_VarToObject"
 		]
 	},
 	"trash": {
 		"groups": [
-			"(TimePicker Forms)",
-			"(TimePicker Private)"
+			"(✅ TimePicker Forms)",
+			"(✅ TimePicker Private)",
+			"(DatePicker Forms)",
+			"(DatePicker Private)"
 		]
 	}
 }

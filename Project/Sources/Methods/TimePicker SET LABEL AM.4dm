@@ -9,17 +9,22 @@ If (Count parameters:C259<2)
 	
 End if 
 
-TimePicker__InitInter
-
 // Do not allow if the widget should not display the label
-If (objectGetValue("AMlabel"; $widget)="<none>")
+var $current : Text
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.AM); $current)
+
+If (Length:C16($current)=0)\
+ || ($current="<none>")
 	
 	return 
 	
 End if 
 
-objectSetValue("AMlabel"; $label; $widget)
+EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.AM:=$1); *; $label)
 
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__BuildPopup))  // If no popup in form does nothing
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimeInputs); *; False:C215)  // If no HH MM SS entry zones does nothing
-EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(TimePicker__DisplayTimePopups); *; False:C215)  // If no popup in form does nothing
+Try
+	
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.buildPopup()))
+	EXECUTE METHOD IN SUBFORM:C1085($widget; Formula:C1597(Form:C1466.display()))
+	
+End try

@@ -74,3 +74,4 @@ DEV/
 !.github/
 !.github/**/.*
 .github/.DS_Store
+Project/Sources/dependencies.json
