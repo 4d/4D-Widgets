@@ -221,7 +221,7 @@ Function redraw()
 		OBJECT SET ENABLED:C1123(*; $ObjectName; This:C1470.inRange($date))
 		
 		// Is it a weekly day off?
-		var $style:=This:C1470.dayOff0[$dayWeek] ? Bold:K14:2+Italic:K14:3 : Plain:K14:1
+		var $style : Integer:=This:C1470.dayOff0[$dayWeek] ? Bold:K14:2+Italic:K14:3 : Plain:K14:1
 		OBJECT SET FONT STYLE:C166(*; $ObjectName; $style)
 		
 		// Is this the currently selected day?
