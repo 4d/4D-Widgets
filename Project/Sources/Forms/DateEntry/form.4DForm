@@ -82,22 +82,21 @@
 				},
 				"Slash1": {
 					"type": "text",
-					"top": 4,
+					"top": 3,
 					"left": 21,
 					"width": 8,
-					"height": 16,
+					"height": 17,
 					"textAlign": "center",
 					"text": "x"
 				},
 				"Slash2": {
 					"type": "text",
-					"top": 4,
+					"top": 3,
 					"left": 46,
 					"width": 8,
-					"height": 16,
+					"height": 17,
 					"textAlign": "center",
-					"text": "x",
-					"fontSize": 13
+					"text": "x"
 				},
 				"LeftEntry": {
 					"type": "input",
@@ -233,7 +232,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 252,
+	"geometryStamp": 268,
 	"formClass": "_dateEntry",
 	"method": "WIDGET FORM METHOD"
 }
