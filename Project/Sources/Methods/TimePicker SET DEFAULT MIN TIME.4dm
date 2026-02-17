@@ -10,14 +10,11 @@ If (Count parameters:C259=0)
 End if 
 
 // MIN must me inferior or equal to timeMAX
-Use (Storage:C1525)
+Use (Storage:C1525.time)
 	
-	Use (Storage:C1525.time)
+	If ($time<=Storage:C1525.time.maxTime)
 		
-		If ($time<=Storage:C1525.time.maxTime)
-			
-			Storage:C1525.time.minTime:=$time
-			
-		End if 
-	End use 
+		Storage:C1525.time.minTime:=$time
+		
+	End if 
 End use 

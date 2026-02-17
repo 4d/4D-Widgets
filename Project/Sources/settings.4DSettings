@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><preferences stamp="24">
+<?xml version="1.0" encoding="UTF-8"?><preferences stamp="26">
 	<com.4d>
 		<database>
 			<cache flush_buffer_delay="20s" size_fixed="32" size_maximum="100" size_reserved="128"/>
@@ -8,6 +8,7 @@
 		<compiler>
 			<typage default_for_button="2" default_for_numeric="2"/>
 			<options AMD64_support="true" compilation_path="3" fat_binary="true" symbol_file="true" target="all"/>
+			<method_suffix arrays="" interprocess_arrays="" interprocess_variables="" methods="" variables=""/>
 		</compiler>
 		<interface>
 			<shortcuts>

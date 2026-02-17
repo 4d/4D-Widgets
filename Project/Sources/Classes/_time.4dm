@@ -68,21 +68,21 @@ Function defaultValues($force : Boolean)
 			
 			Storage:C1525.time:=New shared object:C1526
 			
-			Use (Storage:C1525.time)
-				
-				Storage:C1525.time.minTime:=?00:00:00?
-				Storage:C1525.time.maxTime:=?20:00:00?
-				Storage:C1525.time.step:=?00:15:00?
-				
-				var $t : Text
-				GET SYSTEM FORMAT:C994(System time AM label:K60:15; $t)
-				Storage:C1525.time.AM:=$t
-				GET SYSTEM FORMAT:C994(System time PM label:K60:16; $t)
-				Storage:C1525.time.PM:=$t
-				
-			End use 
 		End use 
 		
+		Use (Storage:C1525.time)
+			
+			Storage:C1525.time.minTime:=?00:00:00?
+			Storage:C1525.time.maxTime:=?20:00:00?
+			Storage:C1525.time.step:=?00:15:00?
+			
+			var $t : Text
+			GET SYSTEM FORMAT:C994(System time AM label:K60:15; $t)
+			Storage:C1525.time.AM:=$t || "AM"
+			GET SYSTEM FORMAT:C994(System time PM label:K60:16; $t)
+			Storage:C1525.time.PM:=$t || "PM"
+			
+		End use 
 	End if 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
