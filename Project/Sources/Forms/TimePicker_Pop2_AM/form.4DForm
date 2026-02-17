@@ -27,7 +27,7 @@
 					"top": 2,
 					"left": 83,
 					"width": 16,
-					"height": 16,
+					"height": 23,
 					"textAlign": "center",
 					"fontSize": 13,
 					"fontWeight": "bold"
@@ -37,7 +37,7 @@
 					"top": 0,
 					"left": 0,
 					"width": 86,
-					"height": 20,
+					"height": 23,
 					"sizingX": "grow",
 					"events": [
 						"onClick",
@@ -51,7 +51,7 @@
 					"top": 0,
 					"left": 95,
 					"width": 56,
-					"height": 20,
+					"height": 23,
 					"sizingX": "move",
 					"events": [
 						"onClick",
@@ -60,12 +60,22 @@
 					"focusable": false,
 					"textAlign": "center"
 				},
-				"Rectangle": {
+				"Rectangle2": {
 					"type": "rectangle",
 					"top": 0,
 					"left": 0,
+					"width": 155,
+					"height": 24,
+					"fill": "automatic",
+					"stroke": "transparent",
+					"visibility": "hidden"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 2,
 					"width": 86,
-					"height": 21,
+					"height": 22,
 					"stroke": "automatic",
 					"fill": "automatic",
 					"borderRadius": 4,
@@ -75,17 +85,17 @@
 					"type": "text",
 					"text": "09 AM",
 					"top": 3,
-					"left": 10,
+					"left": 12,
 					"width": 70,
 					"height": 16,
 					"visibility": "hidden"
 				},
 				"Rectangle1": {
 					"type": "rectangle",
-					"top": 0,
-					"left": 95,
+					"top": 1,
+					"left": 97,
 					"width": 56,
-					"height": 21,
+					"height": 22,
 					"stroke": "automatic",
 					"fill": "automatic",
 					"borderRadius": 4,
@@ -95,15 +105,15 @@
 					"type": "text",
 					"text": "35",
 					"top": 3,
-					"left": 105,
+					"left": 107,
 					"width": 33,
 					"height": 16,
 					"visibility": "hidden"
 				},
 				"Static Picture1": {
 					"type": "picture",
-					"top": 3,
-					"left": 67,
+					"top": 4,
+					"left": 69,
 					"width": 16,
 					"height": 16,
 					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
@@ -112,8 +122,8 @@
 				},
 				"Static Picture2": {
 					"type": "picture",
-					"top": 3,
-					"left": 132,
+					"top": 4,
+					"left": 134,
 					"width": 16,
 					"height": 16,
 					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
@@ -122,8 +132,8 @@
 				},
 				"Texte1": {
 					"type": "text",
-					"top": 2,
-					"left": 87,
+					"top": 4,
+					"left": 89,
 					"width": 7,
 					"height": 16,
 					"class": "Default",
@@ -144,6 +154,7 @@
 			"PREVIEW": {
 				"visible": false,
 				"objects": [
+					"Rectangle2",
 					"Rectangle",
 					"Text",
 					"Rectangle1",
@@ -155,7 +166,7 @@
 			}
 		}
 	},
-	"geometryStamp": 163,
+	"geometryStamp": 175,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

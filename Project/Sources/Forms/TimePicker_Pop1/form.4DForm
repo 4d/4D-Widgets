@@ -39,10 +39,10 @@
 				},
 				"Rectangle": {
 					"type": "rectangle",
-					"top": 0,
-					"left": 0,
-					"width": 80,
-					"height": 21,
+					"top": 1,
+					"left": 1,
+					"width": 78,
+					"height": 22,
 					"stroke": "automatic",
 					"borderRadius": 4,
 					"visibility": "hidden",
@@ -51,7 +51,7 @@
 				"Text": {
 					"type": "text",
 					"text": "09:35",
-					"top": 3,
+					"top": 4,
 					"left": 10,
 					"width": 60,
 					"height": 16,
@@ -59,7 +59,7 @@
 				},
 				"Static Picture1": {
 					"type": "picture",
-					"top": 2,
+					"top": 4,
 					"left": 62,
 					"width": 16,
 					"height": 16,
@@ -71,12 +71,13 @@
 		}
 	],
 	"editor": {
-		"activeView": "Vue 1",
+		"activeView": "PREVIEW",
 		"defaultView": "Vue 1",
 		"views": {
-			"Vue 1": {},
+			"Vue 1": {
+				"visible": false
+			},
 			"PREVIEW": {
-				"visible": false,
 				"objects": [
 					"Rectangle",
 					"Text",
@@ -85,7 +86,7 @@
 			}
 		}
 	},
-	"geometryStamp": 185,
+	"geometryStamp": 191,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

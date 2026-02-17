@@ -99,7 +99,6 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13,
 					"borderStyle": "none"
 				},
 				"minutes": {
@@ -119,7 +118,6 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13,
 					"borderStyle": "none"
 				},
 				"seconds": {
@@ -139,7 +137,6 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13,
 					"borderStyle": "none"
 				},
 				"am_pm": {
@@ -159,13 +156,12 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13,
 					"borderStyle": "none"
 				},
 				"stepper": {
 					"type": "stepper",
 					"top": 1,
-					"left": 108,
+					"left": 105,
 					"width": 22,
 					"height": 22,
 					"visibility": "hidden",
@@ -180,19 +176,19 @@
 				"Separator1": {
 					"type": "text",
 					"text": "x",
-					"top": 4,
+					"top": 3,
 					"left": 20,
 					"width": 8,
-					"height": 16,
+					"height": 19,
 					"textAlign": "center"
 				},
 				"Separator2": {
 					"type": "text",
 					"text": "x",
-					"top": 4,
+					"top": 3,
 					"left": 44,
 					"width": 8,
-					"height": 16,
+					"height": 19,
 					"textAlign": "center"
 				},
 				"Text": {
@@ -236,7 +232,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 244,
+	"geometryStamp": 254,
 	"formClass": "_timeEntry",
 	"method": "WIDGET FORM METHOD"
 }

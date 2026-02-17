@@ -38,10 +38,10 @@
 				},
 				"Rectangle": {
 					"type": "rectangle",
-					"top": 0,
-					"left": 0,
-					"width": 107,
-					"height": 21,
+					"top": 1,
+					"left": 1,
+					"width": 106,
+					"height": 22,
 					"stroke": "automatic",
 					"fill": "automatic",
 					"borderRadius": 4,
@@ -50,7 +50,7 @@
 				"Text": {
 					"type": "text",
 					"text": "09:35 AM",
-					"top": 3,
+					"top": 4,
 					"left": 10,
 					"width": 87,
 					"height": 16,
@@ -58,7 +58,7 @@
 				},
 				"Static Picture1": {
 					"type": "picture",
-					"top": 3,
+					"top": 4,
 					"left": 89,
 					"width": 16,
 					"height": 16,
@@ -84,7 +84,7 @@
 			}
 		}
 	},
-	"geometryStamp": 76,
+	"geometryStamp": 81,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

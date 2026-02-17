@@ -61,12 +61,22 @@
 					"textAlign": "center",
 					"dataSourceTypeHint": "object"
 				},
-				"Rectangle": {
+				"Rectangle2": {
 					"type": "rectangle",
 					"top": 0,
 					"left": 0,
+					"width": 134,
+					"height": 24,
+					"fill": "automatic",
+					"stroke": "transparent",
+					"visibility": "hidden"
+				},
+				"Rectangle": {
+					"type": "rectangle",
+					"top": 1,
+					"left": 2,
 					"width": 60,
-					"height": 21,
+					"height": 22,
 					"stroke": "automatic",
 					"fill": "automatic",
 					"borderRadius": 4,
@@ -76,17 +86,17 @@
 					"type": "text",
 					"text": "09",
 					"top": 3,
-					"left": 10,
+					"left": 12,
 					"width": 37,
 					"height": 16,
 					"visibility": "hidden"
 				},
 				"Rectangle1": {
 					"type": "rectangle",
-					"top": 0,
-					"left": 70,
+					"top": 1,
+					"left": 72,
 					"width": 60,
-					"height": 21,
+					"height": 22,
 					"stroke": "automatic",
 					"fill": "automatic",
 					"borderRadius": 4,
@@ -96,15 +106,15 @@
 					"type": "text",
 					"text": "35",
 					"top": 3,
-					"left": 80,
+					"left": 82,
 					"width": 37,
 					"height": 16,
 					"visibility": "hidden"
 				},
 				"Static Picture1": {
 					"type": "picture",
-					"top": 3,
-					"left": 42,
+					"top": 4,
+					"left": 44,
 					"width": 16,
 					"height": 16,
 					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
@@ -113,8 +123,8 @@
 				},
 				"Static Picture2": {
 					"type": "picture",
-					"top": 3,
-					"left": 112,
+					"top": 4,
+					"left": 114,
 					"width": 16,
 					"height": 16,
 					"picture": "/RESOURCES/Images/Calendar/ArrowsUpDown.png",
@@ -123,8 +133,8 @@
 				},
 				"Texte1": {
 					"type": "text",
-					"top": 2,
-					"left": 61,
+					"top": 4,
+					"left": 64,
 					"width": 7,
 					"height": 16,
 					"class": "Default",
@@ -138,13 +148,13 @@
 		}
 	],
 	"editor": {
-		"activeView": "Vue 1",
+		"activeView": "PREVIEW",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
 			"PREVIEW": {
-				"visible": false,
 				"objects": [
+					"Rectangle2",
 					"Rectangle",
 					"Text",
 					"Rectangle1",
@@ -156,7 +166,7 @@
 			}
 		}
 	},
-	"geometryStamp": 116,
+	"geometryStamp": 134,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
