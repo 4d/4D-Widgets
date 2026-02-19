@@ -26,6 +26,13 @@
 			"_date"
 		]
 	},
+	"🔎 SearchPicker": {
+		"groups": [
+			"SearchPicker Forms",
+			"SearchPicker Private",
+			"SearchPicker Shared"
+		]
+	},
 	"🕒 Time": {
 		"groups": [
 			"Time Displays",
@@ -36,7 +43,11 @@
 			"_time"
 		]
 	},
-	"Compiler": {
+	"0_OBSOLETES": {
+		"groups": [
+			"Compiler",
+			"Tools"
+		],
 		"methods": [
 			"Compiler_Arrays_Inter",
 			"Compiler_Methods",
@@ -44,6 +55,18 @@
 			"Compiler_Variables_Inter"
 		]
 	},
+	"0_TESTS": {
+		"methods": [
+			"_test"
+		],
+		"forms": [
+			"D_TU",
+			"DATE",
+			"TESTS",
+			"TIME"
+		]
+	},
+	"Compiler": {},
 	"Date Entries": {
 		"forms": [
 			"DateEntry"
@@ -79,16 +102,6 @@
 			"DatePicker SET WEEK FIRST DAY"
 		]
 	},
-	"SearchPicker": {
-		"groups": [
-			"SearchPicker Forms",
-			"SearchPicker Private",
-			"SearchPicker Shared"
-		],
-		"methods": [
-			"SearchPicker__SetTarget"
-		]
-	},
 	"SearchPicker Forms": {
 		"forms": [
 			"SearchPicker"
@@ -105,7 +118,8 @@
 			"SearchPicker__SET_ENTERABLE",
 			"SearchPicker__SET_HELPTEXT",
 			"SearchPicker__SET_TEXT",
-			"SearchPicker__SetInterface"
+			"SearchPicker__SetInterface",
+			"SearchPicker__SetTarget"
 		]
 	},
 	"SearchPicker Shared": {

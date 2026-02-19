@@ -139,44 +139,11 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/Button4.4dm"
-				},
-				"timeEntry1": {
-					"type": "subform",
-					"left": 40,
-					"top": 314,
-					"width": 93,
-					"height": 24,
-					"detailForm": "TimeEntry",
-					"dataSourceTypeHint": "undefined",
-					"borderStyle": "system",
-					"dataSource": "Form:C1466.timeEntry"
-				},
-				"timeEntry2": {
-					"type": "subform",
-					"left": 40,
-					"top": 314,
-					"width": 93,
-					"height": 24,
-					"detailForm": "TimeEntry",
-					"dataSourceTypeHint": "undefined",
-					"borderStyle": "system",
-					"dataSource": "Form:C1466.timeEntry"
-				},
-				"timeEntry3": {
-					"type": "subform",
-					"left": 498,
-					"top": 52,
-					"width": 93,
-					"height": 24,
-					"detailForm": "TimeEntry",
-					"dataSourceTypeHint": "undefined",
-					"borderStyle": "system",
-					"dataSource": "Form:C1466.timeEntry"
 				}
 			}
 		}
 	],
-	"geometryStamp": 56,
+	"geometryStamp": 60,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",

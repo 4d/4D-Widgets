@@ -1,0 +1,136 @@
+{
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"windowSizingX": "variable",
+	"windowSizingY": "variable",
+	"windowMinWidth": 0,
+	"windowMinHeight": 0,
+	"windowMaxWidth": 32767,
+	"windowMaxHeight": 32767,
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"events": [
+		"onLoad",
+		"onPageChange",
+		"onValidate",
+		"onClick",
+		"onDoubleClick",
+		"onOutsideCall",
+		"onBeginDragOver",
+		"onDragOver",
+		"onDrop",
+		"onAfterKeystroke",
+		"onMenuSelect",
+		"onPluginArea",
+		"onAfterEdit",
+		"onTimer",
+		"onBoundVariableChange"
+	],
+	"windowTitle": "window title",
+	"destination": "detailScreen",
+	"pages": [
+		{
+			"objects": {}
+		},
+		{
+			"objects": {
+				"Line2": {
+					"type": "line",
+					"top": 111,
+					"left": 66,
+					"width": 573,
+					"height": 0,
+					"stroke": "#1e90ff"
+				},
+				"Line3": {
+					"type": "line",
+					"top": 136,
+					"left": 66,
+					"width": 573,
+					"height": 0,
+					"stroke": "#1e90ff"
+				},
+				"Line": {
+					"type": "line",
+					"top": 50,
+					"left": 89,
+					"width": 293,
+					"height": 0,
+					"stroke": "#1e90ff"
+				},
+				"Line1": {
+					"type": "line",
+					"top": 75,
+					"left": 89,
+					"width": 293,
+					"height": 0,
+					"stroke": "#1e90ff"
+				},
+				"Subform": {
+					"type": "subform",
+					"left": 106,
+					"top": 51,
+					"width": 96,
+					"height": 24,
+					"detailForm": "TimeEntry",
+					"dataSourceTypeHint": "time"
+				},
+				"Subform1": {
+					"type": "subform",
+					"left": 209,
+					"top": 51,
+					"width": 130,
+					"height": 24,
+					"detailForm": "TimeEntry_AM",
+					"dataSourceTypeHint": "time"
+				},
+				"Subform2": {
+					"type": "subform",
+					"left": 89,
+					"top": 112,
+					"width": 80,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1",
+					"dataSourceTypeHint": "time"
+				},
+				"Subform3": {
+					"type": "subform",
+					"left": 185,
+					"top": 112,
+					"width": 108,
+					"height": 24,
+					"detailForm": "TimePicker_Pop1_AM",
+					"dataSourceTypeHint": "time"
+				},
+				"Subform4": {
+					"type": "subform",
+					"left": 307,
+					"top": 112,
+					"width": 134,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2",
+					"dataSourceTypeHint": "time"
+				},
+				"Subform5": {
+					"type": "subform",
+					"left": 455,
+					"top": 112,
+					"width": 155,
+					"height": 24,
+					"detailForm": "TimePicker_Pop2_AM",
+					"dataSourceTypeHint": "time"
+				}
+			}
+		}
+	],
+	"geometryStamp": 37,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}

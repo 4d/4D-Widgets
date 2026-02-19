@@ -27,9 +27,8 @@
 					"top": 2,
 					"left": 83,
 					"width": 16,
-					"height": 23,
+					"height": 21,
 					"textAlign": "center",
-					"fontSize": 13,
 					"fontWeight": "bold"
 				},
 				"Hours": {
@@ -166,7 +165,7 @@
 			}
 		}
 	},
-	"geometryStamp": 175,
+	"geometryStamp": 176,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

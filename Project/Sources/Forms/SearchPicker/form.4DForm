@@ -198,6 +198,7 @@
 		"views": {
 			"Search": {},
 			"Search Mac": {
+				"visible": false,
 				"objects": [
 					"BgndRing_Mac",
 					"CloseButton_Mac",
@@ -206,7 +207,6 @@
 				]
 			},
 			"Search Win": {
-				"visible": false,
 				"objects": [
 					"Rectangle",
 					"BgndRing_Win",

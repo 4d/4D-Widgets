@@ -55,7 +55,7 @@
 					"top": 4,
 					"left": 0,
 					"width": 138,
-					"height": 16,
+					"height": 19,
 					"stroke": "#ff0000",
 					"textAlign": "center",
 					"visibility": "hidden"
@@ -82,19 +82,19 @@
 				},
 				"Slash1": {
 					"type": "text",
-					"top": 3,
+					"top": 4,
 					"left": 21,
 					"width": 8,
-					"height": 17,
+					"height": 19,
 					"textAlign": "center",
 					"text": "x"
 				},
 				"Slash2": {
 					"type": "text",
-					"top": 3,
+					"top": 4,
 					"left": 46,
 					"width": 8,
-					"height": 17,
+					"height": 19,
 					"textAlign": "center",
 					"text": "x"
 				},
@@ -103,7 +103,7 @@
 					"top": 4,
 					"left": 4,
 					"width": 17,
-					"height": 17,
+					"height": 19,
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -113,15 +113,14 @@
 					],
 					"hideFocusRing": true,
 					"dropping": "none",
-					"dragging": "none",
-					"fontSize": 13
+					"dragging": "none"
 				},
 				"CenterEntry": {
 					"type": "input",
 					"top": 4,
 					"left": 29,
 					"width": 17,
-					"height": 16,
+					"height": 19,
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -131,7 +130,6 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13,
 					"hideFocusRing": true
 				},
 				"RightEntry": {
@@ -139,7 +137,7 @@
 					"top": 4,
 					"left": 54,
 					"width": 34,
-					"height": 16,
+					"height": 19,
 					"fill": "transparent",
 					"borderStyle": "none",
 					"contextMenu": "none",
@@ -149,7 +147,6 @@
 					"events": [
 						"onDataChange"
 					],
-					"fontSize": 13,
 					"hideFocusRing": true
 				},
 				"Rectangle": {
@@ -232,7 +229,7 @@
 		"version": "1",
 		"kind": "form"
 	},
-	"geometryStamp": 268,
+	"geometryStamp": 277,
 	"formClass": "_dateEntry",
 	"method": "WIDGET FORM METHOD"
 }

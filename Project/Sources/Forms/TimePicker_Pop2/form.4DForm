@@ -27,9 +27,8 @@
 					"top": 2,
 					"left": 57,
 					"width": 16,
-					"height": 16,
+					"height": 21,
 					"textAlign": "center",
-					"fontSize": 13,
 					"fontWeight": "bold"
 				},
 				"Hours": {
@@ -37,7 +36,7 @@
 					"top": 0,
 					"left": 0,
 					"width": 60,
-					"height": 20,
+					"height": 23,
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -52,7 +51,7 @@
 					"top": 0,
 					"left": 70,
 					"width": 60,
-					"height": 20,
+					"height": 23,
 					"events": [
 						"onClick",
 						"onDataChange"
@@ -148,11 +147,12 @@
 		}
 	],
 	"editor": {
-		"activeView": "PREVIEW",
+		"activeView": "Vue 1",
 		"defaultView": "Vue 1",
 		"views": {
 			"Vue 1": {},
 			"PREVIEW": {
+				"visible": false,
 				"objects": [
 					"Rectangle2",
 					"Rectangle",
@@ -166,7 +166,7 @@
 			}
 		}
 	},
-	"geometryStamp": 134,
+	"geometryStamp": 142,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

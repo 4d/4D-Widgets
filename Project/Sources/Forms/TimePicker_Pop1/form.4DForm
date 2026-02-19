@@ -71,13 +71,12 @@
 		}
 	],
 	"editor": {
-		"activeView": "PREVIEW",
+		"activeView": "Vue 1",
 		"defaultView": "Vue 1",
 		"views": {
-			"Vue 1": {
-				"visible": false
-			},
+			"Vue 1": {},
 			"PREVIEW": {
+				"visible": false,
 				"objects": [
 					"Rectangle",
 					"Text",

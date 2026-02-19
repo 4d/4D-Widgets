@@ -67,10 +67,10 @@
 				"Button": {
 					"type": "button",
 					"text": "Reset",
-					"top": 805,
-					"left": 18,
-					"width": 135,
-					"height": 30,
+					"top": 314,
+					"left": 229,
+					"width": 64,
+					"height": 24,
 					"events": [
 						"onClick"
 					],
@@ -82,7 +82,7 @@
 					"top": 106,
 					"left": 356,
 					"width": 82,
-					"height": 30,
+					"height": 22,
 					"events": [
 						"onClick"
 					],
@@ -156,10 +156,10 @@
 				"Button4": {
 					"type": "button",
 					"text": "Close",
-					"top": 646,
-					"left": 525,
-					"width": 125,
-					"height": 45,
+					"top": 744,
+					"left": 571,
+					"width": 64,
+					"height": 24,
 					"events": [
 						"onClick"
 					],
@@ -386,7 +386,7 @@
 					"top": 497,
 					"left": 378,
 					"width": 96,
-					"height": 26,
+					"height": 22,
 					"events": [
 						"onClick"
 					],
@@ -521,9 +521,9 @@
 				},
 				"Input8": {
 					"type": "input",
-					"left": 40,
-					"top": 716,
-					"width": 168,
+					"left": 383,
+					"top": 699,
+					"width": 101,
 					"height": 17,
 					"dataSource": "Form:C1466.date",
 					"stroke": "#1e90ff",
@@ -554,10 +554,10 @@
 				"Button2": {
 					"type": "button",
 					"text": "Display Dialog",
-					"top": 694,
-					"left": 249,
-					"width": 180,
-					"height": 26,
+					"top": 695,
+					"left": 259,
+					"width": 115,
+					"height": 24,
 					"events": [
 						"onClick"
 					],
@@ -617,7 +617,7 @@
 			]
 		}
 	],
-	"geometryStamp": 413,
+	"geometryStamp": 438,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
