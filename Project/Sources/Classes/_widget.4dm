@@ -1,6 +1,8 @@
 property currentForm : Text
 property type : Text
 
+property inited:=False:C215
+
 // === === === === === === === === === === === === === === === === === === === === === === === ===
 Class constructor()
 	

@@ -7,6 +7,7 @@ var $format : Text
 var $target; $PtrSearchText : Pointer
 
 Case of 
+		
 	: ($1="Win")
 		$searchObjectName:="SearchText_Win"
 		

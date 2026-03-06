@@ -7,13 +7,7 @@ Case of
 		
 		If (Is Windows:C1573)
 			
-			OBJECT SET VISIBLE:C603(*; "@_Win"; True:C214)
-			OBJECT SET VISIBLE:C603(*; "@_Mac"; False:C215)
-			
-		Else 
-			
-			OBJECT SET VISIBLE:C603(*; "@_Mac"; True:C214)
-			OBJECT SET VISIBLE:C603(*; "@_Win"; False:C215)
+			FORM GOTO PAGE:C247(2; *)
 			
 		End if 
 		

@@ -105,6 +105,9 @@
 	"SearchPicker Forms": {
 		"forms": [
 			"SearchPicker"
+		],
+		"classes": [
+			"_searchPicker"
 		]
 	},
 	"SearchPicker Private": {
