@@ -9,10 +9,9 @@
 	"markerFooter": 30,
 	"events": [
 		"onLoad",
-		"onUnload",
+		"onActivate",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
@@ -30,7 +29,6 @@
 					"height": 24,
 					"sizingX": "grow",
 					"borderRadius": 6,
-					"stroke": "#c0c0c0",
 					"fill": "automatic"
 				},
 				"CloseButton_Mac": {
@@ -40,10 +38,9 @@
 					"width": 20,
 					"height": 20,
 					"sizingX": "move",
-					"dataSource": "bCloseSearch",
 					"class": "Default",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Mac/SearchBox/searchbox_close.png",
+					"icon": "/RESOURCES/Images/SearchBox/mac_close.svg",
 					"iconFrames": 4,
 					"style": "toolbar",
 					"method": "ObjectMethods/CloseButton_Mac.4dm",
@@ -58,11 +55,10 @@
 					"width": 140,
 					"height": 17,
 					"sizingX": "grow",
-					"class": "Default",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"hideFocusRing": true,
-					"contextMenu": "none",
+					"contextMenu": "automatic",
 					"method": "ObjectMethods/SearchText_Mac.4dm",
 					"events": [
 						"onLosingFocus",
@@ -79,7 +75,7 @@
 					"height": 20,
 					"class": "Default",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Mac/SearchBox/Searchbox_glass.png",
+					"icon": "/RESOURCES/Images/SearchBox/mac_glass.svg",
 					"iconFrames": 4,
 					"style": "custom",
 					"events": [
@@ -105,7 +101,7 @@
 					"height": 30,
 					"visibility": "hidden",
 					"pictureFormat": "truncatedTopLeft",
-					"picture": "/RESOURCES/Images/Mac/SearchBox/SearchPreview.png"
+					"picture": "/RESOURCES/Images/SearchBox/SearchPreview.png"
 				}
 			}
 		},
@@ -119,8 +115,7 @@
 					"height": 24,
 					"sizingX": "grow",
 					"borderRadius": 0,
-					"stroke": "#808080",
-					"fill": "#FFFFFF"
+					"fill": "automatic"
 				},
 				"CloseButton_Win": {
 					"type": "button",
@@ -131,7 +126,7 @@
 					"sizingX": "move",
 					"class": "Default",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Win/SearchBox/Searchbox_glass.png",
+					"icon": "/RESOURCES/Images/SearchBox/win_glass.svg",
 					"iconFrames": 4,
 					"style": "custom",
 					"events": [
@@ -146,9 +141,8 @@
 					"width": 160,
 					"height": 17,
 					"sizingX": "grow",
-					"class": "Default",
 					"hideFocusRing": true,
-					"contextMenu": "none",
+					"contextMenu": "automatic",
 					"method": "ObjectMethods/SearchText_Win.4dm",
 					"events": [
 						"onLosingFocus",
@@ -156,9 +150,8 @@
 						"onAfterEdit"
 					],
 					"borderStyle": "none",
-					"stroke": "automatic",
-					"fill": "#FFFFFF",
-					"dataSource": "Form:C1466.toSearch"
+					"dataSource": "Form:C1466.toSearch",
+					"fill": "transparent"
 				}
 			}
 		}
@@ -168,12 +161,6 @@
 		"defaultView": "Search",
 		"views": {
 			"Search": {},
-			"Search Mac": {
-				"visible": false
-			},
-			"Search Win": {
-				"visible": false
-			},
 			"Preview": {
 				"visible": false,
 				"objects": [
@@ -183,9 +170,11 @@
 			}
 		}
 	},
-	"geometryStamp": 301,
+	"geometryStamp": 308,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
-	}
+	},
+	"formClass": "_searchPicker",
+	"method": "WIDGET FORM METHOD"
 }

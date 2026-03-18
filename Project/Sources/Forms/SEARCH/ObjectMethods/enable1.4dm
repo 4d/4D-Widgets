@@ -1,0 +1,1 @@
+SearchPicker SET ENTERABLE("Subform"; False:C215)

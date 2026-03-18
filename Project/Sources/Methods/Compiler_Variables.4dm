@@ -1,5 +1,4 @@
 //%attributes = {"invisible":true}
-var bCloseSearch : Integer
 var dummyDate : Date
 var vEndTime : Time
 var vStartTime : Time
