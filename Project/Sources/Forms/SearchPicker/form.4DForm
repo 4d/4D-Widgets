@@ -83,16 +83,6 @@
 						"onLongClick"
 					]
 				},
-				"Picture23": {
-					"type": "picture",
-					"top": 91,
-					"left": 533,
-					"width": 30,
-					"height": 120,
-					"visibility": "hidden",
-					"pictureFormat": "scaled",
-					"picture": "/RESOURCES/Images/Win/SearchBox/Searchbox_glass.png"
-				},
 				"Preview": {
 					"type": "picture",
 					"top": 0,
@@ -101,7 +91,7 @@
 					"height": 30,
 					"visibility": "hidden",
 					"pictureFormat": "truncatedTopLeft",
-					"picture": "/RESOURCES/Images/SearchBox/SearchPreview.png"
+					"picture": "/RESOURCES/Images/SearchBox/poster.png"
 				}
 			}
 		},
@@ -164,13 +154,12 @@
 			"Preview": {
 				"visible": false,
 				"objects": [
-					"Picture23",
 					"Preview"
 				]
 			}
 		}
 	},
-	"geometryStamp": 308,
+	"geometryStamp": 310,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
