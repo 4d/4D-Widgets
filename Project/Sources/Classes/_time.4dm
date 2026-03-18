@@ -9,8 +9,6 @@ property meridien; separator : Text
 
 property time : Time
 
-property inited:=False:C215
-
 // === === === === === === === === === === === === === === === === === === === === === === === ===
 Class constructor()
 	

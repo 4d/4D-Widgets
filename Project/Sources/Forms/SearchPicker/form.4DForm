@@ -9,10 +9,9 @@
 	"markerFooter": 30,
 	"events": [
 		"onLoad",
-		"onUnload",
+		"onActivate",
 		"onBoundVariableChange"
 	],
-	"method": "method.4dm",
 	"pageFormat": {
 		"paperName": "A4",
 		"paperWidth": "595pt",
@@ -22,14 +21,6 @@
 		null,
 		{
 			"objects": {
-				"Rectangle": {
-					"type": "rectangle",
-					"top": 49,
-					"left": 136,
-					"width": 93,
-					"height": 22,
-					"fill": "#dda0dd"
-				},
 				"BgndRing_Mac": {
 					"type": "rectangle",
 					"top": 3,
@@ -38,9 +29,7 @@
 					"height": 24,
 					"sizingX": "grow",
 					"borderRadius": 6,
-					"stroke": "#c0c0c0",
-					"fill": "automatic",
-					"visibility": "hidden"
+					"fill": "automatic"
 				},
 				"CloseButton_Mac": {
 					"type": "button",
@@ -49,29 +38,15 @@
 					"width": 20,
 					"height": 20,
 					"sizingX": "move",
-					"dataSource": "bCloseSearch",
 					"class": "Default",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Mac/SearchBox/searchbox_close.png",
+					"icon": "/RESOURCES/Images/SearchBox/mac_close.svg",
 					"iconFrames": 4,
 					"style": "toolbar",
 					"method": "ObjectMethods/CloseButton_Mac.4dm",
 					"events": [
 						"onClick"
-					],
-					"visibility": "hidden"
-				},
-				"BgndRing_Win": {
-					"type": "rectangle",
-					"top": 3,
-					"left": 4,
-					"width": 192,
-					"height": 24,
-					"sizingX": "grow",
-					"borderRadius": 0,
-					"stroke": "#808080",
-					"fill": "#FFFFFF",
-					"visibility": "hidden"
+					]
 				},
 				"SearchText_Mac": {
 					"type": "input",
@@ -80,18 +55,17 @@
 					"width": 140,
 					"height": 17,
 					"sizingX": "grow",
-					"class": "Default",
 					"fill": "transparent",
 					"borderStyle": "none",
 					"hideFocusRing": true,
-					"contextMenu": "none",
+					"contextMenu": "automatic",
 					"method": "ObjectMethods/SearchText_Mac.4dm",
 					"events": [
 						"onLosingFocus",
 						"onGettingFocus",
 						"onAfterEdit"
 					],
-					"visibility": "hidden"
+					"dataSource": "Form:C1466.toSearch"
 				},
 				"SearchButton_Mac": {
 					"type": "button",
@@ -101,15 +75,13 @@
 					"height": 20,
 					"class": "Default",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Mac/SearchBox/Searchbox_glass.png",
+					"icon": "/RESOURCES/Images/SearchBox/mac_glass.svg",
 					"iconFrames": 4,
-					"style": "toolbar",
+					"style": "custom",
 					"events": [
 						"onClick",
-						"onAlternateClick",
 						"onLongClick"
-					],
-					"visibility": "hidden"
+					]
 				},
 				"Picture23": {
 					"type": "picture",
@@ -121,6 +93,30 @@
 					"pictureFormat": "scaled",
 					"picture": "/RESOURCES/Images/Win/SearchBox/Searchbox_glass.png"
 				},
+				"Preview": {
+					"type": "picture",
+					"top": 0,
+					"left": 0,
+					"width": 200,
+					"height": 30,
+					"visibility": "hidden",
+					"pictureFormat": "truncatedTopLeft",
+					"picture": "/RESOURCES/Images/SearchBox/SearchPreview.png"
+				}
+			}
+		},
+		{
+			"objects": {
+				"BgndRing_Win": {
+					"type": "rectangle",
+					"top": 3,
+					"left": 4,
+					"width": 192,
+					"height": 24,
+					"sizingX": "grow",
+					"borderRadius": 0,
+					"fill": "automatic"
+				},
 				"CloseButton_Win": {
 					"type": "button",
 					"top": 5,
@@ -130,14 +126,12 @@
 					"sizingX": "move",
 					"class": "Default",
 					"focusable": false,
-					"icon": "/RESOURCES/Images/Win/SearchBox/Searchbox_glass.png",
+					"icon": "/RESOURCES/Images/SearchBox/win_glass.svg",
 					"iconFrames": 4,
 					"style": "custom",
-					"customBackgroundPicture": "var:0",
 					"events": [
 						"onClick"
 					],
-					"visibility": "hidden",
 					"method": "ObjectMethods/CloseButton_Win.4dm"
 				},
 				"SearchText_Win": {
@@ -147,9 +141,8 @@
 					"width": 160,
 					"height": 17,
 					"sizingX": "grow",
-					"class": "Default",
 					"hideFocusRing": true,
-					"contextMenu": "none",
+					"contextMenu": "automatic",
 					"method": "ObjectMethods/SearchText_Win.4dm",
 					"events": [
 						"onLosingFocus",
@@ -157,37 +150,8 @@
 						"onAfterEdit"
 					],
 					"borderStyle": "none",
-					"visibility": "hidden",
-					"stroke": "automatic",
-					"fill": "#FFFFFF"
-				},
-				"Preview": {
-					"type": "picture",
-					"top": 0,
-					"left": 0,
-					"width": 200,
-					"height": 30,
-					"visibility": "hidden",
-					"pictureFormat": "truncatedTopLeft",
-					"picture": "/RESOURCES/Images/Mac/SearchBox/SearchPreview.png"
-				},
-				"CloseButton_Win1": {
-					"type": "button",
-					"top": 86,
-					"left": 173,
-					"width": 20,
-					"height": 20,
-					"sizingX": "move",
-					"class": "Default",
-					"focusable": false,
-					"icon": "/RESOURCES/Images/Win/SearchBox/Searchbox_glass.png",
-					"iconFrames": 4,
-					"style": "custom",
-					"customBackgroundPicture": "var:0",
-					"events": [
-						"onClick"
-					],
-					"visibility": "hidden"
+					"dataSource": "Form:C1466.toSearch",
+					"fill": "transparent"
 				}
 			}
 		}
@@ -197,24 +161,6 @@
 		"defaultView": "Search",
 		"views": {
 			"Search": {},
-			"Search Mac": {
-				"visible": false,
-				"objects": [
-					"BgndRing_Mac",
-					"CloseButton_Mac",
-					"SearchText_Mac",
-					"SearchButton_Mac"
-				]
-			},
-			"Search Win": {
-				"objects": [
-					"Rectangle",
-					"BgndRing_Win",
-					"CloseButton_Win",
-					"SearchText_Win",
-					"CloseButton_Win1"
-				]
-			},
 			"Preview": {
 				"visible": false,
 				"objects": [
@@ -224,9 +170,11 @@
 			}
 		}
 	},
-	"geometryStamp": 289,
+	"geometryStamp": 308,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
-	}
+	},
+	"formClass": "_searchPicker",
+	"method": "WIDGET FORM METHOD"
 }

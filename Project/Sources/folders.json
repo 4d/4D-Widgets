@@ -12,10 +12,7 @@
 			"TimePicker"
 		]
 	},
-	"(✅ TimePicker Forms)": {},
-	"(✅ TimePicker Private)": {},
-	"(DatePicker Forms)": {},
-	"(DatePicker Private)": {},
+	"(Compiler)": {},
 	"📅 Date": {
 		"groups": [
 			"Date Entries",
@@ -29,7 +26,6 @@
 	"🔎 SearchPicker": {
 		"groups": [
 			"SearchPicker Forms",
-			"SearchPicker Private",
 			"SearchPicker Shared"
 		]
 	},
@@ -44,29 +40,23 @@
 		]
 	},
 	"0_OBSOLETES": {
-		"groups": [
-			"Compiler",
-			"Tools"
-		],
 		"methods": [
-			"Compiler_Arrays_Inter",
-			"Compiler_Methods",
-			"Compiler_Variables",
-			"Compiler_Variables_Inter"
+			"Compiler_Inter"
 		]
 	},
 	"0_TESTS": {
 		"methods": [
-			"_test"
+			"_test",
+			"Compiler_Variables"
 		],
 		"forms": [
 			"D_TU",
 			"DATE",
+			"SEARCH",
 			"TESTS",
 			"TIME"
 		]
 	},
-	"Compiler": {},
 	"Date Entries": {
 		"forms": [
 			"DateEntry"
@@ -105,21 +95,9 @@
 	"SearchPicker Forms": {
 		"forms": [
 			"SearchPicker"
-		]
-	},
-	"SearchPicker Private": {
-		"methods": [
-			"SearchPicker__BtnClose",
-			"SearchPicker__BtnPopup",
-			"SearchPicker__EnterableText",
-			"SearchPicker__GetTarget",
-			"SearchPicker__InitForm",
-			"SearchPicker__InitInter",
-			"SearchPicker__SET_ENTERABLE",
-			"SearchPicker__SET_HELPTEXT",
-			"SearchPicker__SET_TEXT",
-			"SearchPicker__SetInterface",
-			"SearchPicker__SetTarget"
+		],
+		"classes": [
+			"_searchPicker"
 		]
 	},
 	"SearchPicker Shared": {
@@ -190,18 +168,9 @@
 			"TimePicker SET STEP"
 		]
 	},
-	"Tools": {
-		"methods": [
-			"Tool_ObjectToVar",
-			"Tool_VarToObject"
-		]
-	},
 	"trash": {
 		"groups": [
-			"(✅ TimePicker Forms)",
-			"(✅ TimePicker Private)",
-			"(DatePicker Forms)",
-			"(DatePicker Private)"
+			"(Compiler)"
 		]
 	}
 }

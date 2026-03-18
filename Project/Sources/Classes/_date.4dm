@@ -36,8 +36,6 @@ Localized string:C991("Monthes_November"); \
 Localized string:C991("Monthes_December")\
 ]
 
-property inited:=False:C215
-
 // === === === === === === === === === === === === === === === === === === === === === === === ===
 Class constructor()
 	
