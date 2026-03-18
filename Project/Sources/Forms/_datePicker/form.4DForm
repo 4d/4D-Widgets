@@ -1072,7 +1072,7 @@
 					"height": 190,
 					"visibility": "hidden",
 					"pictureFormat": "tiled",
-					"picture": "/RESOURCES/Images/Calendar/CalendarPicker.png"
+					"picture": "/RESOURCES/Images/Calendar/picker.png"
 				}
 			}
 		}

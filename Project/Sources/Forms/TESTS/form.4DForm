@@ -21,15 +21,6 @@
 		},
 		{
 			"objects": {
-				"Rectangle": {
-					"type": "rectangle",
-					"top": 554,
-					"left": 351,
-					"width": 284,
-					"height": 65,
-					"stroke": "#ff0000",
-					"fill": "transparent"
-				},
 				"LCD": {
 					"type": "subform",
 					"left": 356,
@@ -325,46 +316,6 @@
 					"enterable": false,
 					"focusable": false
 				},
-				"BevelButton14": {
-					"type": "button",
-					"top": 556,
-					"left": 560,
-					"width": 83,
-					"height": 63,
-					"focusable": false,
-					"icon": "/RESOURCES/Images/Icons/Printers/Printer32.png",
-					"style": "circular",
-					"events": [
-						"onClick"
-					],
-					"iconFrames": 4
-				},
-				"BevelButton6": {
-					"type": "button",
-					"top": 567,
-					"left": 490,
-					"width": 80,
-					"height": 40,
-					"focusable": false,
-					"text": "Print",
-					"icon": "/RESOURCES/Images/Icons/Printers/Printer32.png",
-					"iconFrames": 4,
-					"textPlacement": "right",
-					"style": "toolbar",
-					"events": [
-						"onClick"
-					]
-				},
-				"Combo Box7": {
-					"type": "dropdown",
-					"top": 576,
-					"left": 438,
-					"width": 18,
-					"height": 22,
-					"events": [
-						"onClick"
-					]
-				},
 				"Input6": {
 					"type": "input",
 					"left": 545,
@@ -459,14 +410,6 @@
 					"text": "✅",
 					"top": 406,
 					"left": 11,
-					"width": 19,
-					"height": 17
-				},
-				"Text9": {
-					"type": "text",
-					"text": "❌",
-					"top": 581,
-					"left": 376,
 					"width": 19,
 					"height": 17
 				},
@@ -604,9 +547,6 @@
 				"Subform4",
 				"Input6",
 				"Button1",
-				"BevelButton14",
-				"BevelButton6",
-				"Combo Box7",
 				"Button",
 				"Button4",
 				"Input7",
@@ -617,7 +557,7 @@
 			]
 		}
 	],
-	"geometryStamp": 438,
+	"geometryStamp": 443,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
