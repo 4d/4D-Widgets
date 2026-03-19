@@ -11,7 +11,7 @@ Class constructor()
 	This:C1470.defaultValues()
 	This:C1470.page:=1+Num:C11(Is Windows:C1573)  // +1
 	
-	If (Structure file:C489=Structure file:C489(*))\
+	If (This:C1470.dev)\
 		 && (Is macOS:C1572 && Shift down:C543)/* 🚧 FOR TESTING PURPOSES */
 		
 		This:C1470.page+=1  // Test Windows UI
@@ -48,6 +48,8 @@ Function defaultValues($force : Boolean)
 Function handleEvents($e : Object)
 	
 	$e:=$e || FORM Event:C1606
+	
+	Super:C1706.handleEvents($e)
 	
 	// MARK: Form Method
 	If ($e.objectName=Null:C1517)

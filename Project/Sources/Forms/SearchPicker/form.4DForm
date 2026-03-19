@@ -10,6 +10,7 @@
 	"events": [
 		"onLoad",
 		"onActivate",
+		"onTimer",
 		"onBoundVariableChange"
 	],
 	"pageFormat": {
@@ -56,7 +57,7 @@
 					"width": 140,
 					"height": 17,
 					"sizingX": "grow",
-					"fill": "transparent",
+					"fill": "automatic",
 					"borderStyle": "none",
 					"hideFocusRing": true,
 					"contextMenu": "automatic",
@@ -92,7 +93,7 @@
 					"height": 30,
 					"visibility": "hidden",
 					"pictureFormat": "truncatedTopLeft",
-					"picture": "/RESOURCES/Images/SearchBox/poster.png"
+					"picture": "Images/poster.png"
 				}
 			}
 		},
@@ -142,7 +143,7 @@
 					],
 					"borderStyle": "none",
 					"dataSource": "Form:C1466.toSearch",
-					"fill": "transparent"
+					"fill": "automatic"
 				}
 			}
 		}
@@ -160,7 +161,7 @@
 			}
 		}
 	},
-	"geometryStamp": 311,
+	"geometryStamp": 317,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

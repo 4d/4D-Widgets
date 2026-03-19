@@ -2,18 +2,61 @@ property currentForm : Text
 property type : Text
 
 property inited:=False:C215
+property dev:=False:C215
+property screenshotDone:=False:C215
 
 // === === === === === === === === === === === === === === === === === === === === === === === ===
 Class constructor()
 	
-	//
+	This:C1470.dev:=(Structure file:C489=Structure file:C489(*))
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function init()
 	
 	This:C1470.currentForm:=Current form name:C1298
 	
+	If (This:C1470.dev)\
+		 && (Macintosh option down:C545 || Windows Alt down:C563)
+		
+		ARRAY LONGINT:C221($events; 1)
+		$events{1}:=On Timer:K2:25
+		OBJECT SET EVENTS:C1239(*; ""; $events; Enable events others unchanged:K42:38)
+		
+		SET TIMER:C645(-1)
+		
+	End if 
+	
 	This:C1470.callParent()
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function handleEvents($e : Object)
+	
+	$e:=$e || FORM Event:C1606
+	
+	If (This:C1470.dev)\
+		 && ($e.code=On Timer:K2:25)\
+		 && (Not:C34(This:C1470.screenshotDone))
+		
+		SET TIMER:C645(0)
+		
+		var $formPict : Picture
+		FORM SCREENSHOT:C940($formPict)
+		
+		If (FORM Get color scheme:C1761="dark")
+			
+			var $file:=File:C1566("/PROJECT/Sources/Forms/"+This:C1470.currentForm+"/Images/poster_dark.png")
+			
+		Else 
+			
+			$file:=File:C1566("/PROJECT/Sources/Forms/"+This:C1470.currentForm+"/Images/poster.png")
+			
+		End if 
+		
+		$file.parent.create()
+		
+		WRITE PICTURE FILE:C680(String:C10($file.platformPath); $formPict; ".png")
+		
+	End if 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function callParent()
