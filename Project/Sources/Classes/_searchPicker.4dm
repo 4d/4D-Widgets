@@ -14,7 +14,7 @@ Class constructor()
 	If (Structure file:C489=Structure file:C489(*))\
 		 && (Is macOS:C1572 && Shift down:C543)/* 🚧 FOR TESTING PURPOSES */
 		
-		This:C1470.page+=1
+		This:C1470.page+=1  // Test Windows UI
 		
 	End if 
 	
@@ -29,29 +29,16 @@ Function init()
 		 | ($container.type=Is string var:K8:2)
 		
 		Form:C1466.toSearch:=String:C10($container.value)
-		This:C1470.update()
 		
 	End if 
+	
+	This:C1470.manageRing()
+	This:C1470.update()
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
 Function defaultValues($force : Boolean)
 	
 	If (Not:C34(This:C1470.inited) || $force)
-		
-		var <>SearchPicker_SearchText:=""
-		
-		var <>SearchPicker_PopupFunction : Text
-		
-		var <>SearchPicker_Menu : Text
-		
-		<>SearchPicker_PopupFunction:="Scope"  //(or "Values")
-		
-		RELEASE MENU:C978(<>SearchPicker_Menu)
-		<>SearchPicker_Menu:=""
-		
-		var <>SearchPicker_DummyText : Text
-		var <>SearchPicker_Target : Pointer
-		<>SearchPicker_Target:=-><>SearchPicker_DummyText
 		
 		This:C1470.inited:=True:C214
 		
@@ -62,19 +49,19 @@ Function handleEvents($e : Object)
 	
 	$e:=$e || FORM Event:C1606
 	
-	// MARK:Form Method
+	// MARK: Form Method
 	If ($e.objectName=Null:C1517)
 		
 		Case of 
 				
-				//________________________________________________________________________________
+				// ________________________________________________________________________________
 			: ($e.code=On Load:K2:1)
 				
 				FORM GOTO PAGE:C247(This:C1470.page; *)
 				
 				This:C1470.init()
 				
-				//________________________________________________________________________________
+				// ________________________________________________________________________________
 			: ($e.code=On Bound Variable Change:K2:52)
 				
 				var $container:=This:C1470.getContainerValue()
@@ -87,12 +74,12 @@ Function handleEvents($e : Object)
 					
 				End if 
 				
-				//________________________________________________________________________________
+				// ________________________________________________________________________________
 			: ($e.code=On Activate:K2:9)
 				
-				This:C1470.manageFocus($e)
+				This:C1470.manageFocus()
 				
-				//________________________________________________________________________________
+				// ________________________________________________________________________________
 		End case 
 		
 		return 
@@ -106,38 +93,30 @@ Function handleEvents($e : Object)
 		: ($e.code=On Activate:K2:9)\
 			 || ($e.code=On Deactivate:K2:10)
 			
-			This:C1470.manageFocus($e)
+			This:C1470.manageFocus()
 			
 			// ______________________________________________________
 		: ($e.objectName="search@")
 			
 			Case of 
 					
-					//________________________________________________________________________________
+					// ________________________________________________________________________________
 				: ($e.code=On After Edit:K2:43)
 					
 					This:C1470.setContainerValue(Get edited text:C655; [Is text:K8:3; Is string var:K8:2])
 					This:C1470.update()
 					
-					//________________________________________________________________________________
+					// ________________________________________________________________________________
 				: ($e.code=On Getting Focus:K2:7)
 					
-					If (This:C1470.enterable)
-						
-						OBJECT SET RGB COLORS:C628(*; "BgndRing@"; FORM Get color scheme:C1761="dark" ? "silver" : "grey"; Background color:K23:2)
-						
-					Else 
-						
-						OBJECT SET RGB COLORS:C628(*; "BgndRing@"; FORM Get color scheme:C1761="dark" ? "grey" : "silver"; Background color:K23:2)
-						
-					End if 
+					This:C1470.manageRing()
 					
-					//________________________________________________________________________________
+					// ________________________________________________________________________________
 				: ($e.code=On Losing Focus:K2:8)
 					
 					OBJECT SET RGB COLORS:C628(*; "BgndRing@"; FORM Get color scheme:C1761="dark" ? "grey" : "silver"; Background color:K23:2)
 					
-					//________________________________________________________________________________
+					// ________________________________________________________________________________
 			End case 
 			
 			// ______________________________________________________
@@ -180,9 +159,7 @@ Function update()
 	End if 
 	
 	// === === === === === === === === === === === === === === === === === === === === === === === ===
-Function manageFocus($e : Object)
-	
-	$e:=$e || FORM Event:C1606
+Function manageFocus()
 	
 	If (This:C1470.enterable)
 		
@@ -198,7 +175,24 @@ Function manageFocus($e : Object)
 		
 	Else 
 		
-		GOTO OBJECT:C206(*; "")
+		If (OBJECT Get name:C1087(Object with focus:K67:3)="SearchText_@")
+			
+			POST KEY:C465(Tab key:K12:28)
+			
+		End if 
+	End if 
+	
+	// === === === === === === === === === === === === === === === === === === === === === === === ===
+Function manageRing()
+	
+	If (This:C1470.enterable)\
+		 && (OBJECT Get name:C1087(Object with focus:K67:3)="SearchText_@")
+		
+		OBJECT SET RGB COLORS:C628(*; "BgndRing@"; FORM Get color scheme:C1761="dark" ? "silver" : "grey"; Background color:K23:2)
+		
+	Else 
+		
+		OBJECT SET RGB COLORS:C628(*; "BgndRing@"; FORM Get color scheme:C1761="dark" ? "grey" : "silver"; Background color:K23:2)
 		
 	End if 
 	
@@ -207,15 +201,13 @@ Function set placeholder($value : Text)
 	
 	OBJECT SET PLACEHOLDER:C1295(*; This:C1470.page=1 ? "SearchText_Mac" : "SearchText_Win"; $value)
 	
-	// <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <==
+	// ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==> ==>
 Function get enterable() : Boolean
 	
 	return OBJECT Get enterable:C1067(*; This:C1470.page=1 ? "SearchText_Mac" : "SearchText_Win")
 	
 	// <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <== <==
 Function set enterable($value : Boolean)
-	
-	//This._enterable:=$value
 	
 	If (This:C1470.page=1)
 		
@@ -228,6 +220,5 @@ Function set enterable($value : Boolean)
 	End if 
 	
 	This:C1470.manageFocus()
-	
+	This:C1470.manageRing()
 	This:C1470.update()
-	

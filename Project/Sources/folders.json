@@ -12,7 +12,11 @@
 			"TimePicker"
 		]
 	},
-	"(Compiler)": {},
+	"(0_OBSOLETES)": {
+		"methods": [
+			"(Compiler_Inter)"
+		]
+	},
 	"📅 Date": {
 		"groups": [
 			"Date Entries",
@@ -25,8 +29,13 @@
 	},
 	"🔎 SearchPicker": {
 		"groups": [
-			"SearchPicker Forms",
 			"SearchPicker Shared"
+		],
+		"forms": [
+			"SearchPicker"
+		],
+		"classes": [
+			"_searchPicker"
 		]
 	},
 	"🕒 Time": {
@@ -39,15 +48,9 @@
 			"_time"
 		]
 	},
-	"0_OBSOLETES": {
-		"methods": [
-			"Compiler_Inter"
-		]
-	},
 	"0_TESTS": {
 		"methods": [
-			"_test",
-			"Compiler_Variables"
+			"_test"
 		],
 		"forms": [
 			"D_TU",
@@ -90,14 +93,6 @@
 			"DatePicker SET MAX DATE",
 			"DatePicker SET MIN DATE",
 			"DatePicker SET WEEK FIRST DAY"
-		]
-	},
-	"SearchPicker Forms": {
-		"forms": [
-			"SearchPicker"
-		],
-		"classes": [
-			"_searchPicker"
 		]
 	},
 	"SearchPicker Shared": {
@@ -170,7 +165,7 @@
 	},
 	"trash": {
 		"groups": [
-			"(Compiler)"
+			"(0_OBSOLETES)"
 		]
 	}
 }

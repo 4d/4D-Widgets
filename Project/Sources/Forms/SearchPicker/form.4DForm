@@ -46,7 +46,8 @@
 					"method": "ObjectMethods/CloseButton_Mac.4dm",
 					"events": [
 						"onClick"
-					]
+					],
+					"visibility": "hidden"
 				},
 				"SearchText_Mac": {
 					"type": "input",
@@ -159,7 +160,7 @@
 			}
 		}
 	},
-	"geometryStamp": 310,
+	"geometryStamp": 311,
 	"$4d": {
 		"version": "1",
 		"kind": "form"

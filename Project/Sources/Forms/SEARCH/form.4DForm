@@ -32,15 +32,15 @@
 				},
 				"Input": {
 					"type": "input",
-					"left": 132,
-					"top": 51,
+					"left": 138,
+					"top": 53,
 					"width": 198,
 					"height": 17,
 					"dataSource": "OBJECT Get value:C1743(\"Subform\")",
 					"enterable": false,
 					"focusable": false,
 					"contextMenu": "none",
-					"borderStyle": "none",
+					"borderStyle": "dotted",
 					"stroke": "#1e90ff"
 				},
 				"Input1": {
@@ -75,6 +75,19 @@
 					],
 					"method": "ObjectMethods/enable1.4dm",
 					"focusable": false
+				},
+				"enable2": {
+					"type": "button",
+					"text": "set",
+					"top": 109,
+					"left": 223,
+					"width": 140,
+					"height": 23,
+					"events": [
+						"onClick"
+					],
+					"method": "ObjectMethods/enable2.4dm",
+					"focusable": false
 				}
 			},
 			"entryOrder": [
@@ -82,11 +95,12 @@
 				"Subform",
 				"Input",
 				"enable",
-				"enable1"
+				"enable1",
+				"enable2"
 			]
 		}
 	],
-	"geometryStamp": 24,
+	"geometryStamp": 28,
 	"editor": {
 		"activeView": "View 1",
 		"defaultView": "View 1",
