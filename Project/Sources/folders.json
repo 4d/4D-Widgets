@@ -12,11 +12,6 @@
 			"TimePicker"
 		]
 	},
-	"(0_OBSOLETES)": {
-		"methods": [
-			"(Compiler_Inter)"
-		]
-	},
 	"📅 Date": {
 		"groups": [
 			"Date Entries",
@@ -163,9 +158,5 @@
 			"TimePicker SET STEP"
 		]
 	},
-	"trash": {
-		"groups": [
-			"(0_OBSOLETES)"
-		]
-	}
+	"trash": {}
 }

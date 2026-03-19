@@ -142,6 +142,13 @@ Function init()
 	OBJECT SET TITLE:C194(*; This:C1470.widgets[2]; This:C1470.separator)
 	OBJECT SET TITLE:C194(*; This:C1470.widgets[4]; This:C1470.separator)
 	
+	If (This:C1470.currentForm="DateEntry")\
+		 && (Is Windows:C1573)
+		
+		OBJECT MOVE:C664(*; "stepper"; -3; 0)
+		
+	End if 
+	
 	This:C1470.date:=This:C1470.getSelectedDate() || Current date:C33
 	
 	This:C1470.setSelectedDate(This:C1470.date)
