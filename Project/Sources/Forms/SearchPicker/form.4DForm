@@ -103,9 +103,28 @@
 					"top": 3,
 					"left": 4,
 					"width": 192,
-					"height": 24,
+					"height": 25,
 					"sizingX": "grow",
 					"borderRadius": 0,
+					"fill": "automatic"
+				},
+				"SearchText_Win": {
+					"type": "input",
+					"top": 6,
+					"left": 8,
+					"width": 160,
+					"height": 18,
+					"sizingX": "grow",
+					"hideFocusRing": true,
+					"contextMenu": "automatic",
+					"method": "ObjectMethods/SearchText_Win.4dm",
+					"events": [
+						"onLosingFocus",
+						"onGettingFocus",
+						"onAfterEdit"
+					],
+					"borderStyle": "none",
+					"dataSource": "Form:C1466.toSearch",
 					"fill": "automatic"
 				},
 				"CloseButton_Win": {
@@ -124,25 +143,6 @@
 						"onClick"
 					],
 					"method": "ObjectMethods/CloseButton_Win.4dm"
-				},
-				"SearchText_Win": {
-					"type": "input",
-					"top": 7,
-					"left": 8,
-					"width": 160,
-					"height": 17,
-					"sizingX": "grow",
-					"hideFocusRing": true,
-					"contextMenu": "automatic",
-					"method": "ObjectMethods/SearchText_Win.4dm",
-					"events": [
-						"onLosingFocus",
-						"onGettingFocus",
-						"onAfterEdit"
-					],
-					"borderStyle": "none",
-					"dataSource": "Form:C1466.toSearch",
-					"fill": "automatic"
 				}
 			}
 		}
@@ -160,7 +160,7 @@
 			}
 		}
 	},
-	"geometryStamp": 317,
+	"geometryStamp": 320,
 	"$4d": {
 		"version": "1",
 		"kind": "form"
