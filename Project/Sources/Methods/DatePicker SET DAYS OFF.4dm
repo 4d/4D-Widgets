@@ -2,8 +2,8 @@
 #DECLARE($widget : Text; $type : Integer; $values : Pointer)
 
 // Name of the widget
-// Type of days off (0 = repeated each week, 1 = repeated earch year , 2 = only once)
-// Pointer on booelan or date array
+// Type of days off (0 = repeated each week, 1 = repeated each year , 2 = only once)
+// Pointer on boolean or date array
 
 If (Count parameters:C259<3)
 	

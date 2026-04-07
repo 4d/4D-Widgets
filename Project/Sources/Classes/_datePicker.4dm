@@ -438,12 +438,12 @@ Function setDaysOff($type : Integer; $values : Collection)
 			// ______________________________________________________
 		: ($type=1)  // Repeated earch year
 			
-			ARRAY TO COLLECTION:C1563(This:C1470.dayOff1; $values)
+			This:C1470.dayOff1:=$values
 			
 			// ______________________________________________________
 		: ($type=2)  // Only once
 			
-			ARRAY TO COLLECTION:C1563(This:C1470.dayOff2; $values)
+			This:C1470.dayOff2:=$values
 			
 			// ______________________________________________________
 	End case 
