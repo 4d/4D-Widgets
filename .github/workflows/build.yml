@@ -3,9 +3,6 @@ on:
   push:
   pull_request:
 
-env:
-  DEPENDENCIES_BRANCH: 21R3
-
 jobs:
   build:
     name: "Build on ${{ matrix.os }}"
