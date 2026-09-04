@@ -109,7 +109,7 @@
         </trans-unit>
         <trans-unit id="14" resname="Errors_DateArrayPtrParameter">
           <source>Error: the method "[1]" was expecting an array date pointer parameter.</source>
-          <target state="needs-review-translation">エラー: メソッド "[1]" は日付ポインターを引数として受け取ります。</target>
+          <target">エラー: メソッド "[1]" は日付配列へのポインターを引数として受け取ります。</target>
         </trans-unit>
         <trans-unit id="22" resname="Errors_TimeParameter">
           <source>Error: the method "[1]" was expecting a time as parameter.</source>
@@ -153,7 +153,7 @@
         </trans-unit>
         <trans-unit id="9" resname="dateInvalidContainerType">
           <source>The type of the {name} widget container must be  date, or undefined.</source>
-          <target state="new">The type of the {name} widget container must be  date, or undefined.</target>
+          <target>{name} ウィジェットコンテナの型は、日付か未定義でなければなりません。</target>
         </trans-unit>
       </group>
     </body>
