@@ -153,7 +153,7 @@
         </trans-unit>
         <trans-unit id="9" resname="dateInvalidContainerType">
           <source>The type of the {name} widget container must be  date, or undefined.</source>
-          <target state="new">The type of the {name} widget container must be  date, or undefined.</target>
+          <target>Typ kontejneru widgetu {name} musí být datum nebo nedefinovaný.</target>
         </trans-unit>
       </group>
     </body>
